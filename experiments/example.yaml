@@ -1,0 +1,34 @@
+experiment_id: 20260921_pool_001
+date: 2026-09-21
+
+environment:
+  type: pool
+  location_note: null
+
+data:
+  storage: external
+  relative_path: 20260921_pool_001
+
+parent:
+  csv: parent/log.csv
+  video: parent/camera.mp4
+
+child:
+  csv: child/log.csv
+  video: child/camera.mp4
+
+spresense:
+  csv: spresense/imu.csv
+
+calibration:
+  extrinsics: calibration/extrinsics.yaml
+  parent_camera: calibration/parent_camera.yaml
+  child_camera: calibration/child_camera.yaml
+
+pre_experiment_sequence:
+  stationary_initial_s: 20
+  imu_sync_motion: true
+  stationary_final_s: 10
+
+notes:
+  - Replace example values with actual experiment metadata.

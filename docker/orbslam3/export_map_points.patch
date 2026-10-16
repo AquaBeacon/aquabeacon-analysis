@@ -1,0 +1,67 @@
+diff --git a/include/System.h b/include/System.h
+index 71f79ca..79b7487 100644
+--- a/include/System.h
++++ b/include/System.h
+@@ -175,6 +175,9 @@ public:
+     int GetTrackingState();
+     std::vector<MapPoint*> GetTrackedMapPoints();
+     std::vector<cv::KeyPoint> GetTrackedKeyPointsUn();
++    // Read the finished Atlas only after Shutdown() for child map export.
++    Atlas* GetAtlasForExport() { return mpAtlas; }
++
+ 
+     // For debugging
+     double GetTimeFromIMUInit();
+diff --git a/Examples/Monocular/mono_euroc.cc b/Examples/Monocular/mono_euroc.cc
+index 3f22b50..c3bfe09 100644
+--- a/Examples/Monocular/mono_euroc.cc
++++ b/Examples/Monocular/mono_euroc.cc
+@@ -21,9 +21,13 @@
+ #include<algorithm>
+ #include<fstream>
+ #include<chrono>
++#include<iomanip>
+ 
+ #include<opencv2/core/core.hpp>
+ 
+ #include<System.h>
++#include<Atlas.h>
++#include<Map.h>
++#include<MapPoint.h>
+ 
+ using namespace std;
+@@ -200,5 +204,34 @@ int main(int argc, char **argv)
+         SLAM.SaveKeyFrameTrajectoryEuRoC("KeyFrameTrajectory.txt");
+     }
+ 
++    // Export each surviving Atlas map separately: their local coordinate frames
++    // must not be concatenated after tracking resets or map creation.
++    ofstream mapIndex("MapPoints_manifest.csv");
++    mapIndex << "map_id,keyframes,map_points,ply_file\n";
++    for (ORB_SLAM3::Map* map : SLAM.GetAtlasForExport()->GetAllMaps())
++    {
++        if (!map) continue;
++        vector<Eigen::Vector3f> valid;
++        for (ORB_SLAM3::MapPoint* point : map->GetAllMapPoints())
++        {
++            if (!point || point->isBad()) continue;
++            Eigen::Vector3f position = point->GetWorldPos();
++            if (position.allFinite()) valid.push_back(position);
++        }
++        string name = "MapPoints_map_" + to_string(map->GetId()) + ".ply";
++        ofstream ply(name);
++        ply << "ply\nformat ascii 1.0\n";
++        ply << "comment ORB-SLAM3 monocular map; coordinates are arbitrary SLAM units\n";
++        ply << "element vertex " << valid.size() << "\n";
++        ply << "property float x\nproperty float y\nproperty float z\nend_header\n";
++        ply << setprecision(9);
++        for (const auto& position : valid)
++            ply << position.x() << " " << position.y() << " " << position.z() << "\n";
++        mapIndex << map->GetId() << "," << map->KeyFramesInMap() << ","
++                 << valid.size() << "," << name << "\n";
++        cout << "Exported map " << map->GetId() << " with " << valid.size()
++             << " points to " << name << endl;
++    }
++
+     return 0;
+ }

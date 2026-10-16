@@ -1,0 +1,12 @@
+{
+  "camera_id": "P_MAIN_CAM",
+  "status": "hypothetical_not_measured",
+  "purpose": "Temporary camera-relative light angles until underwater housing calibration",
+  "assumed_horizontal_fov_deg": 90.0,
+  "image_size_px": [1280, 720],
+  "assumed_square_pixels": true,
+  "assumed_principal_point": "image_center",
+  "distortion": "ignored",
+  "source": "Explicit analysis scenario; not a DJI specification or measured calibration",
+  "applies_to": "1280x720 P_MAIN proxy videos in 20260922_cmain_022/023/024"
+}

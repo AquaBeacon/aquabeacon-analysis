@@ -1,0 +1,17 @@
+{
+  "status": "hypothetical_not_measured",
+  "parent_camera_depth_below_surface_m": 0.03,
+  "parent_camera_depth_source": "user: a few centimeters below the surface; 0.03 m used for this scenario",
+  "child_light_camera_separation_m": 0.20,
+  "child_light_camera_direction": "unknown; no lever-arm correction",
+  "child_light_acoustic_receiver_offset": "unknown; no lever-arm correction",
+  "tof_endpoint_offset_allowance_m_for_diagnostic": 0.20,
+  "tof_endpoint_offset_allowance_status": "illustrative only; actual acoustic receiver to light distance is unknown",
+  "pressure_zero_point": "median pre-immersion C_MAIN pressure from data/interim; sustained rise identifies immersion onset",
+  "pressure_sensor_to_child_light_vertical_offset_m_assumed": 0.0,
+  "pressure_sensor_to_child_light_vertical_offset_status": "not measured; conditional co-height assumption",
+  "pressure_depth_constraint_sigma_m": 0.03,
+  "pressure_depth_constraint_sigma_status": "analysis weight, not measured absolute sensor error",
+  "horizontal_imu_yaw_coherence_min": 0.4,
+  "max_time_from_optical_observation_s": 2.0
+}

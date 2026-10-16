@@ -1,0 +1,42 @@
+diff --git a/Examples/Monocular/mono_euroc.cc b/Examples/Monocular/mono_euroc.cc
+--- a/Examples/Monocular/mono_euroc.cc
++++ b/Examples/Monocular/mono_euroc.cc
+@@ -93,5 +93,10 @@ int main(int argc, char **argv)
+     ORB_SLAM3::System SLAM(argv[1],argv[2],ORB_SLAM3::System::MONOCULAR, false);
+     float imageScale = SLAM.GetImageScale();
+ 
++    ofstream features("TrackedFeatures.csv");
++    features << "frame_index,utc_ns,tracking_state,feature_index,x_px,y_px,map_point_id\n";
++    ofstream frameSummary("TrackedFrameSummary.csv");
++    frameSummary << "frame_index,utc_ns,tracking_state,detected_features,associated_features\n";
++
+     double t_resize = 0.f;
+     double t_track = 0.f;
+@@ -143,5 +148,27 @@ int main(int argc, char **argv)
+             // cout << "tframe = " << tframe << endl;
+             SLAM.TrackMonocular(im,tframe); // TODO change to monocular_inertial
+ 
++            // Export all valid 3D associations and every tenth remaining
++            // detected feature. The summary preserves exact per-frame counts.
++            const auto keypoints = SLAM.GetTrackedKeyPointsUn();
++            const auto points = SLAM.GetTrackedMapPoints();
++            const int state = SLAM.GetTrackingState();
++            const string stamp = vstrImageFilenames[seq][ni].substr(
++                vstrImageFilenames[seq][ni].find_last_of('/') + 1, 19);
++            size_t associated = 0;
++            for (size_t k = 0; k < keypoints.size(); ++k)
++            {
++                const bool valid = k < points.size() && points[k] && !points[k]->isBad();
++                if (valid) ++associated;
++                if (!valid && k % 10 != 0) continue;
++                features << ni << ',' << stamp << ',' << state << ',' << k
++                         << ',' << keypoints[k].pt.x << ',' << keypoints[k].pt.y << ',';
++                if (valid)
++                    features << points[k]->mnId;
++                features << '\n';
++            }
++            frameSummary << ni << ',' << stamp << ',' << state << ','
++                         << keypoints.size() << ',' << associated << '\n';
++
+     #ifdef COMPILEDWITHC11
+             std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();

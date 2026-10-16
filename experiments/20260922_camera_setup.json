@@ -1,0 +1,11 @@
+{
+  "parent_camera_device_id": "P_MAIN_CAM",
+  "parent_camera_model": "DJI Osmo Action 6",
+  "fov_setting": "Standard (Dewarp)",
+  "eis": "Off",
+  "housing": "DJI official waterproof case",
+  "medium": "underwater",
+  "source": "user-provided camera setup; 2026-09-23",
+  "in_water_intrinsics": null,
+  "distortion_coefficients": null
+}

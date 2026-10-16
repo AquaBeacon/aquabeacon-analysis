@@ -1,0 +1,355 @@
+{
+  "status": "provisional_limited_viewpoint_diversity",
+  "experiment_id": "20260924_parent_camera_calibration",
+  "camera_model_from_video_metadata": "DJI OsmoAction6",
+  "camera_device_id_assumed": "P_MAIN_CAM",
+  "medium_user_reported": "underwater",
+  "waterproof_housing_user_reported": true,
+  "image_size_px": [
+    1920,
+    1080
+  ],
+  "camera_model": "OpenCV pinhole with radial-tangential distortion",
+  "camera_matrix_px": [
+    [
+      1007.221786949235,
+      0.0,
+      970.4262916716998
+    ],
+    [
+      0.0,
+      1008.2156966228548,
+      540.6504160064836
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "distortion_order": [
+    "k1",
+    "k2",
+    "p1",
+    "p2",
+    "k3"
+  ],
+  "distortion_coefficients": [
+    0.364595412211401,
+    0.343791267410154,
+    -0.00607885408676629,
+    0.0025108632436118238,
+    0.0
+  ],
+  "chessboard_inner_corners": [
+    4,
+    5
+  ],
+  "square_size_m_nominal": 0.04,
+  "square_size_measured_m": null,
+  "board_flatness_verified": false,
+  "source_video": "data/raw/DJI_20260924183857_0021_D.MP4",
+  "source_video_sha256": "dde2b2933ed7cd5ede723884a5fcdb1466cd6abe972063ccd27f70ee55395195",
+  "source_duration_s": 33.344,
+  "source_fps": "120000/1001",
+  "sampling_interval_s": 0.5,
+  "detection_count": 43,
+  "selected_time_window_s": [
+    0.5,
+    32.5
+  ],
+  "selected_frame_times_s": [
+    0.5,
+    2.5,
+    3.0,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    10.0,
+    10.5,
+    11.5,
+    14.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0,
+    30.5,
+    31.0,
+    31.5,
+    32.0,
+    32.5
+  ],
+  "selected_view_count": 34,
+  "rms_reprojection_error_px": 0.3781603887538766,
+  "median_view_rms_px": 0.35412876307964325,
+  "max_view_rms_px": 0.5941582918167114,
+  "calibration_flags": [
+    "CALIB_FIX_K3"
+  ],
+  "corner_detection": "findChessboardCornersSB at half resolution, cornerSubPix on full resolution",
+  "source_git_commit_sha": "3d3724b5fafc2791d763615940716a6d598831a8",
+  "limitations": [
+    "Pattern poses and image coverage may not constrain intrinsics sufficiently",
+    "User confirmed 40 mm square spacing, but board flatness and caliper measurement are unverified",
+    "Existing 2026-09-22 proxy videos were not available in this workspace for direct frame comparison",
+    "Selected early frames improve viewpoint diversity; independent board flatness and camera-mode verification remain outstanding",
+    "Corner-based reprojection RMS is not ground-truth directional or 3D accuracy"
+  ],
+  "camera_device_ids_user_reported_same_camera_and_settings": [
+    "P_MAIN_CAM",
+    "C_MAIN_CAM"
+  ],
+  "common_capture_settings_user_confirmed": true,
+  "capture_settings_reference": "experiments/20260922_camera_setup.json",
+  "square_spacing_m_user_confirmed": 0.04,
+  "image_size_1280x720_px_if_full_frame_resized": [
+    1280,
+    720
+  ],
+  "camera_matrix_1280x720_px_if_full_frame_resized": [
+    [
+      671.48119129949,
+      0.0,
+      646.9508611144665
+    ],
+    [
+      0.0,
+      672.1437977485698,
+      360.4336106709891
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "proxy_source_video": "data/raw/DJI_20260924183857_0021_D.LRF",
+  "proxy_source_video_sha256": "dda8fe1654deb917f3ffa8078696d4739ea6b40d69e04e705fd380107577eba9",
+  "proxy_image_size_px": [
+    1280,
+    720
+  ],
+  "proxy_direct_camera_matrix_px": [
+    [
+      671.4928071645874,
+      0.0,
+      646.1748800271314
+    ],
+    [
+      0.0,
+      672.2714627042396,
+      360.67668886119225
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "proxy_direct_distortion_coefficients": [
+    0.36299078889677444,
+    0.35047393383599057,
+    -0.005888261119551278,
+    0.0018919520831984344,
+    0.0
+  ],
+  "proxy_direct_rms_reprojection_error_px": 0.2378495107418346,
+  "proxy_selected_view_count": 35,
+  "proxy_selected_frame_times_s": [
+    0.5,
+    2.5,
+    3.0,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    10.0,
+    10.5,
+    11.5,
+    14.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0,
+    30.5,
+    31.0,
+    31.5,
+    32.0,
+    32.5
+  ],
+  "proxy_to_main_frame_geometry": "Same field of view in matched frames at 22,24,26,28,30,32 s; proxy corner coordinates times 1.5 differed mostly by small frame-time motion; per-frame corner offset spread <=0.32 px in 1920 coordinates",
+  "target_spec_sha256": "491dcfe24c1641529c5dce0cbddad5b274a2da2c225222edc19b7324549d45f0",
+  "capture_settings_reference_sha256": "99bafc6fbc4727375379b8da349b672a14f6794381261cfa39a6585be89327e2",
+  "input_calibration_sha256": null,
+  "opencv_version": "5.0.0",
+  "late_only_diagnostic": {
+    "camera_matrix_px": [
+      [
+        988.2362748403522,
+        0.0,
+        971.6507291292137
+      ],
+      [
+        0.0,
+        989.9564218536403,
+        546.1335184933616
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "distortion_coefficients": [
+      0.3585536129468112,
+      0.3107087078395769,
+      -0.0033121760378373353,
+      0.002537650018852674,
+      0.0
+    ],
+    "selected_frame_times_s": [
+      22.0,
+      22.5,
+      23.0,
+      23.5,
+      24.0,
+      24.5,
+      25.0,
+      25.5,
+      26.0,
+      26.5,
+      27.0,
+      27.5,
+      28.0,
+      28.5,
+      29.0,
+      29.5,
+      30.0,
+      30.5,
+      31.0,
+      31.5,
+      32.0,
+      32.5
+    ],
+    "selected_view_count": 22,
+    "rms_reprojection_error_px": 0.36907200649836097,
+    "proxy_direct_camera_matrix_px": [
+      [
+        660.9278374723141,
+        0.0,
+        646.7333383248969
+      ],
+      [
+        0.0,
+        662.184343826635,
+        364.2277171865172
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "proxy_direct_distortion_coefficients": [
+      0.3597979639096823,
+      0.32142696586627556,
+      -0.0029636380376799956,
+      0.0018263556258372629,
+      0.0
+    ],
+    "proxy_direct_rms_reprojection_error_px": 0.22959401651517752,
+    "proxy_selected_view_count": 22,
+    "proxy_selected_frame_times_s": [
+      22.0,
+      22.5,
+      23.0,
+      23.5,
+      24.0,
+      24.5,
+      25.0,
+      25.5,
+      26.0,
+      26.5,
+      27.0,
+      27.5,
+      28.0,
+      28.5,
+      29.0,
+      29.5,
+      30.0,
+      30.5,
+      31.0,
+      31.5,
+      32.0,
+      32.5
+    ]
+  },
+  "proxy_median_view_rms_px": 0.22895626723766327,
+  "proxy_max_view_rms_px": 0.3594730794429779,
+  "selected_early_proxy_frame_times_s": [
+    0.5,
+    2.5,
+    3.0,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    10.0,
+    10.5,
+    11.5,
+    14.5
+  ],
+  "early_frame_selection": "Proxy checkerboard detected, board-region Laplacian variance >=180, and per-view PnP reprojection RMS <=0.5 px under late-only proxy model; 0.5-second sampling. Rejected 9.5 s false corner detection and blurred/high-residual observations.",
+  "selection_diagnostic": {
+    "late_only_proxy_fx_px": 660.9278374723141,
+    "late_only_proxy_rms_px": 0.22959401651517752,
+    "combined_proxy_even_fx_px": 670.7,
+    "combined_proxy_odd_fx_px": 672.12,
+    "temporal_group_omission_fx_range_px": [
+      670.74,
+      672.17
+    ]
+  },
+  "selected_time_intervals_s": [
+    [
+      0.5,
+      14.5
+    ],
+    [
+      22.0,
+      32.5
+    ]
+  ]
+}

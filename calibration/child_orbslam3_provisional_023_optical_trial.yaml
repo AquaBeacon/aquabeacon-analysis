@@ -1,0 +1,49 @@
+%YAML:1.0
+# EXPERIMENTAL ONLY: DJI Osmo Action 6 Standard (Dewarp), underwater housing.
+# Effective horizontal FOV assumed 90 deg at 1280x720; no measured intrinsics.
+# fx=fy=640 px, principal point=image center, residual distortion set zero.
+# Camera-to-IMU rotation uses gyro fit from 023 localization manifest, with
+# DJI IMU-to-optical axes trial from parent_camera_imu_provisional.json. Translation assumed zero.
+# IMU noise values are trial settings, not sensor characterization.
+File.version: "1.0"
+Camera.type: "PinHole"
+Camera1.fx: 640.0
+Camera1.fy: 640.0
+Camera1.cx: 640.0
+Camera1.cy: 360.0
+Camera1.k1: 0.0
+Camera1.k2: 0.0
+Camera1.p1: 0.0
+Camera1.p2: 0.0
+Camera.width: 1280
+Camera.height: 720
+Camera.fps: 30
+Camera.RGB: 0
+IMU.T_b_c1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [-0.011875725,  0.116487353, -0.993121173, 0.0,
+           0.849034619, -0.523469606, -0.071552690, 0.0,
+          -0.528203732, -0.844043997, -0.092685214, 0.0,
+           0.0, 0.0, 0.0, 1.0]
+IMU.NoiseGyro: 0.02
+IMU.NoiseAcc: 0.2
+IMU.GyroWalk: 0.001
+IMU.AccWalk: 0.01
+IMU.Frequency: 100.0
+ORBextractor.nFeatures: 1500
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 12
+ORBextractor.minThFAST: 5
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5
+Viewer.ViewpointF: 500.0

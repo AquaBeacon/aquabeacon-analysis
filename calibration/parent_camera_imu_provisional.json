@@ -1,0 +1,11 @@
+{
+  "camera_id": "P_MAIN_CAM",
+  "status": "hypothetical_not_measured",
+  "source_frame": "camera optical: +x right, +y down, +z forward",
+  "target_frame": "P_MAIN camera IMU sensor axes",
+  "optical_to_imu_rotation_matrix": [[0, -1, 0], [1, 0, 0], [0, 0, 1]],
+  "assumption": "IMU +x is image up, +y is image right, +z is optical forward",
+  "basis": "plausible axis assignment from gravity projection; not a measured mounting rotation",
+  "yaw_reference": "horizontal projection of optical forward at first fused parent attitude sample",
+  "note": "Outputs are conditional gravity-frame angles, not compass bearings or calibrated optical angles"
+}

@@ -1,0 +1,19 @@
+{
+  "method": "Independent manual estimates from the exact sampled source_frame_index in full 1280x720 proxy frames. Coordinates are approximate (about 5-10 px); these frames are not EKF anchors.",
+  "20260922_cmain_022": [
+    {"video_time_s": 130, "visible": true, "x_px": 778, "y_px": 195},
+    {"video_time_s": 140, "visible": true, "x_px": 875, "y_px": 80}
+  ],
+  "20260922_cmain_023": [
+    {"video_time_s": 10, "visible": true, "x_px": 915, "y_px": 485},
+    {"video_time_s": 30, "visible": true, "x_px": 965, "y_px": 475},
+    {"video_time_s": 60, "visible": false},
+    {"video_time_s": 70, "visible": false},
+    {"video_time_s": 120, "visible": true, "x_px": 895, "y_px": 331},
+    {"video_time_s": 140, "visible": true, "x_px": 860, "y_px": 330}
+  ],
+  "20260922_cmain_024": [
+    {"video_time_s": 50, "visible": true, "x_px": 782, "y_px": 205},
+    {"video_time_s": 80, "visible": true, "x_px": 1026, "y_px": 328}
+  ]
+}

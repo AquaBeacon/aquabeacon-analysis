@@ -1,0 +1,37 @@
+<!doctype html><html lang="ja"><meta charset="utf-8">
+<title>子機テクスチャ付き3Dマップ __EXPERIMENT__</title>
+<style>body{margin:0;background:#111b24;color:#eef4f7;font:15px system-ui}header{padding:14px 20px}h1{font-size:20px;margin:0 0 8px}label{margin-right:20px}input{vertical-align:middle}canvas{display:block;width:100%;height:75vh}p{margin:8px 0;color:#bed0dc}#status{font-variant-numeric:tabular-nums}</style>
+<header><h1>子機画像を投影した3Dマップ：__EXPERIMENT__</h1>
+<label>表示画像 <input id="frame" type="range" min="0" value="0"><span id="status"></span></label>
+<label><input id="all" type="checkbox" checked>全画像を重ねる</label>
+<label><input id="points" type="checkbox">疎点群</label>
+<label><input id="planes" type="checkbox" checked>画像平面</label>
+<button id="reset">視点を戻す</button>
+<p>ドラッグ：回転 ／ ホイール：拡大縮小。画像を切り替えて、貼り付け位置を確認できます。</p>
+<p>画像平面：推定姿勢と可視点の中央値深度で画像全体を配置。チェックを外すと疎点群の局所三角形へ投影。最大Atlas地図のみ、単眼尺度は未確定です。</p></header>
+<canvas id="view"></canvas><script>
+const data=__DATA__;
+const canvas=document.getElementById('view'), gl=canvas.getContext('webgl',{preserveDrawingBuffer:true});
+if(!gl)throw Error('WebGLを利用できません');
+const vertex=`attribute vec3 xyz;attribute vec2 uv;varying vec2 tex;uniform float yaw,pitch,dist,aspect;
+void main(){vec3 p=xyz;float c=cos(yaw),s=sin(yaw);p=vec3(c*p.x+s*p.z,p.y,-s*p.x+c*p.z);c=cos(pitch);s=sin(pitch);p=vec3(p.x,c*p.y-s*p.z,s*p.y+c*p.z);p.z-=dist;float f=1.73205;gl_Position=vec4(p.x*f/aspect,p.y*f,-1.0002*p.z-0.020002,-p.z);gl_PointSize=2.;tex=uv;}`;
+const fragment=`precision mediump float;varying vec2 tex;uniform sampler2D image;uniform bool textured;void main(){gl_FragColor=textured?texture2D(image,tex):vec4(.2,.85,.8,1.);}`;
+function shader(type,source){const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s;}
+const program=gl.createProgram();gl.attachShader(program,shader(gl.VERTEX_SHADER,vertex));gl.attachShader(program,shader(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));gl.useProgram(program);
+const pos=gl.getAttribLocation(program,'xyz'),uv=gl.getAttribLocation(program,'uv');
+const uniforms={};for(const name of ['yaw','pitch','dist','aspect','textured','image'])uniforms[name]=gl.getUniformLocation(program,name);
+function buffer(array){const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(array),gl.STATIC_DRAW);return b;}
+function normalized(array,map){const result=[],center=map?data.map_center:data.center,radius=map?data.map_radius:data.radius;for(let i=0;i<array.length;i+=3){const p=[0,1,2].map(j=>(array[i+j]-center[j])/radius);for(let j=0;j<3;j++)result.push(p.reduce((s,v,k)=>s+v*data.basis[k][j],0));}return result;}
+function geometry(xyz,tex,map=false){return {pos:buffer(normalized(xyz,map)),uv:buffer(tex),count:xyz.length/3};}
+const cloud=geometry(data.points,new Array(data.points.length/3*2).fill(0),true),planeCloud=geometry(data.points,new Array(data.points.length/3*2).fill(0));
+const surfaces=data.surfaces.map(s=>({...s,...geometry(s.xyz,s.uv,true),plane:geometry(s.plane_xyz,s.plane_uv),texture:gl.createTexture(),ready:false}));
+for(const surface of surfaces){const image=new Image();image.onload=()=>{gl.bindTexture(gl.TEXTURE_2D,surface.texture);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,image);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);surface.ready=true;draw();};image.src='data:image/jpeg;base64,'+surface.image;}
+let yaw=.4,pitch=-.25,dist=2,drag=null;
+const slider=document.getElementById('frame');slider.max=surfaces.length-1;
+function drawGeometry(g,mode,textured){gl.bindBuffer(gl.ARRAY_BUFFER,g.pos);gl.enableVertexAttribArray(pos);gl.vertexAttribPointer(pos,3,gl.FLOAT,false,0,0);gl.bindBuffer(gl.ARRAY_BUFFER,g.uv);gl.enableVertexAttribArray(uv);gl.vertexAttribPointer(uv,2,gl.FLOAT,false,0,0);gl.uniform1i(uniforms.textured,textured);if(textured){gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,g.texture);gl.uniform1i(uniforms.image,0);}gl.drawArrays(mode,0,g.count);}
+function draw(){const ratio=devicePixelRatio||1;canvas.width=Math.round(canvas.clientWidth*ratio);canvas.height=Math.round(canvas.clientHeight*ratio);gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(.045,.075,.105,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.uniform1f(uniforms.yaw,yaw);gl.uniform1f(uniforms.pitch,pitch);gl.uniform1f(uniforms.dist,dist);gl.uniform1f(uniforms.aspect,canvas.width/canvas.height);const i=+slider.value;const shown=document.getElementById('all').checked?surfaces:[surfaces[i]];for(const s of shown)if(s.ready)drawGeometry(document.getElementById('planes').checked?{...s.plane,texture:s.texture}:s,gl.TRIANGLES,true);if(document.getElementById('points').checked)drawGeometry(document.getElementById('planes').checked?planeCloud:cloud,gl.POINTS,false);document.getElementById('status').textContent=` ${i+1}/${surfaces.length} · ${surfaces[i].count/3}三角形 · UTC ns ${surfaces[i].time}`;}
+canvas.onpointerdown=e=>{drag=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId);};canvas.onpointermove=e=>{if(!drag)return;yaw+=(e.clientX-drag[0])*.006;pitch+=(e.clientY-drag[1])*.006;drag=[e.clientX,e.clientY];draw();};canvas.onpointerup=()=>drag=null;
+canvas.addEventListener('wheel',e=>{e.preventDefault();dist=Math.max(.1,Math.min(50,dist*Math.exp(e.deltaY*.001)));draw();},{passive:false});
+for(const id of ['frame','all','points','planes']){document.getElementById(id).oninput=draw;document.getElementById(id).onchange=draw;}
+document.getElementById('reset').onclick=()=>{yaw=.4;pitch=-.25;dist=2;draw();};window.onresize=draw;draw();
+</script></html>

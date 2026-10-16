@@ -1,0 +1,21 @@
+project:
+  name: aquabeacon-analysis
+  coordinate_frame: ENU
+  time_unit: s
+  distance_unit: m
+  angle_unit: rad
+
+analysis:
+  ground_truth_available: false
+  enable_static_stability_metrics: true
+  enable_loop_closure_metrics: true
+  enable_sim3_diagnostic_alignment: true
+
+mapping:
+  backend: colmap
+  use_position_prior: true
+  use_orientation_prior_when_available: true
+
+visualization:
+  enable_blender_export: true
+  blender_is_evaluation_backend: false

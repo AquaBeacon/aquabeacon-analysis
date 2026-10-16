@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+license = { text = "Apache-2.0" }
+name = "aquabeacon-analysis"
+version = "0.1.0"
+description = "Post-processing tools for AquaBeacon experiment data"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+media = ["imageio-ffmpeg==0.6.0"]
+analysis = ["matplotlib>=3.9", "numpy>=2.0"]
+vision = ["opencv-python-headless>=4.10", "numpy>=2.0"]
+mapping = ["scipy>=1.14", "trimesh>=4.0", "Pillow>=10"]
+dev = ["pytest>=8.0", "ruff>=0.11"]
+
+[project.scripts]
+aquabeacon-analysis = "aquabeacon_analysis.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

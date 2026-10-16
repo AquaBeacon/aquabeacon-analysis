@@ -1,0 +1,19 @@
+diff --git a/Examples/Monocular/mono_euroc.cc b/Examples/Monocular/mono_euroc.cc
+--- a/Examples/Monocular/mono_euroc.cc
++++ b/Examples/Monocular/mono_euroc.cc
+@@ -20,4 +20,5 @@
+ #include<algorithm>
+ #include<fstream>
+ #include<chrono>
++#include<cstdlib>
+ #include<iomanip>
+@@ -251,7 +252,8 @@ void LoadImages(const string &strImagePath, const string &strPathTimes,
+         if(!s.empty())
+         {
+             stringstream ss;
+             ss << s;
+-            vstrImages.push_back(strImagePath + "/" + ss.str() + ".png");
++            const char* extension = std::getenv("ORB_IMAGE_EXTENSION");
++            vstrImages.push_back(strImagePath + "/" + ss.str() + (extension ? extension : ".png"));
+             double t;
+             ss >> t;

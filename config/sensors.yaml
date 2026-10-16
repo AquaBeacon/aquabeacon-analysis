@@ -1,0 +1,43 @@
+parent:
+  csv_columns:
+    timestamp: null
+    gps_time: null
+    latitude: null
+    longitude: null
+    altitude: null
+    acoustic_tx: null
+  imu_source: spresense_or_body
+
+child:
+  csv_columns:
+    timestamp: null
+    rtc_time: null
+    acoustic_rx: null
+    tof: null
+    depth: null
+  imu_source: body_or_camera
+
+spresense:
+  mounted_on: P_MAIN
+  csv_columns:
+    timestamp: null
+    ax: null
+    ay: null
+    az: null
+    gx: null
+    gy: null
+    gz: null
+    qw: null
+    qx: null
+    qy: null
+    qz: null
+
+cameras:
+  parent:
+    device_id: P_MAIN_CAM
+    role: localization
+    start_time_source: recording_start
+  child:
+    device_id: C_MAIN_CAM
+    role: mapping
+    start_time_source: recording_start

@@ -1,0 +1,10 @@
+{
+  "salinity_ppt": 35.0,
+  "surface_pressure_mbar": 1013.25,
+  "density_kg_m3": 1025.0,
+  "temperature_column": "C_MAIN_HEALTH_RANGE.temp_c",
+  "temperature_interpretation": "assumed ambient water temperature; unverified",
+  "parent_temperature_policy": "use C_MAIN temperature at matched shot because P_MAIN temp_c is unavailable",
+  "tof_interpretation": "one-way acoustic travel time",
+  "fixed_electronic_delay_us": null
+}

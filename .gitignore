@@ -1,0 +1,123 @@
+# Experimental data
+data/raw/**
+data/interim/**
+data/processed/**
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Video / camera
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.avi
+*.AVI
+*.mkv
+*.MKV
+*.lrv
+*.LRV
+
+# Extracted frames
+data/**/frames/
+data/**/images/
+
+# Large logs / robotics data
+*.bag
+*.db3
+*.mcap
+
+# Photogrammetry / SLAM generated data
+*.ply
+*.pcd
+*.las
+*.laz
+*.obj
+*.stl
+*.db
+*.database
+workspace/
+colmap_workspace/
+openmvs_workspace/
+
+# Generated results
+results/**
+!results/.gitkeep
+!results/**/*.md
+!results/**/*.csv
+!results/**/*.png
+!results/**/*.svg
+
+# Blender generated outputs
+blender/output/
+blender/cache/
+blender/render/
+*.blend1
+*.blend2
+*.blend@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+tmp/
+temp/
+
+# Secrets / local machine config
+.env
+.env.*
+!.env.example
+config/local.yaml
+config/calibration.local.yaml
+# Python packaging artifacts
+*.egg-info/
+
+# OSS workspace: local environments, credentials and scratch artifacts
+.env
+.env.*
+!.env.example
+.local/
+.claude/
+.agents/
+.openai/
+.codex_tmp/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+.venv-mcp/
+.pio/
+.deps/
+node_modules/
+**/.history/
+**/*-backups/
+*.kicad_prl
+*.blend1
+*.blend2
+Thumbs.db
+.DS_Store
+/tmp_doc_qa/
+/results/
