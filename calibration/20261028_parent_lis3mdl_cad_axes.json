@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "provisional_cad_and_user_mounting",
+  "device": "Adafruit LIS3MDL STEMMA QT/Qwiic product 4479",
+  "rig": "calibration/rigs/cad_20261028.json",
+  "imu_axes": "calibration/20261029_parent_axis_011_axes.json",
+  "user_evidence_date": "2026-10-30",
+  "user_evidence": [
+    "LIS3MDL board X direction faces the GNSS receiver board",
+    "Parent calibration forward is GNSS receiver toward Spresense",
+    "Estimate magnetic heading without requiring accuracy validation"
+  ],
+  "R_frd_from_cad": [[1,0,0],[0,-1,0],[0,0,-1]],
+  "R_cad_from_mag": [[1,0,0],[0,1,0],[0,0,1]],
+  "R_frd_from_mag": [[1,0,0],[0,-1,0],[0,0,-1]],
+  "basis": {
+    "cad_forward": "+X: nominal board-aligned GNSS-to-Spresense direction",
+    "cad_right": "-Y",
+    "cad_down": "-Z",
+    "mag_x": "+CAD X toward GNSS from LIS3MDL",
+    "mag_y": "+CAD Y from right-handed axes",
+    "mag_z": "+CAD Z: assume component/silkscreen side up as CAD",
+    "nominal_axis_assumption": "Directions select orthogonal assembly axes, not exact lines between board centers. No measured in-plane mounting angle is available.",
+    "cad_mesh_bounds_centers_m": {
+      "gnss_receiver": [-0.015878,0.06841,0.08695],
+      "spresense": [0.07067,0.05716,0.083525],
+      "magnetometer": [-0.05111,0.0927,0.077065]
+    },
+    "vendor_board_axes": "+sensor X=+EAGLE Y, +sensor Y=-EAGLE X, +sensor Z=board top normal",
+    "cad_orientation_override": "CAD Rz(90) composed with silkscreen axes would give sensor +X=-CAD X. User mounting takes precedence: use 180 degree in-plane reversal of the modeled board orientation. CAD positions are not changed."
+  },
+  "sources": [
+    "https://www.adafruit.com/product/4479",
+    "https://learn.adafruit.com/lis3mdl-triple-axis-magnetometer/downloads",
+    "https://www.st.com/resource/en/datasheet/lis3mdl.pdf"
+  ],
+  "vendor_board_file": "parts/parent/interior/cots/adafruit_lis3mdl/ref/Adafruit LIS3MDL.brd",
+  "magnetic_input": "logged corrected_x/y/z in microtesla, calibration_generation=1; no second bias correction",
+  "camera_mount": "R_frd_from_spresense from axis011 composed with inverse of Oct28 run-specific R_camera_imu",
+  "tilt_policy": "Oct28 camera quaternion SLERP within 0.1s brackets; otherwise corrected Spresense accelerometer tilt within 0.1s brackets. No gap extrapolation.",
+  "accuracy_validated": false,
+  "declination_applied": false,
+  "measurement_centers_calibrated": false
+}

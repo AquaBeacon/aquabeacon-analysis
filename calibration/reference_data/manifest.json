@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-31",
+  "purpose": "Portable calibration evidence; derived observations, not operational raw data",
+  "source_analysis_git_head": "f14369324f937bd145b87851c5aadbd5b4884deb",
+  "source_worktree_dirty": true,
+  "firmware_reader_commit": "ab7857cf7e246bb388e9d28e310e677ca0499c69",
+  "limitations": [
+    "Camera detections can be refit numerically; original videos required to repeat corner detection.",
+    "Axis data preserve recorded values and original timestamps; clip clock fits must not be reused for new acquisitions.",
+    "Copied reports retain original result-relative links; original media are not included."
+  ],
+  "files": [
+    {
+      "path": "calibration/reference_data/camera/contact_sheet.jpg",
+      "sha256": "a3c394346c4dfc4b49462e1a3d9014c8272244e2fc788a6751cb73dc74e26b99",
+      "bytes": 254403,
+      "source_path": "results/20260924_parent_camera_calibration/contact_sheet.jpg",
+      "source_sha256": "a3c394346c4dfc4b49462e1a3d9014c8272244e2fc788a6751cb73dc74e26b99"
+    },
+    {
+      "path": "calibration/reference_data/camera/observations.npz",
+      "sha256": "36eb4b479cfb7df50bc381167abb901d76f0285d6b76ff82cfb4006ae3e1bd9a",
+      "bytes": 7105,
+      "source_path": "results/20260924_parent_camera_calibration/observations.npz",
+      "source_sha256": "36eb4b479cfb7df50bc381167abb901d76f0285d6b76ff82cfb4006ae3e1bd9a"
+    },
+    {
+      "path": "calibration/reference_data/camera/proxy_early_observations.npz",
+      "sha256": "ac466b6352f426665e1082a78337aa69460bca4e2ceb74bbc6d153a6c1642af4",
+      "bytes": 3683,
+      "source_path": "results/20260924_parent_camera_calibration/proxy_early_observations.npz",
+      "source_sha256": "ac466b6352f426665e1082a78337aa69460bca4e2ceb74bbc6d153a6c1642af4"
+    },
+    {
+      "path": "calibration/reference_data/camera/proxy_observations.npz",
+      "sha256": "c9c7314db1b6318ed486af46399cf2cd28965159adea828f670014b10b19946c",
+      "bytes": 3618,
+      "source_path": "results/20260924_parent_camera_calibration/proxy_observations.npz",
+      "source_sha256": "c9c7314db1b6318ed486af46399cf2cd28965159adea828f670014b10b19946c"
+    },
+    {
+      "path": "calibration/reference_data/camera/proxy_selected_observations.npz",
+      "sha256": "c46286c789260ffedca3569f639fcb7d42b180aff30675801b1aed03c526a7ad",
+      "bytes": 6198,
+      "source_path": "results/20260924_parent_camera_calibration/proxy_selected_observations.npz",
+      "source_sha256": "c46286c789260ffedca3569f639fcb7d42b180aff30675801b1aed03c526a7ad"
+    },
+    {
+      "path": "calibration/reference_data/child/manifest.json",
+      "sha256": "1b82de261448babc50c3f86141f459b83eadbf67dea0de3384002c0291c91442",
+      "bytes": 7851,
+      "source_path": "results/20261029_child_axis_003/calibration_clip/manifest.json",
+      "source_sha256": "1b82de261448babc50c3f86141f459b83eadbf67dea0de3384002c0291c91442"
+    },
+    {
+      "path": "calibration/reference_data/child/pose_1_imu.csv",
+      "sha256": "64f3a41def6c0eda87e3fd5ed671d666f6862ae3639039bdc9ca16895f766d74",
+      "bytes": 301802,
+      "source_path": "results/20261029_child_axis_003/calibration_clip/pose_1_imu.csv",
+      "source_sha256": "64f3a41def6c0eda87e3fd5ed671d666f6862ae3639039bdc9ca16895f766d74"
+    },
+    {
+      "path": "calibration/reference_data/child/pose_2_imu.csv",
+      "sha256": "f25fa785a58c8ee6c7b7e520ee6b0077f73e66f9a60bf41f10d04be33c01b693",
+      "bytes": 231459,
+      "source_path": "results/20261029_child_axis_003/calibration_clip/pose_2_imu.csv",
+      "source_sha256": "f25fa785a58c8ee6c7b7e520ee6b0077f73e66f9a60bf41f10d04be33c01b693"
+    },
+    {
+      "path": "calibration/reference_data/child/pose_3_imu.csv",
+      "sha256": "ef9e266f88df5a3af6e08b62be8caa92811e73528b52c415b68a4e34cecbd49d",
+      "bytes": 188524,
+      "source_path": "results/20261029_child_axis_003/calibration_clip/pose_3_imu.csv",
+      "source_sha256": "ef9e266f88df5a3af6e08b62be8caa92811e73528b52c415b68a4e34cecbd49d"
+    },
+    {
+      "path": "calibration/reference_data/child/pose_4_imu.csv",
+      "sha256": "6d46ae6cc926bf57a2367c85b8ae2b666defd01af17e488285f4ebb862af359a",
+      "bytes": 254838,
+      "source_path": "results/20261029_child_axis_003/calibration_clip/pose_4_imu.csv",
+      "source_sha256": "6d46ae6cc926bf57a2367c85b8ae2b666defd01af17e488285f4ebb862af359a"
+    },
+    {
+      "path": "calibration/reference_data/child/preview_15s.jpg",
+      "sha256": "9f8159c1d684d683e8687660d1aac39c48b666ceeec9733f18fae17f9ae8433c",
+      "bytes": 110502,
+      "source_path": "results/20261029_child_axis_003/calibration_clip/preview_15s.jpg",
+      "source_sha256": "9f8159c1d684d683e8687660d1aac39c48b666ceeec9733f18fae17f9ae8433c"
+    },
+    {
+      "path": "calibration/reference_data/child/report.md",
+      "sha256": "b753c60491513e5d6704cd7ae559e8dcafa96356f59322220660478c45ea8460",
+      "bytes": 5907,
+      "source_path": "results/20261029_child_axis_003/calibration_clip/report.md",
+      "source_sha256": "b753c60491513e5d6704cd7ae559e8dcafa96356f59322220660478c45ea8460"
+    },
+    {
+      "path": "calibration/reference_data/child/axis_audit/report.md",
+      "sha256": "02af262a7dab1193ba3fc27e7b296dde5d2d6c4041cb98db18e0375c7727f9ad",
+      "bytes": 6078,
+      "source_path": "results/20261029_child_axis_003/axis_calibration/report.md",
+      "source_sha256": "02af262a7dab1193ba3fc27e7b296dde5d2d6c4041cb98db18e0375c7727f9ad"
+    },
+    {
+      "path": "calibration/reference_data/child/axis_audit/manifest.json",
+      "sha256": "58581fd93971d20719df8c8fe0654e180693be26db0348f9ad591995f558f45c",
+      "bytes": 9283,
+      "source_path": "results/20261029_child_axis_003/axis_calibration/manifest.json",
+      "source_sha256": "58581fd93971d20719df8c8fe0654e180693be26db0348f9ad591995f558f45c"
+    },
+    {
+      "path": "calibration/reference_data/child/axis_audit/health_review.json",
+      "sha256": "24e901b4bb5541d76ac8cc350012c672241ecd5ad4840b7409333c60d5e2937d",
+      "bytes": 19241,
+      "source_path": "results/20261029_child_axis_003/axis_calibration/health_review.json",
+      "source_sha256": "24e901b4bb5541d76ac8cc350012c672241ecd5ad4840b7409333c60d5e2937d"
+    },
+    {
+      "path": "calibration/reference_data/parent/manifest.json",
+      "sha256": "c47ed71544ffdf164e9244aa53672615105d26e76ffce065836790d4626466ca",
+      "bytes": 20603,
+      "source_path": "results/20261029_parent_axis_011/axis_calibration/manifest.json",
+      "source_sha256": "c47ed71544ffdf164e9244aa53672615105d26e76ffce065836790d4626466ca"
+    },
+    {
+      "path": "calibration/reference_data/parent/pose_1_imu.csv",
+      "sha256": "c679ce037fd7c54121782341299f76834550ebf56d58f1a18527fdcc5563702f",
+      "bytes": 2464322,
+      "source_path": "results/20261029_parent_axis_011/axis_calibration/pose_1_imu.csv",
+      "source_sha256": "c679ce037fd7c54121782341299f76834550ebf56d58f1a18527fdcc5563702f"
+    },
+    {
+      "path": "calibration/reference_data/parent/pose_2_imu.csv",
+      "sha256": "2a1eb3df5bcc2014134c1b7aa82df7b0991ddb6f424a5a7876d4c3c56256eb67",
+      "bytes": 3156728,
+      "source_path": "results/20261029_parent_axis_011/axis_calibration/pose_2_imu.csv",
+      "source_sha256": "2a1eb3df5bcc2014134c1b7aa82df7b0991ddb6f424a5a7876d4c3c56256eb67"
+    },
+    {
+      "path": "calibration/reference_data/parent/pose_3_imu.csv",
+      "sha256": "49b14a3a4039e6c87cb7700c2508bb56d41ae24a868f2fe18971580be8149d5f",
+      "bytes": 2375341,
+      "source_path": "results/20261029_parent_axis_011/axis_calibration/pose_3_imu.csv",
+      "source_sha256": "49b14a3a4039e6c87cb7700c2508bb56d41ae24a868f2fe18971580be8149d5f"
+    },
+    {
+      "path": "calibration/reference_data/parent/pose_4_imu.csv",
+      "sha256": "142255cc61adb9c1c34e881fc3dde7826500f3ead03889ed8f9db5380ecf6534",
+      "bytes": 2747842,
+      "source_path": "results/20261029_parent_axis_011/axis_calibration/pose_4_imu.csv",
+      "source_sha256": "142255cc61adb9c1c34e881fc3dde7826500f3ead03889ed8f9db5380ecf6534"
+    },
+    {
+      "path": "calibration/reference_data/parent/preview_8s.jpg",
+      "sha256": "a8e61b82925fb1f9f8ea550d8f92f70471636cd4b8de24b6f07123abd692ee19",
+      "bytes": 34859,
+      "source_path": "results/20261029_parent_axis_011/axis_calibration/preview_8s.jpg",
+      "source_sha256": "a8e61b82925fb1f9f8ea550d8f92f70471636cd4b8de24b6f07123abd692ee19"
+    },
+    {
+      "path": "calibration/reference_data/parent/report.md",
+      "sha256": "c6c12d99faa79eacb8d1b7d66435e516ad7a083f6ecd637d8eea9be03b163ced",
+      "bytes": 6864,
+      "source_path": "results/20261029_parent_axis_011/axis_calibration/report.md",
+      "source_sha256": "c6c12d99faa79eacb8d1b7d66435e516ad7a083f6ecd637d8eea9be03b163ced"
+    },
+    {
+      "path": "calibration/20261028_parent_lis3mdl_cad_axes.json",
+      "sha256": "b45d0ed7af089e37691f05198af9039538e17b4b187a947d18d61436bd871a88",
+      "bytes": 2435
+    },
+    {
+      "path": "calibration/20261029_child_axis_003_camera_imu.json",
+      "sha256": "0ec03eb2125f9ac15e2b5313347dfeec7009d1d8c74f53c29fe5fe0f9d1e662c",
+      "bytes": 3664
+    },
+    {
+      "path": "calibration/20261029_child_axis_003_imu_frd.json",
+      "sha256": "37150d3396b8c1a9af66dee70ef993454842d9ed55edb36e2022e994da0b0823",
+      "bytes": 8970
+    },
+    {
+      "path": "calibration/20261029_parent_axis_011_axes.json",
+      "sha256": "f93f5109cd8fe49e839d7dc6b7f7ab3d8ae169634f5d3744f221e9491fb4525a",
+      "bytes": 14151
+    },
+    {
+      "path": "calibration/camera_defaults.json",
+      "sha256": "7558d2d4181015685d280ea019594d2e06bd669833278cf9c418113029df7eed",
+      "bytes": 990
+    },
+    {
+      "path": "calibration/child_mount_20261028_actual.json",
+      "sha256": "12faf9b582843409545ad653501c71e58757d9ab5acda623ce0a0ebcd46b2e7b",
+      "bytes": 1541
+    },
+    {
+      "path": "calibration/experiment_body_geometry_20260922.json",
+      "sha256": "49aa27fa37ee014400e69574bd113bb3ec0608f862a06d6a5f27e15a60a70315",
+      "bytes": 3228
+    },
+    {
+      "path": "calibration/parent_camera_imu_provisional.json",
+      "sha256": "f71b6a1e1ca33b1c63be2b40bc06540a498ef94f9446a2478433f1da722bb74f",
+      "bytes": 651
+    },
+    {
+      "path": "calibration/parent_camera_provisional.json",
+      "sha256": "8f90074627aa7d82927f90436d6273d7f4769b6046f1c04f7dd7cbdae46a997a",
+      "bytes": 509
+    },
+    {
+      "path": "calibration/parent_camera_underwater_20260924_provisional.json",
+      "sha256": "cd8a1e643ed26aaa48048beacf855d692c77823d3febd2d9f748b8cd644c7942",
+      "bytes": 7770
+    },
+    {
+      "path": "calibration/relative_fusion_provisional.json",
+      "sha256": "4a57f92d7d40903dc05a5819ac93af497557cd324ab902f77326b0f7d504b16e",
+      "bytes": 1101
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "mounting_metadata_with_separate_offline_imu_axis_solution",
+  "evidence": "User statement 2026-10-29",
+  "cad_reference": "cad_20261028",
+  "actual_mounting": "Camera and underwater light fixed positions are interchanged relative to CAD, in both calibration and production acquisition.",
+  "applies_to_experiments": [
+    "20261028_ngt_000",
+    "20261028_ngt_001",
+    "20261028_ngt_002",
+    "20261028_ngt_003",
+    "20261028_ngt_004",
+    "20261029_child_axis_003"
+  ],
+  "R_body_from_bno": [
+    [
+      0.9997707024528126,
+      0.0188676633326407,
+      0.01012688488014523
+    ],
+    [
+      0.021412556046285128,
+      -0.8761782188473859,
+      -0.4815114030435697
+    ],
+    [
+      -0.00021203908669537432,
+      0.4816178361499795,
+      -0.8763813182294777
+    ]
+  ],
+  "T_body_from_camera": null,
+  "T_body_from_light": null,
+  "reuse_conditions": [
+    "Same physical device and unchanged BNO mounting/body-axis definition.",
+    "Verify camera mounting orientation independently; swapping locations alone does not imply a rotation.",
+    "Do not infer sensor centers or exact translations from CAD placement.",
+    "BNO mounting must remain unchanged. Offline pose fit passed; marker drop increase reviewed against contiguous IMU indices. Internal BNO history is not a magnetic heading calibration."
+  ],
+  "calibration_audit_experiment": "20261029_child_axis_003",
+  "imu_axis_calibration": "calibration/20261029_child_axis_003_imu_frd.json"
+}

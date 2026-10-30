@@ -11,6 +11,8 @@ import subprocess
 from pathlib import Path
 from statistics import median
 
+from aquabeacon_analysis.editable_plots import save_editable_figure
+
 MEDWIN_SOURCE = (
     "https://calhoun.nps.edu/server/api/core/bitstreams/"
     "35d133d5-6956-4912-8597-5f2dc8fc5ad2/content"
@@ -231,7 +233,7 @@ def analyze(source: Path, output: Path, *, salinity_ppt: float,
                     xlabel="C_MAIN corrected range (m)", ylabel="P_MAIN corrected range (m)")
     for axis in axes:
         axis.grid(alpha=0.25)
-    fig.savefig(output / "comparison.png", dpi=160)
+    save_editable_figure(fig, output / "comparison.png", dpi=160)
     plt.close(fig)
     if both_valid:
         parent_fig, parent_axis = plt.subplots(figsize=(11, 4.5), constrained_layout=True)
@@ -244,7 +246,7 @@ def analyze(source: Path, output: Path, *, salinity_ppt: float,
                         xlabel="Time in ToF window (s)", ylabel="Meters")
         parent_axis.grid(alpha=0.25)
         parent_axis.legend()
-        parent_fig.savefig(output / "pressure_vs_p_main.png", dpi=160)
+        save_editable_figure(parent_fig, output / "pressure_vs_p_main.png", dpi=160)
         plt.close(parent_fig)
     return summary
 

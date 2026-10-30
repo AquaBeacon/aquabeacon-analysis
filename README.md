@@ -1,5 +1,104 @@
 # AquaBeacon Analysis
 
+別のPCへの導入は **[セットアップと新しい実験の解析](docs/another_pc.md)** を参照。
+解析コード・設定・共通カメラ校正・親子の軸校正と、
+約12 MBの[校正根拠データ](calibration/reference_data/README.md)をGitHubに収録している。
+元動画や全実験のログを移さずに校正値を確認・数値再計算できる。
+新しい実験の原本はローカルの`data/raw/<experiment_id>/`へ配置する。
+
+長田高校の[研究発表用レポート](results/20261028_ngt_000/research_report/report.md)と
+[実映像の照合・12事例](results/20261028_ngt_000/research_report/media_review.md)を追加した。
+親機の90°表示回転と内部校正の不整合を確認したため、既存の子機位置・軌跡・位置priorを使う地図尺度は再評価が必要。
+成立フラグの集計と座標精度の保証を区別する。図の再生成はこのレポート内だけを対象とする。
+
+```powershell
+python scripts/prepare_ngt_research_report.py --experiment 20261028_ngt_000 --phase prepare
+python scripts/prepare_ngt_research_report.py --experiment 20261028_ngt_000 --phase clips
+python scripts/write_ngt_research_report.py --experiment 20261028_ngt_000
+python scripts/verify_ngt_research_report.py --experiment 20261028_ngt_000
+```
+
+長田高校プールの写真付き3D地図・実CAD動画・GNSS俯瞰図は
+[発表素材の入口](results/20261028_ngt_000/presentation/index.html) と
+[検証・制約](results/20261028_ngt_000/presentation/report.md) を参照。
+新しい可視化は元の位置推定CSV・疎点群・rawを上書きしない。
+
+2026-10-30改訂：研究用の細かなブラウザ編集は2次元グラフを対象にする。
+発表用の3D映像は構図・光・画質を優先し、MP4と編集用Blenderを渡す。
+最新の `presentation_v2/` は磁北基準の実測姿勢を反映した親子CADと、
+観測順に増える壁地図（機体あり／マップのみ）を別々に出力する。
+後者は既存の位置拘束型COLMAP結果の再生で、子機のみVSLAMへの親機観測追加ではない。
+
+```powershell
+python scripts/prepare_ngt_replay_v2.py --experiment 20261028_ngt_004
+python scripts/render_ngt_replay_v2.py --experiment 20261028_ngt_004
+python scripts/render_ngt_replay_v2.py --experiment 20261028_ngt_004 --clean-existing
+python scripts/verify_ngt_presentation_v2.py --experiment 20261028_ngt_004
+python scripts/style_ngt_gnss_presentation.py --experiment 20261028_ngt_001
+python scripts/open_ngt_research_figures.py --experiment 20261028_ngt_001 --experiment 20261028_ngt_004
+```
+
+グラフ一覧から対象を選び、見た目の設定だけを保存できる。`--catalog-only` はサーバーを
+起動せず一覧を保存する。エディタは保存して終了、Ctrl+C、または30分無操作で終了する。
+共通エディタの範囲外の特殊Artistは、元のPythonコードとFigureから編集する。
+PowerPointは作らず、単体で貼れるPNG/SVG/PDFを渡す。3Dの`*_clean_1080.png`は
+映像の見出し帯を外した静止画で、`*_clean.blend`から調整できる。
+3Dの姿勢は磁北で精度未検証、子機CADの前方向対応と測定中心は表示上の暫定設定。
+点の出現時刻は最終地図の2回目の画像観測であり、オンラインSLAMの生成時刻ではない。
+
+```powershell
+python scripts/export_ngt_textured_map.py --experiment 20261028_ngt_004
+python scripts/verify_ngt_textured_map.py --experiment 20261028_ngt_004
+python scripts/reconstruct_ngt_dense_patch.py --experiment 20261028_ngt_004
+node scripts/verify_ngt_textured_map.mjs
+python scripts/render_ngt_presentation.py --experiment 20261028_ngt_004
+python scripts/render_ngt_cad_positions.py --experiment 20261028_ngt_004
+python scripts/plot_ngt_gnss_overhead.py --experiment 20261028_ngt_001 --experiment 20261028_ngt_002 --experiment 20261028_ngt_003 --experiment 20261028_ngt_004
+python scripts/plot_ngt_aerial_tracks.py --experiment 20261028_ngt_000
+python scripts/plot_ngt_aerial_hires.py --experiment 20261028_ngt_000
+python scripts/package_ngt_presentation.py --experiment 20261028_ngt_000
+```
+
+Blenderは一度に1プロセス・2スレッドで実行する。旧 `presentation_mapping/` のGLB/OBJは
+単眼尺度未確定の疎な写真投影面で、密な完成モデルではない。
+実CADの設計原点・取付けは未校正で、子機カメラとライトの実配置はCADと逆。
+GNSS円は真値誤差や信頼区間ではなく、水平差または静止時の平均まわりRMSを示す。
+
+子機のみの地図表示・IMU/深度DR融合・VI-SLAM試行は
+[結果レポート](results/20261028_ngt_000/child_sensor_fusion/report.md) と
+[オフライン3D地図](results/20261028_ngt_000/child_sensor_fusion/maps.html) を参照。
+各コマンドで001〜004を`--experiment`の繰り返しで選択する。004の再現例：
+
+```powershell
+python scripts/prepare_ngt_child_fusion.py --experiment 20261028_ngt_004
+python scripts/run_ngt_child_vislam.py --build
+python scripts/run_ngt_child_vislam.py --experiment 20261028_ngt_004
+python scripts/fuse_ngt_child_dead_reckoning.py --experiment 20261028_ngt_004
+python scripts/prepare_ngt_child_fusion.py --experiment 20261028_ngt_004 --camera-imu
+python scripts/run_ngt_child_vislam.py --experiment 20261028_ngt_004 --camera-imu
+python scripts/visualize_ngt_child_maps.py --experiment 20261028_ngt_004
+python scripts/report_ngt_child_fusion.py --experiment 20261028_ngt_004
+python scripts/verify_ngt_child_fusion.py --experiment 20261028_ngt_004 --tests
+```
+
+VI実行にはDocker Desktopと既存ORB-SLAM3イメージ、準備済みの子機単眼画像が必要。
+既存runは上書きしない。地図の尺度、圧力への残差、独立した真値誤差を区別する。
+
+2026-10-30: 沖縄の水中内部校正を親機・子機の共通既定として
+[`calibration/camera_defaults.json`](calibration/camera_defaults.json) に登録。
+長田高校プールの子機のみ単眼VSLAMは次で実行・評価する。原動画の約120 fpsを維持し、
+親機観測を入力しない。子機だけで同期し、回転角変化量の一致性を評価する。
+
+```powershell
+python scripts/run_ngt_child_vslam.py --experiment 20261028_ngt_001 --experiment 20261028_ngt_002 --experiment 20261028_ngt_003 --experiment 20261028_ngt_004
+python scripts/evaluate_ngt_child_vslam.py --experiment 20261028_ngt_001 --experiment 20261028_ngt_002 --experiment 20261028_ngt_003 --experiment 20261028_ngt_004
+python scripts/verify_ngt_child_vslam.py --experiment 20261028_ngt_001 --experiment 20261028_ngt_002 --experiment 20261028_ngt_003 --experiment 20261028_ngt_004
+```
+
+出力は各実験の `results/<id>/child_only_vslam/`、比較は
+[`results/20261028_ngt_000/child_only_vslam/report.md`](results/20261028_ngt_000/child_only_vslam/report.md)。
+位置の真値・単眼尺度・光学―機体回転が未確定のため、位置ATE/RPE[m]や絶対姿勢誤差とは区別する。
+
 > AquaBeacon実験で取得した親機・子機・Spresense IMU・2台のカメラ動画を統合し、時刻同期、位置推定、マッピング、比較評価、発表用可視化まで行う後処理解析基盤。
 
 ## 主な機能
@@ -10,6 +109,79 @@
 - **可視化** — 定量評価用グラフとBlender向け発表用データを出力
 
 詳細な受け入れ条件は [docs/spec.md](docs/spec.md) を参照。
+
+## 2026-10-28 学校プール実験
+
+今回の入口は [解析レポート](results/20261028_ngt_000/report.md)。
+`data/raw/ngtHighSchoolExperiment1/` を移動せず、全収録を `20261028_ngt_000`、
+親機静止4:00–8:00を001、子機静止17:30–18:30を002、
+範囲限界18:30–21:00を003、同時移動21:00–25:40を004として登録した。
+切出し動画・センサCSVは `data/interim/<id>/synchronized/`、
+GNSS・姿勢・深度の結果と編集可能な図は `results/<id>/`。
+
+カメラ内IMUと機体IMUの動きから時計のoffset・driftを推定する。
+保存済みの前処理に対する再実行例は以下。実験を指定せずに全rawを走査しない。
+
+```powershell
+python scripts/prepare_ngt_cameras.py --experiment 20261028_ngt_000
+python scripts/synchronize_ngt.py --experiment 20261028_ngt_000
+python scripts/split_ngt_experiments.py --experiment 20261028_ngt_000
+python scripts/analyze_ngt_gnss.py --experiment 20261028_ngt_000 --camera-start-utc 2026-10-28T05:03:01.343757+00:00 --camera-time-scale 0.999975135251818
+python scripts/track_ngt_light.py --experiment 20261028_ngt_000
+python scripts/fuse_ngt_sensors.py --experiment 20261028_ngt_000
+python scripts/plot_ngt_aerial_tracks.py --experiment 20261028_ngt_000
+python scripts/select_ngt_gnss.py --experiment 20261028_ngt_000
+python scripts/ppk_ngt_geonet.py --experiment 20261028_ngt_000
+python scripts/compare_ngt_ppk_bases.py --experiment 20261028_ngt_000
+python scripts/report_ngt_ppk_comparison.py --experiment 20261028_ngt_000
+python scripts/verify_ngt_artifacts.py --experiment 20261028_ngt_000
+```
+
+初回のバイナリ復号は `scripts/decode_ngt_logs.py --experiment <id> --firmware-root ../firmware-experiments --source <raw内のファイル>`。
+入力と読み取りコードのハッシュ・CRC検証結果を保存し、既存の復号CSVを上書きしない。
+PPKの再現コード・設定は `data/interim/20261028_ngt_000/gnss/reproduce_ppk.py` に保存。
+元の混在MSM4/7と、追尾切れ情報を保持したMSM7の比較を残した。
+真値座標はないため、静止結果は平均まわりのばらつきとして評価する。
+10月30日の追加評価では、沖縄の共通水中内部校正と今回の親機磁北姿勢を使い、
+音響距離×ライト光線の相対位置を算出した。測定中心と光学外部校正が未確定のため、
+磁北相対位置と、偏角0°・ゼロレバーアームを仮定したGNSS合成参考座標を区別する。
+[位置推定評価](results/20261028_ngt_000/position_evaluation/report.md) と
+[同時移動区間のプール壁](results/20261028_ngt_004/wall_mapping/report.md) を参照。
+
+```powershell
+python scripts/check_ngt_optical_axes.py --experiment 20261028_ngt_000
+python scripts/evaluate_ngt_position.py --experiment 20261028_ngt_002 --experiment 20261028_ngt_003 --experiment 20261028_ngt_004
+python scripts/report_ngt_position_evaluation.py --experiment 20261028_ngt_000
+# 壁用COLMAP Python wheelは今回の派生物フォルダだけへ配置
+python -m pip install --only-binary=:all: --no-deps --target data/interim/20261028_ngt_004/wall_mapping/runtime pycolmap==4.2.1
+python scripts/evaluate_ngt_wall.py --experiment 20261028_ngt_004 --phase prepare
+python scripts/evaluate_ngt_wall.py --experiment 20261028_ngt_004 --phase features
+python scripts/evaluate_ngt_wall.py --experiment 20261028_ngt_004 --phase visual-only
+python scripts/evaluate_ngt_wall.py --experiment 20261028_ngt_004 --phase prior
+python scripts/report_ngt_wall.py --experiment 20261028_ngt_004
+python scripts/verify_ngt_position_evaluation.py --experiment 20261028_ngt_000
+python scripts/visualize_ngt_positions.py --experiment 20261028_ngt_002 --experiment 20261028_ngt_003 --experiment 20261028_ngt_004
+& 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' -b -t 2 --python-exit-code 1 --python blender/create_ngt_visualizations.py -- --experiment 20261028_ngt_002 --experiment 20261028_ngt_003 --experiment 20261028_ngt_004
+node scripts/verify_ngt_viewer.mjs
+python scripts/run_ngt_restart_mapping.py --experiment 20261028_ngt_004 --phase prepare
+python scripts/run_ngt_restart_mapping.py --experiment 20261028_ngt_004 --phase features
+python scripts/run_ngt_restart_mapping.py --experiment 20261028_ngt_004 --phase matching
+python scripts/run_ngt_restart_mapping.py --experiment 20261028_ngt_004 --phase map
+python scripts/extend_ngt_restart_mapping.py --experiment 20261028_ngt_004 --window 15 --window 16 --window 17 --window 18
+python scripts/report_ngt_restart_mapping.py --experiment 20261028_ngt_004
+python scripts/verify_ngt_restart_mapping.py --experiment 20261028_ngt_004
+& 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' -b -t 2 --python-exit-code 1 --python blender/create_ngt_restart_map.py -- --experiment 20261028_ngt_004
+& 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' -b -t 2 --python-exit-code 1 --python blender/verify_ngt_visualizations.py
+```
+
+壁の5 Hz診断は同じ4コマンドへ `--dense-sampling` を追加する。
+別出力の `five_hz/` に保存し、最初の2 Hz試行を保持する。推定継続率の分母は
+全時間の5 Hzセル、静止ばらつきの分母は記録された音響イベント。欠測を補間しない。
+
+[親機と子機の軌跡・3D・Blender](results/20261028_ngt_004/position_visualization/report.md)、
+[壁地図の回転表示・Blender](results/20261028_ngt_004/map_visualization/report.md)を追加。
+HTMLは単独で開ける。3D軌跡では親機を高さ0、子機を相対下向き成分だけ下げて表示する。
+元のGNSS高度・評価値は変更しない。壁は元の疎点群を表示し、断片の隙間を面で補わない。
 
 ## 技術スタック
 - Python 3.11+ を中心としたローカル解析
@@ -25,13 +197,99 @@ python -m venv .venv
 .venv\Scripts\python -m pip install -e ".[dev,media,analysis,vision]"
 ```
 
+## グラフをブラウザで編集する
+
+今後グラフを生成すると、PNGと同じ場所にSVG、編集用の `.figure.pickle`、
+生成情報の `.plot.json` が保存される。次のコマンドでローカルの編集画面を開く。
+
+```powershell
+python -m aquabeacon_analysis.editable_plots results/<experiment_id>/<analysis_name>/<figure>.figure.pickle
+```
+
+軸ラベル・タイトル・凡例・フォント・文字サイズ・軸範囲・目盛り間隔・グリッド、
+系列ごとの色・線幅・線種・点の形・大きさ・縁・透明度を変更し、プレビューで確認できる。
+画面上部の「フォント・文字サイズ」欄で、このPCのフォントを選び、全体の文字サイズを
+一括指定できる。図全体タイトル・各グラフのタイトル・軸ラベル・目盛り・凡例も
+スライダー／数値入力で個別指定できる。個別サイズが一括サイズより優先され、設定は保存される。
+数値項目はスライダーと数値入力の両方で調整できる。`xlim`・`ylim` は左上の
+「表示範囲」で最小値・最大値を指定する。スライダーの範囲外の値も数値入力で指定できる。
+図の右端・下端・右下の青いハンドルをドラッグすると幅・高さを変更でき、離すと図を再描画する。
+ハンドルにフォーカスして矢印キーでも調整可能。表示だけでなく、保存画像の寸法にも反映する。
+幅・高さはinchとcmで確認でき、保存した寸法・表示範囲は次回も保持する。
+「編集内容と画像を保存」で `.style.json` と `.edited.png/.svg/.pdf` を保存する。
+同じ編集用ファイルを開けば保存済みの設定を読み込み、続きを編集できる。
+散布図のサイズは面積 pt²、折れ線の点のサイズは直径 pt。
+PNG/SVG/PDFのリンクは現在の見た目をダウンロードするが、設定の保存には保存ボタンを使う。
+終了時は「保存して終了」または端末で Ctrl+C。常駐サービスや外部サービスは不要。
+
+生成コードでは `save_editable_figure(fig, output, dpi=...)` を使う。
+計測値や解析処理は変えず、見た目の変更をJSONに分離する。
+既存のPNGだけの図は、対応する生成スクリプトで対象を明示して再生成すると編集用ファイルが付く。
+元の生成スクリプト・入力CSV・config/calibration・解析manifestを残す。
+pickleは自分のPCで生成したものだけを開き、生成時と同じMatplotlib環境を使う
+（バージョンは `.plot.json` に記録）。長期保管の正本は生成コードと元の解析データ。
+再生成時も `.style.json` は保持するため、系列構成を変えた場合は設定の対象を確認する。
+
+## 今後の実験向けCAD機体モデル
+
+`parent_hand_service` / `parent_exterior` / `child_horizontal_plate_frame` /
+`child_interior` の配置を `cad_20261027` に固定した。センサー参照点・座標系・
+原典ハッシュと再生成手順は [docs/cad_rig.md](docs/cad_rig.md) を参照。
+**今後取得するデータ向け**であり、既存2026-09-22解析への自動適用は行わない。
+
+```powershell
+python -m pip install -e ".[dev,cad]"
+python scripts/prepare_cad_rig.py --rig-id cad_20261027
+python scripts/prepare_cad_rig.py --rig-id cad_20261027 --verify
+& 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' -b -t 4 --python blender/create_cad_rig_scene.py -- --rig-id cad_20261027
+```
+
+`data/interim/cad/cad_20261027/` にメートル単位の親子GLB、配置JSON、参照点CSVを保存。
+`blender/output/cad_20261027/cad_rig.blend` は部品別表示と再利用可能な機体コレクションを
+持つ。カメラ光学中心、IMU測定中心、TD04A音響中心は未確定で、CAD取付点を
+校正済み外部変換として使わない。CADが更新された場合は新しいrig IDで採取し直す。
+
+## 別の実験を追加するとき
+
+実験ごとに `experiments/<experiment_id>/experiment.json` を作り、生データの参照先と
+使用予定の設定・校正を登録する。新規IDは `YYYYMMDD_location_NNN`（同日でも試行ごとに別ID）。
+
+```powershell
+python -m aquabeacon_analysis list-experiments
+# 以下のID・ログ番号は例。実際の取得日・場所・C_MAINログ番号に置き換える。
+python -m aquabeacon_analysis init-experiment 20261027_pool_001 --c-main-suffix 22
+python -m aquabeacon_analysis show-experiment 20261027_pool_001
+```
+
+初期化は台帳と実験別の中間・処理済み・結果フォルダを作る。原本は操作しない。
+原本を取り込む担当者が `data/raw/<experiment_id>/` 内を機器別に配置し、以降は読み取り専用で扱う。
+設定・校正の参照先を台帳に記入してから、次のように対象を指定する。
+
+```powershell
+python -m aquabeacon_analysis sync-raw --experiment 20261027_pool_001
+python -m aquabeacon_analysis analyze-sync --experiment 20261027_pool_001
+python -m aquabeacon_analysis preprocess-tof --experiment 20261027_pool_001
+# 親機ログも使用する場合は、台帳にp_main_suffixを登録して実行する。
+python scripts/extract_p_main_tof.py --experiment 20261027_pool_001
+python -m aquabeacon_analysis localize-imu --experiment 20261027_pool_001
+```
+
+対象指定なしの解析はエラーにする。登録前の従来データは `--session <完全な実験ID>`、
+全件処理を意図する場合は `--all-experiments` を使う。重複する数字のログ番号だけでの選択は拒否する。
+`--experiment` とルートパスの上書きは併用できない。
+校正参照の登録は数値処理への自動適用を意味しない。実際の適用値は各解析のmanifestで確認する。
+
+配置と既存データの対応は [data/README.md](data/README.md)、
+実験台帳は [experiments/README.md](experiments/README.md) を参照。
+以下の9月22日向けスクリプトには日付・校正値の固定が残るため、新しい実験への実行前に入力と適用条件を確認する。
+
 ## C_MAIN RTC基準の時刻合わせ
 
 `data/raw/C_MAIN/` の各IMUログのUTC換算済みRTC範囲を実験区間とし、C_MAIN、対応する
 Spresense `G/I`、2台のカメラを共通の `experiment_time_s` へ揃える。
 
 ```bash
-python -m aquabeacon_analysis sync-raw --raw-root data/raw
+python -m aquabeacon_analysis sync-raw --raw-root data/raw --all-experiments
 ```
 
 - 元データは変更せず、同期済みCSV・トリミング動画を
@@ -45,7 +303,7 @@ python -m aquabeacon_analysis sync-raw --raw-root data/raw
 ### IMU相互相関・同期図・品質確認
 
 ```bash
-python -m aquabeacon_analysis analyze-sync
+python -m aquabeacon_analysis analyze-sync --experiment 20260922_cmain_023
 ```
 
 - SONY SpresenseはP_MAIN取付として、`SONY IMU ↔ P_MAIN_CAM` を比較する。
@@ -61,7 +319,7 @@ P_MAINの生HEALTH_RANGEログを追加した場合は、次のコマンドで�
 時刻を復元し、継続する有効ToF区間を切り出す。
 
 ```bash
-python scripts/extract_p_main_tof.py
+python scripts/extract_p_main_tof.py --all-experiments
 ```
 
 出力は `data/processed/<date>_pmain_<suffix>/tof_window/p_main/` のCSVと
@@ -70,7 +328,7 @@ UTCで重なる行は、対応する `data/processed/<c_main_experiment_id>/tof_
 にも保存する。ファイル番号は機器間の対応付けに使わない。
 
 ```bash
-python -m aquabeacon_analysis preprocess-tof
+python -m aquabeacon_analysis preprocess-tof --experiment 20260922_cmain_023
 ```
 
 `data/interim/` の各実験で、`C_MAIN_HEALTH_RANGE` の `tof_us > 0` かつ
@@ -287,7 +545,7 @@ python scripts/prepare_orbslam3_clahe_trial.py 20260922_cmain_024 --start-image 
 親機 `P_MAIN_CAM` のproxy動画を解析し、0.5秒間隔のライト座標を出す。
 
 ```bash
-python -m aquabeacon_analysis detect-lights
+python -m aquabeacon_analysis detect-lights --experiment 20260922_cmain_023
 python -m aquabeacon_analysis detect-lights --session 20260922_cmain_023
 ```
 
@@ -314,7 +572,7 @@ DJIの公称155°はレンズ全体の画角であり、撮影設定のStandard 
 
 ```bash
 python scripts/export_reviewed_lights.py
-python -m aquabeacon_analysis track-lights
+python -m aquabeacon_analysis track-lights --experiment 20260922_cmain_023
 python scripts/render_light_track_review.py
 python scripts/evaluate_light_tracking.py
 ```
@@ -468,3 +726,23 @@ aquabeacon-analysis/
 ## 開発とライセンス
 
 [開発ガイド](DEVELOPMENT.md)にセットアップ・入口・確認方法をまとめています。自作部分は [Apache License 2.0](LICENSE)。[第三者素材・依存の扱い](THIRD_PARTY.md)も参照してください。
+
+子機の追加軸校正の監査：`python scripts/audit_child_axis_calibration.py --experiment 20261029_child_axis_003 --firmware-root ../firmware-experiments`。結果は [校正監査レポート](results/20261029_child_axis_003/axis_calibration/report.md)。追加ログから軸変換を算出し、本番BNO機体姿勢を別出力した。カメラ全区間の校正は未採用。カメラ／水中ライト位置交換は実機構成として登録済み。
+
+軸変換算出・本番適用：`python scripts/calibrate_child_axes.py --experiment 20261029_child_axis_003 --firmware-root ../firmware-experiments --target-experiment 20261028_ngt_000`。結果は `results/20261028_ngt_000/child_body_attitude/`。
+
+校正区間の動画・ログ切り出しと磁気方位監査：`python scripts/clip_child_calibration.py --experiment 20261029_child_axis_003 --firmware-root ../firmware-experiments`。今回のマーカー内だけカメラ時計・IMU回転を採用し、磁気方位は独立姿勢検証不合格。詳しくは `results/20261029_child_axis_003/calibration_clip/report.md`。
+
+長田高校プールの子機姿勢を校正済みFRDで保存：
+`python scripts/estimate_ngt_child_attitude.py --experiment 20261028_ngt_000 --calibration calibration/20261029_child_axis_003_imu_frd.json`
+`--experiment`を繰り返して001〜004も指定可能。CSVは`data/processed/<id>/child_attitude/`、レポート・編集可能な図は`results/<id>/child_attitude/`。重力基準のroll/pitchと任意基準yawを出力し、検証未達の北基準方位はabsolute_heading_valid=falseとして扱う。
+
+親機の追加軸校正011：`python scripts/calibrate_parent_axes.py --experiment 20261029_parent_axis_011 --firmware-root ../firmware-experiments`。IMU軸と校正区間内カメラIMU回転は検証済み、磁気軸・絶対方位は不採用。詳細は `results/20261029_parent_axis_011/axis_calibration/report.md`。GPS同期UTCはなく、共通の端末時刻参照による単調時計対応を使う。子機の時計・取付け情報を親機へ流用しない。
+
+磁北基準の暫定絶対姿勢を使う場合：
+`python scripts/estimate_ngt_child_attitude.py --experiment 20261028_ngt_000 --calibration calibration/20261029_child_axis_003_imu_frd.json --magnetic-heading`
+出力は`data/processed/<id>/child_magnetic_attitude/attitude.csv`。`absolute_attitude_available=True`で`heading_magnetic_deg`または`magnetic_ned_q*`を使用。精度未検証、真北偏角未適用。区間001〜004も--experimentの繰返しで選択できる。
+
+親機の磁北方位・姿勢（独立LIS3MDLをCADと実機方向で軸合わせ）：
+`python scripts/estimate_ngt_parent_attitude.py --experiment 20261028_ngt_000 --calibration calibration/20261028_parent_lis3mdl_cad_axes.json`
+`--experiment`の繰返しで001〜004を選択可能。出力は`data/processed/<id>/parent_magnetic_attitude/attitude.csv`、図とレポートは`results/<id>/parent_magnetic_attitude/`。absolute_attitude_availableで四元数を選び、tilt_sourceでカメラと瞬時加速度を区別する。前方はGNSS→Spresense、精度未検証・偏角未適用。

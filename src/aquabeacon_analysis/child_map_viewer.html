@@ -1,0 +1,45 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>長田高校・子機のみの地図</title>
+<style>
+*{box-sizing:border-box}body{font-family:system-ui,'Yu Gothic',sans-serif;margin:0;background:#eef1f4;color:#162331}header{background:#17384c;color:white;padding:18px 24px}h1{font-size:22px;margin:0 0 8px}main{display:grid;grid-template-columns:290px 1fr;gap:18px;padding:18px}aside{background:white;padding:18px;border-radius:10px}label{display:block;margin:12px 0 4px;font-size:13px}select,button,input{font:inherit}select{width:100%;padding:6px}input[type=number]{width:72px}input[type=range]{width:145px;vertical-align:middle}button{padding:8px 10px;margin:6px 3px 0 0;cursor:pointer;background:#e8eff3;border:1px solid #becbd4;border-radius:5px}p{line-height:1.6;font-size:13px}.note{color:#9b4b16}#frame{width:900px;max-width:100%;height:650px;resize:both;overflow:hidden;border:1px solid #b6c5ce;border-radius:8px;background:#fff}canvas{width:100%;height:100%;display:block;touch-action:none}#meta{background:white;padding:12px;margin-bottom:10px;border-radius:8px;font-size:14px}footer{padding:12px 24px;font-size:12px}a{color:#0877a3}@media(max-width:850px){main{grid-template-columns:1fr}#frame{height:500px}}
+</style>
+<header><h1>長田高校のプール実験 — 子機の疎な3D地図</h1>映像から復元した点群と軌跡。各地図は独立した座標系です。</header>
+<main><aside><label>実験・方式・地図</label><select id="map"></select><p id="note" class="note"></p>
+<label>点の色 <input id="color" type="color" value="#226b91"></label>
+<label>点の大きさ</label><input id="size" type="range" min="0.3" max="6" step="0.1" value="1.5"><input id="sizeN" type="number" min="0.3" max="6" step="0.1" value="1.5">
+<label>点の透明度</label><input id="opacity" type="range" min="0.05" max="1" step="0.05" value="0.65"><input id="opacityN" type="number" min="0.05" max="1" step="0.05" value="0.65">
+<label>軌跡の色 <input id="lineColor" type="color" value="#e17930"></label>
+<label>軌跡の太さ</label><input id="lineWidth" type="range" min="0.5" max="6" step="0.5" value="2"><input id="lineWidthN" type="number" min="0.5" max="6" step="0.5" value="2">
+<label>表示倍率</label><input id="zoom" type="range" min="0.2" max="10" step="0.1" value="1"><input id="zoomN" type="number" min="0.2" max="10" step="0.1" value="1">
+<label>背景色 <input id="background" type="color" value="#ffffff"></label>
+<button id="reset">全点を表示</button><button id="png">PNG保存</button><button id="save">表示設定を保存</button>
+<label>表示設定を再読込<input id="load" type="file" accept=".json"></label>
+<p>ドラッグで回転、Shift＋ドラッグで移動、ホイールで拡大縮小。右下のハンドルで図の寸法を変更できます。見た目の編集で元の計測値は変わりません。</p>
+<p>静的な図の軸・凡例・範囲等は、各結果フォルダの <code>.figure.pickle</code> を共通グラフエディタで開いて編集できます。</p></aside>
+<section><div id="meta"></div><div id="frame"><canvas id="canvas"></canvas></div><p id="source"></p></section></main>
+<footer>親機の観測データは使用していません。点のない領域を補間した面や、地図間の接続は生成していません。</footer>
+<script>
+const DATA=__MAP_DATA__;
+const $=id=>document.getElementById(id), canvas=$('canvas'), ctx=canvas.getContext('2d');
+let view={yaw:-0.5,pitch:0.4,panX:0,panY:0}, current,drag=null;
+const controls=['size','opacity','lineWidth','zoom'];
+for(const id of controls){for(const name of [id,id+'N'])$(name).oninput=()=>{$(id).value=$(id+'N').value=$(name).value;draw();};}
+for(const id of ['color','lineColor','background'])$(id).oninput=draw;
+for(const [i,m] of DATA.entries()){let o=document.createElement('option');o.value=i;o.textContent=m.label;$('map').append(o);}
+function choose(){current=DATA[+$('map').value];view={yaw:-0.5,pitch:0.4,panX:0,panY:0};$('zoom').value=$('zoomN').value=1;$('note').textContent=current.note;$('meta').textContent=current.label+' ｜ '+current.points.length.toLocaleString()+' 点 ｜ '+current.unit;$('source').textContent='原本：'+current.source+' ｜ '+current.trajectory.length+' 個の軌跡点';draw();}
+function bounds(){let p=current.points.length?current.points:current.trajectory.filter(Boolean);if(!p.length)return{center:[0,0,0],span:1};let lo=[Infinity,Infinity,Infinity],hi=[-Infinity,-Infinity,-Infinity];for(const a of p)for(let j=0;j<3;j++){lo[j]=Math.min(lo[j],a[j]);hi[j]=Math.max(hi[j],a[j]);}return{center:lo.map((v,j)=>(v+hi[j])/2),span:Math.max(...hi.map((v,j)=>v-lo[j]),1e-6)};}
+function draw(){if(!current)return;const w=canvas.clientWidth,h=canvas.clientHeight,dpr=window.devicePixelRatio||1;canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.scale(dpr,dpr);ctx.fillStyle=$('background').value;ctx.fillRect(0,0,w,h);const b=bounds(),s=.7*Math.min(w,h)/b.span*+$('zoom').value,cy=Math.cos(view.yaw),sy=Math.sin(view.yaw),cp=Math.cos(view.pitch),sp=Math.sin(view.pitch);
+const project=p=>{let [x,y,z]=p.map((v,j)=>v-b.center[j]);let xx=cy*x+sy*z,zz=-sy*x+cy*z,yy=cp*y-sp*zz;return [w/2+xx*s+view.panX,h/2-yy*s+view.panY];};
+ctx.fillStyle=$('color').value;ctx.globalAlpha=+$('opacity').value;let radius=+$('size').value;for(const p of current.points){let [x,y]=project(p);ctx.beginPath();ctx.arc(x,y,radius,0,Math.PI*2);ctx.fill();}ctx.globalAlpha=1;
+ctx.strokeStyle=$('lineColor').value;ctx.lineWidth=+$('lineWidth').value;ctx.beginPath();let started=false;for(const p of current.trajectory){if(!p){started=false;continue;}let [x,y]=project(p);if(started)ctx.lineTo(x,y);else ctx.moveTo(x,y);started=true;}ctx.stroke();
+const origin=[45,h-45],axis=[[1,0,0],[0,1,0],[0,0,1]],colors=['#c34444','#32814f','#3372b7'];axis.forEach((p,j)=>{let a=project(p.map((v,k)=>b.center[k]+v*b.span*.07));let o=project(b.center);ctx.strokeStyle=colors[j];ctx.beginPath();ctx.moveTo(...origin);ctx.lineTo(origin[0]+a[0]-o[0],origin[1]+a[1]-o[1]);ctx.stroke();ctx.fillStyle=colors[j];ctx.fillText('xyz'[j],origin[0]+a[0]-o[0]+4,origin[1]+a[1]-o[1]+4);});
+ctx.fillStyle='#17384c';ctx.font='14px sans-serif';ctx.fillText(current.label,18,26);ctx.font='12px sans-serif';ctx.fillText(current.unit,18,45);if(!current.points.length&&!current.trajectory.length){ctx.fillText('初期化された地図はありません',w/2-90,h/2);} }
+$('map').onchange=choose;$('reset').onclick=choose;
+canvas.onpointerdown=e=>{drag=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId);};canvas.onpointerup=()=>drag=null;canvas.onpointercancel=()=>drag=null;
+canvas.onpointermove=e=>{if(!drag)return;let dx=e.clientX-drag[0],dy=e.clientY-drag[1];if(e.shiftKey){view.panX+=dx;view.panY+=dy;}else{view.yaw+=dx*.008;view.pitch+=dy*.008;}drag=[e.clientX,e.clientY];draw();};
+canvas.onwheel=e=>{e.preventDefault();$('zoom').value=$('zoomN').value=Math.max(.2,Math.min(10,+$('zoom').value*Math.exp(-e.deltaY*.001)));draw();};
+function download(blob,name){let a=document.createElement('a'),u=URL.createObjectURL(blob);a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
+$('png').onclick=()=>canvas.toBlob(b=>download(b,'child-map.png'));
+$('save').onclick=()=>{const settings={map:+$('map').value,view,width:$('frame').clientWidth,height:$('frame').clientHeight,controls:{}};for(const id of [...controls,'color','lineColor','background'])settings.controls[id]=$(id).value;download(new Blob([JSON.stringify(settings,null,2)],{type:'application/json'}),'child-map-view.json');};
+$('load').onchange=async e=>{try{let s=JSON.parse(await e.target.files[0].text());if(!DATA[s.map])throw Error('Invalid map');$('map').value=s.map;choose();view=s.view;for(const id of [...controls,'color','lineColor','background'])if(s.controls[id]!=null){$(id).value=s.controls[id];if($(id+'N'))$(id+'N').value=s.controls[id];}$('frame').style.width=Math.max(300,Math.min(4000,s.width))+'px';$('frame').style.height=Math.max(200,Math.min(3000,s.height))+'px';draw();}catch(err){alert('設定を読み込めません：'+err.message);}};
+new ResizeObserver(draw).observe($('frame'));$('map').value=Math.max(0,DATA.findIndex(m=>m.default));choose();
+</script></html>

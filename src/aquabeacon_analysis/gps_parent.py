@@ -9,6 +9,8 @@ from pathlib import Path
 import matplotlib
 import numpy as np
 
+from .editable_plots import save_editable_figure
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
@@ -211,7 +213,7 @@ def produce_parent_gps_position(
         axis.grid(True)
     figure.suptitle("Different axes and scales; no direct accuracy comparison")
     figure.tight_layout()
-    figure.savefig(output_dir / "parent_gps_imu_diagnostic.png", dpi=150)
+    save_editable_figure(figure, output_dir / "parent_gps_imu_diagnostic.png", dpi=150)
     plt.close(figure)
     gps_valid = segment >= 0
     metadata = {

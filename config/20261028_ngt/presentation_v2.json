@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "experiment_id": "20261028_ngt_004",
+  "max_attitude_slerp_gap_s": 0.1,
+  "attitude_nearest_matching_tolerance_s": 0.055,
+  "render_interval_parent_video_s": [1410.0, 1539.8],
+  "map_selection": "structural AND position_registered AND wall_period, as declared in source models.json",
+  "point_reveal": "second distinct observing-image timestamp in final COLMAP point track; retrospective final-map observation replay, not online SLAM birth",
+  "parent_R_frd_from_cad": [[1, 0, 0], [0, -1, 0], [0, 0, -1]],
+  "child_R_frd_from_cad": [[0, 1, 0], [1, 0, 0], [0, 0, -1]],
+  "child_cad_alignment_status": "provisional_visual_alignment_only",
+  "child_cad_alignment_calibrated": false,
+  "child_cad_axis_evidence": "calibration/rigs/cad_20261028.json: bodies.child.axes; frozen data/interim/cad/cad_20261028/rig.json",
+  "child_cad_alignment_assumption": "CAD +Y tube dome direction is displayed as FRD forward; +X is right and +Z up. Dome-to-calibration-forward correspondence is not independently calibrated. Camera/light position swap does not imply rotation.",
+  "cad_origin_policy": "Nominal design origins placed at estimated position; sensor centres and lever arms uncalibrated",
+  "declination_deg": 0,
+  "heading_accuracy_validated": false
+}

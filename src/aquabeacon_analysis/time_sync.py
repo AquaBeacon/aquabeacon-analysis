@@ -8,9 +8,11 @@ import shutil
 import struct
 import subprocess
 from collections.abc import Iterable, Iterator
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 from datetime import UTC, datetime
 from pathlib import Path
+
+from .experiments import validate_experiment_id
 
 CREATION_TIME_RE = re.compile(r"creation_time\s*:\s*(\S+)")
 DURATION_RE = re.compile(r"Duration:\s*(\d+):(\d+):(\d+(?:\.\d+)?)")
@@ -110,20 +112,32 @@ def _session_bounds(path: Path) -> tuple[int, int]:
 
 
 def discover_sessions(c_main_dir: Path, requested: list[str] | None = None) -> list[Session]:
-    selected = {value.zfill(5) for value in requested} if requested else None
+    selected = {value.zfill(5) if value.isdigit() else value for value in requested} if requested else None
+    found = set()
     sessions = []
     for path in sorted(c_main_dir.glob("C_MAIN_IMU_100Hz_*.csv")):
         match = SESSION_RE.search(path.name)
         if not match:
             continue
         suffix = match.group(1)
-        if selected is not None and suffix not in selected:
+        if selected is not None and not any(
+            token == suffix or token.endswith(f"_cmain_{suffix[-3:]}") for token in selected
+        ):
             continue
         start, end = _session_bounds(path)
         date = datetime.fromtimestamp(start / 1_000_000, UTC).strftime("%Y%m%d")
-        sessions.append(Session(suffix, f"{date}_cmain_{suffix[-3:]}", start, end))
+        experiment_id = f"{date}_cmain_{suffix[-3:]}"
+        matches = {suffix, experiment_id}
+        if selected is not None and not matches.intersection(selected):
+            continue
+        found.update(matches)
+        sessions.append(Session(suffix, experiment_id, start, end))
+    if selected and selected - found:
+        raise FileNotFoundError(f"no matching C_MAIN sessions for {sorted(selected - found)}")
     if not sessions:
         raise FileNotFoundError("no matching C_MAIN IMU sessions found")
+    if len({session.experiment_id for session in sessions}) != len(sessions):
+        raise ValueError("C_MAIN experiment IDs collide; register and select each source separately")
     return sessions
 
 
@@ -625,11 +639,17 @@ def synchronize_raw_data(
     sessions: list[str] | None = None,
     ffmpeg_path: Path | None = None,
     trim_video: bool = True,
+    experiment_id: str | None = None,
 ) -> list[Path]:
     raw_root = raw_root.resolve()
     interim_root = interim_root.resolve()
     results_root = results_root.resolve()
     discovered = discover_sessions(raw_root / "C_MAIN", sessions)
+    if experiment_id is not None:
+        validate_experiment_id(experiment_id)
+        if len(discovered) != 1:
+            raise ValueError("a registered experiment must select exactly one C_MAIN source session")
+        discovered = [replace(discovered[0], experiment_id=experiment_id)]
     ffmpeg = resolve_ffmpeg(ffmpeg_path)
     manifests = []
     for session in discovered:

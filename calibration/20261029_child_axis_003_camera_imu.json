@@ -1,0 +1,98 @@
+{
+  "experiment_id": "20261029_child_axis_003",
+  "clock_model": "child_mono_s = video_s + offset_s",
+  "offset_s": 455.7820000000085,
+  "time_scale": 1,
+  "drift_estimated": false,
+  "source_video_interval_s": [
+    5.396182999991481,
+    107.76272099999147
+  ],
+  "child_marker_interval_s": [
+    461.178183,
+    563.544721
+  ],
+  "R_camera_imu_from_bno": [
+    [
+      -0.012998868907386139,
+      -0.8679940507686785,
+      -0.49640442910726457
+    ],
+    [
+      -0.9988766912146514,
+      -0.011351495416444344,
+      0.04600542685248559
+    ],
+    [
+      -0.04556736941274488,
+      0.49644483216364643,
+      -0.866871468824999
+    ]
+  ],
+  "R_body_from_camera_imu": [
+    [
+      -0.03439993833083141,
+      -0.9983959357716556,
+      -0.04496887454088693
+    ],
+    [
+      0.9992635355000916,
+      -0.03359470773008575,
+      -0.018541365440199995
+    ],
+    [
+      0.01700090770200067,
+      -0.04557357838889902,
+      0.9988163084822648
+    ]
+  ],
+  "camera_rotation_fit": {
+    "samples": 196,
+    "singular_values": [
+      124.2519569414095,
+      30.50354582081226,
+      8.971738920123203
+    ],
+    "singular_ratio": 0.07220601703966553,
+    "correlation": 0.9749854455248904,
+    "rms_rad_s": 0.1279580130294944
+  },
+  "held_out_rotation_check": {
+    "samples": 88,
+    "correlation": 0.9967850776114703,
+    "rms_rad_s": 0.06291577528194112
+  },
+  "camera_calibration_scope": "This capture interval only; camera IMU, not optical extrinsic or translation.",
+  "inputs": {
+    "capture": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\C_MAIN_BODY_CAPTURE_00003.bin",
+      "sha256": "84024acc1c641cb6b1e667c52c8e007a9d1926b0cabd7ad5052a03e5bdffa81d"
+    },
+    "camera_proxy": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\DJI\\DJI_20261029223001_0187_D.LRF",
+      "sha256": "bf92cedd11c18de5215e08d244705a23a8eb7a3128eecdecd15ecd74d8087967"
+    },
+    "camera_original": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\DJI\\DJI_20261029223001_0187_D.MP4",
+      "sha256": "3acf7b183a5c7bec456b4268c4788082540f351e6c922a2eba41fb08d9655988"
+    },
+    "imu": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\C_MAIN_IMU_100Hz_29567.bin",
+      "sha256": "58da4a8f51f1cee0f78c01d308aa0851ed905bfd402fcfb9d6bb0dc68946e668"
+    },
+    "bno_events": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\C_MAIN_BNO_EVENTS_29567.bin",
+      "sha256": "c470359483fd5db174dbebed2f84f10b5050fddcc6b78a4743baecd9252ec689"
+    },
+    "health": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\C_MAIN_HEALTH_RANGE_29567.bin",
+      "sha256": "56178d4de7ecd8c7f2dae72e6b948eb72c3c0076dfe0698c21cd4150ddbb634c"
+    }
+  },
+  "config_sha256": "5bf78872aa28c5670666ab7b18d6bdaf3198c34c676744677617b1afcee0b4dd",
+  "axis_solution_sha256": "37150d3396b8c1a9af66dee70ef993454842d9ed55edb36e2022e994da0b0823",
+  "script_sha256": "b02232dec9c03b405e18822e60fb3500475124912729f9e43f1f012feb735bbb",
+  "git_commit": "f14369324f937bd145b87851c5aadbd5b4884deb",
+  "status": "accepted_for_marker_interval_only",
+  "absolute_heading_valid": false
+}

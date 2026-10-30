@@ -1,0 +1,25 @@
+{
+  "review_date": "2026-10-30",
+  "time_basis": "child original source video seconds",
+  "method": "Manual review of preserved native-video sample frames; conservative sample-supported windows, transition times are not frame-exact immersion measurements.",
+  "20261028_ngt_001": {
+    "note": "Poolside air imagery confirmed at 95.962533 s. Underwater intrinsics mismatch. No overlapping child body IMU. Diagnostic only.",
+    "air_samples_s": [95.96253333333334]
+  },
+  "20261028_ngt_002": {
+    "note": "Murky green underwater image, few persistent scene features; central sample 791.924467 s.",
+    "underwater_samples_s": [791.9244666666667]
+  },
+  "20261028_ngt_003": {
+    "note": "Tracking interval 906.539-959.442 s coincides with emergence above water in inspected samples. Do not claim this as underwater tracking accuracy.",
+    "underwater_samples_s": [904.003, 961.002, 966.999],
+    "air_samples_s": [906.597, 910.001, 920.002, 930.004, 939.997, 949.999, 955.004, 959.400],
+    "conservative_underwater_windows_s": [[821.9211, 904.0], [961.01, 971.9376333333333]],
+    "conservative_air_window_s": [906.6, 959.4],
+    "transition_intervals_unclassified": [[904.0, 906.6], [959.4, 961.01]]
+  },
+  "20261028_ngt_004": {
+    "note": "Underwater samples: low contrast first half; floor/rope/wall texture becomes visible late.",
+    "underwater_samples_s": [980.004, 999.999, 1039.997, 1080.004, 1112.003, 1149.999, 1189.997, 1210.0, 1230.004, 1249.999]
+  }
+}

@@ -9,6 +9,8 @@ from pathlib import Path
 import matplotlib
 import numpy as np
 
+from .editable_plots import save_editable_figure
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
@@ -397,7 +399,7 @@ def _plot_timeline(quality: list[dict], output: Path, title: str) -> None:
     axis.set_title(title)
     axis.grid(axis="x", alpha=0.25)
     fig.tight_layout()
-    fig.savefig(output, dpi=170)
+    save_editable_figure(fig, output, dpi=170)
     plt.close(fig)
 
 
@@ -416,7 +418,7 @@ def _plot_sampling(quality: list[dict], output: Path, title: str) -> None:
     axis.legend()
     axis.grid(axis="x", alpha=0.25)
     fig.tight_layout()
-    fig.savefig(output, dpi=170)
+    save_editable_figure(fig, output, dpi=170)
     plt.close(fig)
 
 
@@ -458,25 +460,14 @@ def _plot_correlations(
         axes[row, 1].grid(alpha=0.2)
     fig.suptitle(title, fontsize=15)
     fig.tight_layout(rect=(0, 0, 1, 0.97))
-    fig.savefig(output, dpi=170)
+    save_editable_figure(fig, output, dpi=170)
     plt.close(fig)
 
 
 def _session_dirs(interim_root: Path, requested: list[str] | None) -> list[Path]:
-    directories = sorted(path for path in interim_root.glob("*_cmain_*") if path.is_dir())
-    if not requested:
-        return directories
-    tokens = {token.lower() for token in requested}
-    numeric_tokens = {str(int(token)) for token in tokens if token.isdigit()}
-    selected = [
-        path
-        for path in directories
-        if path.name.lower() in tokens
-        or path.name.rsplit("_", 1)[-1].lstrip("0") in numeric_tokens
-    ]
-    if not selected:
-        raise FileNotFoundError(f"no matching synchronized sessions for {requested}")
-    return selected
+    from .experiments import select_experiment_directories
+
+    return select_experiment_directories(interim_root, requested, "c_main")
 
 
 def analyze_synchronization(

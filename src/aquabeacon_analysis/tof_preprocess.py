@@ -174,8 +174,8 @@ def preprocess_experiment(experiment: Path, processed_root: Path,
 
 def preprocess_all(interim_root: Path, processed_root: Path, results_root: Path,
                    repository: Path, sessions: list[str] | None = None) -> list[Path]:
-    experiments = sorted(p for p in interim_root.iterdir() if p.is_dir())
-    if sessions:
-        experiments = [p for p in experiments if p.name in sessions or p.name[-3:] in sessions]
+    from .experiments import select_experiment_directories
+
+    experiments = select_experiment_directories(interim_root, sessions, "c_main")
     return [preprocess_experiment(p, processed_root, results_root, repository)
             for p in experiments]

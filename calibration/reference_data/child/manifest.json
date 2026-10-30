@@ -1,0 +1,244 @@
+{
+  "experiment_id": "20261029_child_axis_003",
+  "clock_model": "child_mono_s = video_s + offset_s",
+  "offset_s": 455.7820000000085,
+  "time_scale": 1,
+  "drift_estimated": false,
+  "source_video_interval_s": [
+    5.396182999991481,
+    107.76272099999147
+  ],
+  "child_marker_interval_s": [
+    461.178183,
+    563.544721
+  ],
+  "motion_matches": [
+    {
+      "offset_s": 455.77400000000847,
+      "correlation": 0.9509504813827908,
+      "coverage": 1.0,
+      "window_s": [
+        25,
+        48
+      ],
+      "competing_correlation_outside_1s": 0.597644022508295,
+      "at_search_boundary": false
+    },
+    {
+      "offset_s": 455.7820000000085,
+      "correlation": 0.9975807326907095,
+      "coverage": 1.0,
+      "window_s": [
+        50,
+        73
+      ],
+      "competing_correlation_outside_1s": 0.168220276669593,
+      "at_search_boundary": false
+    },
+    {
+      "offset_s": 455.7840000000085,
+      "correlation": 0.9988426578771431,
+      "coverage": 1.0,
+      "window_s": [
+        75,
+        100
+      ],
+      "competing_correlation_outside_1s": 0.09340161909505958,
+      "at_search_boundary": false
+    }
+  ],
+  "R_camera_imu_from_bno": [
+    [
+      -0.012998868907386139,
+      -0.8679940507686785,
+      -0.49640442910726457
+    ],
+    [
+      -0.9988766912146514,
+      -0.011351495416444344,
+      0.04600542685248559
+    ],
+    [
+      -0.04556736941274488,
+      0.49644483216364643,
+      -0.866871468824999
+    ]
+  ],
+  "R_body_from_camera_imu": [
+    [
+      -0.03439993833083141,
+      -0.9983959357716556,
+      -0.04496887454088693
+    ],
+    [
+      0.9992635355000916,
+      -0.03359470773008575,
+      -0.018541365440199995
+    ],
+    [
+      0.01700090770200067,
+      -0.04557357838889902,
+      0.9988163084822648
+    ]
+  ],
+  "camera_rotation_fit": {
+    "samples": 196,
+    "singular_values": [
+      124.2519569414095,
+      30.50354582081226,
+      8.971738920123203
+    ],
+    "singular_ratio": 0.07220601703966553,
+    "correlation": 0.9749854455248904,
+    "rms_rad_s": 0.1279580130294944
+  },
+  "held_out_rotation_check": {
+    "samples": 88,
+    "correlation": 0.9967850776114703,
+    "rms_rad_s": 0.06291577528194112
+  },
+  "camera_calibration_scope": "This capture interval only; camera IMU, not optical extrinsic or translation.",
+  "magnetic": {
+    "accepted": false,
+    "reference": "local magnetic north candidate; not true north",
+    "poses": [
+      {
+        "phase": 1,
+        "samples": 273,
+        "world_field_uT": [
+          -3.877152981952098,
+          7.841464877218327,
+          -47.76611307844787
+        ],
+        "mean_field_norm_uT": 48.56874516412521,
+        "world_field_azimuth_deg": 116.3097452616727,
+        "source_video_start_s": 10.0082969999915,
+        "source_video_end_s": 22.16200699999149
+      },
+      {
+        "phase": 2,
+        "samples": 205,
+        "world_field_uT": [
+          -10.59222454855562,
+          1.3016877541794951,
+          -52.178259317117835
+        ],
+        "mean_field_norm_uT": 53.26631974840562,
+        "world_field_azimuth_deg": 172.99399913793434,
+        "source_video_start_s": 42.18255099999146,
+        "source_video_end_s": 51.61081399999148
+      },
+      {
+        "phase": 3,
+        "samples": 163,
+        "world_field_uT": [
+          -1.9906929258269201,
+          11.257399954737037,
+          -56.38755833997735
+        ],
+        "mean_field_norm_uT": 57.54005101922142,
+        "world_field_azimuth_deg": 100.02818084460839,
+        "source_video_start_s": 65.5170769999915,
+        "source_video_end_s": 73.29045399999148
+      },
+      {
+        "phase": 4,
+        "samples": 236,
+        "world_field_uT": [
+          -3.7837558043386146,
+          5.337256659045566,
+          -56.149606658929585
+        ],
+        "mean_field_norm_uT": 56.537082395487786,
+        "world_field_azimuth_deg": 125.33407484599898,
+        "source_video_start_s": 89.21409099999147,
+        "source_video_end_s": 99.85646499999149
+      }
+    ],
+    "constant_bias_trial_uT": [
+      1.324926076666604,
+      -2.1991427920517204,
+      6.376265865863028
+    ],
+    "constant_bias_condition": 3.4705557424255,
+    "fit_world_field_uT": [
+      -4.448749699932378,
+      4.082437091214066,
+      -54.399166186753106
+    ],
+    "held_out_pose": 4,
+    "held_out_relative_field_error": 0.10947839555222678,
+    "held_out_field_azimuth_error_deg": 19.11390220783497,
+    "relative_field_gate": 0.05,
+    "heading_gate_deg": 5,
+    "reason": "Raw field varies across poses; constant-bias trial fails independent pose. No magnetic or true-north calibration published.",
+    "declination_deg": null
+  },
+  "ffmpeg_command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-nostdin",
+    "-threads",
+    "2",
+    "-ss",
+    "5.396182999991481",
+    "-i",
+    "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\DJI\\DJI_20261029223001_0187_D.MP4",
+    "-t",
+    "102.36653799999999",
+    "-map",
+    "0:v:0",
+    "-map",
+    "0:a:0?",
+    "-c:v",
+    "libx264",
+    "-threads",
+    "2",
+    "-preset",
+    "veryfast",
+    "-crf",
+    "18",
+    "-c:a",
+    "aac",
+    "-movflags",
+    "+faststart",
+    "-y",
+    "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\results\\20261029_child_axis_003\\calibration_clip\\calibration_only.mp4"
+  ],
+  "clip_sha256": "8d25f4178e03ccbb01a20ff398371dbf9aacab8e7ba37cd48e299918cc741040",
+  "imu_rows": 10236,
+  "camera_rows": 3068,
+  "pid": 28532,
+  "inputs": {
+    "capture": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\C_MAIN_BODY_CAPTURE_00003.bin",
+      "sha256": "84024acc1c641cb6b1e667c52c8e007a9d1926b0cabd7ad5052a03e5bdffa81d"
+    },
+    "camera_proxy": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\DJI\\DJI_20261029223001_0187_D.LRF",
+      "sha256": "bf92cedd11c18de5215e08d244705a23a8eb7a3128eecdecd15ecd74d8087967"
+    },
+    "camera_original": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\DJI\\DJI_20261029223001_0187_D.MP4",
+      "sha256": "3acf7b183a5c7bec456b4268c4788082540f351e6c922a2eba41fb08d9655988"
+    },
+    "imu": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\C_MAIN_IMU_100Hz_29567.bin",
+      "sha256": "58da4a8f51f1cee0f78c01d308aa0851ed905bfd402fcfb9d6bb0dc68946e668"
+    },
+    "bno_events": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\C_MAIN_BNO_EVENTS_29567.bin",
+      "sha256": "c470359483fd5db174dbebed2f84f10b5050fddcc6b78a4743baecd9252ec689"
+    },
+    "health": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\child\\C_MAIN_HEALTH_RANGE_29567.bin",
+      "sha256": "56178d4de7ecd8c7f2dae72e6b948eb72c3c0076dfe0698c21cd4150ddbb634c"
+    }
+  },
+  "config_sha256": "5bf78872aa28c5670666ab7b18d6bdaf3198c34c676744677617b1afcee0b4dd",
+  "axis_solution_sha256": "37150d3396b8c1a9af66dee70ef993454842d9ed55edb36e2022e994da0b0823",
+  "script_sha256": "b02232dec9c03b405e18822e60fb3500475124912729f9e43f1f012feb735bbb",
+  "magnetic_module_sha256": "95b6a554f0c2798d9a581ca1493265eaf66fb31dee1a1783dbedff4b6fe4d9ef",
+  "git_commit": "f14369324f937bd145b87851c5aadbd5b4884deb"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "raw_root": "data/raw/ngtHighSchoolExperiment1",
+  "raw_sources": [
+    "data/raw/ngtHighSchoolExperiment1/parent",
+    "data/raw/ngtHighSchoolExperiment1/child",
+    "data/raw/ngtHighSchoolExperiment1/spresence",
+    "data/raw/ngtHighSchoolExperiment1/AquaBeacon_pool_experiment_checklist.docx"
+  ],
+  "c_main_suffix": "83304",
+  "p_main_suffix": "11071",
+  "config_paths": [
+    "config/20261028_ngt/analysis.json"
+  ],
+  "calibration_paths": [
+    "calibration/rigs/cad_20261028.json",
+    "calibration/child_mount_20261028_actual.json",
+    "calibration/20261029_child_axis_003_imu_frd.json",
+    "calibration/20261029_parent_axis_011_axes.json",
+    "calibration/20261028_parent_lis3mdl_cad_axes.json",
+    "calibration/camera_defaults.json",
+    "calibration/parent_camera_underwater_20260924_provisional.json"
+  ],
+  "notes": [
+    "Raw files are read-only shared sources. Segment bounds are parent source-video seconds; camera clocks must be aligned using IMU.",
+    "GNSS UTC is the absolute clock reference; user reports approximately 15:00 JST. Camera filename time is not trusted.",
+    "Parent Oct28 body capture completed. Child Oct28 alignment failed; use Oct27 alignment only if provenance and transform are available.",
+    "CAD reference only: mechanical/assemblies/child_horizontal_plate_frame, child_interior, parent_exterior, parent_hand_service. Measurement centers are unverified.",
+    "User confirms no surveyed ground truth: report static scatter about mean and RTK/PPK differences.",
+    "cad_20261028 is the current four-assembly design snapshot. cad_20261027 failed source hash verification; no unmeasured lever-arm or body-axis transform is applied.",
+    "User reconfirmed Oct27 BOTH child four-pose body alignment and BNO085 internal calibration completed; copied logs do not yet expose an identifiable saved transform or phase sequence. This is not evidence of calibration not performed.",
+    "2026-10-29 user confirms camera/light mounting locations interchanged vs CAD in actual run; see child_mount_20261028_actual.json. New axis capture 003 audited separately; no rotation applied.",
+    "29567 sources received. Offline four-pose IMU-to-FRD fit available with logged drop-counter review. No camera clock/extrinsic or absolute heading accepted; see calibration solution."
+  ],
+  "experiment_id": "20261028_ngt_003",
+  "description": "Child position range limit experiment",
+  "parent_video_interval_s": [
+    1110,
+    1260
+  ],
+  "camera_intrinsics_policy": "2026-10-30 user request: shared Okinawa underwater calibration for both cameras; see camera_defaults.json; actual values/hashes recorded per analysis."
+}

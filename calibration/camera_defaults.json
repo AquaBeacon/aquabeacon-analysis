@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "updated_date": "2026-10-30",
+  "source": "User instruction: use the Okinawa sea-experiment underwater calibration for child and parent cameras going forward.",
+  "underwater_intrinsics": {
+    "P_MAIN_CAM": "calibration/parent_camera_underwater_20260924_provisional.json",
+    "C_MAIN_CAM": "calibration/parent_camera_underwater_20260924_provisional.json"
+  },
+  "conditions": {
+    "camera": "DJI Osmo Action 6",
+    "fov": "Standard (Dewarp)",
+    "eis": "Off",
+    "housing": "DJI official waterproof case",
+    "medium": "underwater"
+  },
+  "policy": "Use the matching main-video or proxy matrix, rescale intrinsics for full-frame resizing, preserve distortion. Explicit overrides take precedence. Record actual source/hash/geometry in every analysis manifest. Do not apply this underwater model to air images without marking the medium mismatch. No IMU extrinsic or time synchronization is implied.",
+  "status": "provisional_limited_viewpoint_diversity"
+}

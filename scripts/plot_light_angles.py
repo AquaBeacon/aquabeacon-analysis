@@ -11,6 +11,8 @@ from pathlib import Path
 
 import matplotlib
 
+from aquabeacon_analysis.editable_plots import save_editable_figure
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
@@ -71,7 +73,7 @@ def plot_experiment(experiment_id: str, root: Path) -> tuple[Path, Path]:
         ha="center", fontsize=9, color="#4b5563",
     )
     output = directory / "angle_before_after.png"
-    fig.savefig(output, dpi=180, bbox_inches="tight", facecolor="white")
+    save_editable_figure(fig, output, dpi=180, bbox_inches="tight", facecolor="white")
     plt.close(fig)
     manifest_path = directory / "angle_plot_manifest.json"
     inputs = [

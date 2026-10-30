@@ -1,0 +1,3 @@
+# Calibration checksums refer to exact bytes, including on Windows checkouts.
+calibration/*.json -text whitespace=cr-at-eol
+calibration/reference_data/** -text whitespace=cr-at-eol

@@ -1,0 +1,16 @@
+{
+  "station_id": "950356",
+  "station_name": "神戸中央",
+  "base_obs": "data/interim/20261028_ngt_000/gnss_geonet_950356/0356301f.26o",
+  "base_coordinates": "RINEX header model coordinates",
+  "primary_run": "ar_continuous",
+  "systems": "GPS/Galileo/QZSS",
+  "navsys": 73,
+  "max_base_age_s": 15,
+  "base_interval_s": 30.0,
+  "warning": "30s base not interpolated into 1s observations; output age is retained",
+  "ar_ratio_threshold": 3,
+  "minimum_lock_epochs": 5,
+  "elevation_deg": 15,
+  "gravity_or_cad_correction": null
+}

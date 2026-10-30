@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20260922_pmain_024",
+  "description": "2026-09-22 PMAIN log 024 (legacy layout)",
+  "raw_root": "data/raw",
+  "raw_sources": [
+    "data/raw/P_MAIN_HEALTH_RANGE_00024.csv"
+  ],
+  "c_main_suffix": null,
+  "p_main_suffix": "00024",
+  "config_paths": [
+    "config/default.yaml",
+    "config/sensors.yaml",
+    "config/tof_depth_comparison_20260922.json"
+  ],
+  "calibration_paths": [],
+  "notes": [
+    "Legacy sources and outputs were not moved.",
+    "Match to C_MAIN by UTC overlap, never by file suffix.",
+    "Registered calibration references describe existing studies; they are not automatically applied."
+  ]
+}

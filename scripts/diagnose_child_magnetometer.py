@@ -13,6 +13,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.spatial.transform import Rotation
 
+from aquabeacon_analysis.editable_plots import save_editable_figure
+
 
 def read_rows(path: Path) -> list[dict[str, str]]:
     with path.open(encoding="utf-8", newline="") as stream:
@@ -82,7 +84,7 @@ def diagnose(root: Path, experiment: str) -> dict[str, object]:
     fig.text(0.5, 0.01, "Diagnostic only: GRV excludes magnetic heading; parent compass frame unavailable",
              ha="center", fontsize=9)
     fig.tight_layout(rect=(0, 0.04, 1, 0.96))
-    fig.savefig(output / "magnetometer_diagnostic.png", dpi=150)
+    save_editable_figure(fig, output / "magnetometer_diagnostic.png", dpi=150)
     plt.close(fig)
     metadata = {
         "experiment_id": experiment,

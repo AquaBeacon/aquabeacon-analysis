@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>グラフを編集 | AquaBeacon</title>
+<style>
+:root{--paper:#fff;--canvas:#f1f3f4;--ink:#202b30;--muted:#52636c;--line:#b5c1c5;--accent:#166878;--space:16px}
+*{box-sizing:border-box}body{margin:0;background:var(--canvas);color:var(--ink);font:16px/1.5 "Yu Gothic",Meiryo,sans-serif}
+header{padding:16px 24px;background:var(--paper);border-bottom:1px solid var(--line)}h1{font-size:21px;margin:0 0 4px}p{margin:0;color:var(--muted)}
+main{display:grid;grid-template-columns:330px minmax(0,1fr);gap:var(--space);padding:var(--space);align-items:start}
+aside{max-height:calc(100vh - 130px);overflow:auto;background:var(--paper);padding:var(--space);border:1px solid var(--line)}fieldset{border:0;border-top:1px solid var(--line);margin:20px 0 0;padding:12px 0 0}
+legend{font-weight:bold;padding:0 8px 0 0}label{display:block;margin:8px 0}input,select,button{font:inherit;min-height:42px;border:1px solid var(--line);border-radius:3px;background:white;padding:7px;width:100%;color:var(--ink)}
+input[type=checkbox]{width:22px;min-height:22px;vertical-align:middle;margin-right:8px}button{cursor:pointer}button.primary{background:var(--accent);color:white;border-color:var(--accent)}
+button:hover,a:hover{filter:brightness(.92)}button,a,input,select{touch-action:manipulation}button:disabled{opacity:.5;cursor:wait}:focus-visible{outline:3px solid #eab15e;outline-offset:2px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.actions>*{width:auto}a{color:var(--accent);padding:8px;display:inline-block}
+section{position:sticky;top:16px;min-width:0}#preview{display:block;width:100%;height:100%;background:white;object-fit:contain;pointer-events:none;user-select:none}#status{padding:10px 0;min-height:44px}small{color:var(--muted)}
+.numeric{display:grid;grid-template-columns:minmax(0,1fr) 100px;align-items:center;gap:10px}.numeric input[type=number]{min-width:0;font-variant-numeric:tabular-nums}
+input[type=range]{accent-color:var(--accent);cursor:pointer;padding:0;border:0;min-width:0;min-height:36px}
+.plot-stage{overflow:auto;padding:16px 24px 28px 8px;border:1px solid var(--line);background:#e6ebed}#plot-frame{position:relative;background:white;outline:1px solid var(--line)}
+.resize{position:absolute;background:var(--accent);border:2px solid white;padding:0;min-height:0;touch-action:none;z-index:1}
+.resize-width{right:-8px;top:calc(50% - 22px);width:16px;height:44px;cursor:ew-resize}.resize-height{left:calc(50% - 22px);bottom:-8px;width:44px;height:16px;cursor:ns-resize}.resize-both{right:-10px;bottom:-10px;width:22px;height:22px;cursor:nwse-resize}
+#dimensions{padding:8px 0;font-variant-numeric:tabular-nums}details{border-top:1px solid var(--line);margin-top:12px;padding-top:10px}summary{font-weight:bold;cursor:pointer}.limits-title{margin-top:12px;font-weight:bold}
+@media(max-width:780px){main{grid-template-columns:1fr}header{padding:16px}section{grid-row:1;position:static}aside{max-height:none}.plot-stage{max-height:65vh}}
+</style>
+<header><h1>グラフを編集</h1><p>スライダーで見た目を調整し、図の端をドラッグして縦横の大きさを変えられます。</p></header>
+<main><aside><fieldset><legend>フォント・文字サイズ</legend><small>このPCのフォントを選べます。全体サイズを基準に、個別指定したサイズを優先します。空欄は元のサイズを保ちます。</small><div id="fontFigure"></div><small>以下は選択中のグラフの個別サイズです。</small><div id="fontAxes"></div></fieldset><label>編集するグラフ<select id="axis"></select></label><fieldset><legend>表示範囲（xlim / ylim）</legend><div id="limitFields"></div></fieldset><details><summary>図の大きさ・全体設定</summary><div id="global"></div></details><details><summary>軸ラベル・目盛り・凡例</summary><small>対数軸は正の表示範囲を先に指定してください。主・補助目盛り間隔は線形軸用です。指定目盛り位置と文字は対応する個数を入力します。パネル位置を変更すると自動配置を解除します。</small><div id="axisFields"></div></details>
+<fieldset><legend>系列・注釈</legend><label>編集する要素<select id="artist"></select></label><small>点サイズは散布図では面積 pt²、折れ線の点では直径 pt。空欄は元の設定を保ちます。</small><div id="artistFields"></div></fieldset></aside>
+<section><div class="plot-stage" id="plot-stage"><div id="plot-frame"><img width="1200" height="675" id="preview" alt="編集中のグラフ"><button class="resize resize-width" data-resize="width" aria-label="図の幅をドラッグして変更" title="幅を変更（左右キーでも調整）"></button><button class="resize resize-height" data-resize="height" aria-label="図の高さをドラッグして変更" title="高さを変更（上下キーでも調整）"></button><button class="resize resize-both" data-resize="both" aria-label="図の縦横をドラッグして変更" title="縦横を変更（矢印キーでも調整）"></button></div></div><p id="dimensions" aria-live="polite"></p><small>青いハンドルで幅・高さを変更。離すと配置を再計算します。数値入力・矢印キーでも調整できます。プレビューは元の縦横比を維持します。</small><div class="actions"><button class="primary" id="save">編集内容と画像を保存</button><button id="quit">保存して終了</button><button id="reset">生成時に戻す</button><a href="/figure.png" download="figure.png">PNG</a><a href="/figure.svg" download="figure.svg">SVG</a><a href="/figure.pdf" download="figure.pdf">PDF</a></div><p id="status" role="status" aria-live="polite"></p><small>保存ボタンで .style.json と .edited.png / .svg / .pdf を元の図と同じフォルダに保存します。終了時は「保存して終了」または端末で Ctrl+C。</small><details><summary>Pythonで全プロパティを編集する</summary><p>この画面は一般的な2D図の見た目を扱います。特殊なArtist・レイアウト・フォーマッター等は元のPython生成コード、または以下で編集できます。計測値や単位の変更は見た目の変更と分けて記録してください。</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere">__PYTHON_EXAMPLE__</pre></details></section></main>
+<script>
+const token='__TOKEN__';let state,axisIndex=0,artistIndex=0,dirty=false,displayScale=null,drag=null;let fontNames=[];const pending=new Map();
+const $=id=>document.getElementById(id),status=text=>$('status').textContent=text;
+const numeric=new Set(['width','height','dpi','font_size','title_size','label_size','tick_size','xmin','xmax','ymin','ymax','zmin','zmax','elev','azim','xtick_step','ytick_step','xtick_rotation','ytick_rotation','legend_size','linewidth','markersize','markeredgewidth','size','alpha','fontsize']);
+const titles={xscale:'横軸スケール',yscale:'縦軸スケール',aspect:'軸の縦横比 (auto / equal / 正数)',left:'パネル左位置 (図の比率)',bottom:'パネル下位置 (図の比率)',panel_width:'パネル幅 (図の比率)',panel_height:'パネル高さ (図の比率)',title_x:'タイトル横位置 (軸の比率)',title_y:'タイトル縦位置 (軸の比率)',xlabel_x:'横軸ラベル横位置 (軸の比率)',ylabel_y:'縦軸ラベル縦位置 (軸の比率)',xminor_step:'横軸の補助目盛り間隔 (0=自動)',yminor_step:'縦軸の補助目盛り間隔 (0=自動)',xtick_positions:'横軸の指定目盛り位置 (カンマ区切り)',ytick_positions:'縦軸の指定目盛り位置 (カンマ区切り)',xtick_labels:'横軸の指定目盛り文字 (|区切り)',ytick_labels:'縦軸の指定目盛り文字 (|区切り)',xticks_visible:'横軸の目盛り線を表示',yticks_visible:'縦軸の目盛り線を表示',xtick_color:'横軸の目盛り色',ytick_color:'縦軸の目盛り色',legend_columns:'凡例の列数',legend_frame:'凡例の枠を表示',position_x:'注釈の横位置 (元の座標系)',position_y:'注釈の縦位置 (元の座標系)',width:'幅 (inch)',height:'高さ (inch)',dpi:'解像度 (DPI)',title:'タイトル',font:'フォント',font_size:'全体の文字サイズ (pt)',background:'図全体の背景色',xtick_step:'横軸の目盛り間隔',ytick_step:'縦軸の目盛り間隔',xtick_rotation:'横軸の目盛り文字の角度 (度)',ytick_rotation:'縦軸の目盛り文字の角度 (度)',markerfacecolor:'点の塗り色',markeredgecolor:'点の縁の色',title_size:'タイトル文字サイズ (pt)',xlabel:'横軸ラベル',ylabel:'縦軸ラベル',zlabel:'Z軸ラベル',label_size:'軸ラベル文字サイズ (pt)',tick_size:'目盛り文字サイズ (pt)',xmin:'xlim 最小値',xmax:'xlim 最大値',ymin:'ylim 最小値',ymax:'ylim 最大値',zmin:'Z軸の最小値',zmax:'Z軸の最大値',elev:'3D 仰角 (度)',azim:'3D 方位角 (度)',grid:'グリッドを表示',legend:'凡例を表示',legend_location:'凡例の位置',legend_size:'凡例文字サイズ (pt)',label:'凡例での名前',visible:'表示する',alpha:'透明度 (0〜1)',color:'色',facecolor:'塗り・点の色',edgecolor:'縁の色',linewidth:'線・縁の太さ (pt)',linestyle:'線種',marker:'点の形',markersize:'点の直径 (pt)',markeredgewidth:'点の縁の太さ (pt)',size:'点の面積 (pt²)',text:'注釈の文章',fontsize:'注釈の文字サイズ (pt)'};
+for(const which of ['major','minor']){
+ const label=which==='major'?'主':'補助';titles['grid_'+which]=label+'グリッドを表示';
+ for(const [suffix,text] of Object.entries({color:'色',linewidth:'線幅 (pt)',linestyle:'線種',alpha:'透明度'}))titles['grid_'+which+'_'+suffix]=label+'グリッドの'+text;
+}
+for(const [side,label] of Object.entries({left:'左',right:'右',top:'上',bottom:'下'})){titles['spine_'+side+'_visible']=label+'枠線を表示';titles['spine_'+side+'_color']=label+'枠線の色'}
+for(const key of ['left','bottom','panel_width','panel_height','title_x','title_y','xlabel_x','ylabel_y','position_x','position_y','legend_columns','xminor_step','yminor_step','grid_major_linewidth','grid_minor_linewidth','grid_major_alpha','grid_minor_alpha'])numeric.add(key);
+function rangeSpec(key,value){
+ if(['left','bottom','panel_width','panel_height','title_x','title_y','xlabel_x','ylabel_y'].includes(key))return [0,1,.01];
+ if(key==='legend_columns')return [1,10,1];
+ if(key.endsWith('_alpha'))return [0,1,.01];
+ if(key==='width'||key==='height')return [.5,40,.05];
+ if(key==='dpi')return [36,600,1];
+ if(key==='font_size')return [1,Math.max(48,value??0),.5];
+ if(key==='alpha')return [0,1,.01];
+ if(key==='elev')return [-90,90,1];
+ if(key==='azim'||key.endsWith('rotation'))return [-180,180,1];
+ if(/^[xyz](min|max)$/.test(key)){
+  const axis=state.axes[axisIndex],dim=key[0],low=Math.min(axis[dim+'min'],axis[dim+'max']),high=Math.max(axis[dim+'min'],axis[dim+'max']);
+  const span=high-low||1;return [Math.min(low-span,value??low),Math.max(high+span,value??high),span/500];
+ }
+ if(key.endsWith('tick_step')){const axis=state.axes[axisIndex],dim=key[0],span=Math.abs(axis[dim+'max']-axis[dim+'min'])||1;return [span/100,Math.max(span,value??0),span/100]}
+ const max=key==='size'?500:key.includes('size')?48:key==='linewidth'||key==='markeredgewidth'?10:100;
+ return [0,Math.max(max,(value??0)*2),key==='size'?1:.1];
+}
+function refreshGeometry(width=state.figure.width,height=state.figure.height){
+ if(displayScale===null)displayScale=Math.min(96,Math.max(1,($('plot-stage').clientWidth-40)/width));
+ $('plot-frame').style.width=width*displayScale+'px';$('plot-frame').style.height=height*displayScale+'px';
+ $('dimensions').textContent=`幅 ${width.toFixed(2)} inch × 高さ ${height.toFixed(2)} inch（${(width*2.54).toFixed(1)} × ${(height*2.54).toFixed(1)} cm）`;
+ for(const [key,value] of [['width',width],['height',height]]){
+  const input=$('global').querySelector(`input[name="${key}"]`);
+  if(input&&!pending.has(input)&&document.activeElement!==input){input.value=Number(value.toFixed(3));input.parentElement.querySelector('input[type=range]').value=value}
+ }
+}
+function boundedSize(width,height,mode){
+ width=Math.max(.5,Math.min(40,width));height=Math.max(.5,Math.min(40,height));
+ const cap=32_000_000/state.figure.dpi**2;
+ if(width*height>cap){
+  if(mode==='width')width=cap/height;else if(mode==='height')height=cap/width;
+  else{const factor=Math.sqrt(cap/(width*height));width*=factor;height*=factor}
+ }
+ return {width:Math.floor(width*1000)/1000,height:Math.floor(height*1000)/1000};
+}
+for(const handle of document.querySelectorAll('[data-resize]')){
+ handle.addEventListener('pointerdown',event=>{
+  if(event.button!==0)return;event.preventDefault();
+  drag={id:event.pointerId,mode:handle.dataset.resize,x:event.clientX,y:event.clientY,width:parseFloat($('plot-frame').style.width)/displayScale,height:parseFloat($('plot-frame').style.height)/displayScale};
+  handle.setPointerCapture(event.pointerId);
+ });
+ handle.addEventListener('pointermove',event=>{
+  if(!drag||drag.id!==event.pointerId)return;
+  const width=drag.width+(drag.mode==='height'?0:(event.clientX-drag.x)/displayScale);
+  const height=drag.height+(drag.mode==='width'?0:(event.clientY-drag.y)/displayScale);
+  drag.size=boundedSize(width,height,drag.mode);refreshGeometry(drag.size.width,drag.size.height);
+ });
+ const finish=event=>{if(!drag||drag.id!==event.pointerId)return;const size=drag.size;drag=null;if(size)update({figure:size})};
+ handle.addEventListener('pointerup',finish);handle.addEventListener('lostpointercapture',finish);
+ handle.addEventListener('pointercancel',()=>{drag=null;refreshGeometry()});
+ handle.addEventListener('keydown',event=>{
+  if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key))return;
+  event.preventDefault();const mode=handle.dataset.resize,step=event.shiftKey?.5:.1;
+  let width=parseFloat($('plot-frame').style.width)/displayScale,height=parseFloat($('plot-frame').style.height)/displayScale;
+  if(mode!=='height')width+=event.key==='ArrowRight'?step:event.key==='ArrowLeft'?-step:0;
+  if(mode!=='width')height+=event.key==='ArrowDown'?step:event.key==='ArrowUp'?-step:0;
+  const size=boundedSize(width,height,mode);refreshGeometry(size.width,size.height);update({figure:size});
+ });
+}
+function field(container,key,value,send){
+ const caption=container.id==='fontFigure'&&key==='title_size'?'図全体タイトル文字サイズ (pt)':titles[key]||key;
+ const label=document.createElement('label');label.textContent=caption;
+ let input=document.createElement('input');input.type=numeric.has(key)?'number':typeof value==='boolean'?'checkbox':'text';
+ if(input.type==='number')input.step='any';
+ if(key==='font'){
+  input=document.createElement('select');const names=[...fontNames];if(value&&!names.includes(value))names.unshift(value);names.forEach(name=>input.add(new Option(name,name)));
+ }
+ if(key.endsWith('linestyle')||key==='marker'||key==='legend_location'||key==='xscale'||key==='yscale'){
+  input=document.createElement('select');const options=(key==='xscale'||key==='yscale')?['linear','log','symlog']:key.endsWith('linestyle')?['-','--','-.',':','None']:key==='marker'?['','None','o','s','^','v','D','x','+','.','*']:['best','upper right','upper left','lower left','lower right','center left','center right','lower center','upper center','center'];
+  if(value!=null&&!options.includes(String(value)))options.unshift(String(value));
+  options.forEach(v=>{const option=new Option(v===''?'元の形を保持':v,v);input.add(option)});
+ }
+ if(input.type==='checkbox')input.checked=value;else input.value=value??'';
+ if(key==='alpha'){input.min=0;input.max=1}
+ if(['width','height','dpi','size','markersize','linewidth','markeredgewidth','fontsize','title_size','label_size','tick_size','legend_size'].includes(key))input.min=0;
+ input.setAttribute('aria-label',caption);input.name=key;input.autocomplete='off';
+ const commit=()=>{let v=input.type==='checkbox'?input.checked:numeric.has(key)?(input.value===''?null:Number(input.value)):input.value;if(v===null||(key==='marker'&&v===''))return;return update(send(key,v))};
+ const cancel=()=>{const item=pending.get(input);if(item){clearTimeout(item.timer);pending.delete(input)}};
+ input.addEventListener('input',()=>{cancel();pending.set(input,{commit,timer:setTimeout(()=>{pending.delete(input);commit()},500)});dirty=true});
+ input.addEventListener('change',()=>{cancel();commit()});
+ if(numeric.has(key)){
+  const slider=document.createElement('input');slider.type='range';
+  const [min,max,step]=rangeSpec(key,value);Object.assign(slider,{min,max,step,value:value??(key==='alpha'?1:min)});
+  slider.setAttribute('aria-label',caption+' スライダー');
+  if(value==null)slider.setAttribute('aria-valuetext','元の設定。操作すると一律値に変更');
+  slider.addEventListener('input',()=>{input.value=Number(Number(slider.value).toPrecision(10));slider.removeAttribute('aria-valuetext');input.dispatchEvent(new Event('input'))});
+  slider.addEventListener('change',()=>input.dispatchEvent(new Event('change')));
+  input.addEventListener('input',()=>{if(input.value!==''){const v=Number(input.value);slider.min=Math.min(Number(slider.min),v);slider.max=Math.max(Number(slider.max),v);slider.value=v}});
+  const row=document.createElement('span');row.className='numeric';row.append(slider,input);label.append(row);
+ }else label.append(input);
+ if(key.includes('color')||key==='background'){
+  const picker=document.createElement('input');picker.type='color';picker.setAttribute('aria-label',(titles[key]||key)+'を選ぶ');picker.value=/^#[0-9a-f]{6}/i.test(String(value))?value.slice(0,7):'#000000';
+  picker.addEventListener('input',()=>{input.value=picker.value;input.dispatchEvent(new Event('input'))});label.append(picker);
+ }
+ container.append(label);
+}
+function populate(){
+ $('global').replaceChildren();$('fontFigure').replaceChildren();
+ Object.entries({...state.figure,font:state.figure.font||'DejaVu Sans'}).forEach(([k,v])=>field(['font','font_size','title_size'].includes(k)?$('fontFigure'):$('global'),k,v,(key,value)=>({figure:{[key]:value}})));
+ const picker=$('axis');picker.replaceChildren();state.axes.forEach((a,i)=>picker.add(new Option(`${i+1}: ${a.title||a.ylabel||'グラフ'}`,i)));picker.value=axisIndex;populateAxis();
+}
+function populateAxis(){
+ const selectedAxis=axisIndex;const axis=state.axes[selectedAxis];$('axisFields').replaceChildren();$('limitFields').replaceChildren();$('fontAxes').replaceChildren();
+ if(!axis)return;
+ for(const dim of ['x','y','z'])if(dim+'min' in axis){
+  const title=document.createElement('p');title.className='limits-title';title.textContent=dim+'lim';$('limitFields').append(title);
+  for(const suffix of ['min','max'])field($('limitFields'),dim+suffix,axis[dim+suffix],(key,value)=>({axes:{[selectedAxis]:{[key]:value}}}));
+ }
+ Object.entries({...axis,grid:axis.grid??false}).filter(([k])=>k!=='artists'&&!/^[xyz](min|max)$/.test(k)).forEach(([k,v])=>field(['title_size','label_size','tick_size','legend_size'].includes(k)?$('fontAxes'):$('axisFields'),k,v,(key,value)=>({axes:{[selectedAxis]:{[key]:value}}})));
+ const picker=$('artist');picker.replaceChildren();axis.artists.forEach((a,i)=>picker.add(new Option(`${i+1}: ${a.label&&!a.label.startsWith('_')?a.label:a.kind}`,i)));
+ artistIndex=Math.min(artistIndex,Math.max(0,axis.artists.length-1));picker.value=artistIndex;populateArtist();
+}
+function populateArtist(){
+ const selectedAxis=axisIndex,selectedArtist=artistIndex;$('artistFields').replaceChildren();const artist=state.axes[axisIndex].artists[artistIndex];if(!artist)return;
+ const values={...artist};if(artist.kind.includes('PathCollection'))values.marker=artist.marker??'';
+ Object.entries(values).filter(([k])=>k!=='kind').forEach(([k,v])=>field($('artistFields'),k,v,(key,value)=>({axes:{[selectedAxis]:{artists:{[selectedArtist]:{[key]:value}}}}})));
+}
+let queue=Promise.resolve();
+function flushPending(){for(const item of pending.values()){clearTimeout(item.timer);item.commit()}pending.clear();return queue}
+function update(patch){dirty=true;queue=queue.then(async()=>{try{status('反映中…');await post('/update',patch);await reload(false);status('反映しました。保存ボタンで編集内容を残せます。')}catch(e){status(e.message);await reload()}});return queue}
+async function post(path,body={}){const response=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json','X-Plot-Token':token},body:JSON.stringify(body)});const result=await response.json();if(!response.ok)throw Error(result.error||'保存できませんでした');return result}
+async function reload(rebuild=true){state=await(await fetch('/state')).json();if(rebuild)populate();else syncTypography();if(!drag)refreshGeometry();$('preview').src='/figure.svg?v='+Date.now()}
+ $('axis').onchange=e=>{axisIndex=Number(e.target.value);artistIndex=0;populateAxis()};$('artist').onchange=e=>{artistIndex=Number(e.target.value);populateArtist()};
+ $('save').onclick=async()=>{try{await flushPending();$('save').disabled=true;status('保存中…');await post('/save');dirty=false;status('保存しました。次に開いたときも編集を続けられます。')}catch(e){status(e.message)}finally{$('save').disabled=false}};
+ $('reset').onclick=async()=>{try{await flushPending();await post('/reset');dirty=true;displayScale=null;await reload();status('生成時の設定に戻しました。保存するまでは保存済み設定を保ちます。')}catch(e){status(e.message)}};
+ window.addEventListener('beforeunload',event=>{if(dirty){event.preventDefault();event.returnValue=''}});
+ $('quit').onclick=async()=>{try{await flushPending();await post('/save-and-shutdown');dirty=false;status('保存して編集を終了しました。端末のサーバーも停止しました。')}catch(e){status(e.message)}};
+function syncTypography(){
+  for(const [id,values] of [['fontFigure',state.figure],['fontAxes',state.axes[axisIndex]]]){
+   if(!values)continue;
+   for(const [key,value] of Object.entries(values)){
+    const input=$(id).querySelector(`[name="${key}"]`);
+    if(!input||pending.has(input)||input.parentElement.contains(document.activeElement))continue;
+    input.value=value??'';const slider=input.parentElement.querySelector('input[type=range]');if(slider&&value!=null){slider.max=Math.max(Number(slider.max),value);slider.value=value}
+   }
+  }
+ }
+ async function initialize(){fontNames=await(await fetch('/fonts')).json();await reload()}
+ initialize().catch(e=>status(e.message));
+</script></html>

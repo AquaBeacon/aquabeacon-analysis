@@ -12,6 +12,8 @@ from pathlib import Path
 import matplotlib
 import numpy as np
 
+from .editable_plots import save_editable_figure
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
@@ -611,7 +613,7 @@ def localize_experiment(
     axis.grid(True)
     axis.legend()
     figure.tight_layout()
-    figure.savefig(output / "parent_imu_xy.png", dpi=150)
+    save_editable_figure(figure, output / "parent_imu_xy.png", dpi=150)
     plt.close(figure)
     report = (
         f"# {experiment_id} IMU localization\n\n"
@@ -673,10 +675,7 @@ def localize_all(
     processed_root: Path, results_root: Path, repository_root: Path,
     sessions: list[str] | None = None,
 ) -> list[Path]:
-    directories = sorted(path for path in processed_root.iterdir() if path.is_dir())
-    if sessions:
-        directories = [path for path in directories if path.name in sessions or
-                       path.name.rsplit("_", 1)[-1] in sessions]
-    if not directories:
-        raise ValueError("no matching processed experiments")
+    from .experiments import select_experiment_directories
+
+    directories = select_experiment_directories(processed_root, sessions, "tof_window/c_main")
     return [localize_experiment(path, results_root, repository_root) for path in directories]

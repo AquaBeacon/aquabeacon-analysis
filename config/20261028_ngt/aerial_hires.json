@@ -1,0 +1,37 @@
+{
+  "tiles_for_static_map_only": [
+    {
+      "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/19/208252/458959",
+      "size_bytes": 19960
+    },
+    {
+      "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/19/208253/458959",
+      "size_bytes": 17949
+    },
+    {
+      "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/19/208252/458960",
+      "size_bytes": 21300
+    },
+    {
+      "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/19/208253/458960",
+      "size_bytes": 18226
+    }
+  ],
+  "zoom": 19,
+  "extent_m": [
+    -97.52953964524025,
+    28.199334727437346,
+    -31.548056224767357,
+    94.18081814791024
+  ],
+  "display_limits_m": [
+    [
+      -42.55558338742519,
+      -31.133905186579263
+    ],
+    [
+      22.444416612574816,
+      33.86609481342074
+    ]
+  ]
+}

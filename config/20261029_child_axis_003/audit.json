@@ -1,0 +1,73 @@
+{
+  "sources": {
+    "capture": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_BODY_CAPTURE_00003.bin",
+    "camera_proxy": "data/raw/ngtHighSchoolExperiment1/child/DJI/DJI_20261029223001_0187_D.LRF",
+    "camera_original": "data/raw/ngtHighSchoolExperiment1/child/DJI/DJI_20261029223001_0187_D.MP4",
+    "imu": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_IMU_100Hz_29567.bin",
+    "bno_events": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_BNO_EVENTS_29567.bin",
+    "health": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_HEALTH_RANGE_29567.bin"
+  },
+  "offline_marker_interpretation": {
+    "start_event": 7,
+    "completion_mask": 15,
+    "phase_labels": [
+      "level",
+      "nose_up",
+      "right_up",
+      "tail_up"
+    ],
+    "basis": "Observed four-phase markers and existing four-pose acquisition procedure; offline analysis only, not firmware profile validation."
+  },
+  "camera_check_windows_s": [
+    [
+      10,
+      60
+    ],
+    [
+      60,
+      110
+    ],
+    [
+      110,
+      138
+    ]
+  ],
+  "pose_fit": {
+    "start_trim_s": 1,
+    "end_trim_s": 0.25,
+    "max_direction_residual_deg": 5,
+    "accel_std_max_m_s2": 0.04,
+    "gyro_std_max_rad_s": 0.003,
+    "max_gap_s": 0.025,
+    "drop_counter_policy": "Retain warning; explicitly verify full pose IMU indices and timestamps before using complete IMU stream."
+  },
+  "calibration_crop": {
+    "motion_windows_video_s": [
+      [
+        25,
+        48
+      ],
+      [
+        50,
+        73
+      ],
+      [
+        75,
+        100
+      ]
+    ],
+    "offset_search_s": [
+      454,
+      458
+    ],
+    "search_basis": "Broad exploratory motion search found offset near455.8; three marker-contained changes used for refinement.",
+    "clock": "constant offset; no clock drift inferred over 102s",
+    "video_encoding": "1920x1080 source resolution, H264 CRF18, 2 threads; original unchanged",
+    "magnetic_bias_training_phases": [
+      1,
+      2,
+      3
+    ],
+    "magnetic_bias_holdout_phase": 4
+  }
+}

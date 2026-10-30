@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261029_parent_axis_011",
+  "description": "Parent capture011 axis calibration; registered2026-10-29; referenceUTC not GNSS",
+  "raw_root": "data/raw/ngtHighSchoolExperiment1",
+  "raw_sources": [
+    "data/raw/ngtHighSchoolExperiment1/parent/P_MAIN_BODY_CAPTURE_00011.bin",
+    "data/raw/ngtHighSchoolExperiment1/parent/P_MAIN_HEALTH_RANGE_44386.bin",
+    "data/raw/ngtHighSchoolExperiment1/spresence/I00013.BIN",
+    "data/raw/ngtHighSchoolExperiment1/spresence/T00013.BIN",
+    "data/raw/ngtHighSchoolExperiment1/spresence/K00003.CAL",
+    "data/raw/ngtHighSchoolExperiment1/parent/P_MAIN_MAGCAL_00001.bin",
+    "data/raw/ngtHighSchoolExperiment1/parent/DJI/DJI_20261029225449_0025_D.MP4",
+    "data/raw/ngtHighSchoolExperiment1/parent/DJI/DJI_20261029225449_0025_D.LRF"
+  ],
+  "c_main_suffix": null,
+  "p_main_suffix": "44386",
+  "config_paths": [
+    "config/20261029_parent_axis_011/analysis.json"
+  ],
+  "calibration_paths": [
+    "calibration/rigs/cad_20261028.json",
+    "calibration/20261029_parent_axis_011_axes.json"
+  ],
+  "notes": [
+    "Parent and child use different sensors and clock domains.",
+    "Do not transfer child camera/light mounting swap to parent.",
+    "User replaced mistaken child video with parent0025.",
+    "IMU body axes and marker-local camera rotation accepted; magnetic axes rejected. Relative clock reconstructed from shared phone anchors, not absolute GNSS UTC."
+  ]
+}

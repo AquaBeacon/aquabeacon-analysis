@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "acquisition_id": "20261028_ngt_000",
+  "raw_root": "data/raw/ngtHighSchoolExperiment1",
+  "parent_video": "parent/DJI/DJI_20261028140300_0024_D.MP4",
+  "child_video": "child/DJI/DJI_20261028140748_0186_D.MP4",
+  "segments": [
+    {
+      "experiment_id": "20261028_ngt_001",
+      "label": "Parent GNSS static scatter",
+      "parent_video_interval_s": [
+        240,
+        480
+      ]
+    },
+    {
+      "experiment_id": "20261028_ngt_002",
+      "label": "Child position static experiment",
+      "parent_video_interval_s": [
+        1050,
+        1110
+      ]
+    },
+    {
+      "experiment_id": "20261028_ngt_003",
+      "label": "Child position range limit experiment",
+      "parent_video_interval_s": [
+        1110,
+        1260
+      ]
+    },
+    {
+      "experiment_id": "20261028_ngt_004",
+      "label": "Parent and child simultaneous movement",
+      "parent_video_interval_s": [
+        1260,
+        1540
+      ]
+    }
+  ],
+  "child_sync_motion_video_s": 560,
+  "parent_gnss_static_video_interval_s": [
+    240,
+    480
+  ],
+  "ground_truth": null,
+  "cad_rig": "cad_20261028",
+  "max_threads": 2,
+  "cad_reference_purpose": "Visualization reference only; no measured extrinsics",
+  "camera_intrinsics_defaults": "calibration/camera_defaults.json"
+}

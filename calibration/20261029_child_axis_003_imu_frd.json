@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "status": "offline_geometric_fit_with_logged_caveats",
+  "experiment_id": "20261029_child_axis_003",
+  "device": "A521D21EB1DCFB44",
+  "sensor_frame": "BNO085 reported sensor axes",
+  "body_frame": "FRD",
+  "equation": "v_body = R_body_from_sensor @ v_sensor",
+  "R_body_from_sensor": [
+    [
+      0.9997707024528126,
+      0.0188676633326407,
+      0.01012688488014523
+    ],
+    [
+      0.021412556046285128,
+      -0.8761782188473859,
+      -0.4815114030435697
+    ],
+    [
+      -0.00021203908669537432,
+      0.4816178361499795,
+      -0.8763813182294777
+    ]
+  ],
+  "pose_quality": [
+    {
+      "acceleration_samples": 1037,
+      "gyro_samples": 1056,
+      "mean_acceleration_m_s2": [
+        0.002083082208293153,
+        -4.731436837029894,
+        8.60961231316297
+      ],
+      "acceleration_std_m_s2": [
+        0.01527745554274212,
+        0.013295416764114346,
+        0.0169343042227114
+      ],
+      "gyro_std_rad_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_sample_gap_s": 0.020647000000053595,
+      "direction_residual_deg": 8.537736462515939e-07
+    },
+    {
+      "acceleration_samples": 775,
+      "gyro_samples": 798,
+      "mean_acceleration_m_s2": [
+        9.592721774193548,
+        -0.029737903225806453,
+        0.48069556451612905
+      ],
+      "acceleration_std_m_s2": [
+        0.0127435802614674,
+        0.019076805310257617,
+        0.02022331688548332
+      ],
+      "gyro_std_rad_s": [
+        0.0006947393768276177,
+        0.0005870234646778912,
+        0.0009196866499566712
+      ],
+      "max_sample_gap_s": 0.021309999999971296,
+      "direction_residual_deg": 2.611503081320693
+    },
+    {
+      "acceleration_samples": 627,
+      "gyro_samples": 624,
+      "mean_acceleration_m_s2": [
+        0.1288003389154705,
+        -8.287878787878787,
+        -4.83747009569378
+      ],
+      "acceleration_std_m_s2": [
+        0.013150895853028715,
+        0.010397675979543658,
+        0.019113405220984654
+      ],
+      "gyro_std_rad_s": [
+        0.0006897887201428334,
+        0.00046808011428110216,
+        0.0007686257122408913
+      ],
+      "max_sample_gap_s": 0.0205670000000282,
+      "direction_residual_deg": 1.5489066056111949
+    },
+    {
+      "acceleration_samples": 897,
+      "gyro_samples": 907,
+      "mean_acceleration_m_s2": [
+        -9.682191506410257,
+        0.058654717112597544,
+        -0.3687769997212932
+      ],
+      "acceleration_std_m_s2": [
+        0.01550610282364597,
+        0.016486256480267886,
+        0.01960057597208203
+      ],
+      "gyro_std_rad_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_sample_gap_s": 0.020463000000063403,
+      "direction_residual_deg": 2.1451466903320062
+    }
+  ],
+  "world_specific_force_per_pose_m_s2": [
+    [
+      -0.004155204158295067,
+      -0.005572421212635569,
+      9.824064798906145
+    ],
+    [
+      0.0012506951538530484,
+      0.0007247898594479236,
+      9.604669159338838
+    ],
+    [
+      0.0006227356178271828,
+      -0.0011060000422782024,
+      9.596960522745452
+    ],
+    [
+      0.000631887742399359,
+      0.0023448551074215403,
+      9.689478784244296
+    ]
+  ],
+  "pose_windows": [
+    {
+      "phase": 1,
+      "start_mono_s": 465.790297,
+      "end_mono_s": 477.944007,
+      "marker_drop_increment": 0,
+      "imu_index_gaps": 0,
+      "total_imu_rows": 1215
+    },
+    {
+      "phase": 2,
+      "start_mono_s": 497.964551,
+      "end_mono_s": 507.392814,
+      "marker_drop_increment": 0,
+      "imu_index_gaps": 0,
+      "total_imu_rows": 943
+    },
+    {
+      "phase": 3,
+      "start_mono_s": 521.299077,
+      "end_mono_s": 529.072454,
+      "marker_drop_increment": 0,
+      "imu_index_gaps": 0,
+      "total_imu_rows": 777
+    },
+    {
+      "phase": 4,
+      "start_mono_s": 544.996091,
+      "end_mono_s": 555.638465,
+      "marker_drop_increment": 276,
+      "imu_index_gaps": 0,
+      "total_imu_rows": 1064
+    }
+  ],
+  "config": {
+    "sources": {
+      "capture": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_BODY_CAPTURE_00003.bin",
+      "camera_proxy": "data/raw/ngtHighSchoolExperiment1/child/DJI/DJI_20261029223001_0187_D.LRF",
+      "camera_original": "data/raw/ngtHighSchoolExperiment1/child/DJI/DJI_20261029223001_0187_D.MP4",
+      "imu": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_IMU_100Hz_29567.bin",
+      "bno_events": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_BNO_EVENTS_29567.bin",
+      "health": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_HEALTH_RANGE_29567.bin"
+    },
+    "offline_marker_interpretation": {
+      "start_event": 7,
+      "completion_mask": 15,
+      "phase_labels": [
+        "level",
+        "nose_up",
+        "right_up",
+        "tail_up"
+      ],
+      "basis": "Observed four-phase markers and existing four-pose acquisition procedure; offline analysis only, not firmware profile validation."
+    },
+    "camera_check_windows_s": [
+      [
+        10,
+        60
+      ],
+      [
+        60,
+        110
+      ],
+      [
+        110,
+        138
+      ]
+    ],
+    "pose_fit": {
+      "start_trim_s": 1,
+      "end_trim_s": 0.25,
+      "max_direction_residual_deg": 5,
+      "accel_std_max_m_s2": 0.04,
+      "gyro_std_max_rad_s": 0.003,
+      "max_gap_s": 0.025,
+      "drop_counter_policy": "Retain warning; explicitly verify full pose IMU indices and timestamps before using complete IMU stream."
+    }
+  },
+  "camera_checks": [
+    {
+      "offset_s": 455.7759999999889,
+      "correlation": 0.9802082081718497,
+      "coverage": 1.0,
+      "window_s": [
+        10,
+        60
+      ],
+      "competing_correlation_outside_1s": null,
+      "at_search_boundary": false,
+      "competing_peak": 0.628063791726494
+    },
+    {
+      "offset_s": 455.78399999998896,
+      "correlation": 0.9987085724095787,
+      "coverage": 1.0,
+      "window_s": [
+        60,
+        110
+      ],
+      "competing_correlation_outside_1s": null,
+      "at_search_boundary": false,
+      "competing_peak": 0.613739729503292
+    },
+    {
+      "offset_s": 455.75999999998885,
+      "correlation": 0.7125807797470028,
+      "coverage": 1.0,
+      "window_s": [
+        110,
+        138
+      ],
+      "competing_correlation_outside_1s": null,
+      "at_search_boundary": false,
+      "competing_peak": 0.6291377418467686
+    }
+  ],
+  "camera_transform_accepted": false,
+  "camera_limit": "Late motion disagrees; no full-clip clock or extrinsic accepted.",
+  "firmware_importable": false,
+  "marker_limit": "Event7/mask15 interpreted offline as four labeled poses; not firmware profile validation.",
+  "drop_review": "Marker increment retained. Full 100Hz pose stream has contiguous indices/times; no pose data removed due to drop counter. Other stream losses are not repaired.",
+  "heading": "BNO game-world yaw remains arbitrary; no magnetic/geographic heading calibration.",
+  "reuse": "Same device, sensor mounting and FRD definition only; camera/light swapped vs CAD per user.",
+  "provenance": {
+    "capture": {
+      "path": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_BODY_CAPTURE_00003.bin",
+      "sha256": "84024acc1c641cb6b1e667c52c8e007a9d1926b0cabd7ad5052a03e5bdffa81d"
+    },
+    "camera_proxy": {
+      "path": "data/raw/ngtHighSchoolExperiment1/child/DJI/DJI_20261029223001_0187_D.LRF",
+      "sha256": "bf92cedd11c18de5215e08d244705a23a8eb7a3128eecdecd15ecd74d8087967"
+    },
+    "camera_original": {
+      "path": "data/raw/ngtHighSchoolExperiment1/child/DJI/DJI_20261029223001_0187_D.MP4",
+      "sha256": "3acf7b183a5c7bec456b4268c4788082540f351e6c922a2eba41fb08d9655988"
+    },
+    "imu": {
+      "path": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_IMU_100Hz_29567.bin",
+      "sha256": "58da4a8f51f1cee0f78c01d308aa0851ed905bfd402fcfb9d6bb0dc68946e668"
+    },
+    "bno_events": {
+      "path": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_BNO_EVENTS_29567.bin",
+      "sha256": "c470359483fd5db174dbebed2f84f10b5050fddcc6b78a4743baecd9252ec689"
+    },
+    "health": {
+      "path": "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_HEALTH_RANGE_29567.bin",
+      "sha256": "56178d4de7ecd8c7f2dae72e6b948eb72c3c0076dfe0698c21cd4150ddbb634c"
+    }
+  },
+  "config_sha256": "89b533e436cc60adef71608832df848035738436a91a9f5758770db133ae5dcc",
+  "telemetry_sha256": "a827e321badc7f233c60bba954562dcab3b7430fb3aeaba9a139ee37feaf5ee0",
+  "script_sha256": "f858abc1ff070dc71078263981ce43ef8e466d6c22155f5224e0cf6bfb35c2e6",
+  "module_sha256": "b2256ab4f6fb39919cb4d851b5ddfe1e2e867b35afc7719cc64733164dd4f35c",
+  "reader_sha256": "46e1c6804e2f4ca31d3cb7d9b1c89104c078ce2b31aa9c9e4b4a8d96203b9c4b",
+  "git_commit": "f14369324f937bd145b87851c5aadbd5b4884deb",
+  "worktree_dirty": true
+}

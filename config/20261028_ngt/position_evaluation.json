@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "acquisition_id": "20261028_ngt_000",
+  "camera_defaults": "calibration/camera_defaults.json",
+  "image_geometry": "original LRF 1280x720; proxy direct underwater matrix",
+  "optical_to_camera_imu_rotation": [[0, 0, 1], [0, 1, 0], [-1, 0, 0]],
+  "optical_axis_status": "provisional discrete convention from same-run gravity/image orientation and visual-motion audit; not measured continuous extrinsic",
+  "parent_body_axes": "calibration/20261029_parent_axis_011_axes.json",
+  "parent_magnetic_mount": "calibration/20261028_parent_lis3mdl_cad_axes.json",
+  "sample_hz": 5,
+  "nearest_range_max_delta_s": 0.6,
+  "nearest_optical_max_delta_s": 0.12,
+  "attitude_max_bracket_s": 0.25,
+  "gnss_max_bracket_s": 1.5,
+  "pressure_max_bracket_s": 2,
+  "manual_exclusions": [
+    {"interval_s": [1397.5, 1402.5], "reason": "rope/limb overlaps saturated light; review frame1400; conservative 5s review cell"},
+    {"interval_s": [1497.5, 1502.5], "reason": "foreground limb occludes light; review frame1500; conservative 5s review cell"}
+  ],
+  "range_policy": "nearest ALL recorded events before validity gate; state2/3 profile7 positive finite; no smoothing, outlier removal or depth-based rejection",
+  "range_semantics": "firmware formula candidate; not independently verified direct acoustic arrival",
+  "geometry": {
+    "lever_arm_m": [0, 0, 0],
+    "lever_arm_status": "coincident-center approximation; optical, acoustic, antenna, pressure and camera centers are not surveyed",
+    "magnetic_declination_deg": 0,
+    "declination_status": "scenario assumption only; magnetic NED remains separate from true geographic ENU",
+    "density_kg_m3": 997,
+    "sound_speed_m_s": 1500,
+    "tof_correction_us": 55
+  },
+  "ground_truth": null,
+  "range_limit_truth_distances": null,
+  "wall_dimensions_measured_m": null,
+  "nominal_move_distance_m": 25,
+  "nominal_move_status": "approximately 25m user report, not a surveyed scale bar",
+  "max_threads": 2
+}

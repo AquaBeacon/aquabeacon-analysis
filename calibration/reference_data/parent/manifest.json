@@ -1,0 +1,770 @@
+{
+  "experiment_id": "20261029_parent_axis_011",
+  "device": "A444A41EE9334705",
+  "status": "offline_geometric_axes_camera_interval_accepted_magnetic_rejected",
+  "clock": {
+    "origin_s": 2101.1618702093024,
+    "offset_at_origin_s": 1.0998248139535358,
+    "offset_slope": 1.8751206309825036e-05,
+    "pairs": [
+      [
+        2032.283081,
+        2033.38207
+      ],
+      [
+        2035.563019,
+        2036.661814
+      ],
+      [
+        2038.842957,
+        2039.941621
+      ],
+      [
+        2042.122986,
+        2043.221526
+      ],
+      [
+        2045.402924,
+        2046.501519
+      ],
+      [
+        2048.682861,
+        2049.781717
+      ],
+      [
+        2051.963013,
+        2053.061438
+      ],
+      [
+        2055.242645,
+        2056.34176
+      ],
+      [
+        2058.522583,
+        2059.621627
+      ],
+      [
+        2061.802521,
+        2062.901975
+      ],
+      [
+        2065.082458,
+        2066.181426
+      ],
+      [
+        2068.362732,
+        2069.461587
+      ],
+      [
+        2071.642334,
+        2072.741431
+      ],
+      [
+        2074.922272,
+        2076.021795
+      ],
+      [
+        2078.202209,
+        2079.301737
+      ],
+      [
+        2081.482178,
+        2082.581955
+      ],
+      [
+        2084.762421,
+        2085.861553
+      ],
+      [
+        2088.042023,
+        2089.141705
+      ],
+      [
+        2091.321991,
+        2092.421854
+      ],
+      [
+        2094.601929,
+        2095.70182
+      ],
+      [
+        2097.881866,
+        2098.981953
+      ],
+      [
+        2101.161926,
+        2102.26166
+      ],
+      [
+        2104.441986,
+        2105.54155
+      ],
+      [
+        2107.722015,
+        2108.821533
+      ],
+      [
+        2111.001617,
+        2112.101561
+      ],
+      [
+        2114.281555,
+        2115.381581
+      ],
+      [
+        2117.561493,
+        2118.661714
+      ],
+      [
+        2120.841431,
+        2121.941744
+      ],
+      [
+        2124.121674,
+        2125.221739
+      ],
+      [
+        2127.401611,
+        2128.501334
+      ],
+      [
+        2130.681427,
+        2131.78155
+      ],
+      [
+        2133.961243,
+        2135.061491
+      ],
+      [
+        2137.241119,
+        2138.341565
+      ],
+      [
+        2140.521057,
+        2141.621957
+      ],
+      [
+        2143.800995,
+        2144.90175
+      ],
+      [
+        2147.080933,
+        2148.18187
+      ],
+      [
+        2150.36087,
+        2151.462004
+      ],
+      [
+        2153.640808,
+        2154.741993
+      ],
+      [
+        2156.920746,
+        2158.021987
+      ],
+      [
+        2160.200714,
+        2161.301555
+      ],
+      [
+        2163.480743,
+        2164.581605
+      ],
+      [
+        2166.760712,
+        2167.861674
+      ],
+      [
+        2170.040741,
+        2171.141586
+      ]
+    ],
+    "residual_max_s": 0.0005938407463512707,
+    "equation": "parent_mono = spresense_mono + offset_at_origin + offset_slope*(spresense_mono-origin)",
+    "absolute_utc_validated": false,
+    "limitation": "Shared phone timestamps cancel as reference labels; packet receipt latency is unmeasured. Early RTC interval uses same-boot affine extrapolation."
+  },
+  "camera_parent_offset_s": 1954.2599999999702,
+  "camera_equation": "parent_mono_s = source_video_s + camera_parent_offset_s",
+  "source_video_interval_s": [
+    46.700643000029686,
+    140.72081000002981
+  ],
+  "camera_fits": [
+    {
+      "offset_s": 1954.2579999999703,
+      "correlation": 0.998495717310449,
+      "coverage": 1.0,
+      "window_s": [
+        75,
+        88
+      ],
+      "competing_correlation_outside_1s": 0.19918534997321216,
+      "at_search_boundary": false
+    },
+    {
+      "offset_s": 1954.2599999999702,
+      "correlation": 0.9991223348185699,
+      "coverage": 1.0,
+      "window_s": [
+        97,
+        106
+      ],
+      "competing_correlation_outside_1s": 0.2957982048891794,
+      "at_search_boundary": false
+    },
+    {
+      "offset_s": 1954.26399999997,
+      "correlation": 0.9988325289366717,
+      "coverage": 1.0,
+      "window_s": [
+        114,
+        131
+      ],
+      "competing_correlation_outside_1s": 0.3765523511341599,
+      "at_search_boundary": false
+    }
+  ],
+  "R_body_from_spresense": [
+    [
+      -0.9972734887212159,
+      0.013449860092596574,
+      0.07255818325526349
+    ],
+    [
+      0.013723158733116319,
+      0.9999004880631758,
+      0.003269386090423913
+    ],
+    [
+      -0.07250699006441044,
+      0.004256199538572197,
+      -0.9973588226697988
+    ]
+  ],
+  "pose_quality": [
+    {
+      "acceleration_samples": 4809,
+      "gyro_samples": 4809,
+      "mean_acceleration_m_s2": [
+        0.7122683628330758,
+        -0.041810538191375424,
+        9.797498629429802
+      ],
+      "acceleration_std_m_s2": [
+        0.002447357494424211,
+        0.002671055750433518,
+        0.0038968524479632543
+      ],
+      "gyro_std_rad_s": [
+        0.0003079292239913301,
+        0.0003042361120989923,
+        0.00020771170591532277
+      ],
+      "max_sample_gap_s": 0.0010800202512655233,
+      "direction_residual_deg": 8.537736462515939e-07
+    },
+    {
+      "acceleration_samples": 6543,
+      "gyro_samples": 6543,
+      "mean_acceleration_m_s2": [
+        -9.792605332455175,
+        0.13120906315168873,
+        0.9755565773342137
+      ],
+      "acceleration_std_m_s2": [
+        0.003265724773431482,
+        0.0027829971751682694,
+        0.0031973962344426835
+      ],
+      "gyro_std_rad_s": [
+        0.0003119860244712287,
+        0.0003075648137287618,
+        0.0002065037989868179
+      ],
+      "max_sample_gap_s": 0.0011330212455504807,
+      "direction_residual_deg": 1.5277021742717585
+    },
+    {
+      "acceleration_samples": 4629,
+      "gyro_samples": 4629,
+      "mean_acceleration_m_s2": [
+        0.1604133053703065,
+        9.799996918904702,
+        0.43535369071931607
+      ],
+      "acceleration_std_m_s2": [
+        0.0025646013795656286,
+        0.0030841468781890613,
+        0.0030945124499806753
+      ],
+      "gyro_std_rad_s": [
+        0.0003119403798053941,
+        0.00030144002919092804,
+        0.00020734313468644914
+      ],
+      "max_sample_gap_s": 0.0010780202137539163,
+      "direction_residual_deg": 2.360825155067301
+    },
+    {
+      "acceleration_samples": 5461,
+      "gyro_samples": 5461,
+      "mean_acceleration_m_s2": [
+        9.807638545019726,
+        0.008286302370262254,
+        -0.3929594925658822
+      ],
+      "acceleration_std_m_s2": [
+        0.0042270105846620104,
+        0.002794755115400422,
+        0.0036830746696490954
+      ],
+      "gyro_std_rad_s": [
+        0.00030675866300682085,
+        0.00036331868972452235,
+        0.0002413899209646805
+      ],
+      "max_sample_gap_s": 0.0010780202142086637,
+      "direction_residual_deg": 2.0385904403524995
+    }
+  ],
+  "pose_windows": [
+    {
+      "phase": 1,
+      "parent_start_s": 2004.179886,
+      "parent_end_s": 2010.405681
+    },
+    {
+      "phase": 2,
+      "parent_start_s": 2042.924546,
+      "parent_end_s": 2050.944369
+    },
+    {
+      "phase": 3,
+      "parent_start_s": 2060.883644,
+      "parent_end_s": 2066.923577
+    },
+    {
+      "phase": 4,
+      "parent_start_s": 2086.299316,
+      "parent_end_s": 2093.200156
+    }
+  ],
+  "R_camera_imu_from_spresense": [
+    [
+      -0.06382520566958103,
+      0.006023079941736905,
+      -0.9979429170194307
+    ],
+    [
+      -0.04396262677224642,
+      0.9989940549561342,
+      0.008841131691365522
+    ],
+    [
+      0.9969922921309464,
+      0.04443647904948514,
+      -0.0634962106047658
+    ]
+  ],
+  "R_body_from_camera_imu": [
+    [
+      -0.008676729942392977,
+      0.05792058890044866,
+      -0.9982834866604428
+    ],
+    [
+      0.0018839364528684074,
+      0.9983202420903048,
+      0.05790634694224988
+    ],
+    [
+      0.9999605817935762,
+      -0.0013782649164476432,
+      -0.008771273845443319
+    ]
+  ],
+  "camera_fit_quality": {
+    "samples": 229,
+    "singular_values": [
+      64.12946327541763,
+      29.462286443318067,
+      14.368225939130447
+    ],
+    "singular_ratio": 0.2240503070706056,
+    "correlation": 0.9978646968719496,
+    "rms_rad_s": 0.02826285073897248
+  },
+  "camera_heldout": {
+    "samples": 256,
+    "correlation": 0.9982175171441104,
+    "rms_rad_s": 0.02934389623807978
+  },
+  "magnetic": {
+    "accepted": false,
+    "reason": "Magnetic body rotation fails pose consistency (5% gate); preserve the forward direction in all poses",
+    "R_body_from_mag": null,
+    "poses": [
+      {
+        "phase": 1,
+        "samples": 51,
+        "mean_uT": [
+          -4.317606089161892,
+          11.87312006482891,
+          -51.38575213563208
+        ],
+        "norm_mean_uT": 52.917452199145124
+      },
+      {
+        "phase": 2,
+        "samples": 69,
+        "mean_uT": [
+          -56.66301848922951,
+          13.836379769919574,
+          6.0523360086523965
+        ],
+        "norm_mean_uT": 58.64266124370283
+      },
+      {
+        "phase": 3,
+        "samples": 50,
+        "mean_uT": [
+          12.789862957000732,
+          57.141235427856444,
+          2.5515760445594786
+        ],
+        "norm_mean_uT": 58.61284776229886
+      },
+      {
+        "phase": 4,
+        "samples": 57,
+        "mean_uT": [
+          52.53590741073876,
+          5.1026818626805355,
+          -10.533837134377999
+        ],
+        "norm_mean_uT": 53.826022587335395
+      }
+    ],
+    "absolute_heading_valid": false
+  },
+  "framing": {
+    "rows": 2097120,
+    "truncated_tail_bytes": 0,
+    "format": "AQSBIN01",
+    "stream": 1,
+    "file_id": 13,
+    "rate_hz": 960
+  },
+  "source_seq_discontinuities": 0,
+  "imu_coefficients": {
+    "generation": 3,
+    "enabled": true,
+    "gravity_m_s2": 9.806650161743164,
+    "latitude_deg": 38.0,
+    "accel_bias_m_s2": [
+      0.016233570873737335,
+      -0.001475190045312047,
+      0.009811806492507458
+    ],
+    "accel_scale": [
+      1.0028736591339111,
+      1.0010814666748047,
+      1.0036410093307495
+    ],
+    "gyro_bias_rad_s": [
+      0.0004010595439467579,
+      -0.00011368353443685919,
+      0.00012266878911759704
+    ],
+    "creation_time": null,
+    "creation_time_note": "SCAL has no timestamp field"
+  },
+  "imu_rows": 90863,
+  "camera_rows": 2818,
+  "events": [
+    {
+      "capture": 11,
+      "boot": 2323944385,
+      "imu_calibration": 3,
+      "mag_calibration": 1,
+      "marker_mono_us": 2000960643,
+      "utc_us": 1793282136476083,
+      "sample_sequence": 1927045,
+      "drops": 0,
+      "time_uncertainty_us": 4294967295,
+      "event": 7,
+      "phase": 0,
+      "utc_source": 3,
+      "mask": 0,
+      "device": "A444A41EE9334705",
+      "log_file": "P_MAIN_TIME_POSITION_44386.bin",
+      "raw_file": "",
+      "health_file": "P_MAIN_HEALTH_RANGE_44386.bin",
+      "mono_us": 2000960643
+    },
+    {
+      "capture": 11,
+      "boot": 2323944385,
+      "imu_calibration": 3,
+      "mag_calibration": 1,
+      "marker_mono_us": 2004179886,
+      "utc_us": 1793282140061465,
+      "sample_sequence": 1930215,
+      "drops": 0,
+      "time_uncertainty_us": 4294967295,
+      "event": 2,
+      "phase": 1,
+      "utc_source": 3,
+      "mask": 0,
+      "device": "A444A41EE9334705",
+      "log_file": "P_MAIN_TIME_POSITION_44386.bin",
+      "raw_file": "",
+      "health_file": "P_MAIN_HEALTH_RANGE_44386.bin",
+      "mono_us": 2004179886
+    },
+    {
+      "capture": 11,
+      "boot": 2323944385,
+      "imu_calibration": 3,
+      "mag_calibration": 1,
+      "marker_mono_us": 2010405681,
+      "utc_us": 1793282146209244,
+      "sample_sequence": 1936555,
+      "drops": 0,
+      "time_uncertainty_us": 4294967295,
+      "event": 3,
+      "phase": 1,
+      "utc_source": 3,
+      "mask": 1,
+      "device": "A444A41EE9334705",
+      "log_file": "P_MAIN_TIME_POSITION_44386.bin",
+      "raw_file": "",
+      "health_file": "P_MAIN_HEALTH_RANGE_44386.bin",
+      "mono_us": 2010405681
+    },
+    {
+      "capture": 11,
+      "boot": 2323944385,
+      "imu_calibration": 3,
+      "mag_calibration": 1,
+      "marker_mono_us": 2042924546,
+      "utc_us": 1793282179527546,
+      "sample_sequence": 1968254,
+      "drops": 0,
+      "time_uncertainty_us": 4294967295,
+      "event": 2,
+      "phase": 2,
+      "utc_source": 2,
+      "mask": 1,
+      "device": "A444A41EE9334705",
+      "log_file": "P_MAIN_TIME_POSITION_44386.bin",
+      "raw_file": "",
+      "health_file": "P_MAIN_HEALTH_RANGE_44386.bin",
+      "mono_us": 2042924546
+    },
+    {
+      "capture": 11,
+      "boot": 2323944385,
+      "imu_calibration": 3,
+      "mag_calibration": 1,
+      "marker_mono_us": 2050944369,
+      "utc_us": 1793282187547369,
+      "sample_sequence": 1977764,
+      "drops": 0,
+      "time_uncertainty_us": 4294967295,
+      "event": 3,
+      "phase": 2,
+      "utc_source": 2,
+      "mask": 3,
+      "device": "A444A41EE9334705",
+      "log_file": "P_MAIN_TIME_POSITION_44386.bin",
+      "raw_file": "",
+      "health_file": "P_MAIN_HEALTH_RANGE_44386.bin",
+      "mono_us": 2050944369
+    },
+    {
+      "capture": 11,
+      "boot": 2323944385,
+      "imu_calibration": 3,
+      "mag_calibration": 1,
+      "marker_mono_us": 2060883644,
+      "utc_us": 1793282197498644,
+      "sample_sequence": 1987273,
+      "drops": 0,
+      "time_uncertainty_us": 4294967295,
+      "event": 2,
+      "phase": 3,
+      "utc_source": 2,
+      "mask": 3,
+      "device": "A444A41EE9334705",
+      "log_file": "P_MAIN_TIME_POSITION_44386.bin",
+      "raw_file": "",
+      "health_file": "P_MAIN_HEALTH_RANGE_44386.bin",
+      "mono_us": 2060883644
+    },
+    {
+      "capture": 11,
+      "boot": 2323944385,
+      "imu_calibration": 3,
+      "mag_calibration": 1,
+      "marker_mono_us": 2066923577,
+      "utc_us": 1793282203538577,
+      "sample_sequence": 1990443,
+      "drops": 0,
+      "time_uncertainty_us": 4294967295,
+      "event": 3,
+      "phase": 3,
+      "utc_source": 2,
+      "mask": 7,
+      "device": "A444A41EE9334705",
+      "log_file": "P_MAIN_TIME_POSITION_44386.bin",
+      "raw_file": "",
+      "health_file": "P_MAIN_HEALTH_RANGE_44386.bin",
+      "mono_us": 2066923577
+    },
+    {
+      "capture": 11,
+      "boot": 2323944385,
+      "imu_calibration": 3,
+      "mag_calibration": 1,
+      "marker_mono_us": 2086299316,
+      "utc_us": 1793282222914316,
+      "sample_sequence": 2009462,
+      "drops": 0,
+      "time_uncertainty_us": 4294967295,
+      "event": 2,
+      "phase": 4,
+      "utc_source": 2,
+      "mask": 7,
+      "device": "A444A41EE9334705",
+      "log_file": "P_MAIN_TIME_POSITION_44386.bin",
+      "raw_file": "",
+      "health_file": "P_MAIN_HEALTH_RANGE_44386.bin",
+      "mono_us": 2086299316
+    },
+    {
+      "capture": 11,
+      "boot": 2323944385,
+      "imu_calibration": 3,
+      "mag_calibration": 1,
+      "marker_mono_us": 2093200156,
+      "utc_us": 1793282229816156,
+      "sample_sequence": 2015802,
+      "drops": 0,
+      "time_uncertainty_us": 4294967295,
+      "event": 3,
+      "phase": 4,
+      "utc_source": 2,
+      "mask": 15,
+      "device": "A444A41EE9334705",
+      "log_file": "P_MAIN_TIME_POSITION_44386.bin",
+      "raw_file": "",
+      "health_file": "P_MAIN_HEALTH_RANGE_44386.bin",
+      "mono_us": 2093200156
+    },
+    {
+      "capture": 11,
+      "boot": 2323944385,
+      "imu_calibration": 3,
+      "mag_calibration": 1,
+      "marker_mono_us": 2094980810,
+      "utc_us": 1793282231596810,
+      "sample_sequence": 2018971,
+      "drops": 0,
+      "time_uncertainty_us": 4294967295,
+      "event": 4,
+      "phase": 0,
+      "utc_source": 2,
+      "mask": 15,
+      "device": "A444A41EE9334705",
+      "log_file": "P_MAIN_TIME_POSITION_44386.bin",
+      "raw_file": "",
+      "health_file": "P_MAIN_HEALTH_RANGE_44386.bin",
+      "mono_us": 2094980810
+    }
+  ],
+  "inputs": {
+    "capture": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\parent\\P_MAIN_BODY_CAPTURE_00011.bin",
+      "sha256": "a5059faea78aea6daa18d095267191ad84232250ae8b72eb5c1658163758d8d3"
+    },
+    "health": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\parent\\P_MAIN_HEALTH_RANGE_44386.bin",
+      "sha256": "6badd7c698e19307d3aa86a512e68ea748db857054558e7df73d8fc5c0d513b5"
+    },
+    "imu": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\spresence\\I00013.BIN",
+      "sha256": "821da3613bba2f28c8b4506eccedced55463db095c99f2c04de2b8d4e3efd889"
+    },
+    "references": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\spresence\\T00013.BIN",
+      "sha256": "c68823d7cb7a89146f074493e9756635ea9dd1de92bd9b2b2fe1bfd4bcf20384"
+    },
+    "imu_coefficients": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\spresence\\K00003.CAL",
+      "sha256": "799b9ed542022a618f311ce1f54062df875d104a5b867093160949b245510dcc"
+    },
+    "mag_coefficients": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\parent\\P_MAIN_MAGCAL_00001.bin",
+      "sha256": "2492e6365ee0f14997e0fd3d8485a9b3ea26b12d24cc10b3f419b73466baaa3b"
+    },
+    "camera_original": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\parent\\DJI\\DJI_20261029225449_0025_D.MP4",
+      "sha256": "e188343c1c45d461fda217451ce33a5ccea185bfafb3d469c6f73c40ce586a91"
+    },
+    "camera_proxy": {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\parent\\DJI\\DJI_20261029225449_0025_D.LRF",
+      "sha256": "8a922b3c358184c5bfa267cc5a5a70f763c2e3b8f5372bbad64af1e423e8fd88"
+    }
+  },
+  "ffmpeg_command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-nostdin",
+    "-threads",
+    "2",
+    "-ss",
+    "46.700643000029686",
+    "-i",
+    "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\data\\raw\\ngtHighSchoolExperiment1\\parent\\DJI\\DJI_20261029225449_0025_D.MP4",
+    "-t",
+    "94.02016700000013",
+    "-map",
+    "0:v:0",
+    "-map",
+    "0:a:0?",
+    "-c:v",
+    "libx264",
+    "-threads",
+    "2",
+    "-preset",
+    "veryfast",
+    "-crf",
+    "18",
+    "-c:a",
+    "aac",
+    "-movflags",
+    "+faststart",
+    "-y",
+    "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\results\\20261029_parent_axis_011\\axis_calibration\\calibration_only.mp4"
+  ],
+  "video_sha256": "3749aa3f890a9ca5c25fa0c2f40d6807726b0de9636c5610a65388759006c3d8",
+  "config_sha256": "be99ac295277ccf9082eb560a5b2f15ede524d9fcf0014a856a35a0440d89dfa",
+  "script_sha256": "09fee89d5a78fcd1e74079bd283654d9e7faa072902ba2a07d0e9b9eeee707eb",
+  "telemetry_sha256": "83624ccf1e264fd56fee4edc94e904954a5a937c0d5560755ffe97ee4517e18a",
+  "clock_module_sha256": "46551b3014acbc959d65ce24cb09d01d2eb5f9081af851bb630693a62ab73fb5",
+  "axis_module_sha256": "b2256ab4f6fb39919cb4d851b5ddfe1e2e867b35afc7719cc64733164dd4f35c",
+  "binary_reader_sha256": "46e1c6804e2f4ca31d3cb7d9b1c89104c078ce2b31aa9c9e4b4a8d96203b9c4b",
+  "reader_sha256": "30674ea1f7d55f53fb3b9c5f212bc3b50601604148014b392e11308d684b1372",
+  "mag_fit_code_sha256": "8c95aa6847b2dc4a8ab302482c1026d68769b5bf8b370ad2a182f08623b2710a",
+  "git_commit": "f14369324f937bd145b87851c5aadbd5b4884deb",
+  "limits": [
+    "No GNSS UTC in this capture. Packet latency is not absolute timing accuracy.",
+    "Camera IMU frame, not optical extrinsic; no measured translation.",
+    "Same installation required for reuse. No firmware import profile.",
+    "Parent magnetometer and IMU have separate frames. No north heading inferred on magnetic failure."
+  ]
+}

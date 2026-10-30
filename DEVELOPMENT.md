@@ -4,7 +4,13 @@
 
 ## セットアップ
 
-Python 3.11以降。python -m pip install -e ".[dev,media,analysis,vision]" で開発依存を導入します。生データは data/raw/ に配置し、READMEの実験ID単位の処理へ進みます。
+別PCへの導入と校正データの確認は[docs/another_pc.md](docs/another_pc.md)を参照。
+`python scripts/verify_calibration_bundle.py --refit`は原動画なしで実行できる。
+
+Python 3.11以降。python -m pip install -e ".[dev,media,analysis,vision]" で開発依存を導入します。
+新しい実験は `init-experiment <experiment_id>` で登録し、取り込み担当者が
+`data/raw/<experiment_id>/` に機器別の原本を配置します。
+[配置ルール](data/README.md)とREADMEの `--experiment` 指定の処理へ進みます。
 
 Pythonの依存を追加する場合は、このリポジトリ専用の仮想環境を推奨します。
 

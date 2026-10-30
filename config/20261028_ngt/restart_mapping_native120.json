@@ -1,0 +1,56 @@
+{
+  "experiment_id": "20261028_ngt_004",
+  "source_run": "okinawa_native120",
+  "frame_sampling": "all 33564 native MP4 frames used by child monocular SLAM",
+  "image_size": [
+    1280,
+    720
+  ],
+  "feature_max_image_size": 648,
+  "feature_first_octave": 0,
+  "feature_max_count": 1200,
+  "feature_peak_threshold": 0.001,
+  "wall_roi_xyxy": [
+    832,
+    36,
+    1260,
+    684
+  ],
+  "crop_xyxy": [
+    640,
+    36,
+    1280,
+    684
+  ],
+  "enhancement": "none; lossless PNG crop of identical source JPEG input to monocular SLAM",
+  "pair_frame_offsets": [
+    1,
+    6,
+    24,
+    60,
+    120
+  ],
+  "pair_min_features": 25,
+  "window_width_s": 20.0,
+  "window_stride_s": 15.0,
+  "prior_sigma_m": [
+    1.0,
+    1.0,
+    0.3
+  ],
+  "prior_max_bracket_s": 0.25,
+  "mapper_max_seconds_per_window": 120,
+  "mapper_max_models_per_window": 10,
+  "mapper_min_model_size": 10,
+  "mapper_min_inliers": 30,
+  "mapper_init_min_triangle_deg": 1.5,
+  "min_structural_points": 50,
+  "position_fit_min_second_first_ratio": 0.001,
+  "num_threads": 4,
+  "phase_timeout_s": 7200,
+  "scope": "Position-aided wall mapping; parent observations authorized. Child-only baseline unchanged.",
+  "coordinate_policy": "horizontal AquaBeacon declination0 position; up=-pressure depth; no missing-prior extrapolation; calibrated optical orientation not supplied",
+  "restart_policy": "Independent overlapping time windows process later images regardless of earlier reconstruction success. Each structural model is explicitly registered to available position correspondences. Unanchored models remain separate local outputs.",
+  "optimizer_prior_hz": 5,
+  "position_fit_huber_delta_m": 1.0
+}

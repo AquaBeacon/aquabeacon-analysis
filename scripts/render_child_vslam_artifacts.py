@@ -14,6 +14,8 @@ from pathlib import Path
 import cv2
 import matplotlib
 
+from aquabeacon_analysis.editable_plots import save_editable_figure
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
@@ -72,7 +74,7 @@ def plot_map(points: np.ndarray, poses: np.ndarray, output: Path) -> None:
     ax.set(xlabel="X (SLAM units)", ylabel="Y (SLAM units)", zlabel="Z (SLAM units)")
     ax.set_title("Largest Atlas map and saved camera poses (central point preview)")
     ax.legend(loc="upper left")
-    fig.savefig(output, dpi=170)
+    save_editable_figure(fig, output, dpi=170)
     plt.close(fig)
 
 
@@ -84,7 +86,7 @@ def plot_coverage(rows: list[dict[str, str]], output: Path) -> None:
     ax.set(xlim=(0, time[-1]), ylim=(0, 1), yticks=[], xlabel="Elapsed child camera time (s)",
            title="Pose saved in the exported largest Atlas map")
     ax.grid(axis="x", color="#dddddd")
-    fig.savefig(output, dpi=170)
+    save_editable_figure(fig, output, dpi=170)
     plt.close(fig)
 
 

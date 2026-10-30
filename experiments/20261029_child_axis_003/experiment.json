@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261029_child_axis_003",
+  "description": "Child axes capture 003 input audit; registered 2026-10-29, acquisition UTC unverified",
+  "raw_root": "data/raw/ngtHighSchoolExperiment1",
+  "raw_sources": [
+    "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_BODY_CAPTURE_00003.bin",
+    "data/raw/ngtHighSchoolExperiment1/child/DJI/DJI_20261029223001_0187_D.LRF",
+    "data/raw/ngtHighSchoolExperiment1/child/DJI/DJI_20261029223001_0187_D.MP4",
+    "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_IMU_100Hz_29567.bin",
+    "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_BNO_EVENTS_29567.bin",
+    "data/raw/ngtHighSchoolExperiment1/child/C_MAIN_HEALTH_RANGE_29567.bin"
+  ],
+  "c_main_suffix": "29567",
+  "p_main_suffix": null,
+  "config_paths": [
+    "config/20261029_child_axis_003/audit.json"
+  ],
+  "calibration_paths": [
+    "calibration/child_mount_20261028_actual.json",
+    "calibration/20261029_child_axis_003_imu_frd.json",
+    "calibration/20261029_child_axis_003_camera_imu.json"
+  ],
+  "notes": [
+    "Source names come from capture markers, not numeric suffix inference.",
+    "Camera pairing supplied by user; time alignment still unverified.",
+    "Keep separate from the Oct28 operational acquisition.",
+    "29567 sources received. Offline four-pose IMU-to-FRD fit available with logged drop-counter review. No camera clock/extrinsic or absolute heading accepted; see calibration solution.",
+    "Camera IMU clock/rotation accepted only inside capture markers after reanalysis of cropped calibration interval. Absolute magnetic heading failed held-out pose consistency; no true-north result."
+  ]
+}

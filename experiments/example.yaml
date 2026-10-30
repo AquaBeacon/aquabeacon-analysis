@@ -1,3 +1,5 @@
+# Legacy reference only. The CLI reads experiments/<id>/experiment.json.
+# Create a current registry with: python -m aquabeacon_analysis init-experiment <id>
 experiment_id: 20260921_pool_001
 date: 2026-09-21
 

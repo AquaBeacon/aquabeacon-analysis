@@ -1,0 +1,32 @@
+%YAML:1.0
+# Native MP4 resized 2/3; shared Okinawa underwater calibration.
+# Calibration SHA256: cd8a1e643ed26aaa48048beacf855d692c77823d3febd2d9f748b8cd644c7942
+File.version: "1.0"
+Camera.type: "PinHole"
+Camera1.fx: 671.48119129949
+Camera1.fy: 672.1437977485698
+Camera1.cx: 646.9508611144665
+Camera1.cy: 360.4336106709891
+Camera1.k1: 0.364595412211401
+Camera1.k2: 0.343791267410154
+Camera1.p1: -0.00607885408676629
+Camera1.p2: 0.0025108632436118238
+Camera.width: 1280
+Camera.height: 720
+Camera.fps: 120
+Camera.RGB: 0
+ORBextractor.nFeatures: 1500
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 12
+ORBextractor.minThFAST: 5
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5
+Viewer.ViewpointF: 500.0

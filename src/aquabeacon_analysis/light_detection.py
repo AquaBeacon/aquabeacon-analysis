@@ -234,10 +234,10 @@ def _sha256(path: Path) -> str:
 
 def analyze_all(processed_root: Path, results_root: Path, intrinsics: Intrinsics | None = None,
                 sessions: list[str] | None = None) -> list[Path]:
+    from .experiments import select_experiment_directories
+
     manifests = []
-    for session in sorted(processed_root.glob("*")):
-        if not session.is_dir() or sessions and session.name not in sessions:
-            continue
+    for session in select_experiment_directories(processed_root, sessions, "tof_window/camera_video"):
         videos = sorted((session / "tof_window" / "camera_video").glob("P_MAIN*_proxy.mp4"))
         for video in videos:
             directory = results_root / session.name / "light_detection"

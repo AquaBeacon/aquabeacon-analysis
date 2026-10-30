@@ -7,6 +7,8 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
+from aquabeacon_analysis.editable_plots import save_editable_figure
+
 
 def main() -> None:
     root = Path(__file__).resolve().parents[1]
@@ -24,7 +26,7 @@ def main() -> None:
     axes[-1].set_xlabel("Elapsed child camera time (s)")
     fig.suptitle("Child-only calibrated monocular VSLAM: saved pose coverage")
     output = root / "results/child_vslam_20260922_coverage.png"
-    fig.savefig(output, dpi=180)
+    save_editable_figure(fig, output, dpi=180)
     print(output)
 
 

@@ -12,9 +12,10 @@ dependencies = []
 
 [project.optional-dependencies]
 media = ["imageio-ffmpeg==0.6.0"]
-analysis = ["matplotlib>=3.9", "numpy>=2.0"]
+analysis = ["matplotlib>=3.9", "numpy>=2.0", "scipy>=1.14"]
 vision = ["opencv-python-headless>=4.10", "numpy>=2.0"]
 mapping = ["scipy>=1.14", "trimesh>=4.0", "Pillow>=10"]
+cad = ["numpy>=2.0", "trimesh>=4.0", "Pillow>=10"]
 dev = ["pytest>=8.0", "ruff>=0.11"]
 
 [project.scripts]
@@ -22,6 +23,9 @@ aquabeacon-analysis = "aquabeacon_analysis.__main__:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+aquabeacon_analysis = ["plot_editor.html", "child_map_viewer.html"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

@@ -17,6 +17,8 @@ from scipy.sparse import csr_matrix
 from scipy.sparse.linalg import lsqr
 from scipy.spatial.transform import Rotation
 
+from aquabeacon_analysis.editable_plots import save_editable_figure
+
 
 def read_rows(path: Path) -> list[dict[str, str]]:
     with path.open(encoding="utf-8", newline="") as stream:
@@ -261,7 +263,7 @@ def render_diagnostic(
     axes[1].grid(alpha=0.25)
     axes[1].legend(fontsize=8)
     fig.tight_layout()
-    fig.savefig(destination, dpi=150)
+    save_editable_figure(fig, destination, dpi=150)
     plt.close(fig)
 
 

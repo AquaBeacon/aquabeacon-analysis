@@ -1,0 +1,44 @@
+{
+  "sources": {
+    "capture": "data/raw/ngtHighSchoolExperiment1/parent/P_MAIN_BODY_CAPTURE_00011.bin",
+    "health": "data/raw/ngtHighSchoolExperiment1/parent/P_MAIN_HEALTH_RANGE_44386.bin",
+    "imu": "data/raw/ngtHighSchoolExperiment1/spresence/I00013.BIN",
+    "references": "data/raw/ngtHighSchoolExperiment1/spresence/T00013.BIN",
+    "imu_coefficients": "data/raw/ngtHighSchoolExperiment1/spresence/K00003.CAL",
+    "mag_coefficients": "data/raw/ngtHighSchoolExperiment1/parent/P_MAIN_MAGCAL_00001.bin",
+    "camera_original": "data/raw/ngtHighSchoolExperiment1/parent/DJI/DJI_20261029225449_0025_D.MP4",
+    "camera_proxy": "data/raw/ngtHighSchoolExperiment1/parent/DJI/DJI_20261029225449_0025_D.LRF"
+  },
+  "expected_parent_session": 2323944385,
+  "camera_status": "replacement_parent0025",
+  "motion_windows_video_s": [
+    [
+      75,
+      88
+    ],
+    [
+      97,
+      106
+    ],
+    [
+      114,
+      131
+    ]
+  ],
+  "offset_search_s": [
+    1953,
+    1956
+  ],
+  "rotation_train_video_s": [
+    75,
+    108
+  ],
+  "rotation_holdout_video_s": [
+    114,
+    131
+  ],
+  "pose_trim_s": [
+    1,
+    0.25
+  ]
+}

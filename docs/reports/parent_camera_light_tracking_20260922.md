@@ -148,9 +148,9 @@ IMU `+X=画像上`、`+Y=画像右`、`+Z=光軸前方` と置いた。
 プロジェクト直下で実行する。
 
 ```powershell
-python -m aquabeacon_analysis detect-lights
+python -m aquabeacon_analysis detect-lights --all-experiments
 python scripts/export_reviewed_lights.py
-python -m aquabeacon_analysis track-lights
+python -m aquabeacon_analysis track-lights --all-experiments
 python scripts/render_light_track_review.py
 python scripts/evaluate_light_tracking.py
 python scripts/estimate_provisional_light_angles.py

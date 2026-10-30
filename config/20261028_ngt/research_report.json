@@ -1,0 +1,24 @@
+{
+  "acquisition_id": "20261028_ngt_000",
+  "position_experiments": ["20261028_ngt_002", "20261028_ngt_003", "20261028_ngt_004"],
+  "mapping_experiment": "20261028_ngt_004",
+  "mapping_run": "wall_mapping/native120_restart",
+  "max_threads": 2,
+  "clip_fps": 12,
+  "clip_size": [1344, 768],
+  "selection_policy": "Purposeful examples of distinct flag patterns, transitions and counterexamples; not a random sample or causal prevalence estimate.",
+  "cases": [
+    {"id": "P1", "experiment": "002", "title": "ライトが見えていても測距データが欠ける", "focus": "parent", "samples_s": [1058, 1061.6, 1064], "clip_s": [1058, 1065]},
+    {"id": "P2", "experiment": "003", "title": "ライトが画面端へ移動する", "focus": "parent", "samples_s": [1135, 1145, 1155], "clip_s": [1134, 1158]},
+    {"id": "P3", "experiment": "004", "title": "26.4秒の位置欠測の前後", "focus": "parent", "samples_s": [1310, 1325, 1340], "clip_s": [1309, 1342]},
+    {"id": "P4", "experiment": "004", "title": "前景がライトと重なる", "focus": "parent", "samples_s": [1396, 1400, 1404], "clip_s": [1396, 1405]},
+    {"id": "P5", "experiment": "004", "title": "機体の向きと光点の変化", "focus": "parent", "samples_s": [1437, 1444, 1452], "clip_s": [1437, 1453]},
+    {"id": "P6", "experiment": "004", "title": "ライトの前を物体が横切る", "focus": "parent", "samples_s": [1496, 1500, 1504], "clip_s": [1496, 1505]},
+    {"id": "P7", "experiment": "004", "title": "光学と測距があっても姿勢が欠ける", "focus": "parent", "samples_s": [1512, 1514, 1516], "clip_s": [1512, 1517]},
+    {"id": "M1", "experiment": "004", "title": "位置は得られるが壁の模様が乏しい", "focus": "child", "samples_s": [1340, 1348, 1355], "clip_s": [1344, 1352]},
+    {"id": "M2", "experiment": "004", "title": "壁が写り再構成できた区間", "focus": "child", "samples_s": [1415.5, 1417.5, 1419.5], "clip_s": [1414, 1420]},
+    {"id": "M3", "experiment": "004", "title": "壁が見えるが未登録の区間", "focus": "child", "samples_s": [1421, 1425, 1429], "clip_s": [1420, 1430]},
+    {"id": "M4", "experiment": "004", "title": "後半の短い地図は位置合わせが成立しない", "focus": "child", "samples_s": [1518, 1525, 1535], "clip_s": [1518, 1538]},
+    {"id": "M5", "experiment": "004", "title": "独立再開で壁の断片を復元", "focus": "child", "samples_s": [1472, 1478, 1484], "clip_s": [1471, 1485]}
+  ]
+}

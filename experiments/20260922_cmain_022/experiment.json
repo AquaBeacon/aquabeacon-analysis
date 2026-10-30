@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20260922_cmain_022",
+  "description": "2026-09-22 CMAIN log 022 (legacy layout)",
+  "raw_root": "data/raw",
+  "raw_sources": [
+    "data/raw/C_MAIN",
+    "data/raw/Spresense",
+    "data/raw/P_MAIN_CAM",
+    "data/raw/C_MAIN_CAM"
+  ],
+  "c_main_suffix": "00022",
+  "p_main_suffix": null,
+  "config_paths": [
+    "config/default.yaml",
+    "config/sensors.yaml",
+    "config/tof_depth_comparison_20260922.json"
+  ],
+  "calibration_paths": [
+    "calibration/parent_camera_underwater_20260924_provisional.json",
+    "calibration/experiment_body_geometry_20260922.json"
+  ],
+  "notes": [
+    "Legacy sources and outputs were not moved.",
+    "Some original C_MAIN/Spresense/camera sources are absent in this checkout.",
+    "Registered calibration references describe existing studies; they are not automatically applied."
+  ]
+}

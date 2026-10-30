@@ -1,0 +1,1261 @@
+{
+  "selected_variant": "existing",
+  "application_status": "existing_retained",
+  "reference": {
+    "path": "data/processed/20261028_ngt_000/gnss/ppk_positions.csv",
+    "sha256": "21f542b7016f75d5c5469131e5830aace1274f4bdd5f50f2723b4cba0318282f"
+  },
+  "reference_metrics": {
+    "rows": 2007,
+    "fixed": 0,
+    "experiment_rows": 1296,
+    "experiment_fixed": 0,
+    "static": {
+      "count": 240,
+      "horizontal_rms_m": 0.21731695497546932,
+      "vertical_rms_m": 0.8900186666931262,
+      "three_d_rms_m": 0.9161658616113243,
+      "mean_enu_m": [
+        4.728071480481265,
+        -2.380553597164462,
+        19.987472384236646
+      ]
+    },
+    "static_first_half": {
+      "count": 120,
+      "horizontal_rms_m": 0.2399819206847303,
+      "vertical_rms_m": 0.7326672689143553,
+      "three_d_rms_m": 0.7709686434570167,
+      "mean_enu_m": [
+        4.747287888255463,
+        -2.3686810294691054,
+        19.67149862355439
+      ]
+    },
+    "static_second_half": {
+      "count": 120,
+      "horizontal_rms_m": 0.18931861821077683,
+      "vertical_rms_m": 0.9207531114835451,
+      "three_d_rms_m": 0.9400148038769749,
+      "mean_enu_m": [
+        4.7088550727070615,
+        -2.3924261648598173,
+        20.303446144918887
+      ]
+    },
+    "static_fixed": null,
+    "step_over_2m_count": 11,
+    "max_step_m": 2.729306769255767
+  },
+  "candidates": {
+    "950356/combined_ar": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい",
+        "前後両方向Fixedの共通時刻が30点未満"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 136,
+        "experiment_rows": 1300,
+        "experiment_fixed": 136,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.6056297141530187,
+          "vertical_rms_m": 1.8618052407873762,
+          "three_d_rms_m": 1.9578319910779902,
+          "mean_enu_m": [
+            4.011306571232522,
+            -4.496897169829828,
+            20.0327617040653
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.5420247488201329,
+          "vertical_rms_m": 1.673071470591797,
+          "three_d_rms_m": 1.7586810324904647,
+          "mean_enu_m": [
+            3.600161090856722,
+            -4.518520109361473,
+            21.325236522871048
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.31743906171379443,
+          "vertical_rms_m": 0.8902174167272895,
+          "three_d_rms_m": 0.9451214773489929,
+          "mean_enu_m": [
+            4.422452051608318,
+            -4.475274230298184,
+            18.740286885259575
+          ]
+        },
+        "static_fixed": {
+          "count": 10,
+          "horizontal_rms_m": 0.3742382025905954,
+          "vertical_rms_m": 1.787451504311684,
+          "three_d_rms_m": 1.82620839789558,
+          "mean_enu_m": [
+            4.31125398865707,
+            -5.136003195513064,
+            18.897546458702784
+          ]
+        },
+        "step_over_2m_count": 2,
+        "max_step_m": 2.8911289584132356
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950356/combined_ar/positions.csv",
+        "sha256": "53191cd70a46c62c6e251fa06e7b983cbe57597f35be19ca972ff5eb6b867a8e"
+      }
+    },
+    "950356/combined_float": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 0,
+        "experiment_rows": 1300,
+        "experiment_fixed": 0,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.590505518429875,
+          "vertical_rms_m": 1.8369391978634284,
+          "three_d_rms_m": 1.9295186923021168,
+          "mean_enu_m": [
+            4.014284146840059,
+            -4.467129403630204,
+            20.03157547461712
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.5420247488201329,
+          "vertical_rms_m": 1.673071470591797,
+          "three_d_rms_m": 1.7586810324904647,
+          "mean_enu_m": [
+            3.600161090856722,
+            -4.518520109361473,
+            21.325236522871048
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.2352124273793229,
+          "vertical_rms_m": 0.7761477127758644,
+          "three_d_rms_m": 0.8110056461214552,
+          "mean_enu_m": [
+            4.428407202823391,
+            -4.415738697898933,
+            18.737914426363215
+          ]
+        },
+        "static_fixed": null,
+        "step_over_2m_count": 2,
+        "max_step_m": 2.8911289584132356
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950356/combined_float/positions.csv",
+        "sha256": "04802938dce5b310b5d21049af629cc6e336664d454f304c8dbfbb91e7fc7891"
+      }
+    },
+    "950356/interp_combined_ar": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい",
+        "両方向Fixedの水平0.2m・鉛直0.4m以内一致が90%未満"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 180,
+        "experiment_rows": 1300,
+        "experiment_fixed": 180,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.6321224357543084,
+          "vertical_rms_m": 2.0119528786791614,
+          "three_d_rms_m": 2.1089175327189356,
+          "mean_enu_m": [
+            4.080728014400804,
+            -4.482751220534122,
+            19.698439584243467
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.7350326341656358,
+          "vertical_rms_m": 2.4360763431940575,
+          "three_d_rms_m": 2.544551222349082,
+          "mean_enu_m": [
+            3.786411594362769,
+            -4.478382031386029,
+            20.57041392427423
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.2925783389860139,
+          "vertical_rms_m": 0.80047630997854,
+          "three_d_rms_m": 0.8522701492371269,
+          "mean_enu_m": [
+            4.375044434438835,
+            -4.487120409682217,
+            18.82646524421273
+          ]
+        },
+        "static_fixed": {
+          "count": 23,
+          "horizontal_rms_m": 0.7355440924595593,
+          "vertical_rms_m": 2.151646211983477,
+          "three_d_rms_m": 2.273896772831828,
+          "mean_enu_m": [
+            4.750251498399882,
+            -4.476289616709064,
+            17.227161831800803
+          ]
+        },
+        "step_over_2m_count": 2,
+        "max_step_m": 2.879130477887627
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950356/interp_combined_ar/positions.csv",
+        "sha256": "232e882fa22fdd328d8429a4864b4ba1d546ec97eab21027db1aca88c85909ad"
+      }
+    },
+    "950356/interp_combined_float": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 0,
+        "experiment_rows": 1300,
+        "experiment_fixed": 0,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.5536114471109613,
+          "vertical_rms_m": 1.7360262035917402,
+          "three_d_rms_m": 1.8221615224588192,
+          "mean_enu_m": [
+            4.007556393717123,
+            -4.4843003688535,
+            19.9643517201361
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.5247042399275721,
+          "vertical_rms_m": 1.6379122505988157,
+          "three_d_rms_m": 1.7199043810804275,
+          "mean_enu_m": [
+            3.627499680602426,
+            -4.53019135019187,
+            21.15744150061888
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.21108897328644527,
+          "vertical_rms_m": 0.7056138957445163,
+          "three_d_rms_m": 0.7365117273410374,
+          "mean_enu_m": [
+            4.387613106831818,
+            -4.438409387515135,
+            18.771261939653343
+          ]
+        },
+        "static_fixed": null,
+        "step_over_2m_count": 2,
+        "max_step_m": 2.879130477887627
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950356/interp_combined_float/positions.csv",
+        "sha256": "f75065e19fb21dc04b03cede2530ead9264ba1a784857b625d9cad8ec2d12229"
+      }
+    },
+    "241259/combined_ar": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい",
+        "前後両方向Fixedの共通時刻が30点未満",
+        "両方向Fixedの水平0.2m・鉛直0.4m以内一致が90%未満"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 14,
+        "experiment_rows": 1300,
+        "experiment_fixed": 9,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.610787798872777,
+          "vertical_rms_m": 1.8977224279249951,
+          "three_d_rms_m": 1.9935927740392194,
+          "mean_enu_m": [
+            4.6683263552573955,
+            -4.336191014063895,
+            19.185285952171775
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.5765173604862308,
+          "vertical_rms_m": 1.8192694406909298,
+          "three_d_rms_m": 1.9084322269270917,
+          "mean_enu_m": [
+            4.251061285914372,
+            -4.394694528425535,
+            20.448562873286342
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.24225111968512097,
+          "vertical_rms_m": 0.8373902138345123,
+          "three_d_rms_m": 0.8717270072760767,
+          "mean_enu_m": [
+            5.085591424600417,
+            -4.277687499702251,
+            17.922009031057225
+          ]
+        },
+        "static_fixed": {
+          "count": 2,
+          "horizontal_rms_m": 0.014764587573493948,
+          "vertical_rms_m": 0.0370500131392868,
+          "three_d_rms_m": 0.03988353695244062,
+          "mean_enu_m": [
+            5.582143409293523,
+            -4.2622036286310525,
+            15.575846130988243
+          ]
+        },
+        "step_over_2m_count": 3,
+        "max_step_m": 2.7853686922875314
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/241259/combined_ar/positions.csv",
+        "sha256": "992c705b1380f4d21ee03e57048651cc03038eaa655c0aa6f6003923e76e5204"
+      }
+    },
+    "241259/combined_float": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 0,
+        "experiment_rows": 1300,
+        "experiment_fixed": 0,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.6131587845069963,
+          "vertical_rms_m": 1.8920931007906956,
+          "three_d_rms_m": 1.9889645540023702,
+          "mean_enu_m": [
+            4.651629832677191,
+            -4.338275729942223,
+            19.242736379371866
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.5561066365646029,
+          "vertical_rms_m": 1.7234177603591017,
+          "three_d_rms_m": 1.810917824737604,
+          "mean_enu_m": [
+            4.217668240753963,
+            -4.398863960182192,
+            20.56346372768653
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.24225111968512097,
+          "vertical_rms_m": 0.8373902138345123,
+          "three_d_rms_m": 0.8717270072760767,
+          "mean_enu_m": [
+            5.085591424600417,
+            -4.277687499702251,
+            17.922009031057225
+          ]
+        },
+        "static_fixed": null,
+        "step_over_2m_count": 2,
+        "max_step_m": 2.7853686922875314
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/241259/combined_float/positions.csv",
+        "sha256": "54ff8c95329d83f2637b4c37d028526384f83a3d5a0e71419b698bd41c3893ec"
+      }
+    },
+    "241259/interp_combined_ar": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい",
+        "前後両方向Fixedの共通時刻が30点未満",
+        "両方向Fixedの水平0.2m・鉛直0.4m以内一致が90%未満"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 55,
+        "experiment_rows": 1300,
+        "experiment_fixed": 50,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.6926911862760171,
+          "vertical_rms_m": 2.2576646126677784,
+          "three_d_rms_m": 2.361539875343379,
+          "mean_enu_m": [
+            4.78913072779135,
+            -4.336438814779189,
+            18.660879604103126
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.8798420552055917,
+          "vertical_rms_m": 2.9348592278798913,
+          "three_d_rms_m": 3.063906122840606,
+          "mean_enu_m": [
+            4.528355212043516,
+            -4.37699940225428,
+            19.371033493526948
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.21499315161372298,
+          "vertical_rms_m": 0.7563486139243956,
+          "three_d_rms_m": 0.786311185871189,
+          "mean_enu_m": [
+            5.049906243539194,
+            -4.295878227304098,
+            17.95072571467929
+          ]
+        },
+        "static_fixed": {
+          "count": 31,
+          "horizontal_rms_m": 0.9492193013572807,
+          "vertical_rms_m": 2.959025576139141,
+          "three_d_rms_m": 3.1075472067717294,
+          "mean_enu_m": [
+            5.427500629484225,
+            -4.28598545845316,
+            16.050928436115974
+          ]
+        },
+        "step_over_2m_count": 4,
+        "max_step_m": 2.806261050673998
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/241259/interp_combined_ar/positions.csv",
+        "sha256": "f9448e072ea1639f5ce805f9b7f275d7172494a64173352cd6de2605a9570a2e"
+      }
+    },
+    "241259/interp_combined_float": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 0,
+        "experiment_rows": 1300,
+        "experiment_fixed": 0,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.5788207430783657,
+          "vertical_rms_m": 1.799395538899379,
+          "three_d_rms_m": 1.890200454456822,
+          "mean_enu_m": [
+            4.646493026711126,
+            -4.351540835176034,
+            19.18246346051405
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.5405217397491419,
+          "vertical_rms_m": 1.69388005360723,
+          "three_d_rms_m": 1.778030761024643,
+          "mean_enu_m": [
+            4.243079809883067,
+            -4.40720344304797,
+            20.414201206348803
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.21499315161372298,
+          "vertical_rms_m": 0.7563486139243956,
+          "three_d_rms_m": 0.786311185871189,
+          "mean_enu_m": [
+            5.049906243539194,
+            -4.295878227304098,
+            17.95072571467929
+          ]
+        },
+        "static_fixed": null,
+        "step_over_2m_count": 2,
+        "max_step_m": 2.806261050673998
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/241259/interp_combined_float/positions.csv",
+        "sha256": "90de497efe1403194ecdabe42e0b8c638166fbfb672c74e8dcc7bc538bed5014"
+      }
+    },
+    "950359/combined_ar": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい",
+        "前後両方向Fixedの共通時刻が30点未満"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 168,
+        "experiment_rows": 1300,
+        "experiment_fixed": 167,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.6627230577907349,
+          "vertical_rms_m": 2.090464667466498,
+          "three_d_rms_m": 2.1929989460219352,
+          "mean_enu_m": [
+            4.089996082223209,
+            -4.425347968246671,
+            20.377690865478755
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.7366742099464326,
+          "vertical_rms_m": 2.3174222757196534,
+          "three_d_rms_m": 2.431693832619941,
+          "mean_enu_m": [
+            3.738353685863074,
+            -4.458815447895134,
+            21.46996563290328
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.29354712880722184,
+          "vertical_rms_m": 0.9917210861655682,
+          "three_d_rms_m": 1.0342536582368844,
+          "mean_enu_m": [
+            4.4416384785833465,
+            -4.391880488598206,
+            19.285416098054256
+          ]
+        },
+        "static_fixed": {
+          "count": 27,
+          "horizontal_rms_m": 0.32902546581541686,
+          "vertical_rms_m": 1.3338759820401838,
+          "three_d_rms_m": 1.373856940375786,
+          "mean_enu_m": [
+            4.851060781421273,
+            -4.157858256080871,
+            17.96601901138928
+          ]
+        },
+        "step_over_2m_count": 2,
+        "max_step_m": 2.874916255737547
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950359/combined_ar/positions.csv",
+        "sha256": "8c0ea50350a20c50e2d7c36f210c233d2941cfdc901f6191a766988b18f57a71"
+      }
+    },
+    "950359/combined_float": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 0,
+        "experiment_rows": 1300,
+        "experiment_fixed": 0,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.5925445175834427,
+          "vertical_rms_m": 1.867483172029272,
+          "three_d_rms_m": 1.9592351576905478,
+          "mean_enu_m": [
+            3.99414487010523,
+            -4.4608546011459556,
+            20.683442158234552
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.5543975389219818,
+          "vertical_rms_m": 1.7382028670617193,
+          "three_d_rms_m": 1.8244741264880495,
+          "mean_enu_m": [
+            3.593201878418724,
+            -4.504914272653454,
+            21.943271535493754
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.2635684066839013,
+          "vertical_rms_m": 0.882778267150296,
+          "three_d_rms_m": 0.9212848495198267,
+          "mean_enu_m": [
+            4.395087861791737,
+            -4.416794929638454,
+            19.42361278097538
+          ]
+        },
+        "static_fixed": null,
+        "step_over_2m_count": 2,
+        "max_step_m": 2.874916255737547
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950359/combined_float/positions.csv",
+        "sha256": "5d4dfc1cdd7aa89366b1d51717531dfd6906600bb0a8fd77f0bc86649074778c"
+      }
+    },
+    "950359/interp_combined_ar": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい",
+        "前後両方向Fixedの共通時刻が30点未満",
+        "両方向Fixedの水平0.2m・鉛直0.4m以内一致が90%未満"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 126,
+        "experiment_rows": 1300,
+        "experiment_fixed": 126,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.6341697703376954,
+          "vertical_rms_m": 2.010268424464622,
+          "three_d_rms_m": 2.107925623927381,
+          "mean_enu_m": [
+            4.082443496592322,
+            -4.429230738867202,
+            20.3993562871839
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.71790584207187,
+          "vertical_rms_m": 2.2747538332372477,
+          "three_d_rms_m": 2.3853498275742435,
+          "mean_enu_m": [
+            3.755932787134404,
+            -4.459261923396515,
+            21.423054791078563
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.27190359738244735,
+          "vertical_rms_m": 0.9010749254191214,
+          "three_d_rms_m": 0.9412053907031085,
+          "mean_enu_m": [
+            4.408954206050238,
+            -4.3991995543378835,
+            19.375657783289245
+          ]
+        },
+        "static_fixed": {
+          "count": 24,
+          "horizontal_rms_m": 0.32903080833030895,
+          "vertical_rms_m": 1.2322549417122217,
+          "three_d_rms_m": 1.2754267968820034,
+          "mean_enu_m": [
+            4.931685321124617,
+            -4.141877088907121,
+            17.641334237897016
+          ]
+        },
+        "step_over_2m_count": 2,
+        "max_step_m": 2.8779939089193376
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950359/interp_combined_ar/positions.csv",
+        "sha256": "28988710160c56758746e6c676c59b7d29a5a27429f81e5176fc34eb4c6d70e8"
+      }
+    },
+    "950359/interp_combined_float": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 0,
+        "experiment_rows": 1300,
+        "experiment_fixed": 0,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.553603778142104,
+          "vertical_rms_m": 1.7553413310134287,
+          "three_d_rms_m": 1.840570653774858,
+          "mean_enu_m": [
+            3.9912230665312167,
+            -4.4620286802406195,
+            20.69500299606387
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.5330744891687049,
+          "vertical_rms_m": 1.6856564038108355,
+          "three_d_rms_m": 1.7679383254828076,
+          "mean_enu_m": [
+            3.623382531401047,
+            -4.500403732780579,
+            21.855291523409548
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.23500482433209566,
+          "vertical_rms_m": 0.7927609549161185,
+          "three_d_rms_m": 0.8268598424756612,
+          "mean_enu_m": [
+            4.359063601661386,
+            -4.42365362770066,
+            19.5347144687182
+          ]
+        },
+        "static_fixed": null,
+        "step_over_2m_count": 2,
+        "max_step_m": 2.8779939089193376
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950359/interp_combined_float/positions.csv",
+        "sha256": "0dfdd16fdf3e3c862e321a1eb7afb917e876896319c284089079a7cd72f68bd9"
+      }
+    },
+    "221245/combined_ar": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい",
+        "前後両方向Fixedの共通時刻が30点未満",
+        "両方向Fixedの水平0.2m・鉛直0.4m以内一致が90%未満"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 116,
+        "experiment_rows": 1300,
+        "experiment_fixed": 116,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.9350773332359108,
+          "vertical_rms_m": 3.0190941832746248,
+          "three_d_rms_m": 3.1605852791238296,
+          "mean_enu_m": [
+            4.876926571969892,
+            -4.459974544361801,
+            19.30299567126944
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 1.2917691669710316,
+          "vertical_rms_m": 4.163756100012054,
+          "three_d_rms_m": 4.359533511870808,
+          "mean_enu_m": [
+            4.871211456911292,
+            -4.403728219220737,
+            19.185388985915825
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.27143882231935357,
+          "vertical_rms_m": 0.9302321482823689,
+          "three_d_rms_m": 0.969025739575657,
+          "mean_enu_m": [
+            4.882641687028486,
+            -4.516220869502863,
+            19.420602356623036
+          ]
+        },
+        "static_fixed": {
+          "count": 63,
+          "horizontal_rms_m": 0.9138084500372964,
+          "vertical_rms_m": 2.9148448213030638,
+          "three_d_rms_m": 3.0547285011334244,
+          "mean_enu_m": [
+            5.84298998632725,
+            -4.187294845084773,
+            15.950362548888473
+          ]
+        },
+        "step_over_2m_count": 6,
+        "max_step_m": 2.9785327183405617
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/221245/combined_ar/positions.csv",
+        "sha256": "b3a2bdd6380f0e4b0b2dd19e42f19d3dfdb584b3d2d3b6e16f97a2db7b20a6d6"
+      }
+    },
+    "221245/combined_float": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 0,
+        "experiment_rows": 1300,
+        "experiment_fixed": 0,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.5836552836525739,
+          "vertical_rms_m": 1.8156589122486662,
+          "three_d_rms_m": 1.9071630176163696,
+          "mean_enu_m": [
+            4.495821756384339,
+            -4.561907106382552,
+            20.589889670445082
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.5509925650668559,
+          "vertical_rms_m": 1.7250900001034999,
+          "three_d_rms_m": 1.8109468007691576,
+          "mean_enu_m": [
+            4.108220488092048,
+            -4.606914793952432,
+            21.7698769853095
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.270542608969126,
+          "vertical_rms_m": 0.9124466758759153,
+          "three_d_rms_m": 0.9517101657462892,
+          "mean_enu_m": [
+            4.883423024676623,
+            -4.5168994188126685,
+            19.409902355580645
+          ]
+        },
+        "static_fixed": null,
+        "step_over_2m_count": 2,
+        "max_step_m": 2.8833958733667515
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/221245/combined_float/positions.csv",
+        "sha256": "9cc2b4e1e55fff4686b9618f9f4f473cb7fa1bb7b0d1200e4c5ad221386e0eee"
+      }
+    },
+    "221245/interp_combined_ar": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい",
+        "前後両方向Fixedの共通時刻が30点未満",
+        "両方向Fixedの水平0.2m・鉛直0.4m以内一致が90%未満"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 103,
+        "experiment_rows": 1300,
+        "experiment_fixed": 102,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.9238779134022098,
+          "vertical_rms_m": 2.9970279821490577,
+          "three_d_rms_m": 3.1361962828651007,
+          "mean_enu_m": [
+            4.846891493693578,
+            -4.470926314783753,
+            19.421126521490756
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 1.280850155104732,
+          "vertical_rms_m": 4.147378472488461,
+          "three_d_rms_m": 4.340659548259057,
+          "mean_enu_m": [
+            4.849413338499019,
+            -4.4180695280732785,
+            19.29448399494193
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.2468264141210724,
+          "vertical_rms_m": 0.8552944513130303,
+          "three_d_rms_m": 0.8901976618452356,
+          "mean_enu_m": [
+            4.844369648888133,
+            -4.523783101494233,
+            19.547769048039562
+          ]
+        },
+        "static_fixed": {
+          "count": 54,
+          "horizontal_rms_m": 0.929439784652449,
+          "vertical_rms_m": 2.9838578616629077,
+          "three_d_rms_m": 3.125262557274562,
+          "mean_enu_m": [
+            5.981717224092628,
+            -4.165249665409893,
+            15.510190210460246
+          ]
+        },
+        "step_over_2m_count": 7,
+        "max_step_m": 3.0756811928703693
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/221245/interp_combined_ar/positions.csv",
+        "sha256": "145bc4bdd31c213b2305f6046ff16b41bac5a37cb605382f5b1273338fe3c905"
+      }
+    },
+    "221245/interp_combined_float": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2061,
+        "fixed": 0,
+        "experiment_rows": 1300,
+        "experiment_fixed": 0,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.5473562974194918,
+          "vertical_rms_m": 1.7132542380769795,
+          "three_d_rms_m": 1.798565817704069,
+          "mean_enu_m": [
+            4.491336125858768,
+            -4.563381184975936,
+            20.61483009249112
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.5343003908995263,
+          "vertical_rms_m": 1.687118870447596,
+          "three_d_rms_m": 1.769702514756579,
+          "mean_enu_m": [
+            4.137735122554602,
+            -4.6022591176140795,
+            21.69187113786339
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.24623281374810316,
+          "vertical_rms_m": 0.8390919250737131,
+          "three_d_rms_m": 0.8744746178650458,
+          "mean_enu_m": [
+            4.84493712916293,
+            -4.524503252337794,
+            19.53778904711884
+          ]
+        },
+        "static_fixed": null,
+        "step_over_2m_count": 2,
+        "max_step_m": 2.8720552570601154
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/221245/interp_combined_float/positions.csv",
+        "sha256": "cd0a32107028f3b190449f458f0302acda5ecba60a4dcc4782e77cd1971f94b3"
+      }
+    },
+    "950351/combined_ar": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい",
+        "前後両方向Fixedの共通時刻が30点未満",
+        "両方向Fixedの水平0.2m・鉛直0.4m以内一致が90%未満"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2052,
+        "fixed": 232,
+        "experiment_rows": 1300,
+        "experiment_fixed": 232,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.3735772762779142,
+          "vertical_rms_m": 1.6419533800614623,
+          "three_d_rms_m": 1.6839153433728447,
+          "mean_enu_m": [
+            3.5697877833046117,
+            -4.289786532471818,
+            19.06062629388689
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.40562245344897446,
+          "vertical_rms_m": 1.3725365706092918,
+          "three_d_rms_m": 1.4312184362989042,
+          "mean_enu_m": [
+            3.559553441916362,
+            -4.2854257164583975,
+            18.897754217278223
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.33814622730495814,
+          "vertical_rms_m": 1.8587927642028759,
+          "three_d_rms_m": 1.8892997145221675,
+          "mean_enu_m": [
+            3.5800221246928596,
+            -4.294147348485242,
+            19.223498370495555
+          ]
+        },
+        "static_fixed": {
+          "count": 33,
+          "horizontal_rms_m": 0.8023022641367842,
+          "vertical_rms_m": 3.8912839319319517,
+          "three_d_rms_m": 3.973132210479636,
+          "mean_enu_m": [
+            3.6278834642732942,
+            -4.278715070794441,
+            19.74732475174237
+          ]
+        },
+        "step_over_2m_count": 23,
+        "max_step_m": 6.445676733541868
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950351/combined_ar/positions.csv",
+        "sha256": "23efee697d4ee0af4886b12daa3c870690a6d9b37ab4a2a5796ffc185d967a0c"
+      }
+    },
+    "950351/combined_float": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2052,
+        "fixed": 0,
+        "experiment_rows": 1300,
+        "experiment_fixed": 0,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.2283069296968618,
+          "vertical_rms_m": 0.7497148836735971,
+          "three_d_rms_m": 0.7837068718272941,
+          "mean_enu_m": [
+            3.5600851282408126,
+            -4.292219645835713,
+            18.957865471211026
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.27083893311801566,
+          "vertical_rms_m": 0.850621620271139,
+          "three_d_rms_m": 0.8926986437567846,
+          "mean_enu_m": [
+            3.512303239971414,
+            -4.291638249298176,
+            19.066607579743394
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.16225747090862763,
+          "vertical_rms_m": 0.6139527509463574,
+          "three_d_rms_m": 0.6350318631850406,
+          "mean_enu_m": [
+            3.607867016510211,
+            -4.292801042373257,
+            18.849123362678647
+          ]
+        },
+        "static_fixed": null,
+        "step_over_2m_count": 15,
+        "max_step_m": 6.445676733541868
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950351/combined_float/positions.csv",
+        "sha256": "cf1c384a024468c0bb34fa770cc1afe9aa3322290bf1eee3515e97399fb5d4f7"
+      }
+    },
+    "950351/interp_combined_ar": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい",
+        "静止3D RMSが従来より大きい",
+        "前後両方向Fixedの共通時刻が30点未満",
+        "両方向Fixedの水平0.2m・鉛直0.4m以内一致が90%未満"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2051,
+        "fixed": 214,
+        "experiment_rows": 1300,
+        "experiment_fixed": 207,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.5308606113018562,
+          "vertical_rms_m": 2.1245592043098998,
+          "three_d_rms_m": 2.1898778050954566,
+          "mean_enu_m": [
+            3.6238504605446646,
+            -4.27782844121102,
+            18.877948343683695
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.6685758661075338,
+          "vertical_rms_m": 2.301975376876403,
+          "three_d_rms_m": 2.397099147821528,
+          "mean_enu_m": [
+            3.678071492045852,
+            -4.265601175281309,
+            18.48047914132864
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.3323453564348159,
+          "vertical_rms_m": 1.847281639558254,
+          "three_d_rms_m": 1.8769397677583628,
+          "mean_enu_m": [
+            3.5696294290434794,
+            -4.29005570714073,
+            19.275417546038764
+          ]
+        },
+        "static_fixed": {
+          "count": 46,
+          "horizontal_rms_m": 1.0684522055550085,
+          "vertical_rms_m": 4.54499394460293,
+          "three_d_rms_m": 4.668892810081707,
+          "mean_enu_m": [
+            3.890694985227694,
+            -4.2451874775779315,
+            18.39012556867129
+          ]
+        },
+        "step_over_2m_count": 23,
+        "max_step_m": 6.4523576562976315
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950351/interp_combined_ar/positions.csv",
+        "sha256": "8f3aab4e95787a6cf3fba821428611df93609ac4bdb6bea392e2c91af333bb68"
+      }
+    },
+    "950351/interp_combined_float": {
+      "rejection_reasons": [
+        "静止水平RMSが従来より大きい"
+      ],
+      "eligible": false,
+      "metrics": {
+        "rows": 2051,
+        "fixed": 0,
+        "experiment_rows": 1300,
+        "experiment_fixed": 0,
+        "static": {
+          "count": 240,
+          "horizontal_rms_m": 0.22076880317206254,
+          "vertical_rms_m": 0.7368075032847665,
+          "three_d_rms_m": 0.7691710871781103,
+          "mean_enu_m": [
+            3.561846416464222,
+            -4.285500195271923,
+            18.990239641665603
+          ]
+        },
+        "static_first_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.2695431928808994,
+          "vertical_rms_m": 0.8601261666929152,
+          "three_d_rms_m": 0.90137148582495,
+          "mean_enu_m": [
+            3.525704482082219,
+            -4.282718084664938,
+            19.067371745060782
+          ]
+        },
+        "static_second_half": {
+          "count": 120,
+          "horizontal_rms_m": 0.1489840157836238,
+          "vertical_rms_m": 0.5779747818160262,
+          "three_d_rms_m": 0.596867728541507,
+          "mean_enu_m": [
+            3.5979883508462263,
+            -4.288282305878903,
+            18.91310753827041
+          ]
+        },
+        "static_fixed": null,
+        "step_over_2m_count": 15,
+        "max_step_m": 6.4523576562976315
+      },
+      "position_file": {
+        "path": "data/interim/20261028_ngt_000/ppk_base_comparison/950351/interp_combined_float/positions.csv",
+        "sha256": "4e2c20196c3d919d1fb76614f6f35d0e7e40e26a8db4e9c91a66105a4e1669d5"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "path": "results/20261028_ngt_000/ppk_base_comparison/manifest.json",
+      "sha256": "714bde634980d068a2f2199baa0d869ee8053904b34ba9af4e3340b990e61978"
+    },
+    {
+      "path": "C:/Users/ryupc/WorkSpace/Mitou26/AquaBeacon-OSS/aquabeacon-analysis/scripts/report_ngt_ppk_comparison.py",
+      "sha256": "63fb6b01c086023b1fa229871b4724fc07a616c83c1d9a5e9c4918c79757b63c"
+    },
+    {
+      "path": "scripts/compare_ngt_ppk_bases.py",
+      "sha256": "ed232389477e6a0a19a0fe088ac82d7eec025327f6693442e1a81a0de3bcd0ab"
+    }
+  ],
+  "scope": "Best supported stability among tested candidates, not demonstrated absolute accuracy",
+  "criterion": {
+    "static_interval_s": [
+      240,
+      480
+    ],
+    "evaluation_interval_s": [
+      240,
+      1540
+    ],
+    "require_static_rows": 228,
+    "require_static_h_rms_le_existing": true,
+    "require_static_3d_rms_le_existing": true,
+    "fixed_candidate_min_direction_overlap": 30,
+    "fixed_candidate_min_agreement_fraction": 0.9,
+    "agreement_horizontal_m": 0.2,
+    "agreement_vertical_m": 0.4,
+    "note": "Conservative screening only, not proof of accuracy; no ratio tuning to force fix"
+  },
+  "calibration": "No change to raw observations, reference frame, antenna correction or CAD"
+}
