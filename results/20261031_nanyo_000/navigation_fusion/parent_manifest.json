@@ -1,0 +1,132 @@
+{
+  "experiment_id": "20261031_nanyo_000",
+  "sfm_position_used": false,
+  "rtk_used": false,
+  "origin_llh": [
+    32.9644859,
+    132.5054768,
+    27.408
+  ],
+  "rows": 35360,
+  "available": 35332,
+  "hampel_rejected_axes": [
+    3,
+    2,
+    20
+  ],
+  "position_updates_by_axis": [
+    1764,
+    1765,
+    1747
+  ],
+  "short_attitude_gaps_interpolated": 137,
+  "dropout_trials": [
+    {
+      "start_utc_s": 1793425220.779539,
+      "duration_s": 5,
+      "withheld_gnss_position_and_velocity": true,
+      "endpoint_vs_full_filter_enu_m": [
+        1.7567658481819457,
+        -2.4821967493086197,
+        -0.5579078583970656
+      ],
+      "endpoint_disagreement_m": 3.0917289865183704,
+      "available_at_end": false,
+      "note": "Internal dropout sensitivity, not position ground truth"
+    },
+    {
+      "start_utc_s": 1793425420.779539,
+      "duration_s": 15,
+      "withheld_gnss_position_and_velocity": true,
+      "endpoint_vs_full_filter_enu_m": [
+        1.8378620843315048,
+        -5.865064114019966,
+        1.1113660768798157
+      ],
+      "endpoint_disagreement_m": 6.245946578336016,
+      "available_at_end": false,
+      "note": "Internal dropout sensitivity, not position ground truth"
+    },
+    {
+      "start_utc_s": 1793425820.779539,
+      "duration_s": 20,
+      "withheld_gnss_position_and_velocity": true,
+      "endpoint_vs_full_filter_enu_m": [
+        13.795943290997473,
+        9.088654483567383,
+        3.012576751837326
+      ],
+      "endpoint_disagreement_m": 16.793073283225986,
+      "available_at_end": false,
+      "note": "Internal dropout sensitivity, not position ground truth"
+    }
+  ],
+  "gnss_velocity_time": "iTOW + integer UTC week offset; not host receive time",
+  "utc_week_offset_s": 1792886382,
+  "config": {
+    "experiment_id": "20261031_nanyo_000",
+    "parent_imu_frd_m": [
+      0.07575000032424926,
+      -0.068,
+      -0.08994999980926513
+    ],
+    "parent_hampel_floors_m": [
+      2,
+      2,
+      3
+    ],
+    "ppk_sigma_floor_by_quality": {
+      "1": [
+        0.4,
+        0.4,
+        1
+      ],
+      "2": [
+        1,
+        1,
+        3
+      ],
+      "4": [
+        3,
+        3,
+        6
+      ]
+    },
+    "gnss_velocity_sigma_floor_m_s": [
+      0.15,
+      0.15,
+      0.2
+    ],
+    "parent_acceleration_sigma_m_s2": 0.4,
+    "child_acceleration_sigma_m_s2": 0.35,
+    "parent_max_dr_s": 5,
+    "child_max_dr_s": 3,
+    "ray_depth_max_after_range_s": 5,
+    "child_max_horizontal_speed_m_s": 3,
+    "depth_sigma_m": 0.1,
+    "child_bearing_sigma_deg": 5,
+    "scope": "Provisional sensor navigation. SfM camera positions are prohibited as filter inputs.",
+    "parameters_are_assumptions_not_validated_noise": true
+  },
+  "accuracy_validated": false,
+  "inputs_sha256": {
+    "config\\20261031_nanyo_000\\absolute_position.json": "8273d1cd2d0866ca5f7e931df87e38bfaea2f2e1e73ca7dfdb10a91f68540554",
+    "results\\20261031_nanyo_000\\absolute_position\\preparation.json": "ed21ea2df8dec9bf644a1c9c55a49f0f11c03539b1e2404c89adfa7fe5a83348",
+    "results\\20261031_nanyo_000\\absolute_position\\optical_axes.json": "947f277119eb36d1ba6b7ed54e8795d0b376b7d93743660dcbf83d5af812d080",
+    "results\\20261031_nanyo_000\\synchronization\\manifest.json": "8e7a2485f6239107b6742bb64183ec6769a3a7541b50bcd034ba0aef30020b80",
+    "calibration\\20261029_parent_axis_011_axes.json": "f93f5109cd8fe49e839d7dc6b7f7ab3d8ae169634f5d3744f221e9491fb4525a",
+    "calibration\\20261029_child_axis_003_imu_frd.json": "37150d3396b8c1a9af66dee70ef993454842d9ed55edb36e2022e994da0b0823",
+    "calibration\\20261028_parent_lis3mdl_cad_axes.json": "b45d0ed7af089e37691f05198af9039538e17b4b187a947d18d61436bd871a88",
+    "data\\processed\\20261031_nanyo_000\\synchronization\\child_DJI_20261031142636_0026_D_attitude.csv": "dc60d2eb441e8a14476a6774a9e0b1786df6bfd0fb287aba2e57cb51f521aaf7",
+    "data\\processed\\20261031_nanyo_000\\synchronization\\parent_DJI_20261031142637_0188_D_attitude.csv": "b22ccf68e220cff5b1448b9a942d1c1ecb4eb814b5a127db1c1274592b5b80f9",
+    "data\\processed\\20261031_nanyo_000\\synchronization\\parent_DJI_20261031150457_0189_D_attitude.csv": "ca7de4111518cc0dd8168ab1f158c8c15814546955a8964e67835b3ec2a537b3",
+    "data\\interim\\20261031_nanyo_000\\geometry\\child_absolute_raw.csv": "f766166cf26458c3a207430fba18faa950c8415a986ab3827a00a6ae5a40e2f2",
+    "data\\interim\\20261031_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_65433.mag_observation.csv": "77c8342e46c3c4a3a9ef067aff83ed75ddcb1ea98fff045ab3855ca9af2f6f8d",
+    "results\\20261031_nanyo_000\\evaluation\\ppk_positions.csv": "fe3a5431c164f9dd6f225fb606feef51f6d9518d6f61414e1bb6d0baf92441dc",
+    "results\\20261031_nanyo_000\\segmentation\\selection.csv": "d962eeefeac855120e35ac3373a9812a0142530fdc1ba2629fd1bf5c045f64a8",
+    "data\\interim\\20261031_nanyo_000\\synchronization\\parent_100hz.csv": "c5327803d21884ee670afda815dc0a4867081588c0b6d435f3317a383b6a8ce7",
+    "data\\interim\\20261031_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_65433.gnss_observation.csv": "6d09333032a06ab947f03c3094225d073e9d71695d7456c1264cf69441bac1e6",
+    "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\scripts\\fuse_nanyo_navigation.py": "dba8323bdb7f3d7225b557de0a52870f51172a5051d62007c7b95095060852cb",
+    "src\\aquabeacon_analysis\\navigation_fusion.py": "6aa6fc72bac2da86581228f7ed45f70e3f8c1e55fd66515e42d324bc634108a0"
+  }
+}

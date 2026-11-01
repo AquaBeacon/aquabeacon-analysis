@@ -1,0 +1,93 @@
+{
+  "experiment_id": "20261031_nanyo_002",
+  "method": "COLMAP sequential SfM, child only",
+  "sample_hz": 1,
+  "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test\\child\\DJI\\DJI_20261031142636_0026_D.LRF",
+  "source_interval_s": [
+    2038.7609997323314,
+    2358.364055521512
+  ],
+  "intrinsics": {
+    "device_id": "C_MAIN_CAM",
+    "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\calibration\\parent_camera_underwater_20260924_provisional.json",
+    "sha256": "cd8a1e643ed26aaa48048beacf855d692c77823d3febd2d9f748b8cd644c7942",
+    "defaults_sha256": "7558d2d4181015685d280ea019594d2e06bd669833278cf9c418113029df7eed",
+    "source_kind": "proxy",
+    "calibrated_size": [
+      1280,
+      720
+    ],
+    "output_size": [
+      960,
+      540
+    ],
+    "camera_matrix_px": [
+      [
+        503.61960537344055,
+        0.0,
+        484.63116002034855
+      ],
+      [
+        0.0,
+        504.20359702817973,
+        270.50751664589416
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "distortion": [
+      0.36299078889677444,
+      0.35047393383599057,
+      -0.005888261119551278,
+      0.0018919520831984344,
+      0.0
+    ],
+    "status": "provisional_limited_viewpoint_diversity",
+    "required_conditions": {
+      "camera": "DJI Osmo Action 6",
+      "fov": "Standard (Dewarp)",
+      "eis": "Off",
+      "housing": "DJI official waterproof case",
+      "medium": "underwater"
+    },
+    "capture_conditions_independently_verified": false
+  },
+  "calibration_status": "provisional underwater model",
+  "capture_conditions": "Dewarp/EIS/housing not independently verified in this run",
+  "source_time_precision_s": 1.0,
+  "scale": "arbitrary monocular units",
+  "parent_position_prior_used": false,
+  "pressure_scale_applied": false,
+  "code_sha256": "36c0e4ccba0696c168214bcec5366a4825ee3c9dbba4a17a331027092989e262",
+  "pycolmap_version": "4.2.1",
+  "models": [
+    {
+      "id": 0,
+      "registered_images": 2,
+      "points": 39,
+      "mean_reprojection_error_px": 0.3467672396100037
+    },
+    {
+      "id": 1,
+      "registered_images": 11,
+      "points": 810,
+      "mean_reprojection_error_px": 0.42682306179664914
+    },
+    {
+      "id": 2,
+      "registered_images": 20,
+      "points": 1294,
+      "mean_reprojection_error_px": 0.42247020674439745
+    }
+  ],
+  "geometrically_verified_pairs": 123,
+  "sampled_frames": 320,
+  "registered_frames": 33,
+  "registered_fraction": 0.103125,
+  "feature_median": 49.0,
+  "sampling_time_note": "Nominal 1 Hz output bins; original per-frame PTS not exported. Conservative 1 s bound; no pose/pressure prior applied.",
+  "timing_metadata_correction": "Post-run metadata audit corrected subframe precision claim; geometry unchanged."
+}

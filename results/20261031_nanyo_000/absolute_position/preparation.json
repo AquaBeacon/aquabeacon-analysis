@@ -1,0 +1,64 @@
+{
+  "child_rows": 299352,
+  "status_counts": {
+    "0": 278842,
+    "1": 20510
+  },
+  "raw_frame": "sensor to magnetic ENU, scalar first wxyz; no body/declination applied in firmware",
+  "gravity_world_median": [
+    0.0003156652928495429,
+    -0.00024108292267011056,
+    9.77723377220619
+  ],
+  "gravity_inverse_median": [
+    0.22601534779605595,
+    5.927344831799524,
+    4.362979298832461
+  ],
+  "magnetic_world_median": [
+    0.0038942714110463683,
+    32.536634303771265,
+    -33.546273113003
+  ],
+  "header": {
+    "version": 1,
+    "role": 2,
+    "stream": 2,
+    "session": 3650135543,
+    "created_us": 3273923895
+  },
+  "field": {
+    "time": 2026.8301369863013,
+    "alt": 0.03,
+    "glat": 32.9645,
+    "glon": 132.5055,
+    "x": 31730.411469438935,
+    "y": -4355.912699619451,
+    "z": 34925.64039635161,
+    "h": 32028.00317638625,
+    "f": 47387.691910050606,
+    "i": 47.47811526005937,
+    "d": -7.816637285209874,
+    "gv": null,
+    "in_blackout_zone": false,
+    "in_caution_zone": false,
+    "is_high_resolution": false
+  },
+  "WMM_source": "https://www.ncei.noaa.gov/sites/default/files/2024-12/WMM2025COF.zip",
+  "crc": "All source records checked by strict reader",
+  "input_sha256": {
+    "C:\\Users\\ryupc\\WorkSpace\\ry32767\\github-repos\\AquaBeacon_MAIN_firmware\\scripts\\binary_log.py": "374518ebb1935fb54fd0eeed01c4f4a5027baa013483478059ea54839f8c8df3",
+    "data\\raw\\Nanyo_ocean_test\\child\\C_MAIN_BNO_EVENTS_35545.bin": "eda60993be97bac06f50ae7208df2cc665ddd6449fd3c3929f1b791cb2b71568",
+    "results\\20261031_nanyo_000\\synchronization\\manifest.json": "8e7a2485f6239107b6742bb64183ec6769a3a7541b50bcd034ba0aef30020b80",
+    "calibration\\rigs\\cad_20261028.json": "be566019d1fbc5875243af482e54df47e0f02f732b13fa8c2696dd6781c11a88",
+    "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\scripts\\prepare_nanyo_geometry.py": "a20bc551fe8aa0ba6114f478c9b6f55cae556e862ded14e34ab960dab98cb355",
+    "data\\interim\\20261031_nanyo_000\\geometry\\WMM.COF": "dfa8597825af4e0b87ff4198a5b4fb661b3c49f4cd090cd0164e0259b075582f",
+    "data\\interim\\20261031_nanyo_000\\geometry\\WMM2025COF.zip": "2e76569370d081f2cd7919490218bd094ca9afde347b198eff5621e0af460d03",
+    "calibration\\20261029_parent_axis_011_axes.json": "f93f5109cd8fe49e839d7dc6b7f7ab3d8ae169634f5d3744f221e9491fb4525a",
+    "calibration\\20261029_child_axis_003_imu_frd.json": "37150d3396b8c1a9af66dee70ef993454842d9ed55edb36e2022e994da0b0823",
+    "calibration\\20261028_parent_lis3mdl_cad_axes.json": "b45d0ed7af089e37691f05198af9039538e17b4b187a947d18d61436bd871a88",
+    "calibration\\20261029_child_axis_003_camera_imu.json": "0ec03eb2125f9ac15e2b5313347dfeec7009d1d8c74f53c29fe5fe0f9d1e662c",
+    "calibration\\child_mount_20261028_actual.json": "12faf9b582843409545ad653501c71e58757d9ab5acda623ce0a0ebcd46b2e7b"
+  },
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3"
+}

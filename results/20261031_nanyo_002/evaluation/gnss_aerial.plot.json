@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T09:31:57.715117+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/plot_nanyo_aerial.py",
+    "--experiment",
+    "20261031_nanyo_000",
+    "--experiment",
+    "20261031_nanyo_001",
+    "--experiment",
+    "20261031_nanyo_002"
+  ],
+  "master": "gnss_aerial.figure.pickle",
+  "image": "gnss_aerial.png",
+  "master_sha256": "972bd1db11c5e248abdd957095e15bd271847a1d18cba570a05b1476407d4c0f",
+  "savefig": {
+    "dpi": 180
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

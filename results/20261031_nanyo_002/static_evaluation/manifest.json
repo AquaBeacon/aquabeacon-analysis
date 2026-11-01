@@ -1,0 +1,547 @@
+{
+  "experiment_id": "20261031_nanyo_002",
+  "start": "2026-10-31T15:03:00+09:00",
+  "duration_s": 60,
+  "interval": "[start,end)",
+  "candidate_samples": 120,
+  "valid_samples": 90,
+  "coverage": 0.75,
+  "unique_shots": 90,
+  "first_valid_offset_s": 0.14466309547424316,
+  "last_valid_offset_s": 59.66879200935364,
+  "maximum_valid_sample_gap_s": 3.5033822059631348,
+  "reference": "own arithmetic mean; population denominator N; no detrending",
+  "frame": "child CAD body origin minus parent CAD body origin, true ENU",
+  "selection": "upstream position_available; no extra outlier removal or smoothing",
+  "static_assumption": "User reports child grounded and parent not deliberately moved",
+  "accuracy_validated": false,
+  "configuration": {
+    "experiment_id": "20261031_nanyo_000",
+    "user_same_mount_confirmed": "2026-10-31 current chat",
+    "parent_axes": "calibration/20261029_parent_axis_011_axes.json",
+    "child_axes": "calibration/20261029_child_axis_003_imu_frd.json",
+    "parent_mag_mount": "calibration/20261028_parent_lis3mdl_cad_axes.json",
+    "saved_child_camera": "calibration/20261029_child_axis_003_camera_imu.json",
+    "saved_child_camera_policy": "Calibration-interval-only rotation not applied; current-run gyro alignment used.",
+    "rig": "calibration\\rigs\\cad_20261028.json",
+    "child_mount": "calibration/child_mount_20261028_actual.json",
+    "R_parent_frd_from_cad": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R_child_frd_from_cad": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "lever_arms_frd_m": {
+      "parent_antenna": [
+        -0.045,
+        0.067,
+        -0.0734
+      ],
+      "parent_camera": [
+        -0.04,
+        0.04,
+        0.09195
+      ],
+      "parent_acoustic": [
+        0.053,
+        0.055,
+        0.085
+      ],
+      "child_camera": [
+        0.08,
+        0.1205,
+        -0.13
+      ],
+      "child_light": [
+        0.095,
+        -0.18395,
+        -0.09
+      ],
+      "child_acoustic": [
+        -0.074,
+        0.154,
+        -0.173
+      ],
+      "child_imu": [
+        -0.056,
+        0.028999999999999998,
+        -0.13340000000000002
+      ]
+    },
+    "lever_arm_status": "CAD reference points used as nominal measurement centers, unmeasured",
+    "child_swap_policy": "Camera at old light-holder reference; light at old camera-case reference. No rotation inferred from swap.",
+    "lever_arm_sensitivity_m": 0.05,
+    "declination_deg": -7.816637285209874,
+    "declination_positive": "east",
+    "declination_model": "NOAA WMM2025",
+    "declination_location": [
+      32.9645,
+      132.5055,
+      0.03
+    ],
+    "decimal_year": 2026.8301369863013,
+    "heading_accuracy_validated": false,
+    "position_accuracy_validated": false,
+    "rtk_used": false,
+    "attitude_max_gap_s": 0.15,
+    "gnss_max_gap_s": 1.5,
+    "optical_range_max_delta_s": 0.3,
+    "mounts": {
+      "child_DJI_20261031142636_0026_D": {
+        "R_dji_from_sensor": [
+          [
+            0.0019434600970220234,
+            -0.6529501891809488,
+            0.7573983584689202
+          ],
+          [
+            -0.9999154800144345,
+            0.008467652880103274,
+            0.009865682044637447
+          ],
+          [
+            -0.01285518534891994,
+            -0.7573535167299785,
+            -0.6528785452948961
+          ]
+        ],
+        "window_residual_deg": [
+          0.6602400739438453,
+          0.3924646013526848,
+          0.4969161793523519,
+          0.22402257577722745,
+          0.24916129159087133,
+          0.15710588971600736,
+          0.33588733165180296,
+          0.10948516766701664,
+          0.8931054164444189,
+          2.282384207307972,
+          0.9174580688314552,
+          0.4294611679753923,
+          1.827377247653225,
+          0.903540992798218,
+          1.0663262586333027,
+          0.9377356406312531,
+          0.591822821401832,
+          0.26068049404913995,
+          8.503286047764703
+        ],
+        "used": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "method": "Same-run accepted gyro windows, mean trimmed at 3 degrees; source sensor is BNO or Spresense"
+      },
+      "parent_DJI_20261031142637_0188_D": {
+        "R_dji_from_sensor": [
+          [
+            -0.0738172743403053,
+            0.01303470214000019,
+            -0.9971865956525342
+          ],
+          [
+            0.007264674208536347,
+            -0.9998810205127359,
+            -0.013607693671401504
+          ],
+          [
+            -0.9972453231364954,
+            -0.008248718599415804,
+            0.07371379873440062
+          ]
+        ],
+        "window_residual_deg": [
+          0.21631560998551838,
+          2.0726750204610527,
+          0.2837241159156078,
+          0.36495194902682343,
+          0.5003914978670643,
+          0.7781535868179025,
+          0.27151355247581077,
+          0.34977702273934475,
+          0.39186023833675854,
+          0.36237291962969564,
+          0.4706941817924959,
+          0.3173190440166184,
+          1.6358342809737105,
+          5.422648183136446,
+          2.1520691488355705,
+          1.083016425092412,
+          1.205663497721567,
+          1.1045018478581892
+        ],
+        "used": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "method": "Same-run accepted gyro windows, mean trimmed at 3 degrees; source sensor is BNO or Spresense"
+      },
+      "parent_DJI_20261031150457_0189_D": {
+        "R_dji_from_sensor": [
+          [
+            -0.08154501556974356,
+            0.010525643338528307,
+            -0.996614078401484
+          ],
+          [
+            0.008147471570624308,
+            -0.9999037816218785,
+            -0.01122703011804206
+          ],
+          [
+            -0.9966363575260212,
+            -0.009035393216437761,
+            0.08145141206073839
+          ]
+        ],
+        "window_residual_deg": [
+          0.8773801510980798,
+          0.9384244374370398,
+          0.6183555647928425,
+          0.822540676003306
+        ],
+        "used": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "method": "Same-run accepted gyro windows, mean trimmed at 3 degrees; source sensor is BNO or Spresense"
+      }
+    },
+    "R_dji_from_parent_optical": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "parent_optical_axis_support": {
+      "pairs": 3,
+      "consistent": 2,
+      "status": "Sparse parent corroboration of child-supported same-device convention"
+    },
+    "R_dji_from_child_optical": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "child_optical_axis_support": {
+      "pairs": 169,
+      "consistent": 147,
+      "status": "Same-run visual motion audit"
+    }
+  },
+  "intrinsics": {
+    "device_id": "P_MAIN_CAM",
+    "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\calibration\\parent_camera_underwater_20260924_provisional.json",
+    "sha256": "cd8a1e643ed26aaa48048beacf855d692c77823d3febd2d9f748b8cd644c7942",
+    "defaults_sha256": "7558d2d4181015685d280ea019594d2e06bd669833278cf9c418113029df7eed",
+    "source_kind": "proxy",
+    "calibrated_size": [
+      1280,
+      720
+    ],
+    "output_size": [
+      1280,
+      720
+    ],
+    "camera_matrix_px": [
+      [
+        671.4928071645874,
+        0.0,
+        646.1748800271314
+      ],
+      [
+        0.0,
+        672.2714627042396,
+        360.67668886119225
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "distortion": [
+      0.36299078889677444,
+      0.35047393383599057,
+      -0.005888261119551278,
+      0.0018919520831984344,
+      0.0
+    ],
+    "status": "provisional_limited_viewpoint_diversity",
+    "required_conditions": {
+      "camera": "DJI Osmo Action 6",
+      "fov": "Standard (Dewarp)",
+      "eis": "Off",
+      "housing": "DJI official waterproof case",
+      "medium": "underwater"
+    },
+    "capture_conditions_independently_verified": false
+  },
+  "git_sha": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "git_status": " M AGENTS.md\n M README.md\n M docs/README.md\n M docs/spec.md\n M experiments/README.md\n M pyproject.toml\n?? config/20261031_nanyo_000/\n?? experiments/20261031_nanyo_000/\n?? experiments/20261031_nanyo_001/\n?? experiments/20261031_nanyo_002/\n?? scripts/analyze_nanyo.py\n?? scripts/anchor_nanyo_maps.py\n?? scripts/audit_nanyo_optical_axes.py\n?? scripts/bridge_nanyo_maps.py\n?? scripts/download_nanyo_base.py\n?? scripts/estimate_nanyo_absolute.py\n?? scripts/evaluate_nanyo_static.py\n?? scripts/export_nanyo_replay.py\n?? scripts/extend_nanyo_maps.py\n?? scripts/fuse_nanyo_navigation.py\n?? scripts/group_nanyo_acoustic.py\n?? scripts/locate_nanyo.py\n?? scripts/map_nanyo.py\n?? scripts/plot_nanyo_aerial.py\n?? scripts/prepare_nanyo_geometry.py\n?? scripts/prepare_nanyo_replay_media.py\n?? scripts/prepare_nanyo_segments.py\n?? scripts/prepare_nanyo_sync.py\n?? scripts/recover_nanyo_frame_times.py\n?? scripts/report_nanyo.py\n?? scripts/report_nanyo_absolute.py\n?? scripts/report_nanyo_navigation.py\n?? scripts/report_nanyo_sync.py\n?? scripts/reprocess_nanyo_ppk.py\n?? scripts/synchronize_nanyo.py\n?? scripts/templates/nanyo_navigation_replay.html\n?? scripts/verify_nanyo_absolute.py\n?? scripts/verify_nanyo_replay.py\n?? scripts/verify_nanyo_segments.py\n?? src/aquabeacon_analysis/interval_selection.py\n?? src/aquabeacon_analysis/nanyo_position.py\n?? src/aquabeacon_analysis/navigation_fusion.py\n?? src/aquabeacon_analysis/static_evaluation.py\n?? tests/test_interval_selection.py\n?? tests/test_nanyo_position.py\n?? tests/test_nanyo_sync.py\n?? tests/test_navigation_fusion.py\n?? tests/test_static_evaluation.py\n",
+  "input_sha256": {
+    "results\\20261031_nanyo_002\\absolute_position\\positions.csv": "12df349d0a84da0911aadaad5c301cd45ae45dabdcce6a5910d5d0dc5ac826dc",
+    "results\\20261031_nanyo_002\\absolute_position\\manifest.json": "6d0350814696c5edd7e21421cd655c2e38ebde896edf705de1b0a769e0200e5d",
+    "data\\processed\\20261031_nanyo_002\\absolute_position\\attitudes_10hz.csv": "de9e3f3ca435ba5108ff1954bd7aab56d9b18f0230d36c9ca24437ee9f16fa0a",
+    "data\\processed\\20261031_nanyo_000\\synchronization\\child_DJI_20261031142636_0026_D_attitude.csv": "dc60d2eb441e8a14476a6774a9e0b1786df6bfd0fb287aba2e57cb51f521aaf7",
+    "calibration\\20261029_parent_axis_011_axes.json": "f93f5109cd8fe49e839d7dc6b7f7ab3d8ae169634f5d3744f221e9491fb4525a",
+    "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\scripts\\evaluate_nanyo_static.py": "eb4c8ce396074b5c9537dbecd68c58cd1cfe34e4df1a5d669b601386292635b2",
+    "src\\aquabeacon_analysis\\static_evaluation.py": "d6b530080c18919d5667d8474212570dc1d1fabccfb6ed05c732d39c00e855a6"
+  },
+  "metrics": {
+    "compensated_relative_enu": {
+      "n": 90,
+      "mean_m": [
+        -0.34219479366822814,
+        0.2676324323799579,
+        -4.510469235727637
+      ],
+      "axis_rmse_m": [
+        0.08564883610863341,
+        0.07928971796537528,
+        0.016582121557411584
+      ],
+      "horizontal_rmse_m": 0.11671581941533161,
+      "rmse_3d_m": 0.11788786730252217,
+      "radius_p95_m": 0.19469892837664787,
+      "radius_max_m": 0.25157895632405886
+    },
+    "fixed_parent_attitude_relative_enu": {
+      "n": 90,
+      "mean_m": [
+        -0.34099787812872584,
+        0.2715424711926802,
+        -4.497264425311023
+      ],
+      "axis_rmse_m": [
+        0.2536557086070375,
+        0.25923635756490204,
+        0.03920187106440122
+      ],
+      "horizontal_rmse_m": 0.36269092571010936,
+      "rmse_3d_m": 0.3648033638652555,
+      "radius_p95_m": 0.6847991434458309,
+      "radius_max_m": 0.816153235217641
+    },
+    "parent_origin_enu_diagnostic": {
+      "n": 90,
+      "mean_m": [
+        31.81463151252191,
+        -47.20311730789692,
+        5.686067815926998
+      ],
+      "axis_rmse_m": [
+        0.09375746877358396,
+        0.1091405569948637,
+        0.09848349875057057
+      ],
+      "horizontal_rmse_m": 0.14388232737893372,
+      "rmse_3d_m": 0.1743591800225394,
+      "radius_p95_m": 0.34299908056210915,
+      "radius_max_m": 0.5281474845046048
+    },
+    "child_origin_enu_diagnostic": {
+      "n": 90,
+      "mean_m": [
+        31.47243671885368,
+        -46.935484875517,
+        1.175598580199363
+      ],
+      "axis_rmse_m": [
+        0.15535863533345076,
+        0.10251696734087012,
+        0.09975848869819066
+      ],
+      "horizontal_rmse_m": 0.18613445184984204,
+      "rmse_3d_m": 0.21118188897911724,
+      "radius_p95_m": 0.40166144685584154,
+      "radius_max_m": 0.6535173990833887
+    },
+    "attitude_correction_variation_rmse_m": 0.321856742362723,
+    "range_mean_m": 4.528966666666667,
+    "range_rmse_m": 0.016400677492781297,
+    "attitude_10hz": {
+      "parent": {
+        "n": 600,
+        "rms_deg": 6.923596468282503,
+        "p95_deg": 13.204295657530748,
+        "max_deg": 20.24304450029679
+      },
+      "child": {
+        "n": 600,
+        "rms_deg": 11.478277310042532,
+        "p95_deg": 18.649617165233,
+        "max_deg": 20.978405584816922
+      },
+      "child_camera_independent": {
+        "n": 1799,
+        "rms_deg": 11.714868784217703,
+        "max_deg": 21.27097525279762
+      }
+    },
+    "subwindows": [
+      {
+        "start_offset_s": 0,
+        "duration_s": 30,
+        "n": 44,
+        "mean_m": [
+          -0.4029136586215897,
+          0.2268603279351523,
+          -4.507349480098334
+        ],
+        "axis_rmse_m": [
+          0.06495761303395722,
+          0.08136664453310896,
+          0.01594861677195206
+        ],
+        "horizontal_rmse_m": 0.10411542793287958,
+        "rmse_3d_m": 0.10532986618516721,
+        "radius_p95_m": 0.18246969898112067,
+        "radius_max_m": 0.1984615289973636
+      },
+      {
+        "start_offset_s": 10,
+        "duration_s": 30,
+        "n": 46,
+        "mean_m": [
+          -0.36871659652106936,
+          0.25467034889812973,
+          -4.50729793524462
+        ],
+        "axis_rmse_m": [
+          0.09182280377604114,
+          0.08765710807076516,
+          0.015504745996644736
+        ],
+        "horizontal_rmse_m": 0.12694564147154938,
+        "rmse_3d_m": 0.12788898716091088,
+        "radius_p95_m": 0.20007414145937655,
+        "radius_max_m": 0.22508411727463556
+      },
+      {
+        "start_offset_s": 20,
+        "duration_s": 30,
+        "n": 48,
+        "mean_m": [
+          -0.30129063495773983,
+          0.3104749327180554,
+          -4.513225692906933
+        ],
+        "axis_rmse_m": [
+          0.07446489060216223,
+          0.049828894522980324,
+          0.016856464052197245
+        ],
+        "horizontal_rmse_m": 0.08959876484513772,
+        "rmse_3d_m": 0.09117060404602628,
+        "radius_p95_m": 0.14279240088378178,
+        "radius_max_m": 0.19110234016819164
+      },
+      {
+        "start_offset_s": 30,
+        "duration_s": 30,
+        "n": 46,
+        "mean_m": [
+          -0.2841158793650127,
+          0.3066318366315111,
+          -4.513453349807838
+        ],
+        "axis_rmse_m": [
+          0.058453574652163186,
+          0.05344767578843265,
+          0.016627220866839664
+        ],
+        "horizontal_rmse_m": 0.07920526773391669,
+        "rmse_3d_m": 0.08093169286846835,
+        "radius_p95_m": 0.12667563131846074,
+        "radius_max_m": 0.21079535693227358
+      }
+    ]
+  }
+}

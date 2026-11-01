@@ -1,0 +1,186 @@
+{
+  "status": "passed",
+  "geometry": [
+    {
+      "experiment_id": "20261031_nanyo_001",
+      "texture_uv_max_error": 0,
+      "photo_patches": 72,
+      "points": 50058,
+      "sfm_navigation_used": false
+    },
+    {
+      "experiment_id": "20261031_nanyo_002",
+      "texture_uv_max_error": 0,
+      "photo_patches": 11,
+      "points": 810,
+      "sfm_navigation_used": false
+    }
+  ],
+  "native_preview_frame_checks": [
+    {
+      "video": "media/001_parent_DJI_20261031142637_0188_D.mp4",
+      "preview_time_s": 521.6,
+      "matched_native_clock_difference_s": 0.030005218335872996,
+      "mean_pixel_difference_0_255": 1.5583506944444445
+    },
+    {
+      "video": "media/001_child_DJI_20261031142636_0026_D.mp4",
+      "preview_time_s": 521.6,
+      "matched_native_clock_difference_s": 0.012723560955691937,
+      "mean_pixel_difference_0_255": 1.553449074074074
+    },
+    {
+      "video": "media/002_parent_DJI_20261031142637_0188_D.mp4",
+      "preview_time_s": 129.86666666666667,
+      "matched_native_clock_difference_s": 0.044479464246251155,
+      "mean_pixel_difference_0_255": 1.155697337962963
+    },
+    {
+      "video": "media/002_parent_DJI_20261031150457_0189_D.mp4",
+      "preview_time_s": 29.933333333333334,
+      "matched_native_clock_difference_s": 0.028864247532652598,
+      "mean_pixel_difference_0_255": 2.7248914930555554
+    },
+    {
+      "video": "media/002_child_DJI_20261031142636_0026_D.mp4",
+      "preview_time_s": 159.8,
+      "matched_native_clock_difference_s": 0.03131438626587624,
+      "mean_pixel_difference_0_255": 1.4118272569444446
+    }
+  ],
+  "browser_states": [
+    {
+      "state": {
+        "selected": 0,
+        "time": 650,
+        "playing": false,
+        "surfaces": 72,
+        "texturesReady": 72,
+        "childAvailable": true,
+        "parentAvailable": true,
+        "sfmNavigation": false
+      },
+      "videos": [
+        {
+          "role": "child",
+          "source": "media/001_child_DJI_20261031142636_0026_D.mp4",
+          "current": 650,
+          "expected": 650,
+          "width": 640,
+          "height": 360
+        },
+        {
+          "role": "parent",
+          "source": "media/001_parent_DJI_20261031142637_0188_D.mp4",
+          "current": 650,
+          "expected": 650,
+          "width": 640,
+          "height": 360
+        }
+      ]
+    },
+    {
+      "state": {
+        "selected": 0,
+        "time": 0,
+        "playing": false,
+        "surfaces": 72,
+        "texturesReady": 72,
+        "childAvailable": false,
+        "parentAvailable": true,
+        "sfmNavigation": false
+      },
+      "videos": [
+        {
+          "role": "child",
+          "source": "media/001_child_DJI_20261031142636_0026_D.mp4",
+          "current": 0,
+          "expected": 0,
+          "width": 640,
+          "height": 360
+        },
+        {
+          "role": "parent",
+          "source": "media/001_parent_DJI_20261031142637_0188_D.mp4",
+          "current": 0,
+          "expected": 0,
+          "width": 640,
+          "height": 360
+        }
+      ]
+    },
+    {
+      "state": {
+        "selected": 1,
+        "time": 100,
+        "playing": false,
+        "surfaces": 11,
+        "texturesReady": 11,
+        "childAvailable": true,
+        "parentAvailable": true,
+        "sfmNavigation": false
+      },
+      "videos": [
+        {
+          "role": "child",
+          "source": "media/002_child_DJI_20261031142636_0026_D.mp4",
+          "current": 100,
+          "expected": 100,
+          "width": 640,
+          "height": 360
+        },
+        {
+          "role": "parent",
+          "source": "media/002_parent_DJI_20261031142637_0188_D.mp4",
+          "current": 100,
+          "expected": 100,
+          "width": 640,
+          "height": 360
+        }
+      ]
+    },
+    {
+      "state": {
+        "selected": 1,
+        "time": 280,
+        "playing": false,
+        "surfaces": 11,
+        "texturesReady": 11,
+        "childAvailable": false,
+        "parentAvailable": true,
+        "sfmNavigation": false
+      },
+      "videos": [
+        {
+          "role": "child",
+          "source": "media/002_child_DJI_20261031142636_0026_D.mp4",
+          "current": 280,
+          "expected": 280,
+          "width": 640,
+          "height": 360
+        },
+        {
+          "role": "parent",
+          "source": "media/002_parent_DJI_20261031150457_0189_D.mp4",
+          "current": 20.294834,
+          "expected": 20.294834852218628,
+          "width": 640,
+          "height": 360
+        }
+      ]
+    }
+  ],
+  "page_errors": [],
+  "checked_controls": [
+    "segment switch",
+    "time seek",
+    "parent split-video boundary",
+    "missing child position",
+    "play/pause",
+    "video visibility",
+    "mesh/point toggle",
+    "view resets"
+  ],
+  "viewer_sha256": "43f15b9aff7914bdea083530cf48cdd0d93a457cd154db1ed6552203d540127a",
+  "code_sha256": "480cac2f922f086581c088d5f2352f4839fb321f30eebdf6df96230225727795"
+}

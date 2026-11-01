@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review": "Selection plot shows two immersions separated by surface interval; labels readable. Four representative decoded frames are intact. Child views underwater; parent views boat deck; original orientation preserved.",
+  "files": [
+    {
+      "path": "results\\20261031_nanyo_000\\segmentation\\intervals.png",
+      "sha256": "dcbe38379788b13c0868abc0ae3faf28c5d26c8fc13d4e587ece017b1c9bf1fa"
+    },
+    {
+      "path": "results\\20261031_nanyo_000\\segmentation\\20261031_nanyo_001_child_review.png",
+      "sha256": "b6d03a335f10438b0f1d7e00c8a794392cfa6a4434e35ea8315a193742d753f6"
+    },
+    {
+      "path": "results\\20261031_nanyo_000\\segmentation\\20261031_nanyo_001_parent_review.png",
+      "sha256": "4c968857d2159ebb13619931cfa9b84cdfe23c2b72a8a3b596f28cc4e5563a10"
+    },
+    {
+      "path": "results\\20261031_nanyo_000\\segmentation\\20261031_nanyo_002_child_review.png",
+      "sha256": "3025920215657007255b4242600e60d43f08018a623386a844e99d33ade5eea3"
+    },
+    {
+      "path": "results\\20261031_nanyo_000\\segmentation\\20261031_nanyo_002_parent_review.png",
+      "sha256": "5005b7d65acaa0a28cb46d74e18d76cb5f911d760a04fb5c4a2e05068bc0bc84"
+    }
+  ]
+}

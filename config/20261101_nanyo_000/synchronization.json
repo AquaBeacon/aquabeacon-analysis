@@ -1,0 +1,26 @@
+{
+  "experiment_id": "20261101_nanyo_000",
+  "method": "DJI quaternion angular velocity vs body gyro, invariant norm correlation and independent 3-axis validation",
+  "coarse_search_s": 120,
+  "window_s": 90,
+  "window_stride_s": 90,
+  "coarse_step_s": 0.1,
+  "fine_step_s": 0.005,
+  "minimum_correlation": 0.9,
+  "minimum_vector_correlation": 0.85,
+  "minimum_singular_ratio": 0.01,
+  "camera_overrides": {
+    "child_DJI_20261101105154_0030_D": {
+      "window_s": 30,
+      "window_stride_s": 30
+    },
+    "parent_DJI_20261101103718_0195_D": {
+      "window_s": 30,
+      "window_stride_s": 30
+    },
+    "parent_DJI_20261101105120_0197_D": {
+      "window_s": 30,
+      "window_stride_s": 30
+    }
+  }
+}

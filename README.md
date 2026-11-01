@@ -746,3 +746,115 @@ aquabeacon-analysis/
 親機の磁北方位・姿勢（独立LIS3MDLをCADと実機方向で軸合わせ）：
 `python scripts/estimate_ngt_parent_attitude.py --experiment 20261028_ngt_000 --calibration calibration/20261028_parent_lis3mdl_cad_axes.json`
 `--experiment`の繰返しで001〜004を選択可能。出力は`data/processed/<id>/parent_magnetic_attitude/attitude.csv`、図とレポートは`results/<id>/parent_magnetic_attitude/`。absolute_attitude_availableで四元数を選び、tilt_sourceでカメラと瞬時加速度を区別する。前方はGNSS→Spresense、精度未検証・偏角未適用。
+
+
+Nanyo海上実験の姿勢時刻同期：
+
+```powershell
+python scripts/prepare_nanyo_sync.py --experiment 20261031_nanyo_000 --firmware-root ../firmware-experiments
+python scripts/synchronize_nanyo.py --experiment 20261031_nanyo_000
+python scripts/report_nanyo_sync.py --experiment 20261031_nanyo_000
+```
+
+仕様はdocs/spec.md「Nanyo海上実験の姿勢時刻同期」、結果はresults/20261031_nanyo_000/synchronization/report.md。
+
+Nanyo親機動画連結と水中・音響候補の区間切出し：
+
+```powershell
+python scripts/prepare_nanyo_segments.py --experiment 20261031_nanyo_000 --firmware-root ../firmware-experiments
+python scripts/verify_nanyo_segments.py --experiment 20261031_nanyo_000
+```
+
+結果：results/20261031_nanyo_000/segmentation/report.md。区間001/002の動画・ログはdata/processed/<id>/。
+
+
+Nanyo評価（RTK未使用）：
+```powershell
+python scripts/reprocess_nanyo_ppk.py --experiment 20261031_nanyo_000
+python scripts/analyze_nanyo.py --experiment 20261031_nanyo_000
+python scripts/locate_nanyo.py --experiment 20261031_nanyo_001
+python scripts/locate_nanyo.py --experiment 20261031_nanyo_002
+python scripts/map_nanyo.py --experiment 20261031_nanyo_001
+python scripts/map_nanyo.py --experiment 20261031_nanyo_002
+python scripts/group_nanyo_acoustic.py --experiment 20261031_nanyo_001 --experiment 20261031_nanyo_002
+python scripts/plot_nanyo_aerial.py --experiment 20261031_nanyo_000 --experiment 20261031_nanyo_001 --experiment 20261031_nanyo_002
+python scripts/report_nanyo.py --experiment 20261031_nanyo_000
+```
+結果の入口はresults/20261031_nanyo_000/analysis/report.md。依存：opencv-python-headless、pycolmap。
+
+
+Nanyo子機の絶対位置推定・位置拘束マッピング（同一取付けのユーザー確認後）：
+
+```powershell
+python -m pip install -e ".[analysis,vision,media,nanyo]"
+python scripts/prepare_nanyo_geometry.py --experiment 20261031_nanyo_000 --firmware-root <kind16対応firmwareのパス>
+python scripts/recover_nanyo_frame_times.py --experiment 20261031_nanyo_001
+python scripts/recover_nanyo_frame_times.py --experiment 20261031_nanyo_002
+python scripts/audit_nanyo_optical_axes.py --experiment 20261031_nanyo_000
+python scripts/estimate_nanyo_absolute.py --experiment 20261031_nanyo_001 --experiment 20261031_nanyo_002
+python scripts/bridge_nanyo_maps.py --experiment 20261031_nanyo_001
+python scripts/bridge_nanyo_maps.py --experiment 20261031_nanyo_002
+python scripts/extend_nanyo_maps.py --experiment 20261031_nanyo_001
+python scripts/anchor_nanyo_maps.py --experiment 20261031_nanyo_001 --experiment 20261031_nanyo_002 --use-bridge
+python scripts/verify_nanyo_absolute.py --experiment 20261031_nanyo_000
+python scripts/report_nanyo_absolute.py --experiment 20261031_nanyo_000
+```
+
+入口：results/20261031_nanyo_000/absolute_position/report.md。オフライン3D表示は同じフォルダのviewer.html。
+追加依存：pygeomag、plotly。前回の90°画像回転を適用しない。kind16対応デコーダは既存firmware-experimentsより新しいfirmware checkoutを明示指定する。
+精度未検証の姿勢・位置を推定に利用できるが、欠測・品質値・CAD基準点の暫定性を保持する。
+
+Nanyoのセンサー航法と写真・同期映像付き3D表示：
+
+```powershell
+python -m pip install -e ".[analysis,vision,media,nanyo,replay,dev]"
+python scripts/fuse_nanyo_navigation.py --experiment 20261031_nanyo_000
+python scripts/prepare_nanyo_replay_media.py --experiment 20261031_nanyo_000
+python scripts/export_nanyo_replay.py --experiment 20261031_nanyo_000
+python scripts/verify_nanyo_replay.py --experiment 20261031_nanyo_000
+python scripts/report_nanyo_navigation.py --experiment 20261031_nanyo_000
+```
+
+入口：[最新レポート](results/20261031_nanyo_000/navigation_replay/report.md)と
+[写真地図・親子映像付き表示](results/20261031_nanyo_000/navigation_replay/viewer.html)。
+親機はPPK/Doppler/Spresense、子機は光点/音響/深度/BNO085で推定し、SfM位置を航法に入力しない。
+親機5秒・子機3秒を超える水平観測欠測は有効位置として埋めない。値は精度未検証。
+viewer.htmlとmedia/は同じ配置で使用する。検証には既存Edgeを使い、別PCでは
+`--browser-executable <Chromium系ブラウザの実行ファイル>`を指定できる。
+表示だけの修正はexportに`--reuse-geometry`を付けられるが、航法・地図を変更した場合は再生成する。
+
+
+Nanyo指定静止区間の相対位置評価：`python scripts/evaluate_nanyo_static.py --experiment 20261031_nanyo_002`。既定は2026-10-31 15:03:00〜15:04:00 JST。結果は`results/20261031_nanyo_002/static_evaluation/report.md`。平均周りRMSEであり真値誤差ではない。
+
+
+区間①の初期静止候補の選定・評価：
+
+```powershell
+python scripts/select_nanyo_static.py --experiment 20261031_nanyo_001
+python scripts/evaluate_nanyo_static.py --experiment 20261031_nanyo_001 --start 2026-10-31T14:41:10+09:00 --selection-note "初期6分の姿勢と親機位置による探索的選定。static_selection/report.md参照"
+```
+
+結果は`results/20261031_nanyo_001/static_selection/report.md`と`static_evaluation/report.md`。相対位置RMSEを選定基準に使わない。
+
+
+Nanyo day2（2026-11-01）の同期・実験分割：
+
+```powershell
+python scripts/prepare_nanyo_sync.py --experiment 20261101_nanyo_000 --firmware-root ../firmware-experiments
+python scripts/synchronize_nanyo.py --experiment 20261101_nanyo_000
+python scripts/report_nanyo_sync.py --experiment 20261101_nanyo_000
+python scripts/prepare_nanyo_day2_logs.py --experiment 20261101_nanyo_000 --firmware-root <kind16対応firmwareのパス>
+python scripts/prepare_nanyo_day2_segments.py --experiment 20261101_nanyo_000
+python scripts/repair_nanyo_day2_video_timing.py --experiment 20261101_nanyo_000
+python scripts/verify_nanyo_day2_segments.py --experiment 20261101_nanyo_000
+```
+
+先に追加の親機health/range、子機BNO/multipathを同じinterimへCRC検証付きで抽出する。
+子機kind16対応デコーダを明示指定する。今回の抽出来歴はinterimのdecode.jsonを参照。
+設定はconfig/20261101_nanyo_000/。原本の前日ログは対象suffixとUTCで除外。
+親4本・子3本を個別同期し、短い動画は30秒窓を明示設定。再起動前後の時計を共有しない。
+開始は子機入水と親機測距開始の遅い方、終了は離水または測距停止。
+結果：[day2分割レポート](results/20261101_nanyo_000/segmentation/report.md)。
+
+
+別PCへのNanyo作業引き継ぎ：[手順と現在地](docs/handoff/nanyo_20261102.md)。processed移行後は `python scripts/verify_nanyo_handoff.py --experiment 20261101_nanyo_000 --verify-csv`。

@@ -1,0 +1,1166 @@
+{
+  "schema_version": 1,
+  "scope": "Nanyo day1 and day2 processed files; uncorrected concat backups and logs optional",
+  "files": [
+    {
+      "path": "data/processed/20261031_nanyo_000/synchronization/child_DJI_20261031142636_0026_D_attitude.csv",
+      "bytes": 13909974
+    },
+    {
+      "path": "data/processed/20261031_nanyo_000/synchronization/parent_DJI_20261031142637_0188_D_attitude.csv",
+      "bytes": 12243392
+    },
+    {
+      "path": "data/processed/20261031_nanyo_000/synchronization/parent_DJI_20261031150457_0189_D_attitude.csv",
+      "bytes": 3153297
+    },
+    {
+      "path": "data/processed/20261031_nanyo_000/videos/parent_concat.txt",
+      "bytes": 319
+    },
+    {
+      "path": "data/processed/20261031_nanyo_000/videos/parent_joined.clock.json",
+      "bytes": 740
+    },
+    {
+      "path": "data/processed/20261031_nanyo_000/videos/parent_joined.mp4",
+      "bytes": 21578871874
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/absolute_position/attitudes_10hz.csv",
+      "bytes": 2414590
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/absolute_position/positions.csv",
+      "bytes": 1234573
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/navigation_fusion/child_navigation.csv",
+      "bytes": 9623287
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/navigation_mapping/model/cameras.bin",
+      "bytes": 96
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/navigation_mapping/model/frames.bin",
+      "bytes": 46712
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/navigation_mapping/model/images.bin",
+      "bytes": 28195326
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/navigation_mapping/model/points3D.bin",
+      "bytes": 7195918
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/navigation_mapping/model/rigs.bin",
+      "bytes": 24
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/bridge_0/cameras.bin",
+      "bytes": 96
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/bridge_0/frames.bin",
+      "bytes": 39068
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/bridge_0/images.bin",
+      "bytes": 23520256
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/bridge_0/points3D.bin",
+      "bytes": 5871360
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/bridge_0/rigs.bin",
+      "bytes": 24
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/extended_0/cameras.bin",
+      "bytes": 96
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/extended_0/frames.bin",
+      "bytes": 46712
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/extended_0/images.bin",
+      "bytes": 28195326
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/extended_0/points3D.bin",
+      "bytes": 7195918
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/extended_0/rigs.bin",
+      "bytes": 24
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/original_3/cameras.bin",
+      "bytes": 96
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/original_3/frames.bin",
+      "bytes": 15884
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/original_3/images.bin",
+      "bytes": 6528071
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/original_3/points3D.bin",
+      "bytes": 514685
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/position_mapping/original_3/rigs.bin",
+      "bytes": 24
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/camera/child_DJI_20261031142636_0026_D_attitude.csv",
+      "bytes": 6895126
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/camera/parent_DJI_20261031142637_0188_D_attitude.csv",
+      "bytes": 6900108
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/camera/parent_DJI_20261031150457_0189_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/child/C_MAIN_BNO_EVENTS_35545.bno.csv",
+      "bytes": 58438818
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/child/C_MAIN_BNO_EVENTS_35545.unknown_16.csv",
+      "bytes": 19028973
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/child/C_MAIN_HEALTH_RANGE_35545.health.csv",
+      "bytes": 414222
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/child/C_MAIN_HEALTH_RANGE_35545.shot.csv",
+      "bytes": 441311
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/child/C_MAIN_IMU_100Hz_35545.imu.csv",
+      "bytes": 32245999
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/child/C_MAIN_MULTIPATH_35545.capture_begin.csv",
+      "bytes": 10405
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/child/C_MAIN_MULTIPATH_35545.capture_end.csv",
+      "bytes": 9227
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/child/C_MAIN_MULTIPATH_35545.comparator.csv",
+      "bytes": 149833
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/child/C_MAIN_MULTIPATH_35545.envelope.csv",
+      "bytes": 388212585
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.gnss_observation.csv",
+      "bytes": 205113
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.health.csv",
+      "bytes": 410874
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.mag_observation.csv",
+      "bytes": 3194403
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.range_measurement.csv",
+      "bytes": 346286
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.shot.csv",
+      "bytes": 441311
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/parent/P_MAIN_TIME_POSITION_65433.time_position.csv",
+      "bytes": 144129
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/synchronized/parent/parent_100hz.csv",
+      "bytes": 34921239
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/videos/child.mp4",
+      "bytes": 3910670145
+    },
+    {
+      "path": "data/processed/20261031_nanyo_001/videos/parent.mp4",
+      "bytes": 7769257942
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/absolute_position/attitudes_10hz.csv",
+      "bytes": 741438
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/absolute_position/positions.csv",
+      "bytes": 408569
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/navigation_fusion/child_navigation.csv",
+      "bytes": 3049362
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/navigation_mapping/model/cameras.bin",
+      "bytes": 96
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/navigation_mapping/model/frames.bin",
+      "bytes": 932
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/navigation_mapping/model/images.bin",
+      "bytes": 657561
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/navigation_mapping/model/points3D.bin",
+      "bytes": 66758
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/navigation_mapping/model/rigs.bin",
+      "bytes": 24
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/position_mapping/original_1/cameras.bin",
+      "bytes": 96
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/position_mapping/original_1/frames.bin",
+      "bytes": 932
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/position_mapping/original_1/images.bin",
+      "bytes": 657561
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/position_mapping/original_1/points3D.bin",
+      "bytes": 66758
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/position_mapping/original_1/rigs.bin",
+      "bytes": 24
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/camera/child_DJI_20261031142636_0026_D_attitude.csv",
+      "bytes": 2117388
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/camera/parent_DJI_20261031142637_0188_D_attitude.csv",
+      "bytes": 1715714
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/camera/parent_DJI_20261031150457_0189_D_attitude.csv",
+      "bytes": 397579
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/child/C_MAIN_BNO_EVENTS_35545.bno.csv",
+      "bytes": 17960969
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/child/C_MAIN_BNO_EVENTS_35545.unknown_16.csv",
+      "bytes": 5838028
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/child/C_MAIN_HEALTH_RANGE_35545.health.csv",
+      "bytes": 128530
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/child/C_MAIN_HEALTH_RANGE_35545.shot.csv",
+      "bytes": 136506
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/child/C_MAIN_IMU_100Hz_35545.imu.csv",
+      "bytes": 9921819
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/child/C_MAIN_MULTIPATH_35545.capture_begin.csv",
+      "bytes": 3085
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/child/C_MAIN_MULTIPATH_35545.capture_end.csv",
+      "bytes": 2932
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/child/C_MAIN_MULTIPATH_35545.comparator.csv",
+      "bytes": 50089
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/child/C_MAIN_MULTIPATH_35545.envelope.csv",
+      "bytes": 113248928
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.gnss_observation.csv",
+      "bytes": 63040
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.health.csv",
+      "bytes": 126373
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.mag_observation.csv",
+      "bytes": 979461
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.range_measurement.csv",
+      "bytes": 106888
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_65433.shot.csv",
+      "bytes": 136506
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/parent/P_MAIN_TIME_POSITION_65433.time_position.csv",
+      "bytes": 44310
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/synchronized/parent/parent_100hz.csv",
+      "bytes": 10719493
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/videos/child.mp4",
+      "bytes": 1209147329
+    },
+    {
+      "path": "data/processed/20261031_nanyo_002/videos/parent.mp4",
+      "bytes": 2393466314
+    },
+    {
+      "path": "data/processed/20261101_nanyo_000/synchronization/child_DJI_20261101091928_0028_D_attitude.csv",
+      "bytes": 22598656
+    },
+    {
+      "path": "data/processed/20261101_nanyo_000/synchronization/child_DJI_20261101103009_0029_D_attitude.csv",
+      "bytes": 3837014
+    },
+    {
+      "path": "data/processed/20261101_nanyo_000/synchronization/child_DJI_20261101105154_0030_D_attitude.csv",
+      "bytes": 1170415
+    },
+    {
+      "path": "data/processed/20261101_nanyo_000/synchronization/parent_DJI_20261101092040_0193_D_attitude.csv",
+      "bytes": 12229145
+    },
+    {
+      "path": "data/processed/20261101_nanyo_000/synchronization/parent_DJI_20261101095854_0194_D_attitude.csv",
+      "bytes": 12316314
+    },
+    {
+      "path": "data/processed/20261101_nanyo_000/synchronization/parent_DJI_20261101103718_0195_D_attitude.csv",
+      "bytes": 1695520
+    },
+    {
+      "path": "data/processed/20261101_nanyo_000/synchronization/parent_DJI_20261101105120_0197_D_attitude.csv",
+      "bytes": 1491674
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/camera/child_DJI_20261101091928_0028_D_attitude.csv",
+      "bytes": 3233542
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/camera/child_DJI_20261101103009_0029_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/camera/child_DJI_20261101105154_0030_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/camera/parent_DJI_20261101092040_0193_D_attitude.csv",
+      "bytes": 3248715
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/camera/parent_DJI_20261101095854_0194_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/camera/parent_DJI_20261101103718_0195_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/camera/parent_DJI_20261101105120_0197_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/child/C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+      "bytes": 10824697
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/child/C_MAIN_BNO_EVENTS_68440.bno.csv",
+      "bytes": 27487552
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/child/C_MAIN_HEALTH_RANGE_68440.health.csv",
+      "bytes": 197456
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/child/C_MAIN_HEALTH_RANGE_68440.shot.csv",
+      "bytes": 68526
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/child/C_MAIN_IMU_100Hz_68440.imu.csv",
+      "bytes": 15181590
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/child/C_MAIN_MULTIPATH_68440.capture_begin.csv",
+      "bytes": 2454
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/child/C_MAIN_MULTIPATH_68440.capture_end.csv",
+      "bytes": 1581
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/child/C_MAIN_MULTIPATH_68440.comparator.csv",
+      "bytes": 37917
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/child/C_MAIN_MULTIPATH_68440.envelope.csv",
+      "bytes": 88403009
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+      "bytes": 94779
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.health.csv",
+      "bytes": 195732
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+      "bytes": 1482653
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+      "bytes": 53577
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.shot.csv",
+      "bytes": 69216
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+      "bytes": 203
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.health.csv",
+      "bytes": 645
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+      "bytes": 302
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+      "bytes": 194
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.shot.csv",
+      "bytes": 245
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_TIME_POSITION_62440.time_position.csv",
+      "bytes": 67581
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/P_MAIN_TIME_POSITION_62441.time_position.csv",
+      "bytes": 215
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/synchronized/parent/parent_100hz.csv",
+      "bytes": 16377012
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/videos/child.clock.json",
+      "bytes": 2129
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/videos/child.mp4",
+      "bytes": 1833852600
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/videos/child_concat.txt",
+      "bytes": 150
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/videos/child_part01.mp4",
+      "bytes": 1833852600
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/videos/parent.clock.json",
+      "bytes": 2137
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/videos/parent.mp4",
+      "bytes": 3679457822
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/videos/parent_concat.txt",
+      "bytes": 151
+    },
+    {
+      "path": "data/processed/20261101_nanyo_001/videos/parent_part01.mp4",
+      "bytes": 3679457822
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/camera/child_DJI_20261101091928_0028_D_attitude.csv",
+      "bytes": 5714496
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/camera/child_DJI_20261101103009_0029_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/camera/child_DJI_20261101105154_0030_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/camera/parent_DJI_20261101092040_0193_D_attitude.csv",
+      "bytes": 1933247
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/camera/parent_DJI_20261101095854_0194_D_attitude.csv",
+      "bytes": 3809892
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/camera/parent_DJI_20261101103718_0195_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/camera/parent_DJI_20261101105120_0197_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/child/C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+      "bytes": 19158845
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/child/C_MAIN_BNO_EVENTS_68440.bno.csv",
+      "bytes": 48518886
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/child/C_MAIN_HEALTH_RANGE_68440.health.csv",
+      "bytes": 343718
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/child/C_MAIN_HEALTH_RANGE_68440.shot.csv",
+      "bytes": 118868
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/child/C_MAIN_IMU_100Hz_68440.imu.csv",
+      "bytes": 26746354
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/child/C_MAIN_MULTIPATH_68440.capture_begin.csv",
+      "bytes": 2903
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/child/C_MAIN_MULTIPATH_68440.capture_end.csv",
+      "bytes": 2613
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/child/C_MAIN_MULTIPATH_68440.comparator.csv",
+      "bytes": 34400
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/child/C_MAIN_MULTIPATH_68440.envelope.csv",
+      "bytes": 105163815
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+      "bytes": 167945
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.health.csv",
+      "bytes": 344585
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+      "bytes": 2633338
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+      "bytes": 94499
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.shot.csv",
+      "bytes": 120388
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+      "bytes": 203
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.health.csv",
+      "bytes": 645
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+      "bytes": 302
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+      "bytes": 194
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.shot.csv",
+      "bytes": 245
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_TIME_POSITION_62440.time_position.csv",
+      "bytes": 120179
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/P_MAIN_TIME_POSITION_62441.time_position.csv",
+      "bytes": 215
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/synchronized/parent/parent_100hz.csv",
+      "bytes": 29073787
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/videos/child.clock.json",
+      "bytes": 2128
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/videos/child.mp4",
+      "bytes": 3242739056
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/videos/child_concat.txt",
+      "bytes": 150
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/videos/child_part01.mp4",
+      "bytes": 3242739056
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/videos/parent.clock.json",
+      "bytes": 4776
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/videos/parent.mp4",
+      "bytes": 6439472321
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/videos/parent_concat.txt",
+      "bytes": 302
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/videos/parent_part01.mp4",
+      "bytes": 2176815157
+    },
+    {
+      "path": "data/processed/20261101_nanyo_002/videos/parent_part02.mp4",
+      "bytes": 4262334435
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/camera/child_DJI_20261101091928_0028_D_attitude.csv",
+      "bytes": 3385916
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/camera/child_DJI_20261101103009_0029_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/camera/child_DJI_20261101105154_0030_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/camera/parent_DJI_20261101092040_0193_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/camera/parent_DJI_20261101095854_0194_D_attitude.csv",
+      "bytes": 3402425
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/camera/parent_DJI_20261101103718_0195_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/camera/parent_DJI_20261101105120_0197_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/child/C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+      "bytes": 11371421
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/child/C_MAIN_BNO_EVENTS_68440.bno.csv",
+      "bytes": 27973210
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/child/C_MAIN_HEALTH_RANGE_68440.health.csv",
+      "bytes": 206443
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/child/C_MAIN_HEALTH_RANGE_68440.shot.csv",
+      "bytes": 72383
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/child/C_MAIN_IMU_100Hz_68440.imu.csv",
+      "bytes": 15021344
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/child/C_MAIN_MULTIPATH_68440.capture_begin.csv",
+      "bytes": 2449
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/child/C_MAIN_MULTIPATH_68440.capture_end.csv",
+      "bytes": 1582
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/child/C_MAIN_MULTIPATH_68440.comparator.csv",
+      "bytes": 28585
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/child/C_MAIN_MULTIPATH_68440.envelope.csv",
+      "bytes": 88347730
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+      "bytes": 98891
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.health.csv",
+      "bytes": 206301
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+      "bytes": 1554709
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+      "bytes": 57711
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.shot.csv",
+      "bytes": 73440
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+      "bytes": 203
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.health.csv",
+      "bytes": 645
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+      "bytes": 302
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+      "bytes": 194
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.shot.csv",
+      "bytes": 245
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_TIME_POSITION_62440.time_position.csv",
+      "bytes": 71835
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/P_MAIN_TIME_POSITION_62441.time_position.csv",
+      "bytes": 215
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/synchronized/parent/parent_100hz.csv",
+      "bytes": 17247990
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/videos/child.clock.json",
+      "bytes": 2130
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/videos/child.mp4",
+      "bytes": 1927694049
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/videos/child_concat.txt",
+      "bytes": 150
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/videos/child_part01.mp4",
+      "bytes": 1927694049
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/videos/parent.clock.json",
+      "bytes": 2134
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/videos/parent.mp4",
+      "bytes": 3802517791
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/videos/parent_concat.txt",
+      "bytes": 151
+    },
+    {
+      "path": "data/processed/20261101_nanyo_003/videos/parent_part01.mp4",
+      "bytes": 3802517791
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/camera/child_DJI_20261101091928_0028_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/camera/child_DJI_20261101103009_0029_D_attitude.csv",
+      "bytes": 4240741
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/camera/child_DJI_20261101105154_0030_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/camera/parent_DJI_20261101092040_0193_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/camera/parent_DJI_20261101095854_0194_D_attitude.csv",
+      "bytes": 2474135
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/camera/parent_DJI_20261101103718_0195_D_attitude.csv",
+      "bytes": 1766872
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/camera/parent_DJI_20261101105120_0197_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/child/C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+      "bytes": 14248008
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/child/C_MAIN_BNO_EVENTS_68440.bno.csv",
+      "bytes": 35987591
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/child/C_MAIN_HEALTH_RANGE_68440.health.csv",
+      "bytes": 262646
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/child/C_MAIN_HEALTH_RANGE_68440.shot.csv",
+      "bytes": 89985
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/child/C_MAIN_IMU_100Hz_68440.imu.csv",
+      "bytes": 19734534
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/child/C_MAIN_MULTIPATH_68440.capture_begin.csv",
+      "bytes": 2908
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/child/C_MAIN_MULTIPATH_68440.capture_end.csv",
+      "bytes": 2057
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/child/C_MAIN_MULTIPATH_68440.comparator.csv",
+      "bytes": 45894
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/child/C_MAIN_MULTIPATH_68440.envelope.csv",
+      "bytes": 106933659
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+      "bytes": 124991
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.health.csv",
+      "bytes": 258304
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+      "bytes": 1964719
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+      "bytes": 70516
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.shot.csv",
+      "bytes": 91119
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+      "bytes": 203
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.health.csv",
+      "bytes": 645
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+      "bytes": 302
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+      "bytes": 194
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.shot.csv",
+      "bytes": 245
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_TIME_POSITION_62440.time_position.csv",
+      "bytes": 89310
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/P_MAIN_TIME_POSITION_62441.time_position.csv",
+      "bytes": 215
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/synchronized/parent/parent_100hz.csv",
+      "bytes": 21561175
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/videos/child.clock.json",
+      "bytes": 2124
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/videos/child.mp4",
+      "bytes": 2375914845
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/videos/child_concat.txt",
+      "bytes": 150
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/videos/child_part01.mp4",
+      "bytes": 2375914845
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/videos/parent.clock.json",
+      "bytes": 4785
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/videos/parent.mp4",
+      "bytes": 4792641969
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/videos/parent_concat.txt",
+      "bytes": 302
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/videos/parent_part01.mp4",
+      "bytes": 2800777095
+    },
+    {
+      "path": "data/processed/20261101_nanyo_004/videos/parent_part02.mp4",
+      "bytes": 1991625489
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/camera/child_DJI_20261101091928_0028_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/camera/child_DJI_20261101103009_0029_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/camera/child_DJI_20261101105154_0030_D_attitude.csv",
+      "bytes": 706504
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/camera/parent_DJI_20261101092040_0193_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/camera/parent_DJI_20261101095854_0194_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/camera/parent_DJI_20261101103718_0195_D_attitude.csv",
+      "bytes": 83
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/camera/parent_DJI_20261101105120_0197_D_attitude.csv",
+      "bytes": 703096
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/child/C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+      "bytes": 2366155
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/child/C_MAIN_BNO_EVENTS_68440.bno.csv",
+      "bytes": 5994896
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/child/C_MAIN_HEALTH_RANGE_68440.health.csv",
+      "bytes": 44150
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/child/C_MAIN_HEALTH_RANGE_68440.shot.csv",
+      "bytes": 14814
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/child/C_MAIN_IMU_100Hz_68440.imu.csv",
+      "bytes": 3318832
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/child/C_MAIN_MULTIPATH_68440.capture_begin.csv",
+      "bytes": 455
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/child/C_MAIN_MULTIPATH_68440.capture_end.csv",
+      "bytes": 498
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/child/C_MAIN_MULTIPATH_68440.comparator.csv",
+      "bytes": 10502
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/child/C_MAIN_MULTIPATH_68440.envelope.csv",
+      "bytes": 11705407
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+      "bytes": 20734
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.health.csv",
+      "bytes": 43795
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+      "bytes": 328712
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+      "bytes": 11611
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62440.shot.csv",
+      "bytes": 14990
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+      "bytes": 367
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+      "bytes": 203
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.health.csv",
+      "bytes": 645
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+      "bytes": 302
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+      "bytes": 194
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_HEALTH_RANGE_62441.shot.csv",
+      "bytes": 245
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_TIME_POSITION_62440.time_position.csv",
+      "bytes": 14937
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/P_MAIN_TIME_POSITION_62441.time_position.csv",
+      "bytes": 215
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/synchronized/parent/parent_100hz.csv",
+      "bytes": 3576253
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/videos/child.clock.json",
+      "bytes": 2126
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/videos/child.mp4",
+      "bytes": 404357164
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/videos/child_concat.txt",
+      "bytes": 150
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/videos/child_part01.mp4",
+      "bytes": 404357164
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/videos/parent.clock.json",
+      "bytes": 2127
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/videos/parent.mp4",
+      "bytes": 805440401
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/videos/parent_concat.txt",
+      "bytes": 151
+    },
+    {
+      "path": "data/processed/20261101_nanyo_005/videos/parent_part01.mp4",
+      "bytes": 805440401
+    }
+  ]
+}

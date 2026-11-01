@@ -1,0 +1,21 @@
+{
+  "report_sha256": "744124600532d7782cd1727fff149d7a6a380a482c9a24f6de1bddd9396ec947",
+  "packages": {
+    "numpy": "2.4.1",
+    "scipy": "1.18.1",
+    "pycolmap": "4.2.1",
+    "opencv-python-headless": "5.0.0.93",
+    "trimesh": "5.2.0",
+    "playwright": "1.64.1"
+  },
+  "code_sha256": "a58484f5b31926bd059dd472222e134f080e97886507f856c3e2cc5b8a62e409",
+  "experiment_and_configuration_sha256": {
+    "experiments\\20261031_nanyo_000\\experiment.json": "476e55e72825bc2e600558f34de6cc4b504720216630a70dc7402816777bb1c9",
+    "experiments\\20261031_nanyo_001\\experiment.json": "f7ff007688663b7372787c15ce66e2ad1cc8b7f357bc79dcc7d34e2e18d8021f",
+    "experiments\\20261031_nanyo_002\\experiment.json": "61cd15b4e0d8a4332d94874b30f1dab9032c66d3c3be32ee349b525bacc648c5",
+    "config\\20261031_nanyo_000\\navigation_fusion.json": "be8aace3c65cdfae193a92525c6f2a6ee88fe035455ee2750971dc56c9e57299",
+    "results\\20261031_nanyo_000\\navigation_fusion\\manifest.json": "f199467f9e850c6481b5bf7a4c24dda267b01b12485e515f7f1c7ff036f1fcd5",
+    "results\\20261031_nanyo_000\\navigation_replay\\verification.json": "908f0474bf3bed9dbeba3ff0d81691c0204936f2b69fc34f603c770b30109279"
+  },
+  "accuracy_validated": false
+}

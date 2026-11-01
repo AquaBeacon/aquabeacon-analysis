@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T09:24:42.987385+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/analyze_nanyo.py",
+    "--experiment",
+    "20261031_nanyo_000"
+  ],
+  "master": "acoustic_depth.figure.pickle",
+  "image": "acoustic_depth.png",
+  "master_sha256": "223a411c0312c3ed4c0789c60dbd9b8e7b1d2961b94cd3d84edb00447d8b3d3e",
+  "savefig": {
+    "dpi": 150
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

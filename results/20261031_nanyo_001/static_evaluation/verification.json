@@ -1,0 +1,10 @@
+{
+  "selection": "Recomputed from saved candidate table; matches minimum parent 3D scatter among eligible windows",
+  "rows": "120 retained, 77 valid, all within half-open 60 seconds",
+  "geometry": "recomputed upstream matches at atol=1e-8 m, rtol=0",
+  "tests": "5 passed (static_evaluation and nanyo_position)",
+  "lint": "passed both scripts",
+  "workspace": "19 repositories; 0 structural errors",
+  "visual_review": "Both PNGs inspected; axes and legends legible; valid-only scatter does not bridge gaps; vector and editable files present",
+  "selection_sha256": "732b45af349a7a7823d984db919774a79bc130fab30784078ca52c2a3c4c4758"
+}

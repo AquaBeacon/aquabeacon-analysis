@@ -1,0 +1,302 @@
+{
+  "experiment_id": "20261031_nanyo_001",
+  "origin_llh": [
+    32.9644859,
+    132.5054768,
+    27.408
+  ],
+  "frame": "True ENU in meters, shared with absolute_position",
+  "models": [
+    {
+      "label": "bridge_0",
+      "source_model": "data\\interim\\20261031_nanyo_001\\position_mapping\\models",
+      "registered_images": 465,
+      "points": 42112,
+      "orientation_residual_median_deg": 5.911645795025892,
+      "orientation_residual_p95_deg": 7.7684446571999,
+      "direct_position_anchors": 46,
+      "position_matched_frames_before_deduplication": 76,
+      "anchor_policy": "One closest image per observed position or acoustic shot, at most 0.3 s apart",
+      "depth_range_m": 0.8358679861811407,
+      "depth_scale_candidate": 1.0486945587453547,
+      "depth_correlation": 0.9877914134602528,
+      "scale_method": "pressure variation with rotated camera-to-pressure lever arm",
+      "input_model_sha256": {
+        "cameras.bin": "06095b527511e74956413a9e297ffdb4dded876103370033b3e72156141350cf",
+        "frames.bin": "e49b3be7ea58b2221075953dae271c5a1f62d64de9f19d9668b20ebeb0341109",
+        "images.bin": "be84fd1765f8fc2d9f99737912e285e91bd297bc992683b13b56a88308f141a8",
+        "points3D.bin": "eb51be15c042de07e14c333057b70229aeadfefab357aa0975d3da5ed65438df",
+        "rigs.bin": "73e4d5f0da0a84a5711b46ae716a149f1532832f95bb09b4b01e73cf2c5afbe9"
+      },
+      "accuracy_validated": false,
+      "accepted": true,
+      "position_only_unconstrained_scale": 1.3811197766823167,
+      "weighted_position_scale": 1.466043866782121,
+      "depth_scale_supported": true,
+      "static_scene_validated": false,
+      "reason": "Provisional metric fragment anchored to observed child positions",
+      "scale_m_per_unit": 1.0486945587453547,
+      "translation_enu_m": [
+        -32.85513936715379,
+        1.1461613378257567,
+        -5.578267659952036
+      ],
+      "R_enu_from_model": [
+        [
+          0.0636902516664915,
+          0.21725320971036827,
+          0.9740352122552872
+        ],
+        [
+          -0.9229154929761825,
+          -0.3585232187433952,
+          0.1403142702878299
+        ],
+        [
+          0.3796979650553708,
+          -0.9078888392817805,
+          0.17767191911045493
+        ]
+      ],
+      "pressure_fit_rms_m": 0.040971082342282174,
+      "position_prior_residual_median_m": 4.190852380988193,
+      "position_prior_residual_p95_m": 17.46241838411359,
+      "position_prior_horizontal_median_m": 1.8134916054870729,
+      "position_prior_horizontal_p95_m": 4.653079777868896,
+      "position_prior_vertical_abs_median_m": 1.693487495937834,
+      "position_prior_vertical_abs_p95_m": 17.367717514113856,
+      "acoustic_residual_median_m": 0.047194790380485685,
+      "acoustic_residual_p95_abs_m": 8.669919328055371,
+      "acoustic_constraints": 177,
+      "estimated_water_surface_up_m": 5.6918845491473835,
+      "vertical_position_sigma_assumed_m": 5,
+      "horizontal_position_sigma_assumed_m": 1,
+      "range_sigma_assumed_m": 5,
+      "pressure_sensor_reference": "Child IMU CAD reference used provisionally; actual pressure center unmeasured",
+      "mean_reprojection_error_px": 0.5789489485927108,
+      "similarity_preserves_reprojection": true
+    },
+    {
+      "label": "extended_0",
+      "source_model": "data\\interim\\20261031_nanyo_001\\position_mapping\\extended_models",
+      "registered_images": 556,
+      "points": 50058,
+      "orientation_residual_median_deg": 5.4795559064023225,
+      "orientation_residual_p95_deg": 7.723932176633413,
+      "direct_position_anchors": 46,
+      "position_matched_frames_before_deduplication": 76,
+      "anchor_policy": "One closest image per observed position or acoustic shot, at most 0.3 s apart",
+      "depth_range_m": 0.8358679861811407,
+      "depth_scale_candidate": 1.0345798898627705,
+      "depth_correlation": 0.9866573876972108,
+      "scale_method": "Inherited fixed-camera ENU similarity from bridge_0; no re-fit",
+      "input_model_sha256": {
+        "cameras.bin": "06095b527511e74956413a9e297ffdb4dded876103370033b3e72156141350cf",
+        "frames.bin": "d81ba7f27e2548bec7d53bccf104ee59cd4283cc709096dc8f158dd46aee49fb",
+        "images.bin": "d6d7741a3d76e2dfa0d794edeed85d4033e99a515b268b98a4815b884660d3e7",
+        "points3D.bin": "7ceb93fcc041536b2a0078642763ce499774fab61a207e7282e5bffbfa355b3a",
+        "rigs.bin": "73e4d5f0da0a84a5711b46ae716a149f1532832f95bb09b4b01e73cf2c5afbe9"
+      },
+      "accuracy_validated": false,
+      "accepted": true,
+      "position_only_unconstrained_scale": 1.3811197766823171,
+      "weighted_position_scale": 1.466043867896127,
+      "alignment_parent": "bridge_0",
+      "depth_scale_supported": true,
+      "static_scene_validated": false,
+      "reason": "Provisional metric fragment anchored to observed child positions",
+      "scale_m_per_unit": 1.0486945587453547,
+      "translation_enu_m": [
+        -32.85513936715379,
+        1.1461613378257567,
+        -5.578267659952036
+      ],
+      "R_enu_from_model": [
+        [
+          0.0636902516664915,
+          0.21725320971036827,
+          0.9740352122552872
+        ],
+        [
+          -0.9229154929761825,
+          -0.3585232187433952,
+          0.1403142702878299
+        ],
+        [
+          0.3796979650553708,
+          -0.9078888392817805,
+          0.17767191911045493
+        ]
+      ],
+      "pressure_fit_rms_m": 0.03999235005450593,
+      "position_prior_residual_median_m": 4.190852380988186,
+      "position_prior_residual_p95_m": 17.462418384113597,
+      "position_prior_horizontal_median_m": 1.8134916054870756,
+      "position_prior_horizontal_p95_m": 4.653079777868891,
+      "position_prior_vertical_abs_median_m": 1.6934874959378283,
+      "position_prior_vertical_abs_p95_m": 17.36771751411386,
+      "acoustic_residual_median_m": 0.047194790380491014,
+      "acoustic_residual_p95_abs_m": 8.669919328055366,
+      "acoustic_constraints": 177,
+      "estimated_water_surface_up_m": 5.695656502857142,
+      "vertical_position_sigma_assumed_m": 5,
+      "horizontal_position_sigma_assumed_m": 1,
+      "range_sigma_assumed_m": 5,
+      "pressure_sensor_reference": "Child IMU CAD reference used provisionally; actual pressure center unmeasured",
+      "mean_reprojection_error_px": 0.5940325566153866,
+      "similarity_preserves_reprojection": true
+    },
+    {
+      "label": "original_1",
+      "source_model": "data\\interim\\20261031_nanyo_001\\visual_mapping\\models\\1",
+      "registered_images": 94,
+      "points": 8376,
+      "orientation_residual_median_deg": 0.25698799713801534,
+      "orientation_residual_p95_deg": 1.0575834731036429,
+      "direct_position_anchors": 32,
+      "position_matched_frames_before_deduplication": 32,
+      "anchor_policy": "One closest image per observed position or acoustic shot, at most 0.3 s apart",
+      "depth_range_m": 0.062403426979035004,
+      "depth_scale_candidate": 0.0005536447724113795,
+      "depth_correlation": 0.03288466277155938,
+      "scale_method": "pressure variation with rotated camera-to-pressure lever arm",
+      "input_model_sha256": {
+        "cameras.bin": "06095b527511e74956413a9e297ffdb4dded876103370033b3e72156141350cf",
+        "frames.bin": "65958b943b2292be6c1d5e63a11ff19e7b1b305e0c617458805ce8b69806d060",
+        "images.bin": "35d4adca6115acdac286f972359ce43b76fc85aff1b55e7fca48af9d9b2618c7",
+        "points3D.bin": "3546e22024e94c9b43c10298f3200e9f62a44863ea8b78bb9805809c268015c1",
+        "rigs.bin": "73e4d5f0da0a84a5711b46ae716a149f1532832f95bb09b4b01e73cf2c5afbe9"
+      },
+      "accuracy_validated": false,
+      "accepted": false,
+      "position_only_unconstrained_scale": -6.327953479064214,
+      "weighted_position_scale": -1.2191216259390498,
+      "reason": "Metric scale not supported: pressure/visual motion inconsistent or too small; no forced positive scale."
+    },
+    {
+      "label": "original_2",
+      "source_model": "data\\interim\\20261031_nanyo_001\\visual_mapping\\models\\2",
+      "registered_images": 31,
+      "points": 4379,
+      "orientation_residual_median_deg": 2.4333722673828886,
+      "orientation_residual_p95_deg": 3.683010804300703,
+      "direct_position_anchors": 0,
+      "position_matched_frames_before_deduplication": 0,
+      "anchor_policy": "One closest image per observed position or acoustic shot, at most 0.3 s apart",
+      "depth_range_m": 0.045501836155983355,
+      "depth_scale_candidate": -0.0058783572572636816,
+      "depth_correlation": -0.28578374336968576,
+      "scale_method": "pressure variation with rotated camera-to-pressure lever arm",
+      "input_model_sha256": {
+        "cameras.bin": "06095b527511e74956413a9e297ffdb4dded876103370033b3e72156141350cf",
+        "frames.bin": "a863df4b0e49073a7adc45a721d2bfd0c189c2aa278d82559701245162083e3d",
+        "images.bin": "8647e800893fc155b2fa38568b51932b0b9771d0aac244ced817ce95d013fa3c",
+        "points3D.bin": "0e0291f3b243b1e6e785e396179a8cdc595692e1b9bb0c73289128fae7ee224b",
+        "rigs.bin": "73e4d5f0da0a84a5711b46ae716a149f1532832f95bb09b4b01e73cf2c5afbe9"
+      },
+      "accuracy_validated": false,
+      "accepted": false,
+      "reason": "Metric scale not supported: pressure/visual motion inconsistent or too small; no forced positive scale."
+    },
+    {
+      "label": "original_3",
+      "source_model": "data\\interim\\20261031_nanyo_001\\visual_mapping\\models\\3",
+      "registered_images": 189,
+      "points": 5063,
+      "orientation_residual_median_deg": 1.4321647466786056,
+      "orientation_residual_p95_deg": 5.353324542169607,
+      "direct_position_anchors": 7,
+      "position_matched_frames_before_deduplication": 7,
+      "anchor_policy": "One closest image per observed position or acoustic shot, at most 0.3 s apart",
+      "depth_range_m": 0.7492108722596562,
+      "depth_scale_candidate": 0.7057241319094191,
+      "depth_correlation": 0.9934998745318635,
+      "scale_method": "pressure variation with rotated camera-to-pressure lever arm",
+      "input_model_sha256": {
+        "cameras.bin": "06095b527511e74956413a9e297ffdb4dded876103370033b3e72156141350cf",
+        "frames.bin": "d388c736f22400a097c282c1fb13421e248a72562680bac9e0cd4f4d6f6398bd",
+        "images.bin": "c31836b2656a573478e67a3314782dff9cbe32dc3706f957d475274f0aa4dc52",
+        "points3D.bin": "a1d8e82fef42a94d7651636aa9155765a00fd69d0dd553bdd1753e30c3e1b7f8",
+        "rigs.bin": "73e4d5f0da0a84a5711b46ae716a149f1532832f95bb09b4b01e73cf2c5afbe9"
+      },
+      "accuracy_validated": false,
+      "accepted": true,
+      "position_only_unconstrained_scale": -3.4813405997060696,
+      "weighted_position_scale": -2.9496368093218472,
+      "depth_scale_supported": true,
+      "static_scene_validated": false,
+      "reason": "Provisional metric fragment anchored to observed child positions",
+      "scale_m_per_unit": 0.7057241319094191,
+      "translation_enu_m": [
+        -33.433777858968654,
+        10.32209769071689,
+        -6.532389817202405
+      ],
+      "R_enu_from_model": [
+        [
+          -0.03470949824675085,
+          0.18221476993449037,
+          0.9826459323424579
+        ],
+        [
+          -0.9305255395740605,
+          -0.3645759731027436,
+          0.03473586095938885
+        ],
+        [
+          0.364578483912396,
+          -0.9131714720981526,
+          0.1822097462108723
+        ]
+      ],
+      "pressure_fit_rms_m": 0.0226037741870946,
+      "position_prior_residual_median_m": 1.418908179005334,
+      "position_prior_residual_p95_m": 2.547624359453669,
+      "position_prior_horizontal_median_m": 0.3735872523890208,
+      "position_prior_horizontal_p95_m": 1.1792680571352512,
+      "position_prior_vertical_abs_median_m": 1.3378257905587274,
+      "position_prior_vertical_abs_p95_m": 2.316008987630903,
+      "acoustic_residual_median_m": -0.07872973373004832,
+      "acoustic_residual_p95_abs_m": 4.202547733679589,
+      "acoustic_constraints": 117,
+      "estimated_water_surface_up_m": 5.079456442943985,
+      "vertical_position_sigma_assumed_m": 5,
+      "horizontal_position_sigma_assumed_m": 1,
+      "range_sigma_assumed_m": 5,
+      "pressure_sensor_reference": "Child IMU CAD reference used provisionally; actual pressure center unmeasured",
+      "mean_reprojection_error_px": 0.6870208877492374,
+      "similarity_preserves_reprojection": true
+    }
+  ],
+  "code_sha256": "f72d39e6c295f95a39bcd6d466263cea486a7bba812a277862c5d07be7260cd8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "config_sha256": "8273d1cd2d0866ca5f7e931df87e38bfaea2f2e1e73ca7dfdb10a91f68540554",
+  "inputs_sha256": {
+    "config\\20261031_nanyo_000\\absolute_position.json": "8273d1cd2d0866ca5f7e931df87e38bfaea2f2e1e73ca7dfdb10a91f68540554",
+    "results\\20261031_nanyo_000\\absolute_position\\preparation.json": "ed21ea2df8dec9bf644a1c9c55a49f0f11c03539b1e2404c89adfa7fe5a83348",
+    "results\\20261031_nanyo_000\\absolute_position\\optical_axes.json": "947f277119eb36d1ba6b7ed54e8795d0b376b7d93743660dcbf83d5af812d080",
+    "results\\20261031_nanyo_000\\synchronization\\manifest.json": "8e7a2485f6239107b6742bb64183ec6769a3a7541b50bcd034ba0aef30020b80",
+    "calibration\\20261029_parent_axis_011_axes.json": "f93f5109cd8fe49e839d7dc6b7f7ab3d8ae169634f5d3744f221e9491fb4525a",
+    "calibration\\20261029_child_axis_003_imu_frd.json": "37150d3396b8c1a9af66dee70ef993454842d9ed55edb36e2022e994da0b0823",
+    "calibration\\20261028_parent_lis3mdl_cad_axes.json": "b45d0ed7af089e37691f05198af9039538e17b4b187a947d18d61436bd871a88",
+    "data\\processed\\20261031_nanyo_000\\synchronization\\child_DJI_20261031142636_0026_D_attitude.csv": "dc60d2eb441e8a14476a6774a9e0b1786df6bfd0fb287aba2e57cb51f521aaf7",
+    "data\\processed\\20261031_nanyo_000\\synchronization\\parent_DJI_20261031142637_0188_D_attitude.csv": "b22ccf68e220cff5b1448b9a942d1c1ecb4eb814b5a127db1c1274592b5b80f9",
+    "data\\processed\\20261031_nanyo_000\\synchronization\\parent_DJI_20261031150457_0189_D_attitude.csv": "ca7de4111518cc0dd8168ab1f158c8c15814546955a8964e67835b3ec2a537b3",
+    "data\\interim\\20261031_nanyo_000\\geometry\\child_absolute_raw.csv": "f766166cf26458c3a207430fba18faa950c8415a986ab3827a00a6ae5a40e2f2",
+    "data\\interim\\20261031_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_65433.mag_observation.csv": "77c8342e46c3c4a3a9ef067aff83ed75ddcb1ea98fff045ab3855ca9af2f6f8d",
+    "results\\20261031_nanyo_000\\evaluation\\ppk_positions.csv": "fe3a5431c164f9dd6f225fb606feef51f6d9518d6f61414e1bb6d0baf92441dc",
+    "results\\20261031_nanyo_000\\segmentation\\selection.csv": "d962eeefeac855120e35ac3373a9812a0142530fdc1ba2629fd1bf5c045f64a8",
+    "results\\20261031_nanyo_001\\absolute_position\\positions.csv": "06c7f5199dd5fa6501251d6353d03ce0e10067684dd7560fbf788e7e13468b87",
+    "results\\20261031_nanyo_001\\evaluation\\acoustic_depth.csv": "e49db3f977797df2197888a9f7e1b14dcc2ef85fe763d8fed59d192256998e4a",
+    "results\\20261031_nanyo_001\\visual_mapping\\frame_times.csv": "54cd6de15e7d1c3cbc2b547dcd774a2c29f5c6bcee84c6ada9aad5190e69d508",
+    "results\\20261031_nanyo_001\\position_mapping\\frame_times.csv": "763726170041c9e49374bb060ef4d64a9f6db9d35ee1a6afba46ac5e3b5b310b",
+    "results\\20261031_nanyo_001\\position_mapping\\bridge_manifest.json": "929be6e339a8be7c5522c67a8ef431ed289471a154534302b1628815cbf55643",
+    "results\\20261031_nanyo_001\\position_mapping\\extension_manifest.json": "6b67529f70688c6309a703d58c072d03ecd4812279a167d77d6f3335335e57bd"
+  },
+  "limitations": [
+    "Registration residuals are not independent accuracy.",
+    "All fragments kept; non-observable scale or translation is explicitly unplaced.",
+    "Pressure scale assumes the saved child IMU point approximates pressure location.",
+    "Dynamic bubbles/boat scenes are not validated static seafloor maps."
+  ]
+}

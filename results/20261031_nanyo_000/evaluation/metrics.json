@@ -1,0 +1,10 @@
+{
+  "experiment_id": "20261031_nanyo_000",
+  "ppk_quality_counts": {
+    "4": 806,
+    "2": 2291,
+    "1": 340
+  },
+  "spp_ppk_horizontal_difference_median_m": 3.4580165247451546,
+  "spp_ppk_horizontal_difference_p95_m": 8.144861020024848
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T15:40:43.705068+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/evaluate_nanyo_static.py",
+    "--experiment",
+    "20261031_nanyo_001",
+    "--start",
+    "2026-10-31T14:41:10+09:00",
+    "--selection-note",
+    "初期6分の姿勢と親機位置による探索的選定。static_selection/report.md参照"
+  ],
+  "master": "static_residuals.figure.pickle",
+  "image": "static_residuals.png",
+  "master_sha256": "7f75218e2267be333d14cabbe8386aeccf495cb67fe2f118d96d98d0d5cba95a",
+  "savefig": {
+    "dpi": 170
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

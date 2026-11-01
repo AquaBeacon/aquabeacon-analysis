@@ -1,0 +1,9 @@
+# 20261101_nanyo_001
+
+JST 09:35:44.994–09:43:52.881。子機入水 AND 親機測距。前後余白なし。
+
+[親機動画](../../../data/processed/20261101_nanyo_001/videos/parent.mp4) / [子機動画](../../../data/processed/20261101_nanyo_001/videos/child.mp4)
+
+同期CSVは同じ実験IDのsynchronized/。動画時計・欠測はvideos/*.clock.json参照。
+
+動画と同期CSVの自動検証済み。詳細は[全収録の検証](../../20261101_nanyo_000/segmentation/report.md#最終検証)。

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261101_nanyo_005",
+  "description": "Nanyo day 2 submerged parent-ranging trial 5",
+  "raw_root": "data/raw/Nanyo_ocean_test_day2",
+  "raw_sources": [
+    "data/raw/Nanyo_ocean_test_day2/parent",
+    "data/raw/Nanyo_ocean_test_day2/child",
+    "data/raw/Nanyo_ocean_test_day2/spresence"
+  ],
+  "c_main_suffix": "68440",
+  "p_main_suffix": null,
+  "config_paths": [
+    "config/20261101_nanyo_000/segments.json"
+  ],
+  "calibration_paths": [],
+  "notes": [
+    "Raw is read-only. Camera restart before last immersion requires independent clocks. Segments require child submerged AND parent ranging. Earlier-day logs in acquisition must be excluded by UTC."
+  ],
+  "parent_acquisition": "20261101_nanyo_000",
+  "utc_interval_s": [
+    1793498013.226345,
+    1793498119.853301
+  ],
+  "log_suffixes": {
+    "child": [
+      "68440"
+    ],
+    "parent": [
+      "62440",
+      "62441"
+    ]
+  }
+}

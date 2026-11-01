@@ -1,0 +1,21 @@
+[
+  {
+    "command": [
+      "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe",
+      "images",
+      "--format",
+      "{{.Repository}}:{{.Tag}}"
+    ],
+    "status": "timeout_15s"
+  },
+  {
+    "command": [
+      "wsl.exe",
+      "--list",
+      "--quiet"
+    ],
+    "returncode": 0,
+    "stdout": "U\u0000b\u0000u\u0000n\u0000t\u0000u\u0000\r\u0000\n\u0000",
+    "stderr": ""
+  }
+]

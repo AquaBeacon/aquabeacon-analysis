@@ -39,3 +39,17 @@
 - [親機軸校正011と動画切り出し](../results/20261029_parent_axis_011/axis_calibration/report.md)
 
 - [長田高校プールの子機のみ単眼VSLAM](../results/20261028_ngt_000/child_only_vslam/report.md)：001〜004、沖縄共通水中校正、追跡状態・子機姿勢との一致性。
+
+- [Nanyo海上実験の評価](../results/20261031_nanyo_000/analysis/report.md)：RTK未使用、SPP/PPK・音響・相対位置候補・単眼地図。
+
+- [Nanyo子機絶対位置・位置拘束マッピング](../results/20261031_nanyo_000/absolute_position/report.md)
+
+- [Nanyoセンサー航法・写真地図・同期親子映像](../results/20261031_nanyo_000/navigation_replay/report.md)：SfM位置を航法に使わない追加推定、短時間DR、写真面と動画表示。
+
+- [Nanyo指定静止区間の相対位置RMSE](../results/20261031_nanyo_002/static_evaluation/report.md)：15:03〜15:04 JST、姿勢補正比較と静止仮定の診断。
+
+- [区間①の初期静止候補](../results/20261031_nanyo_001/static_selection/report.md) / [相対位置評価](../results/20261031_nanyo_001/static_evaluation/report.md)：14:41:10〜14:42:10 JST。
+
+Nanyo day2：[同期](../results/20261101_nanyo_000/synchronization/report.md) / [5実験の分割](../results/20261101_nanyo_000/segmentation/report.md)。仕様はspec.mdのday2節。
+
+[Nanyo：別PCへの引き継ぎ](handoff/nanyo_20261102.md)：day2の現状、processedの転送先、移行検証、公開対象と再処理用の追加データ。

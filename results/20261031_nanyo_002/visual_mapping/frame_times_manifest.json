@@ -1,0 +1,26 @@
+{
+  "method": "Replay original ffmpeg fps filter FIFO debug trace",
+  "command": [
+    "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+    "-v",
+    "debug",
+    "-threads",
+    "2",
+    "-ss",
+    "2038.7609997323314",
+    "-i",
+    "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test\\child\\DJI\\DJI_20261031142636_0026_D.LRF",
+    "-t",
+    "319.60305578918064",
+    "-vf",
+    "fps=1,scale=960:540",
+    "-f",
+    "null",
+    "-"
+  ],
+  "rows": 320,
+  "code_sha256": "7090da983a09d4e6b151ccd47f095872c4c9b51ce2544ce97d328914c7f667ec",
+  "log_sha256": "4aeb33c7906a18de9b8df481f331073756a1ea8f9e8832e5cdcf058cc6f2cbb0",
+  "precision_s": 3.3333333333333335e-05,
+  "source_sha256": "a5a2016773ce9b5bca46d77d8ae560d3ee95235cda10d7437308bc746e4b92a9"
+}

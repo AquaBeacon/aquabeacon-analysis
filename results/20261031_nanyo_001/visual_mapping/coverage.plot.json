@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T14:11:51.674428+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/report_nanyo.py",
+    "--experiment",
+    "20261031_nanyo_000"
+  ],
+  "master": "coverage.figure.pickle",
+  "image": "coverage.png",
+  "master_sha256": "2fcd1a8fee4d9b5f5f79889564251ac742e7e0c8112441bd0e1519944a004c66",
+  "savefig": {
+    "dpi": 150
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

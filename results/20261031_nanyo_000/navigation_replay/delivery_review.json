@@ -1,0 +1,16 @@
+{
+  "status": "passed_with_documented_limitations",
+  "local_report_links": 22,
+  "related_tests": "12 passed",
+  "lint": "passed",
+  "workspace": "19 repositories; 0 structural errors",
+  "manual_visual_review": [
+    "Textured seafloor patches and source images correspond; holes and overlaps retained.",
+    "Parent and child previews visible at lower right; actual browser control and timing assertions passed.",
+    "Parent and child comparison plots reviewed; low-frequency GNSS height bias and long gaps remain."
+  ],
+  "report_sha256": "744124600532d7782cd1727fff149d7a6a380a482c9a24f6de1bddd9396ec947",
+  "verification_sha256": "908f0474bf3bed9dbeba3ff0d81691c0204936f2b69fc34f603c770b30109279",
+  "sfm_positions_used_for_navigation": false,
+  "accuracy_validated": false
+}

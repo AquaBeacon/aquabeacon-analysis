@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "cameras": [
+    {
+      "camera": "child_DJI_20261101091928_0028_D",
+      "rows": 127065,
+      "lrf_path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101091928_0028_D.LRF",
+      "lrf_sha256": "ca059f3a4a0b249e615aec9b0e68dddd2a2e211e55b35da926f7b14da076645f",
+      "mp4_size_bytes": 17186740054,
+      "duration_difference_s": 0.0,
+      "minimum_peak_margin": 0.2274793492006666,
+      "leave_one_window_out_max_ms": 31.237939309103346
+    },
+    {
+      "camera": "child_DJI_20261101103009_0029_D",
+      "rows": 21621,
+      "lrf_path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101103009_0029_D.LRF",
+      "lrf_sha256": "be43fc82f40db3794671d1326ff84fb43120bfff06f48fe1ca83c39868476e82",
+      "mp4_size_bytes": 2894910843,
+      "duration_difference_s": 0.0,
+      "minimum_peak_margin": 0.3594491950627934,
+      "leave_one_window_out_max_ms": 16.000000000000014
+    },
+    {
+      "camera": "child_DJI_20261101105154_0030_D",
+      "rows": 6572,
+      "lrf_path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101105154_0030_D.LRF",
+      "lrf_sha256": "173965785ca2b159952f4a3c13c8d9dd0bd846027693d1ea284c027893df0d03",
+      "mp4_size_bytes": 896445574,
+      "duration_difference_s": 0.0,
+      "minimum_peak_margin": 0.2963660891487836,
+      "leave_one_window_out_max_ms": 5.0000000000003375
+    },
+    {
+      "camera": "parent_DJI_20261101092040_0193_D",
+      "rows": 68725,
+      "lrf_path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101092040_0193_D.LRF",
+      "lrf_sha256": "df78589064d455253c17ff8170f20af95869ce70e846b259a1842f5989286841",
+      "mp4_size_bytes": 17188030544,
+      "duration_difference_s": -0.01999999999998181,
+      "minimum_peak_margin": 0.2481406067206927,
+      "leave_one_window_out_max_ms": 9.939985879027669
+    },
+    {
+      "camera": "parent_DJI_20261101095854_0194_D",
+      "rows": 69048,
+      "lrf_path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101095854_0194_D.LRF",
+      "lrf_sha256": "10b9666e0bb28e8156ecd942f4970f480029fae4fc7fe917f3768d13d024d131",
+      "mp4_size_bytes": 17188143386,
+      "duration_difference_s": 0.02999999999974534,
+      "minimum_peak_margin": 0.16008718231267371,
+      "leave_one_window_out_max_ms": 10.359771054782918
+    },
+    {
+      "camera": "parent_DJI_20261101103718_0195_D",
+      "rows": 9532,
+      "lrf_path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101103718_0195_D.LRF",
+      "lrf_sha256": "4c26cdd2f5ce8731758ce8e3a8f484b6b86e4026ed7fe9d0468b69339d5eecad",
+      "mp4_size_bytes": 2383026014,
+      "duration_difference_s": 0.0,
+      "minimum_peak_margin": 0.2260388710584108,
+      "leave_one_window_out_max_ms": 3.958333333332953
+    },
+    {
+      "camera": "parent_DJI_20261101105120_0197_D",
+      "rows": 8425,
+      "lrf_path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101105120_0197_D.LRF",
+      "lrf_sha256": "7b098a7ada6a4870d17fe786d4fb7a1eee8ec4fbc1e01c4b2e3a92984c3700f7",
+      "mp4_size_bytes": 2117452493,
+      "duration_difference_s": 0.0,
+      "minimum_peak_margin": 0.2260125519626046,
+      "leave_one_window_out_max_ms": 2.770700636942791
+    }
+  ],
+  "report_script_sha256": "6279f0b8d808f14cd95efe18f71293ec350d5c8f7a140f2387f006aff1167327"
+}

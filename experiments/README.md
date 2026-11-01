@@ -54,3 +54,13 @@ P_MAINとC_MAINの番号が同じでも、同一区間とは限らない。対�
 追加登録：[`20261029_child_axis_003`](20261029_child_axis_003/experiment.json) は子機軸校正003の監査。IDの日付は登録日、収録UTCは未確定。29567はマーカー参照に基づく。
 
 追加登録：[`20261029_parent_axis_011`](20261029_parent_axis_011/experiment.json)：親機4姿勢・カメラ0025。I00013/T00013をparent_sessionで選択。
+
+追加登録：[`20261031_nanyo_000`](20261031_nanyo_000/experiment.json)：Nanyo海上実験の全収録。親機DJI2本、子機DJI1本。原本Nanyo_ocean_testを参照。
+
+Nanyo切出し区間：[`20261031_nanyo_001`](20261031_nanyo_001/experiment.json) と [`20261031_nanyo_002`](20261031_nanyo_002/experiment.json)。水深または音響候補で抽出し前後10秒を付加。
+
+Nanyo 000/001/002の追加結果：[子機絶対位置・位置拘束地図](../results/20261031_nanyo_000/absolute_position/report.md)。固定取付確認により保存済みFRD軸を適用し、真北ENU・CAD基準点補正を追加。
+
+Nanyoの現行入口：[センサー航法・写真地図・同期親子映像](../results/20261031_nanyo_000/navigation_replay/report.md)。config/20261031_nanyo_000/navigation_fusion.jsonを明示使用。SfMの位置・速度を航法へ逆入力しない。
+
+Nanyo day2：20261101_nanyo_000（全収録）、001〜005（子機入水 AND 親機測距）。原本Nanyo_ocean_test_day2、カメラ再起動前後を独立同期。

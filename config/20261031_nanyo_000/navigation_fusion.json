@@ -1,0 +1,45 @@
+{
+  "experiment_id": "20261031_nanyo_000",
+  "parent_imu_frd_m": [
+    0.07575000032424926,
+    -0.068,
+    -0.08994999980926513
+  ],
+  "parent_hampel_floors_m": [
+    2,
+    2,
+    3
+  ],
+  "ppk_sigma_floor_by_quality": {
+    "1": [
+      0.4,
+      0.4,
+      1
+    ],
+    "2": [
+      1,
+      1,
+      3
+    ],
+    "4": [
+      3,
+      3,
+      6
+    ]
+  },
+  "gnss_velocity_sigma_floor_m_s": [
+    0.15,
+    0.15,
+    0.2
+  ],
+  "parent_acceleration_sigma_m_s2": 0.4,
+  "child_acceleration_sigma_m_s2": 0.35,
+  "parent_max_dr_s": 5,
+  "child_max_dr_s": 3,
+  "ray_depth_max_after_range_s": 5,
+  "child_max_horizontal_speed_m_s": 3,
+  "depth_sigma_m": 0.1,
+  "child_bearing_sigma_deg": 5,
+  "scope": "Provisional sensor navigation. SfM camera positions are prohibited as filter inputs.",
+  "parameters_are_assumptions_not_validated_noise": true
+}

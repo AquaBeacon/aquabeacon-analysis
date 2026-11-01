@@ -1,0 +1,36 @@
+{
+  "experiment_id": "20261031_nanyo_000",
+  "rtk_used": false,
+  "ppk": {
+    "stations": [
+      "950437",
+      "041133"
+    ],
+    "mode": "kinematic combined",
+    "base_interval_s": 30,
+    "maxage_s": 15,
+    "primary": "950437",
+    "comparison": "041133",
+    "solver": "RTKLIB EX 2.5.1"
+  },
+  "acoustic": {
+    "candidate_state": 3,
+    "sound_speed_m_s": 1500,
+    "delay_correction_us": 0,
+    "profile": 0,
+    "truth": "none"
+  },
+  "relative_position": {
+    "frame": "moving parent optical right/down/forward",
+    "coincident_centers_assumed": true,
+    "identity_medium_extrinsic_validated": false
+  },
+  "mapping": {
+    "method": "COLMAP child-only",
+    "sample_hz": 1,
+    "fixed_intrinsics": true,
+    "scale": "arbitrary",
+    "maximum_runtime_mapping_s": 600,
+    "calibration": "calibration/parent_camera_underwater_20260924_provisional.json"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "experiment_id": "20261031_nanyo_000",
+  "child_suffix": "35545",
+  "parent_suffix": "65433",
+  "baseline_first_s": 180,
+  "density_kg_m3_assumed": 1025,
+  "gravity_m_s2": 9.80665,
+  "depth_threshold_m": 0.2,
+  "median_samples": 5,
+  "merge_gap_s": 30,
+  "padding_s": 10,
+  "acoustic_candidate_states": [
+    3
+  ],
+  "selection": "underwater OR positive-ToF acoustic candidate; retain all states in subsets"
+}

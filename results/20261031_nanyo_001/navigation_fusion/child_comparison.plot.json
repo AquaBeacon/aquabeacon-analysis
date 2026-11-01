@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T14:54:51.516601+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/fuse_nanyo_navigation.py",
+    "--experiment",
+    "20261031_nanyo_000"
+  ],
+  "master": "child_comparison.figure.pickle",
+  "image": "child_comparison.png",
+  "master_sha256": "01bf9d7ed3f40ac464c027eea65531d88fcd663cb9ae1032e652321b0df82c73",
+  "savefig": {
+    "dpi": 150
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

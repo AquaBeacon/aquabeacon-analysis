@@ -1,0 +1,2055 @@
+{
+  "experiment_id": "20261101_nanyo_000",
+  "config": {
+    "experiment_id": "20261101_nanyo_000",
+    "log_suffixes": {
+      "child": [
+        "68440"
+      ],
+      "parent": [
+        "62440",
+        "62441"
+      ]
+    },
+    "baseline_first_s": 180,
+    "density_kg_m3_assumed": 1025,
+    "gravity_m_s2": 9.80665,
+    "depth_threshold_m": 0.2,
+    "median_samples": 5,
+    "ranging_gap_s": 5,
+    "immersion_merge_gap_s": 30,
+    "minimum_duration_s": 10,
+    "sample_tail_s": 1,
+    "selection": "child submerged AND parent ranging; no padding; retain failed ranges"
+  },
+  "selection_rule": "child submerged AND parent ranging; start=max(immersion, ranging start)",
+  "pressure_baseline_mbar": 1037.9000244140625,
+  "ranging_runs": [
+    {
+      "active_start_utc_s": 1793493344.994279,
+      "active_end_utc_s": 1793493972.025744,
+      "start_utc_s": 1793493344.994279,
+      "end_utc_s": 1793493973.025744
+    },
+    {
+      "active_start_utc_s": 1793494444.051055,
+      "active_end_utc_s": 1793495343.084054,
+      "start_utc_s": 1793494444.051055,
+      "end_utc_s": 1793495344.084054
+    },
+    {
+      "active_start_utc_s": 1793495714.104666,
+      "active_end_utc_s": 1793496248.118868,
+      "start_utc_s": 1793495714.104666,
+      "end_utc_s": 1793496249.118868
+    },
+    {
+      "active_start_utc_s": 1793496648.141349,
+      "active_end_utc_s": 1793497348.193768,
+      "start_utc_s": 1793496648.141349,
+      "end_utc_s": 1793497349.193768
+    },
+    {
+      "active_start_utc_s": 1793497947.245934,
+      "active_end_utc_s": 1793498380.260062,
+      "start_utc_s": 1793497947.245934,
+      "end_utc_s": 1793498381.260062
+    },
+    {
+      "active_start_utc_s": 1793498398.260874,
+      "active_end_utc_s": 1793499097.305588,
+      "start_utc_s": 1793498398.260874,
+      "end_utc_s": 1793499098.305588
+    }
+  ],
+  "threshold_sensitivity": {
+    "0.1": [
+      {
+        "start_utc_s": 1793493344.994279,
+        "end_utc_s": 1793493836.881084,
+        "immersion_start_utc_s": 1793493263.341371,
+        "parent_ranging_start_utc_s": 1793493344.994279
+      },
+      {
+        "start_utc_s": 1793494444.051055,
+        "end_utc_s": 1793495307.708502,
+        "immersion_start_utc_s": 1793494268.815231,
+        "parent_ranging_start_utc_s": 1793494444.051055
+      },
+      {
+        "start_utc_s": 1793495714.104666,
+        "end_utc_s": 1793496226.052303,
+        "immersion_start_utc_s": 1793495525.400727,
+        "parent_ranging_start_utc_s": 1793495714.104666
+      },
+      {
+        "start_utc_s": 1793496662.585194,
+        "end_utc_s": 1793497305.45455,
+        "immersion_start_utc_s": 1793496662.585194,
+        "parent_ranging_start_utc_s": 1793496648.141349
+      },
+      {
+        "start_utc_s": 1793498013.226345,
+        "end_utc_s": 1793498120.85298,
+        "immersion_start_utc_s": 1793498013.226345,
+        "parent_ranging_start_utc_s": 1793497947.245934
+      }
+    ],
+    "0.2": [
+      {
+        "start_utc_s": 1793493344.994279,
+        "end_utc_s": 1793493832.881152,
+        "immersion_start_utc_s": 1793493264.351108,
+        "parent_ranging_start_utc_s": 1793493344.994279
+      },
+      {
+        "start_utc_s": 1793494444.051055,
+        "end_utc_s": 1793495307.708502,
+        "immersion_start_utc_s": 1793494268.815231,
+        "parent_ranging_start_utc_s": 1793494444.051055
+      },
+      {
+        "start_utc_s": 1793495714.104666,
+        "end_utc_s": 1793496225.052269,
+        "immersion_start_utc_s": 1793495526.400737,
+        "parent_ranging_start_utc_s": 1793495714.104666
+      },
+      {
+        "start_utc_s": 1793496663.593774,
+        "end_utc_s": 1793497305.45455,
+        "immersion_start_utc_s": 1793496663.593774,
+        "parent_ranging_start_utc_s": 1793496648.141349
+      },
+      {
+        "start_utc_s": 1793498013.226345,
+        "end_utc_s": 1793498119.853301,
+        "immersion_start_utc_s": 1793498013.226345,
+        "parent_ranging_start_utc_s": 1793497947.245934
+      }
+    ],
+    "0.3": [
+      {
+        "start_utc_s": 1793493344.994279,
+        "end_utc_s": 1793493832.881152,
+        "immersion_start_utc_s": 1793493264.351108,
+        "parent_ranging_start_utc_s": 1793493344.994279
+      },
+      {
+        "start_utc_s": 1793494444.051055,
+        "end_utc_s": 1793495304.708009,
+        "immersion_start_utc_s": 1793494269.814749,
+        "parent_ranging_start_utc_s": 1793494444.051055
+      },
+      {
+        "start_utc_s": 1793495714.104666,
+        "end_utc_s": 1793496224.052134,
+        "immersion_start_utc_s": 1793495526.400737,
+        "parent_ranging_start_utc_s": 1793495714.104666
+      },
+      {
+        "start_utc_s": 1793496663.593774,
+        "end_utc_s": 1793497304.454899,
+        "immersion_start_utc_s": 1793496663.593774,
+        "parent_ranging_start_utc_s": 1793496648.141349
+      },
+      {
+        "start_utc_s": 1793498014.225594,
+        "end_utc_s": 1793498119.853301,
+        "immersion_start_utc_s": 1793498014.225594,
+        "parent_ranging_start_utc_s": 1793497947.245934
+      }
+    ]
+  },
+  "clock_manifest_sha256": "3d6445c769b733b6ea0bbaff7fbf9fa7acda4be6d01324a50afb6d6678d321de",
+  "config_sha256": "8b75edade947bb61854495d4a376e54c42fd160da3cc4e3264c517d72920790d",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "calibration_paths": [],
+  "segments": [
+    {
+      "start_utc_s": 1793493344.994279,
+      "end_utc_s": 1793493832.881152,
+      "immersion_start_utc_s": 1793493264.351108,
+      "parent_ranging_start_utc_s": 1793493344.994279,
+      "experiment_id": "20261101_nanyo_001",
+      "sensor_files": [
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\child\\C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+          "rows": 48882,
+          "unmapped_source_rows": 0,
+          "source_sha256": "494355f570a0a496e0610f6c320ace918a33e7f7aaf8ed37c54f51efea08c981"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_BNO_EVENTS_68440.bno.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\child\\C_MAIN_BNO_EVENTS_68440.bno.csv",
+          "rows": 146304,
+          "unmapped_source_rows": 0,
+          "source_sha256": "c3db74fa3e8b6bbaf25440420a3055f16ebefe622ee921eaa5f185fc0f8a0f17"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_HEALTH_RANGE_68440.health.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\child\\C_MAIN_HEALTH_RANGE_68440.health.csv",
+          "rows": 484,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0ed0656c0b5076009856546b4ce1904c48d6a347f403de4933212f1a83cccb87"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_HEALTH_RANGE_68440.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\child\\C_MAIN_HEALTH_RANGE_68440.shot.csv",
+          "rows": 442,
+          "unmapped_source_rows": 0,
+          "source_sha256": "3b557a97e316067274966d3600e99b238c1e53c71cb499847f1e4e439be4b8cf"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_IMU_100Hz_68440.imu.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\child\\C_MAIN_IMU_100Hz_68440.imu.csv",
+          "rows": 48789,
+          "unmapped_source_rows": 0,
+          "source_sha256": "1b09a0389432f877b1340bda68db84d46607686b73296ccf828ed6897c95f4e1"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.capture_begin.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\child\\C_MAIN_MULTIPATH_68440.capture_begin.csv",
+          "rows": 15,
+          "unmapped_source_rows": 0,
+          "source_sha256": "8f3395263467be9f3bddc8990544559caeb0e687d686090f7d92bfdc572af278"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.capture_end.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\child\\C_MAIN_MULTIPATH_68440.capture_end.csv",
+          "rows": 15,
+          "unmapped_source_rows": 0,
+          "source_sha256": "fd5030ae8997135ff93ec67a5e29c9edfc4126b4eebcb1ad77227d5a21763065"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.comparator.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\child\\C_MAIN_MULTIPATH_68440.comparator.csv",
+          "rows": 443,
+          "unmapped_source_rows": 0,
+          "source_sha256": "36a9f9ce40873802b66c4b24d310cc9c4fcf38476aaeabb1ee454c0413b771e7"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.envelope.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\child\\C_MAIN_MULTIPATH_68440.envelope.csv",
+          "rows": 900000,
+          "unmapped_source_rows": 0,
+          "source_sha256": "adeb816a574b9df76f529906db58af8908eec11ed0df2fd863a9d76d091d0334"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+          "rows": 0,
+          "unmapped_source_rows": 1,
+          "source_sha256": "ff7c6ecd1770fb65e02491720bde562cb853dc8310340203b9e3c497f604ce02"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+          "rows": 488,
+          "unmapped_source_rows": 0,
+          "source_sha256": "e876a94718d65d10eefe52a5779b86efaa8f7044bba31a2d363772519f526e4f"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.health.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.health.csv",
+          "rows": 486,
+          "unmapped_source_rows": 0,
+          "source_sha256": "96491e4f4fe75e77177d6ce0cc1462fd7308c820d1246c81f892f7e49f3d222d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+          "rows": 4992,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0e6f5e27b3766ef3070ebde12ca43548b2452e2b3c20da78ddac112ecf62a8c8"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+          "rows": 441,
+          "unmapped_source_rows": 2,
+          "source_sha256": "f1c048d68bad452ff013000a57a1c1dcc19c5958cb513cb15849565d5b4d9dd1"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.shot.csv",
+          "rows": 441,
+          "unmapped_source_rows": 2,
+          "source_sha256": "ee117494b77757c4a389477abc6e35cbb4ae286c0c460d3b69dd3c23a953ce97"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_TIME_POSITION_62440.time_position.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_TIME_POSITION_62440.time_position.csv",
+          "rows": 486,
+          "unmapped_source_rows": 0,
+          "source_sha256": "2bdc02912eaaa3edef844aedb3dacf47c058d33dfeb7e57afef5a32ef605f06c"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "d493386884192688bfb082e368cb74a7c9d8fb5e8752c1072e44ca7addc1027b"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "8f758851354278b67540dd11e0b2d90e2243d4740efac8b93a080ae42143cdd9"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.health.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.health.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "66828b30521002f7967de14264c014b6b603ab70ade918389ed831cdfa52de15"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "e0a5ab308cd2a59752964e3dc6a8ec0aa6e7024cf420288239df35a1955146cb"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "a3ad08c6bb67da04664ba38fb71611065ef5a848833060a6ed763485977de9d4"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.shot.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "4d272fdacae2053d06b6b93a51543a7b767ebd2888d00bd181f062c665cdc464"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_TIME_POSITION_62441.time_position.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\P_MAIN_TIME_POSITION_62441.time_position.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "70f1b677aade1ff2d17262c39962d0529779c86d18e8e52931bc1712b8a4940c"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent_100hz.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\parent\\parent_100hz.csv",
+          "rows": 48789,
+          "unmapped_source_rows": 0,
+          "source_sha256": "49950b1ae9ca1976d3a3b74014b000b0077b0dd620c60a463e42df90cea39023"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101091928_0028_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\camera\\child_DJI_20261101091928_0028_D_attitude.csv",
+          "rows": 14622,
+          "unmapped_source_rows": 0,
+          "source_sha256": "a8d7a7207bdaf3207fd2457a86505a5a8f5b12b548a14966c2af5a969158aa6d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101103009_0029_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\camera\\child_DJI_20261101103009_0029_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "ab93ffd59e3e38e4cce7e80d48863592a1de2ca03a301fe3ff01d212e76da38d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101105154_0030_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\camera\\child_DJI_20261101105154_0030_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "3bf9bfbf4910f9750cd050ef660de061c3fa044ebf892a21c576ecbfd08ee986"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101092040_0193_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\camera\\parent_DJI_20261101092040_0193_D_attitude.csv",
+          "rows": 14623,
+          "unmapped_source_rows": 0,
+          "source_sha256": "9ff809351831a199341c20a564f6f867809962e650e49d0338ed8f6b2a26fa05"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101095854_0194_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\camera\\parent_DJI_20261101095854_0194_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "50af241a8a88b9ccaca7f1369e7a6cf2d2c52a13bb0bffd1f66267ac3731bc5f"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101103718_0195_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\camera\\parent_DJI_20261101103718_0195_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0f7e98bbf54ce36a9531e99df3dc57deafa3405910d8758119741e2418752d80"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101105120_0197_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_001\\synchronized\\camera\\parent_DJI_20261101105120_0197_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "33ddad3dd4d1a2f00e7712d3e1a1fc54128389b4cb3149afe3f99106bfa96854"
+        }
+      ],
+      "videos": [
+        {
+          "role": "parent",
+          "output": "data\\processed\\20261101_nanyo_001\\videos\\parent.mp4",
+          "pieces": [
+            {
+              "camera_key": "parent_DJI_20261101092040_0193_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101092040_0193_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_001\\videos\\parent_part01.mp4",
+              "source_start_s": 903.624147946799,
+              "source_end_s": 1391.5259313038034,
+              "sync_utc_start_s": 1793493344.994279,
+              "sync_utc_end_s": 1793493832.881152,
+              "joined_start_s": 0.0,
+              "joined_end_s": 487.90178335700443,
+              "utc_at_source_zero_s": 1793492441.3977458,
+              "time_scale": 0.9999694398530762,
+              "validated_source_interval_s": [
+                280.0,
+                2260.0
+              ],
+              "clock_extrapolated_at_start": false,
+              "clock_extrapolated_at_end": false,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "903.624147947",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101092040_0193_D.MP4",
+                "-t",
+                "487.901783357",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_001\\videos\\parent_part01.mp4"
+              ],
+              "container_duration_s": 487.91
+            }
+          ],
+          "uncovered_duration_s": 0.0,
+          "edit_list_correction": {
+            "method": "hardlink to original trimmed piece",
+            "uncorrected_concat": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_001\\videos\\parent_concat_untrimmed.mp4"
+          }
+        },
+        {
+          "role": "child",
+          "output": "data\\processed\\20261101_nanyo_001\\videos\\child.mp4",
+          "pieces": [
+            {
+              "camera_key": "child_DJI_20261101091928_0028_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101091928_0028_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_001\\videos\\child_part01.mp4",
+              "source_start_s": 974.8554469388818,
+              "source_end_s": 1462.7539735895584,
+              "sync_utc_start_s": 1793493344.994279,
+              "sync_utc_end_s": 1793493832.881152,
+              "joined_start_s": 0.0,
+              "joined_end_s": 487.8985266506767,
+              "utc_at_source_zero_s": 1793492370.1621168,
+              "time_scale": 0.9999761146156028,
+              "validated_source_interval_s": [
+                730.0,
+                4060.0
+              ],
+              "clock_extrapolated_at_start": false,
+              "clock_extrapolated_at_end": false,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "974.855446939",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101091928_0028_D.MP4",
+                "-t",
+                "487.898526651",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_001\\videos\\child_part01.mp4"
+              ],
+              "container_duration_s": 487.91
+            }
+          ],
+          "uncovered_duration_s": 0.0,
+          "edit_list_correction": {
+            "method": "hardlink to original trimmed piece",
+            "uncorrected_concat": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_001\\videos\\child_concat_untrimmed.mp4"
+          }
+        }
+      ],
+      "max_relative_depth_m": 8.436286327856422
+    },
+    {
+      "start_utc_s": 1793494444.051055,
+      "end_utc_s": 1793495307.708502,
+      "immersion_start_utc_s": 1793494268.815231,
+      "parent_ranging_start_utc_s": 1793494444.051055,
+      "experiment_id": "20261101_nanyo_002",
+      "sensor_files": [
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\child\\C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+          "rows": 86508,
+          "unmapped_source_rows": 0,
+          "source_sha256": "494355f570a0a496e0610f6c320ace918a33e7f7aaf8ed37c54f51efea08c981"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_BNO_EVENTS_68440.bno.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\child\\C_MAIN_BNO_EVENTS_68440.bno.csv",
+          "rows": 259036,
+          "unmapped_source_rows": 0,
+          "source_sha256": "c3db74fa3e8b6bbaf25440420a3055f16ebefe622ee921eaa5f185fc0f8a0f17"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_HEALTH_RANGE_68440.health.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\child\\C_MAIN_HEALTH_RANGE_68440.health.csv",
+          "rows": 855,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0ed0656c0b5076009856546b4ce1904c48d6a347f403de4933212f1a83cccb87"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_HEALTH_RANGE_68440.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\child\\C_MAIN_HEALTH_RANGE_68440.shot.csv",
+          "rows": 786,
+          "unmapped_source_rows": 0,
+          "source_sha256": "3b557a97e316067274966d3600e99b238c1e53c71cb499847f1e4e439be4b8cf"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_IMU_100Hz_68440.imu.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\child\\C_MAIN_IMU_100Hz_68440.imu.csv",
+          "rows": 86365,
+          "unmapped_source_rows": 0,
+          "source_sha256": "1b09a0389432f877b1340bda68db84d46607686b73296ccf828ed6897c95f4e1"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.capture_begin.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\child\\C_MAIN_MULTIPATH_68440.capture_begin.csv",
+          "rows": 18,
+          "unmapped_source_rows": 0,
+          "source_sha256": "8f3395263467be9f3bddc8990544559caeb0e687d686090f7d92bfdc572af278"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.capture_end.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\child\\C_MAIN_MULTIPATH_68440.capture_end.csv",
+          "rows": 26,
+          "unmapped_source_rows": 0,
+          "source_sha256": "fd5030ae8997135ff93ec67a5e29c9edfc4126b4eebcb1ad77227d5a21763065"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.comparator.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\child\\C_MAIN_MULTIPATH_68440.comparator.csv",
+          "rows": 404,
+          "unmapped_source_rows": 0,
+          "source_sha256": "36a9f9ce40873802b66c4b24d310cc9c4fcf38476aaeabb1ee454c0413b771e7"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.envelope.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\child\\C_MAIN_MULTIPATH_68440.envelope.csv",
+          "rows": 1074272,
+          "unmapped_source_rows": 0,
+          "source_sha256": "adeb816a574b9df76f529906db58af8908eec11ed0df2fd863a9d76d091d0334"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+          "rows": 0,
+          "unmapped_source_rows": 1,
+          "source_sha256": "ff7c6ecd1770fb65e02491720bde562cb853dc8310340203b9e3c497f604ce02"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+          "rows": 864,
+          "unmapped_source_rows": 0,
+          "source_sha256": "e876a94718d65d10eefe52a5779b86efaa8f7044bba31a2d363772519f526e4f"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.health.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.health.csv",
+          "rows": 862,
+          "unmapped_source_rows": 0,
+          "source_sha256": "96491e4f4fe75e77177d6ce0cc1462fd7308c820d1246c81f892f7e49f3d222d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+          "rows": 8867,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0e6f5e27b3766ef3070ebde12ca43548b2452e2b3c20da78ddac112ecf62a8c8"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+          "rows": 786,
+          "unmapped_source_rows": 2,
+          "source_sha256": "f1c048d68bad452ff013000a57a1c1dcc19c5958cb513cb15849565d5b4d9dd1"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.shot.csv",
+          "rows": 786,
+          "unmapped_source_rows": 2,
+          "source_sha256": "ee117494b77757c4a389477abc6e35cbb4ae286c0c460d3b69dd3c23a953ce97"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_TIME_POSITION_62440.time_position.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_TIME_POSITION_62440.time_position.csv",
+          "rows": 862,
+          "unmapped_source_rows": 0,
+          "source_sha256": "2bdc02912eaaa3edef844aedb3dacf47c058d33dfeb7e57afef5a32ef605f06c"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "d493386884192688bfb082e368cb74a7c9d8fb5e8752c1072e44ca7addc1027b"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "8f758851354278b67540dd11e0b2d90e2243d4740efac8b93a080ae42143cdd9"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.health.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.health.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "66828b30521002f7967de14264c014b6b603ab70ade918389ed831cdfa52de15"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "e0a5ab308cd2a59752964e3dc6a8ec0aa6e7024cf420288239df35a1955146cb"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "a3ad08c6bb67da04664ba38fb71611065ef5a848833060a6ed763485977de9d4"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.shot.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "4d272fdacae2053d06b6b93a51543a7b767ebd2888d00bd181f062c665cdc464"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_TIME_POSITION_62441.time_position.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\P_MAIN_TIME_POSITION_62441.time_position.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "70f1b677aade1ff2d17262c39962d0529779c86d18e8e52931bc1712b8a4940c"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent_100hz.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\parent\\parent_100hz.csv",
+          "rows": 86367,
+          "unmapped_source_rows": 0,
+          "source_sha256": "49950b1ae9ca1976d3a3b74014b000b0077b0dd620c60a463e42df90cea39023"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101091928_0028_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\camera\\child_DJI_20261101091928_0028_D_attitude.csv",
+          "rows": 25885,
+          "unmapped_source_rows": 0,
+          "source_sha256": "a8d7a7207bdaf3207fd2457a86505a5a8f5b12b548a14966c2af5a969158aa6d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101103009_0029_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\camera\\child_DJI_20261101103009_0029_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "ab93ffd59e3e38e4cce7e80d48863592a1de2ca03a301fe3ff01d212e76da38d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101105154_0030_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\camera\\child_DJI_20261101105154_0030_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "3bf9bfbf4910f9750cd050ef660de061c3fa044ebf892a21c576ecbfd08ee986"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101092040_0193_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\camera\\parent_DJI_20261101092040_0193_D_attitude.csv",
+          "rows": 8703,
+          "unmapped_source_rows": 0,
+          "source_sha256": "9ff809351831a199341c20a564f6f867809962e650e49d0338ed8f6b2a26fa05"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101095854_0194_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\camera\\parent_DJI_20261101095854_0194_D_attitude.csv",
+          "rows": 17181,
+          "unmapped_source_rows": 0,
+          "source_sha256": "50af241a8a88b9ccaca7f1369e7a6cf2d2c52a13bb0bffd1f66267ac3731bc5f"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101103718_0195_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\camera\\parent_DJI_20261101103718_0195_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0f7e98bbf54ce36a9531e99df3dc57deafa3405910d8758119741e2418752d80"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101105120_0197_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_002\\synchronized\\camera\\parent_DJI_20261101105120_0197_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "33ddad3dd4d1a2f00e7712d3e1a1fc54128389b4cb3149afe3f99106bfa96854"
+        }
+      ],
+      "videos": [
+        {
+          "role": "parent",
+          "output": "data\\processed\\20261101_nanyo_002\\videos\\parent.mp4",
+          "pieces": [
+            {
+              "camera_key": "parent_DJI_20261101092040_0193_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101092040_0193_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_002\\videos\\parent_part01.mp4",
+              "source_start_s": 2002.7145123565708,
+              "source_end_s": 2293.139999950427,
+              "sync_utc_start_s": 1793494444.051055,
+              "sync_utc_end_s": 1793494734.467667,
+              "joined_start_s": 0.0,
+              "joined_end_s": 290.42548759385613,
+              "utc_at_source_zero_s": 1793492441.3977458,
+              "time_scale": 0.9999694398530762,
+              "validated_source_interval_s": [
+                280.0,
+                2260.0
+              ],
+              "clock_extrapolated_at_start": false,
+              "clock_extrapolated_at_end": true,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "2002.714512357",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101092040_0193_D.MP4",
+                "-t",
+                "290.425487594",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_002\\videos\\parent_part01.mp4"
+              ],
+              "container_duration_s": 290.43
+            },
+            {
+              "camera_key": "parent_DJI_20261101095854_0194_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101095854_0194_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_002\\videos\\parent_part02.mp4",
+              "source_start_s": 0.0,
+              "source_end_s": 573.2703063184357,
+              "sync_utc_start_s": 1793494734.454316,
+              "sync_utc_end_s": 1793495307.708502,
+              "joined_start_s": 290.42548759385613,
+              "joined_end_s": 863.6957939122918,
+              "utc_at_source_zero_s": 1793494734.454316,
+              "time_scale": 0.9999718803418803,
+              "validated_source_interval_s": [
+                10.0,
+                2260.0
+              ],
+              "clock_extrapolated_at_start": true,
+              "clock_extrapolated_at_end": false,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "0.000000000",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101095854_0194_D.MP4",
+                "-t",
+                "573.270306318",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_002\\videos\\parent_part02.mp4"
+              ],
+              "container_duration_s": 573.29
+            }
+          ],
+          "uncovered_duration_s": 0.0,
+          "edit_list_correction": {
+            "method": "restore hidden initial preroll after concat",
+            "preroll_s": 0.7350666666666669,
+            "matching_frames": 12,
+            "uncorrected_concat": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_002\\videos\\parent_concat_untrimmed.mp4",
+            "command": [
+              "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+              "-v",
+              "warning",
+              "-nostdin",
+              "-y",
+              "-ss",
+              "0.735066667",
+              "-i",
+              "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_002\\videos\\parent_concat_untrimmed.mp4",
+              "-t",
+              "863.695793912",
+              "-map",
+              "0:v:0",
+              "-map",
+              "0:a:0?",
+              "-c",
+              "copy",
+              "-map_metadata",
+              "-1",
+              "-metadata",
+              "creation_time=2000-01-01T00:00:00Z",
+              "-movflags",
+              "+faststart",
+              "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_002\\videos\\parent.mp4"
+            ]
+          }
+        },
+        {
+          "role": "child",
+          "output": "data\\processed\\20261101_nanyo_002\\videos\\child.mp4",
+          "pieces": [
+            {
+              "camera_key": "child_DJI_20261101091928_0028_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101091928_0028_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_002\\videos\\child_part01.mp4",
+              "source_start_s": 2073.9384750062445,
+              "source_end_s": 2937.61655138878,
+              "sync_utc_start_s": 1793494444.051055,
+              "sync_utc_end_s": 1793495307.708502,
+              "joined_start_s": 0.0,
+              "joined_end_s": 863.6780763825354,
+              "utc_at_source_zero_s": 1793492370.1621168,
+              "time_scale": 0.9999761146156028,
+              "validated_source_interval_s": [
+                730.0,
+                4060.0
+              ],
+              "clock_extrapolated_at_start": false,
+              "clock_extrapolated_at_end": false,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "2073.938475006",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101091928_0028_D.MP4",
+                "-t",
+                "863.678076383",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_002\\videos\\child_part01.mp4"
+              ],
+              "container_duration_s": 863.7
+            }
+          ],
+          "uncovered_duration_s": 0.0,
+          "edit_list_correction": {
+            "method": "hardlink to original trimmed piece",
+            "uncorrected_concat": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_002\\videos\\child_concat_untrimmed.mp4"
+          }
+        }
+      ],
+      "max_relative_depth_m": 16.41991692724872
+    },
+    {
+      "start_utc_s": 1793495714.104666,
+      "end_utc_s": 1793496225.052269,
+      "immersion_start_utc_s": 1793495526.400737,
+      "parent_ranging_start_utc_s": 1793495714.104666,
+      "experiment_id": "20261101_nanyo_003",
+      "sensor_files": [
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\child\\C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+          "rows": 51202,
+          "unmapped_source_rows": 0,
+          "source_sha256": "494355f570a0a496e0610f6c320ace918a33e7f7aaf8ed37c54f51efea08c981"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_BNO_EVENTS_68440.bno.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\child\\C_MAIN_BNO_EVENTS_68440.bno.csv",
+          "rows": 153615,
+          "unmapped_source_rows": 0,
+          "source_sha256": "c3db74fa3e8b6bbaf25440420a3055f16ebefe622ee921eaa5f185fc0f8a0f17"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_HEALTH_RANGE_68440.health.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\child\\C_MAIN_HEALTH_RANGE_68440.health.csv",
+          "rows": 505,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0ed0656c0b5076009856546b4ce1904c48d6a347f403de4933212f1a83cccb87"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_HEALTH_RANGE_68440.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\child\\C_MAIN_HEALTH_RANGE_68440.shot.csv",
+          "rows": 465,
+          "unmapped_source_rows": 0,
+          "source_sha256": "3b557a97e316067274966d3600e99b238c1e53c71cb499847f1e4e439be4b8cf"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_IMU_100Hz_68440.imu.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\child\\C_MAIN_IMU_100Hz_68440.imu.csv",
+          "rows": 51095,
+          "unmapped_source_rows": 0,
+          "source_sha256": "1b09a0389432f877b1340bda68db84d46607686b73296ccf828ed6897c95f4e1"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.capture_begin.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\child\\C_MAIN_MULTIPATH_68440.capture_begin.csv",
+          "rows": 15,
+          "unmapped_source_rows": 0,
+          "source_sha256": "8f3395263467be9f3bddc8990544559caeb0e687d686090f7d92bfdc572af278"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.capture_end.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\child\\C_MAIN_MULTIPATH_68440.capture_end.csv",
+          "rows": 15,
+          "unmapped_source_rows": 0,
+          "source_sha256": "fd5030ae8997135ff93ec67a5e29c9edfc4126b4eebcb1ad77227d5a21763065"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.comparator.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\child\\C_MAIN_MULTIPATH_68440.comparator.csv",
+          "rows": 334,
+          "unmapped_source_rows": 0,
+          "source_sha256": "36a9f9ce40873802b66c4b24d310cc9c4fcf38476aaeabb1ee454c0413b771e7"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.envelope.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\child\\C_MAIN_MULTIPATH_68440.envelope.csv",
+          "rows": 899836,
+          "unmapped_source_rows": 0,
+          "source_sha256": "adeb816a574b9df76f529906db58af8908eec11ed0df2fd863a9d76d091d0334"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+          "rows": 0,
+          "unmapped_source_rows": 1,
+          "source_sha256": "ff7c6ecd1770fb65e02491720bde562cb853dc8310340203b9e3c497f604ce02"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+          "rows": 510,
+          "unmapped_source_rows": 0,
+          "source_sha256": "e876a94718d65d10eefe52a5779b86efaa8f7044bba31a2d363772519f526e4f"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.health.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.health.csv",
+          "rows": 511,
+          "unmapped_source_rows": 0,
+          "source_sha256": "96491e4f4fe75e77177d6ce0cc1462fd7308c820d1246c81f892f7e49f3d222d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+          "rows": 5250,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0e6f5e27b3766ef3070ebde12ca43548b2452e2b3c20da78ddac112ecf62a8c8"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+          "rows": 466,
+          "unmapped_source_rows": 2,
+          "source_sha256": "f1c048d68bad452ff013000a57a1c1dcc19c5958cb513cb15849565d5b4d9dd1"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.shot.csv",
+          "rows": 466,
+          "unmapped_source_rows": 2,
+          "source_sha256": "ee117494b77757c4a389477abc6e35cbb4ae286c0c460d3b69dd3c23a953ce97"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_TIME_POSITION_62440.time_position.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_TIME_POSITION_62440.time_position.csv",
+          "rows": 511,
+          "unmapped_source_rows": 0,
+          "source_sha256": "2bdc02912eaaa3edef844aedb3dacf47c058d33dfeb7e57afef5a32ef605f06c"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "d493386884192688bfb082e368cb74a7c9d8fb5e8752c1072e44ca7addc1027b"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "8f758851354278b67540dd11e0b2d90e2243d4740efac8b93a080ae42143cdd9"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.health.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.health.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "66828b30521002f7967de14264c014b6b603ab70ade918389ed831cdfa52de15"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "e0a5ab308cd2a59752964e3dc6a8ec0aa6e7024cf420288239df35a1955146cb"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "a3ad08c6bb67da04664ba38fb71611065ef5a848833060a6ed763485977de9d4"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.shot.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "4d272fdacae2053d06b6b93a51543a7b767ebd2888d00bd181f062c665cdc464"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_TIME_POSITION_62441.time_position.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\P_MAIN_TIME_POSITION_62441.time_position.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "70f1b677aade1ff2d17262c39962d0529779c86d18e8e52931bc1712b8a4940c"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent_100hz.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\parent\\parent_100hz.csv",
+          "rows": 51095,
+          "unmapped_source_rows": 0,
+          "source_sha256": "49950b1ae9ca1976d3a3b74014b000b0077b0dd620c60a463e42df90cea39023"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101091928_0028_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\camera\\child_DJI_20261101091928_0028_D_attitude.csv",
+          "rows": 15313,
+          "unmapped_source_rows": 0,
+          "source_sha256": "a8d7a7207bdaf3207fd2457a86505a5a8f5b12b548a14966c2af5a969158aa6d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101103009_0029_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\camera\\child_DJI_20261101103009_0029_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "ab93ffd59e3e38e4cce7e80d48863592a1de2ca03a301fe3ff01d212e76da38d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101105154_0030_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\camera\\child_DJI_20261101105154_0030_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "3bf9bfbf4910f9750cd050ef660de061c3fa044ebf892a21c576ecbfd08ee986"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101092040_0193_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\camera\\parent_DJI_20261101092040_0193_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "9ff809351831a199341c20a564f6f867809962e650e49d0338ed8f6b2a26fa05"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101095854_0194_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\camera\\parent_DJI_20261101095854_0194_D_attitude.csv",
+          "rows": 15314,
+          "unmapped_source_rows": 0,
+          "source_sha256": "50af241a8a88b9ccaca7f1369e7a6cf2d2c52a13bb0bffd1f66267ac3731bc5f"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101103718_0195_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\camera\\parent_DJI_20261101103718_0195_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0f7e98bbf54ce36a9531e99df3dc57deafa3405910d8758119741e2418752d80"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101105120_0197_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_003\\synchronized\\camera\\parent_DJI_20261101105120_0197_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "33ddad3dd4d1a2f00e7712d3e1a1fc54128389b4cb3149afe3f99106bfa96854"
+        }
+      ],
+      "videos": [
+        {
+          "role": "parent",
+          "output": "data\\processed\\20261101_nanyo_003\\videos\\parent.mp4",
+          "pieces": [
+            {
+              "camera_key": "parent_DJI_20261101095854_0194_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101095854_0194_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_003\\videos\\parent_part01.mp4",
+              "source_start_s": 979.6778983014092,
+              "source_end_s": 1490.639869364637,
+              "sync_utc_start_s": 1793495714.104666,
+              "sync_utc_end_s": 1793496225.052269,
+              "joined_start_s": 0.0,
+              "joined_end_s": 510.9619710632278,
+              "utc_at_source_zero_s": 1793494734.454316,
+              "time_scale": 0.9999718803418803,
+              "validated_source_interval_s": [
+                10.0,
+                2260.0
+              ],
+              "clock_extrapolated_at_start": false,
+              "clock_extrapolated_at_end": false,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "979.677898301",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101095854_0194_D.MP4",
+                "-t",
+                "510.961971063",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_003\\videos\\parent_part01.mp4"
+              ],
+              "container_duration_s": 510.97
+            }
+          ],
+          "uncovered_duration_s": 0.0,
+          "edit_list_correction": {
+            "method": "hardlink to original trimmed piece",
+            "uncorrected_concat": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_003\\videos\\parent_concat_untrimmed.mp4"
+          }
+        },
+        {
+          "role": "child",
+          "output": "data\\processed\\20261101_nanyo_003\\videos\\child.mp4",
+          "pieces": [
+            {
+              "camera_key": "child_DJI_20261101091928_0028_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101091928_0028_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_003\\videos\\child_part01.mp4",
+              "source_start_s": 3344.0224224896624,
+              "source_end_s": 3854.9822299483644,
+              "sync_utc_start_s": 1793495714.104666,
+              "sync_utc_end_s": 1793496225.052269,
+              "joined_start_s": 0.0,
+              "joined_end_s": 510.959807458702,
+              "utc_at_source_zero_s": 1793492370.1621168,
+              "time_scale": 0.9999761146156028,
+              "validated_source_interval_s": [
+                730.0,
+                4060.0
+              ],
+              "clock_extrapolated_at_start": false,
+              "clock_extrapolated_at_end": false,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "3344.022422490",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101091928_0028_D.MP4",
+                "-t",
+                "510.959807459",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_003\\videos\\child_part01.mp4"
+              ],
+              "container_duration_s": 510.98
+            }
+          ],
+          "uncovered_duration_s": 0.0,
+          "edit_list_correction": {
+            "method": "hardlink to original trimmed piece",
+            "uncorrected_concat": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_003\\videos\\child_concat_untrimmed.mp4"
+          }
+        }
+      ],
+      "max_relative_depth_m": 16.497515329707827
+    },
+    {
+      "start_utc_s": 1793496663.593774,
+      "end_utc_s": 1793497305.45455,
+      "immersion_start_utc_s": 1793496663.593774,
+      "parent_ranging_start_utc_s": 1793496648.141349,
+      "experiment_id": "20261101_nanyo_004",
+      "sensor_files": [
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\child\\C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+          "rows": 64293,
+          "unmapped_source_rows": 0,
+          "source_sha256": "494355f570a0a496e0610f6c320ace918a33e7f7aaf8ed37c54f51efea08c981"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_BNO_EVENTS_68440.bno.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\child\\C_MAIN_BNO_EVENTS_68440.bno.csv",
+          "rows": 192680,
+          "unmapped_source_rows": 0,
+          "source_sha256": "c3db74fa3e8b6bbaf25440420a3055f16ebefe622ee921eaa5f185fc0f8a0f17"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_HEALTH_RANGE_68440.health.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\child\\C_MAIN_HEALTH_RANGE_68440.health.csv",
+          "rows": 638,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0ed0656c0b5076009856546b4ce1904c48d6a347f403de4933212f1a83cccb87"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_HEALTH_RANGE_68440.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\child\\C_MAIN_HEALTH_RANGE_68440.shot.csv",
+          "rows": 584,
+          "unmapped_source_rows": 0,
+          "source_sha256": "3b557a97e316067274966d3600e99b238c1e53c71cb499847f1e4e439be4b8cf"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_IMU_100Hz_68440.imu.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\child\\C_MAIN_IMU_100Hz_68440.imu.csv",
+          "rows": 64186,
+          "unmapped_source_rows": 0,
+          "source_sha256": "1b09a0389432f877b1340bda68db84d46607686b73296ccf828ed6897c95f4e1"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.capture_begin.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\child\\C_MAIN_MULTIPATH_68440.capture_begin.csv",
+          "rows": 18,
+          "unmapped_source_rows": 0,
+          "source_sha256": "8f3395263467be9f3bddc8990544559caeb0e687d686090f7d92bfdc572af278"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.capture_end.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\child\\C_MAIN_MULTIPATH_68440.capture_end.csv",
+          "rows": 20,
+          "unmapped_source_rows": 0,
+          "source_sha256": "fd5030ae8997135ff93ec67a5e29c9edfc4126b4eebcb1ad77227d5a21763065"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.comparator.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\child\\C_MAIN_MULTIPATH_68440.comparator.csv",
+          "rows": 538,
+          "unmapped_source_rows": 0,
+          "source_sha256": "36a9f9ce40873802b66c4b24d310cc9c4fcf38476aaeabb1ee454c0413b771e7"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.envelope.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\child\\C_MAIN_MULTIPATH_68440.envelope.csv",
+          "rows": 1090972,
+          "unmapped_source_rows": 0,
+          "source_sha256": "adeb816a574b9df76f529906db58af8908eec11ed0df2fd863a9d76d091d0334"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+          "rows": 0,
+          "unmapped_source_rows": 1,
+          "source_sha256": "ff7c6ecd1770fb65e02491720bde562cb853dc8310340203b9e3c497f604ce02"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+          "rows": 642,
+          "unmapped_source_rows": 0,
+          "source_sha256": "e876a94718d65d10eefe52a5779b86efaa8f7044bba31a2d363772519f526e4f"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.health.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.health.csv",
+          "rows": 641,
+          "unmapped_source_rows": 0,
+          "source_sha256": "96491e4f4fe75e77177d6ce0cc1462fd7308c820d1246c81f892f7e49f3d222d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+          "rows": 6598,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0e6f5e27b3766ef3070ebde12ca43548b2452e2b3c20da78ddac112ecf62a8c8"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+          "rows": 584,
+          "unmapped_source_rows": 2,
+          "source_sha256": "f1c048d68bad452ff013000a57a1c1dcc19c5958cb513cb15849565d5b4d9dd1"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.shot.csv",
+          "rows": 584,
+          "unmapped_source_rows": 2,
+          "source_sha256": "ee117494b77757c4a389477abc6e35cbb4ae286c0c460d3b69dd3c23a953ce97"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_TIME_POSITION_62440.time_position.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_TIME_POSITION_62440.time_position.csv",
+          "rows": 641,
+          "unmapped_source_rows": 0,
+          "source_sha256": "2bdc02912eaaa3edef844aedb3dacf47c058d33dfeb7e57afef5a32ef605f06c"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "d493386884192688bfb082e368cb74a7c9d8fb5e8752c1072e44ca7addc1027b"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "8f758851354278b67540dd11e0b2d90e2243d4740efac8b93a080ae42143cdd9"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.health.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.health.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "66828b30521002f7967de14264c014b6b603ab70ade918389ed831cdfa52de15"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "e0a5ab308cd2a59752964e3dc6a8ec0aa6e7024cf420288239df35a1955146cb"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "a3ad08c6bb67da04664ba38fb71611065ef5a848833060a6ed763485977de9d4"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.shot.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "4d272fdacae2053d06b6b93a51543a7b767ebd2888d00bd181f062c665cdc464"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_TIME_POSITION_62441.time_position.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\P_MAIN_TIME_POSITION_62441.time_position.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "70f1b677aade1ff2d17262c39962d0529779c86d18e8e52931bc1712b8a4940c"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent_100hz.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\parent\\parent_100hz.csv",
+          "rows": 64187,
+          "unmapped_source_rows": 0,
+          "source_sha256": "49950b1ae9ca1976d3a3b74014b000b0077b0dd620c60a463e42df90cea39023"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101091928_0028_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\camera\\child_DJI_20261101091928_0028_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "a8d7a7207bdaf3207fd2457a86505a5a8f5b12b548a14966c2af5a969158aa6d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101103009_0029_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\camera\\child_DJI_20261101103009_0029_D_attitude.csv",
+          "rows": 19237,
+          "unmapped_source_rows": 0,
+          "source_sha256": "ab93ffd59e3e38e4cce7e80d48863592a1de2ca03a301fe3ff01d212e76da38d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101105154_0030_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\camera\\child_DJI_20261101105154_0030_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "3bf9bfbf4910f9750cd050ef660de061c3fa044ebf892a21c576ecbfd08ee986"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101092040_0193_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\camera\\parent_DJI_20261101092040_0193_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "9ff809351831a199341c20a564f6f867809962e650e49d0338ed8f6b2a26fa05"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101095854_0194_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\camera\\parent_DJI_20261101095854_0194_D_attitude.csv",
+          "rows": 11230,
+          "unmapped_source_rows": 0,
+          "source_sha256": "50af241a8a88b9ccaca7f1369e7a6cf2d2c52a13bb0bffd1f66267ac3731bc5f"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101103718_0195_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\camera\\parent_DJI_20261101103718_0195_D_attitude.csv",
+          "rows": 8008,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0f7e98bbf54ce36a9531e99df3dc57deafa3405910d8758119741e2418752d80"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101105120_0197_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_004\\synchronized\\camera\\parent_DJI_20261101105120_0197_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "33ddad3dd4d1a2f00e7712d3e1a1fc54128389b4cb3149afe3f99106bfa96854"
+        }
+      ],
+      "videos": [
+        {
+          "role": "parent",
+          "output": "data\\processed\\20261101_nanyo_004\\videos\\parent.mp4",
+          "pieces": [
+            {
+              "camera_key": "parent_DJI_20261101095854_0194_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101095854_0194_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_004\\videos\\parent_part01.mp4",
+              "source_start_s": 1929.1937064469457,
+              "source_end_s": 2303.879999905562,
+              "sync_utc_start_s": 1793496663.593774,
+              "sync_utc_end_s": 1793497038.2695315,
+              "joined_start_s": 0.0,
+              "joined_end_s": 374.6862934586161,
+              "utc_at_source_zero_s": 1793494734.454316,
+              "time_scale": 0.9999718803418803,
+              "validated_source_interval_s": [
+                10.0,
+                2260.0
+              ],
+              "clock_extrapolated_at_start": false,
+              "clock_extrapolated_at_end": true,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "1929.193706447",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101095854_0194_D.MP4",
+                "-t",
+                "374.686293459",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_004\\videos\\parent_part01.mp4"
+              ],
+              "container_duration_s": 374.69
+            },
+            {
+              "camera_key": "parent_DJI_20261101103718_0195_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101103718_0195_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_004\\videos\\parent_part02.mp4",
+              "source_start_s": 0.0,
+              "source_end_s": 267.169323224391,
+              "sync_utc_start_s": 1793497038.290894,
+              "sync_utc_end_s": 1793497305.45455,
+              "joined_start_s": 374.6862934586161,
+              "joined_end_s": 641.8556166830072,
+              "utc_at_source_zero_s": 1793497038.290894,
+              "time_scale": 0.9999787878787879,
+              "validated_source_interval_s": [
+                10.0,
+                310.0
+              ],
+              "clock_extrapolated_at_start": true,
+              "clock_extrapolated_at_end": false,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "0.000000000",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101103718_0195_D.MP4",
+                "-t",
+                "267.169323224",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_004\\videos\\parent_part02.mp4"
+              ],
+              "container_duration_s": 267.18
+            }
+          ],
+          "uncovered_duration_s": 0.0213625431060791,
+          "edit_list_correction": {
+            "method": "restore hidden initial preroll after concat",
+            "preroll_s": 0.2762750000000001,
+            "matching_frames": 12,
+            "uncorrected_concat": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_004\\videos\\parent_concat_untrimmed.mp4",
+            "command": [
+              "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+              "-v",
+              "warning",
+              "-nostdin",
+              "-y",
+              "-ss",
+              "0.276275000",
+              "-i",
+              "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_004\\videos\\parent_concat_untrimmed.mp4",
+              "-t",
+              "641.855616683",
+              "-map",
+              "0:v:0",
+              "-map",
+              "0:a:0?",
+              "-c",
+              "copy",
+              "-map_metadata",
+              "-1",
+              "-metadata",
+              "creation_time=2000-01-01T00:00:00Z",
+              "-movflags",
+              "+faststart",
+              "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_004\\videos\\parent.mp4"
+            ]
+          }
+        },
+        {
+          "role": "child",
+          "output": "data\\processed\\20261101_nanyo_004\\videos\\child.mp4",
+          "pieces": [
+            {
+              "camera_key": "child_DJI_20261101103009_0029_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101103009_0029_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_004\\videos\\child_part01.mp4",
+              "source_start_s": 53.787278018995714,
+              "source_end_s": 695.6837148797255,
+              "sync_utc_start_s": 1793496663.593774,
+              "sync_utc_end_s": 1793497305.45455,
+              "joined_start_s": 0.0,
+              "joined_end_s": 641.8964368607298,
+              "utc_at_source_zero_s": 1793496609.8094842,
+              "time_scale": 0.9999444444444444,
+              "validated_source_interval_s": [
+                10.0,
+                640.0
+              ],
+              "clock_extrapolated_at_start": false,
+              "clock_extrapolated_at_end": true,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "53.787278019",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101103009_0029_D.MP4",
+                "-t",
+                "641.896436861",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_004\\videos\\child_part01.mp4"
+              ],
+              "container_duration_s": 641.91
+            }
+          ],
+          "uncovered_duration_s": 0.0,
+          "edit_list_correction": {
+            "method": "hardlink to original trimmed piece",
+            "uncorrected_concat": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_004\\videos\\child_concat_untrimmed.mp4"
+          }
+        }
+      ],
+      "max_relative_depth_m": 6.561997943266596
+    },
+    {
+      "start_utc_s": 1793498013.226345,
+      "end_utc_s": 1793498119.853301,
+      "immersion_start_utc_s": 1793498013.226345,
+      "parent_ranging_start_utc_s": 1793497947.245934,
+      "experiment_id": "20261101_nanyo_005",
+      "sensor_files": [
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\child\\C_MAIN_BNO_EVENTS_68440.absolute_attitude.csv",
+          "rows": 10680,
+          "unmapped_source_rows": 0,
+          "source_sha256": "494355f570a0a496e0610f6c320ace918a33e7f7aaf8ed37c54f51efea08c981"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_BNO_EVENTS_68440.bno.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\child\\C_MAIN_BNO_EVENTS_68440.bno.csv",
+          "rows": 31953,
+          "unmapped_source_rows": 0,
+          "source_sha256": "c3db74fa3e8b6bbaf25440420a3055f16ebefe622ee921eaa5f185fc0f8a0f17"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_HEALTH_RANGE_68440.health.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\child\\C_MAIN_HEALTH_RANGE_68440.health.csv",
+          "rows": 107,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0ed0656c0b5076009856546b4ce1904c48d6a347f403de4933212f1a83cccb87"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_HEALTH_RANGE_68440.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\child\\C_MAIN_HEALTH_RANGE_68440.shot.csv",
+          "rows": 96,
+          "unmapped_source_rows": 0,
+          "source_sha256": "3b557a97e316067274966d3600e99b238c1e53c71cb499847f1e4e439be4b8cf"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_IMU_100Hz_68440.imu.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\child\\C_MAIN_IMU_100Hz_68440.imu.csv",
+          "rows": 10663,
+          "unmapped_source_rows": 0,
+          "source_sha256": "1b09a0389432f877b1340bda68db84d46607686b73296ccf828ed6897c95f4e1"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.capture_begin.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\child\\C_MAIN_MULTIPATH_68440.capture_begin.csv",
+          "rows": 2,
+          "unmapped_source_rows": 0,
+          "source_sha256": "8f3395263467be9f3bddc8990544559caeb0e687d686090f7d92bfdc572af278"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.capture_end.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\child\\C_MAIN_MULTIPATH_68440.capture_end.csv",
+          "rows": 4,
+          "unmapped_source_rows": 0,
+          "source_sha256": "fd5030ae8997135ff93ec67a5e29c9edfc4126b4eebcb1ad77227d5a21763065"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.comparator.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\child\\C_MAIN_MULTIPATH_68440.comparator.csv",
+          "rows": 123,
+          "unmapped_source_rows": 0,
+          "source_sha256": "36a9f9ce40873802b66c4b24d310cc9c4fcf38476aaeabb1ee454c0413b771e7"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\child\\C_MAIN_MULTIPATH_68440.envelope.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\child\\C_MAIN_MULTIPATH_68440.envelope.csv",
+          "rows": 120000,
+          "unmapped_source_rows": 0,
+          "source_sha256": "adeb816a574b9df76f529906db58af8908eec11ed0df2fd863a9d76d091d0334"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.calibration_set.csv",
+          "rows": 0,
+          "unmapped_source_rows": 1,
+          "source_sha256": "ff7c6ecd1770fb65e02491720bde562cb853dc8310340203b9e3c497f604ce02"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.gnss_observation.csv",
+          "rows": 106,
+          "unmapped_source_rows": 0,
+          "source_sha256": "e876a94718d65d10eefe52a5779b86efaa8f7044bba31a2d363772519f526e4f"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.health.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.health.csv",
+          "rows": 107,
+          "unmapped_source_rows": 0,
+          "source_sha256": "96491e4f4fe75e77177d6ce0cc1462fd7308c820d1246c81f892f7e49f3d222d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.mag_observation.csv",
+          "rows": 1096,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0e6f5e27b3766ef3070ebde12ca43548b2452e2b3c20da78ddac112ecf62a8c8"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.range_measurement.csv",
+          "rows": 96,
+          "unmapped_source_rows": 2,
+          "source_sha256": "f1c048d68bad452ff013000a57a1c1dcc19c5958cb513cb15849565d5b4d9dd1"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62440.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62440.shot.csv",
+          "rows": 96,
+          "unmapped_source_rows": 2,
+          "source_sha256": "ee117494b77757c4a389477abc6e35cbb4ae286c0c460d3b69dd3c23a953ce97"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_TIME_POSITION_62440.time_position.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_TIME_POSITION_62440.time_position.csv",
+          "rows": 107,
+          "unmapped_source_rows": 0,
+          "source_sha256": "2bdc02912eaaa3edef844aedb3dacf47c058d33dfeb7e57afef5a32ef605f06c"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.calibration_set.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "d493386884192688bfb082e368cb74a7c9d8fb5e8752c1072e44ca7addc1027b"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.gnss_observation.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "8f758851354278b67540dd11e0b2d90e2243d4740efac8b93a080ae42143cdd9"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.health.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.health.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "66828b30521002f7967de14264c014b6b603ab70ade918389ed831cdfa52de15"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.mag_observation.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "e0a5ab308cd2a59752964e3dc6a8ec0aa6e7024cf420288239df35a1955146cb"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.range_measurement.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "a3ad08c6bb67da04664ba38fb71611065ef5a848833060a6ed763485977de9d4"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_HEALTH_RANGE_62441.shot.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_HEALTH_RANGE_62441.shot.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "4d272fdacae2053d06b6b93a51543a7b767ebd2888d00bd181f062c665cdc464"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent\\P_MAIN_TIME_POSITION_62441.time_position.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\P_MAIN_TIME_POSITION_62441.time_position.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "70f1b677aade1ff2d17262c39962d0529779c86d18e8e52931bc1712b8a4940c"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261101_nanyo_000\\synchronization\\parent_100hz.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\parent\\parent_100hz.csv",
+          "rows": 10662,
+          "unmapped_source_rows": 0,
+          "source_sha256": "49950b1ae9ca1976d3a3b74014b000b0077b0dd620c60a463e42df90cea39023"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101091928_0028_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\camera\\child_DJI_20261101091928_0028_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "a8d7a7207bdaf3207fd2457a86505a5a8f5b12b548a14966c2af5a969158aa6d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101103009_0029_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\camera\\child_DJI_20261101103009_0029_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "ab93ffd59e3e38e4cce7e80d48863592a1de2ca03a301fe3ff01d212e76da38d"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\child_DJI_20261101105154_0030_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\camera\\child_DJI_20261101105154_0030_D_attitude.csv",
+          "rows": 3195,
+          "unmapped_source_rows": 0,
+          "source_sha256": "3bf9bfbf4910f9750cd050ef660de061c3fa044ebf892a21c576ecbfd08ee986"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101092040_0193_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\camera\\parent_DJI_20261101092040_0193_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "9ff809351831a199341c20a564f6f867809962e650e49d0338ed8f6b2a26fa05"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101095854_0194_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\camera\\parent_DJI_20261101095854_0194_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "50af241a8a88b9ccaca7f1369e7a6cf2d2c52a13bb0bffd1f66267ac3731bc5f"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101103718_0195_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\camera\\parent_DJI_20261101103718_0195_D_attitude.csv",
+          "rows": 0,
+          "unmapped_source_rows": 0,
+          "source_sha256": "0f7e98bbf54ce36a9531e99df3dc57deafa3405910d8758119741e2418752d80"
+        },
+        {
+          "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_000\\synchronization\\parent_DJI_20261101105120_0197_D_attitude.csv",
+          "output": "data\\processed\\20261101_nanyo_005\\synchronized\\camera\\parent_DJI_20261101105120_0197_D_attitude.csv",
+          "rows": 3196,
+          "unmapped_source_rows": 0,
+          "source_sha256": "33ddad3dd4d1a2f00e7712d3e1a1fc54128389b4cb3149afe3f99106bfa96854"
+        }
+      ],
+      "videos": [
+        {
+          "role": "parent",
+          "output": "data\\processed\\20261101_nanyo_005\\videos\\parent.mp4",
+          "pieces": [
+            {
+              "camera_key": "parent_DJI_20261101105120_0197_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101105120_0197_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_005\\videos\\parent_part01.mp4",
+              "source_start_s": 131.92768493185415,
+              "source_end_s": 238.55730665842026,
+              "sync_utc_start_s": 1793498013.226345,
+              "sync_utc_end_s": 1793498119.853301,
+              "joined_start_s": 0.0,
+              "joined_end_s": 106.62962172656611,
+              "utc_at_source_zero_s": 1793497881.3019583,
+              "time_scale": 0.999975,
+              "validated_source_interval_s": [
+                10.0,
+                280.0
+              ],
+              "clock_extrapolated_at_start": false,
+              "clock_extrapolated_at_end": false,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "131.927684932",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\parent\\DJI\\DJI_20261101105120_0197_D.MP4",
+                "-t",
+                "106.629621727",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_005\\videos\\parent_part01.mp4"
+              ],
+              "container_duration_s": 106.64
+            }
+          ],
+          "uncovered_duration_s": 0.0,
+          "edit_list_correction": {
+            "method": "hardlink to original trimmed piece",
+            "uncorrected_concat": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_005\\videos\\parent_concat_untrimmed.mp4"
+          }
+        },
+        {
+          "role": "child",
+          "output": "data\\processed\\20261101_nanyo_005\\videos\\child.mp4",
+          "pieces": [
+            {
+              "camera_key": "child_DJI_20261101105154_0030_D",
+              "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101105154_0030_D.MP4",
+              "output": "data\\processed\\20261101_nanyo_005\\videos\\child_part01.mp4",
+              "source_start_s": 97.29764018105902,
+              "source_end_s": 203.92281908076697,
+              "sync_utc_start_s": 1793498013.226345,
+              "sync_utc_end_s": 1793498119.853301,
+              "joined_start_s": 0.0,
+              "joined_end_s": 106.62517889970795,
+              "utc_at_source_zero_s": 1793497915.9270833,
+              "time_scale": 1.0000166666666668,
+              "validated_source_interval_s": [
+                40.0,
+                190.0
+              ],
+              "clock_extrapolated_at_start": false,
+              "clock_extrapolated_at_end": true,
+              "command": [
+                "C:\\Users\\ryupc\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+                "-hide_banner",
+                "-loglevel",
+                "warning",
+                "-nostdin",
+                "-y",
+                "-ss",
+                "97.297640181",
+                "-i",
+                "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test_day2\\child\\DJI\\DJI_20261101105154_0030_D.MP4",
+                "-t",
+                "106.625178900",
+                "-map",
+                "0:v:0",
+                "-map",
+                "0:a:0?",
+                "-c",
+                "copy",
+                "-map_metadata",
+                "-1",
+                "-metadata",
+                "creation_time=2000-01-01T00:00:00Z",
+                "-movflags",
+                "+faststart",
+                "data\\processed\\20261101_nanyo_005\\videos\\child_part01.mp4"
+              ],
+              "container_duration_s": 106.64
+            }
+          ],
+          "uncovered_duration_s": 0.0,
+          "edit_list_correction": {
+            "method": "hardlink to original trimmed piece",
+            "uncorrected_concat": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\processed\\20261101_nanyo_005\\videos\\child_concat_untrimmed.mp4"
+          }
+        }
+      ],
+      "max_relative_depth_m": 4.342498799657227
+    }
+  ],
+  "limitations": [
+    "Pressure baseline and seawater density are provisional.",
+    "Ranging starts are first logged scheduled shots, not UI button timestamps.",
+    "No retiming; each video piece retains its own source clock.",
+    "Video keyframe preroll may be retained in MP4 edit lists.",
+    "Creation tag is a 2000-01-01 placeholder; use clock sidecars.",
+    "Clock extrapolation is flagged; no independent absolute timing truth."
+  ],
+  "code_sha256": "f67ddc41403bfb1020af7a14908b1c400cd28ef37e3fc254ceaae4b15a223a64",
+  "video_timing_repair_code_sha256": "cb8f760826777ed40c9106f91d8df4a0927641109ba733c2d254b527e07a0c47",
+  "video_copy_helper_sha256": "b3850cd0c4dd710e9769a3451cc507cecff188d6656aa59ff9f34800ee774191"
+}

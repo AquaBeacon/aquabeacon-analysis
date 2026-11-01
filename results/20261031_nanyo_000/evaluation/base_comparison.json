@@ -1,0 +1,10 @@
+{
+  "base_041133_quality_counts": {
+    "4": 806,
+    "2": 2220,
+    "1": 411
+  },
+  "horizontal_base_solution_difference_median_m": 0.10358094827921842,
+  "horizontal_base_solution_difference_p95_m": 0.7304763156825219,
+  "limit": "Station sensitivity, not surveyed error."
+}

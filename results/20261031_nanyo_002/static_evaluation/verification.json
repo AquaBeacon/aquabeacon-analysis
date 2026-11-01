@@ -1,0 +1,8 @@
+{
+  "pytest": "5 passed: test_static_evaluation.py, test_nanyo_position.py",
+  "ruff": "passed for 3 new Python files",
+  "workspace_check": "19 repositories; 0 structural errors",
+  "geometry": "Recomputed relative positions agree with upstream at 1e-8 m",
+  "visual_review": "PNG inspected: three readable ENU residual panels; missing values not joined; SVG, pickle, plot JSON present",
+  "acceptance": "docs/spec.md Nanyo static evaluation conditions checked"
+}

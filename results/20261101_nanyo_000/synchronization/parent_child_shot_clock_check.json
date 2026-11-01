@@ -1,0 +1,7 @@
+{
+  "matched_shots": 3545,
+  "child_tx_minus_parent_scheduled_s_median": -3.0994415283203125e-05,
+  "max_abs_s": 0.0006921291351318359,
+  "p99_abs_s": 0.0006111812591552733,
+  "interpretation": "UTC transfer internal consistency; not independent absolute timing accuracy"
+}

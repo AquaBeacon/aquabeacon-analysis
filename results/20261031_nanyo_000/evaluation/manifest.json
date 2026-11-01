@@ -1,0 +1,196 @@
+{
+  "experiment_id": "20261031_nanyo_000",
+  "rtk_used": false,
+  "origin_llh": [
+    32.9644859,
+    132.5054768,
+    27.408
+  ],
+  "ubx_audit": {
+    "messages": {
+      "02-15": 3437,
+      "01-07": 3437,
+      "02-13": 17998,
+      "01-43": 687,
+      "06-8b": 114
+    },
+    "rawx_first": {
+      "gps_week": 2442,
+      "gps_tow_s": 537799.001,
+      "leap_seconds": 18,
+      "signals": 12,
+      "leap_seconds_valid": true
+    },
+    "rawx_last": {
+      "gps_week": 2442,
+      "gps_tow_s": 541235.0,
+      "leap_seconds": 18,
+      "signals": 12,
+      "leap_seconds_valid": true
+    },
+    "checksum_errors": 0
+  },
+  "spp_epochs": 3437,
+  "ppk_quality_counts": {
+    "4": 806,
+    "2": 2291,
+    "1": 340
+  },
+  "ppk_float_run_quality_counts": {
+    "4": 806,
+    "2": 2631
+  },
+  "base_station": "950437",
+  "base_distance_km_approx": 5.25,
+  "base_coordinates": "GEONET RINEX header; no surveyed truth or frame-epoch transform",
+  "base_interval_s": 30,
+  "ppk_max_base_age_s": 15,
+  "accuracy_limit": "Moving boat: dispersion includes real motion; no absolute error metric.",
+  "acoustic_calibration": "Logged profile 0, offset 0 us, sound speed 1500 m/s; no NGT correction",
+  "segments": [
+    {
+      "experiment_id": "20261031_nanyo_000",
+      "ppk_quality_counts": {
+        "4": 806,
+        "2": 2291,
+        "1": 340
+      },
+      "spp_ppk_horizontal_difference_median_m": 3.4580165247451546,
+      "spp_ppk_horizontal_difference_p95_m": 8.144861020024848
+    },
+    {
+      "experiment_id": "20261031_nanyo_001",
+      "ppk_quality_counts": {
+        "1": 137,
+        "2": 877,
+        "4": 29
+      },
+      "spp_ppk_horizontal_difference_median_m": 3.441895367849052,
+      "spp_ppk_horizontal_difference_p95_m": 5.602623502704687,
+      "shot_count": 2842,
+      "candidate_count": 1870,
+      "candidate_fraction": 0.6579873328641802,
+      "range_below_depth_count": 1822,
+      "range_state_counts": {
+        "1": 972,
+        "3": 1870
+      }
+    },
+    {
+      "experiment_id": "20261031_nanyo_002",
+      "ppk_quality_counts": {
+        "2": 273,
+        "4": 15,
+        "1": 31
+      },
+      "spp_ppk_horizontal_difference_median_m": 3.924027181087096,
+      "spp_ppk_horizontal_difference_p95_m": 4.80326962285508,
+      "shot_count": 872,
+      "candidate_count": 558,
+      "candidate_fraction": 0.6399082568807339,
+      "range_below_depth_count": 558,
+      "range_state_counts": {
+        "1": 314,
+        "3": 558
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\raw\\Nanyo_ocean_test\\parent\\P_MAIN_GNSS_65433.ubx",
+      "sha256": "492edabaf033ae1995652863d46d76a0380691044bc946fd1c0a99b8215f870f"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\rover.obs",
+      "sha256": "1dfed7f966fa29e363ea983c0588c650da0c0c7659dbd4cdebc4954e07fa032f"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\rover.nav",
+      "sha256": "75b77a1d3d49f62a5f238610c71ecd4417b96f6e419a1985f416de8e564b4b17"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\ar_continuous.pos",
+      "sha256": "6a5c8bf7c59f4f5a8ddcde7f60b380c4ab0146bbc399df966f3a909fe31657d8"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\float.pos",
+      "sha256": "4eb0ef5bec43280f430fc0f0dc93f29c6b066aa79cc2ec5b9a5f2dcb3cb00fed"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_950437\\0437304f.26g",
+      "sha256": "2b47b51cc95f249ee47458fb26fa636051932ffee7f1101c2e38a41aec5fa4c1"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_950437\\0437304f.26l",
+      "sha256": "e0fc233976c5cd70d2065e915d7e025f226dd568e6ec1ee6ad9c1067c0cc1d65"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_950437\\0437304f.26n",
+      "sha256": "e913bad28ea892d24d055cb50d04bd531ab63eefddd47af1107bb3fcf618ddb0"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_950437\\0437304f.26N.tar.gz",
+      "sha256": "2b6a3c53f732756a00693c0eb1b04e1c5a7ed18ddd13ab5fe9f9c02e90fdfe2a"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_950437\\0437304f.26o",
+      "sha256": "8629ce0e54aaeff6ce8a5287114782c6c825a63f8e2528b55224fc10300e3003"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_950437\\0437304f.26o.gz",
+      "sha256": "4bc1de10d4ad6358002305f834ca497bc7eea2968520d4d41e67d58fc729768f"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_950437\\0437304f.26q",
+      "sha256": "fd35d785b8a2b615f9a4833b19de6f3fb9a5a1aa930a575ae8031a2cebd9f92d"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\ar_continuous.conf",
+      "sha256": "fa91be7844bdffc19e271034e7a0481b4d026e81c60d2e705c00e285a1dcdc9a"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\float.conf",
+      "sha256": "416b92b17520ec61f062d73b9d82b2f13fc2d75392cc2a8f2bfedf3b7f9490d9"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\rtklib\\rnx2rtkp.exe",
+      "sha256": "e3dcb3d7ebc57ed8fb3d48f6be2de70c0744b6ad56913846e4b303297a348926"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\scripts\\analyze_nanyo.py",
+      "sha256": "6f28e05a94e44af5d4b9224468f6f5d9b45a7d8b4180be945dd6fa76ff497b90"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_041133\\ar_continuous.pos",
+      "sha256": "ce09acd05df8fe1ce0d6fbb305ae9cbe0bc9b1050c317632cc8f3316ccce664d"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_041133\\1133304f.26g",
+      "sha256": "e481896b0519eff538d4c4e7156354b55cfa83003a660fe510576069933db3b7"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_041133\\1133304f.26l",
+      "sha256": "3296192540937b9ab9fe2860d94d80ace2ae11d810351b92f2171680db834c37"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_041133\\1133304f.26n",
+      "sha256": "167a8acb50d845259d0fc143582b25643789fd0c2d7247f8f1c365413a693d59"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_041133\\1133304f.26N.tar.gz",
+      "sha256": "a3ce4aae959342fd83e1ffdbeacb8e3b8b6015f3a41c00bb3f78fbe53670f95d"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_041133\\1133304f.26o",
+      "sha256": "0bc1eab0c5e321f1e9a5b5b1c3a31f5aa13d04140c0b30cb8143b27e2a975662"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_041133\\1133304f.26o.gz",
+      "sha256": "e196d31042288403eefaa3e5d7d4a296f2c0e456f72161d9b1b0548ec1735636"
+    },
+    {
+      "path": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\data\\interim\\20261031_nanyo_000\\gnss\\base_041133\\1133304f.26q",
+      "sha256": "9870f2aa499d0bb160feb8768d36046cc938146e72e272c8949912cd2c094c94"
+    }
+  ]
+}

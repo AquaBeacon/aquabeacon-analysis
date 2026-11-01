@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T14:55:40.742291+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/evaluate_nanyo_static.py",
+    "--experiment",
+    "20261031_nanyo_002"
+  ],
+  "master": "static_residuals.figure.pickle",
+  "image": "static_residuals.png",
+  "master_sha256": "28b2bab7e0132b9b078c0f0f05cfcaf0316944f8d519b65c52011dd4ab7b555e",
+  "savefig": {
+    "dpi": 170
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

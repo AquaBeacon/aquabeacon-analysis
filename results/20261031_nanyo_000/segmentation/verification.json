@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "intervals": 2,
+  "decoded_frame_checks": [
+    {
+      "kind": "joined_frame_match",
+      "source_index": 0,
+      "source_time_s": 1.0,
+      "matching_decoded_frames": 15
+    },
+    {
+      "kind": "joined_frame_match",
+      "source_index": 0,
+      "source_time_s": 100.0,
+      "matching_decoded_frames": 14
+    },
+    {
+      "kind": "joined_frame_match",
+      "source_index": 0,
+      "source_time_s": 2298.0,
+      "matching_decoded_frames": 15
+    },
+    {
+      "kind": "joined_frame_match",
+      "source_index": 1,
+      "source_time_s": 1.0,
+      "matching_decoded_frames": 15
+    },
+    {
+      "kind": "joined_frame_match",
+      "source_index": 1,
+      "source_time_s": 100.0,
+      "matching_decoded_frames": 14
+    },
+    {
+      "kind": "clip_frame_match",
+      "path": "data\\processed\\20261031_nanyo_001\\videos\\parent.mp4",
+      "clip_time_s": 1.0,
+      "matching_decoded_frames": 18
+    },
+    {
+      "kind": "clip_frame_match",
+      "path": "data\\processed\\20261031_nanyo_001\\videos\\parent.mp4",
+      "clip_time_s": 521.615843320876,
+      "matching_decoded_frames": 17
+    },
+    {
+      "kind": "clip_frame_match",
+      "path": "data\\processed\\20261031_nanyo_001\\videos\\child.mp4",
+      "clip_time_s": 1.0,
+      "matching_decoded_frames": 5
+    },
+    {
+      "kind": "clip_frame_match",
+      "path": "data\\processed\\20261031_nanyo_001\\videos\\child.mp4",
+      "clip_time_s": 521.6116145265921,
+      "matching_decoded_frames": 5
+    },
+    {
+      "kind": "clip_frame_match",
+      "path": "data\\processed\\20261031_nanyo_002\\videos\\parent.mp4",
+      "clip_time_s": 1.0,
+      "matching_decoded_frames": 18
+    },
+    {
+      "kind": "clip_frame_match",
+      "path": "data\\processed\\20261031_nanyo_002\\videos\\parent.mp4",
+      "clip_time_s": 159.79355543554755,
+      "matching_decoded_frames": 17
+    },
+    {
+      "kind": "clip_frame_match",
+      "path": "data\\processed\\20261031_nanyo_002\\videos\\child.mp4",
+      "clip_time_s": 1.0,
+      "matching_decoded_frames": 5
+    },
+    {
+      "kind": "clip_frame_match",
+      "path": "data\\processed\\20261031_nanyo_002\\videos\\child.mp4",
+      "clip_time_s": 159.80152789459032,
+      "matching_decoded_frames": 4
+    }
+  ],
+  "all_csv_bounds_and_row_counts": "passed",
+  "manifest_sha256": "80cce325758716b75574d38d65797530b51e66a6120641876dc025117fd9ccbf",
+  "verification_script_sha256": "6a7e40fd59dbb58258f37bdcc075b6e54fb1b5d56fc28b12fd4a2a2b77cf172e"
+}

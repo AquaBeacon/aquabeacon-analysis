@@ -1,0 +1,39 @@
+{
+  "status": "passed_with_documented_scientific_limitations",
+  "report_local_links_checked": 23,
+  "editable_2d_plot_bundles": [
+    "results\\20261031_nanyo_001\\absolute_position\\overhead.png",
+    "results\\20261031_nanyo_001\\absolute_position\\trajectory_components.png",
+    "results\\20261031_nanyo_001\\position_mapping\\bridge_0_overhead.png",
+    "results\\20261031_nanyo_001\\position_mapping\\extended_0_overhead.png",
+    "results\\20261031_nanyo_001\\position_mapping\\original_3_overhead.png",
+    "results\\20261031_nanyo_001\\position_mapping\\bridge_0_anchor_residuals.png",
+    "results\\20261031_nanyo_001\\position_mapping\\extended_0_anchor_residuals.png",
+    "results\\20261031_nanyo_001\\position_mapping\\original_3_anchor_residuals.png",
+    "results\\20261031_nanyo_002\\absolute_position\\overhead.png",
+    "results\\20261031_nanyo_002\\absolute_position\\trajectory_components.png",
+    "results\\20261031_nanyo_002\\position_mapping\\original_1_overhead.png",
+    "results\\20261031_nanyo_002\\position_mapping\\original_1_anchor_residuals.png"
+  ],
+  "related_pytest": "15 passed; nanyo_position, parent_magnetic_attitude, ngt_position, nanyo_sync, interval_selection",
+  "lint": "All new Nanyo scripts and modules/tests passed Ruff",
+  "workspace_check": "19 repositories; 0 structural errors",
+  "visual_review": {
+    "segment_001": "Reviewed extended point cloud and chronological first/middle/last source images; seabed texture and relief visible; 3 original seabed fragments fully included.",
+    "segment_002": "Reviewed source images and provisional 810-point map; bubbles/rope/boat vicinity; no validated static seafloor map.",
+    "plots": "Reviewed position overhead, 3D map and component residuals; high PPK-derived vertical variation retained.",
+    "viewer": "Rendered final standalone HTML with headless Edge; screenshot saved as viewer_preview.png. Interactive control clicks not automated."
+  },
+  "package_versions": {
+    "pygeomag": "1.1.0",
+    "pycolmap": "4.2.1",
+    "plotly": "7.1.0",
+    "requests": "2.32.4",
+    "numpy": "2.4.1",
+    "scipy": "1.18.1",
+    "opencv-python-headless": "5.0.0.93"
+  },
+  "report_sha256": "e937a0c983f011156e2ef5622ac00637644f31a5dfe44850c47387030fb0d5c6",
+  "viewer_sha256": "cf3d96e7ce7c79037d359a39acd764e119e3857f21bfd8e73a6c11ca101db305",
+  "accuracy_validated": false
+}

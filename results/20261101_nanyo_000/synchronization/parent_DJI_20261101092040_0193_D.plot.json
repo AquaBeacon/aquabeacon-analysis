@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-01T14:44:36.670747+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/synchronize_nanyo.py",
+    "--experiment",
+    "20261101_nanyo_000"
+  ],
+  "master": "parent_DJI_20261101092040_0193_D.figure.pickle",
+  "image": "parent_DJI_20261101092040_0193_D.png",
+  "master_sha256": "f0b6f8b501bbc89763076c6640e0881fe8c22a576fd4d9d0de34de6c2f80a13a",
+  "savefig": {
+    "dpi": 150
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

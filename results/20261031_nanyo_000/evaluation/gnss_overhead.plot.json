@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T09:24:40.618301+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/analyze_nanyo.py",
+    "--experiment",
+    "20261031_nanyo_000"
+  ],
+  "master": "gnss_overhead.figure.pickle",
+  "image": "gnss_overhead.png",
+  "master_sha256": "14216b85b6a6ee18e897db4cbe597a16bb8a84080e64514bcaef517991ddac2d",
+  "savefig": {
+    "dpi": 150
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

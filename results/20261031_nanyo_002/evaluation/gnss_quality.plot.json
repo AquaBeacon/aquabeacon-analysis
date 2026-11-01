@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T09:24:42.633977+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/analyze_nanyo.py",
+    "--experiment",
+    "20261031_nanyo_000"
+  ],
+  "master": "gnss_quality.figure.pickle",
+  "image": "gnss_quality.png",
+  "master_sha256": "99e116548ba654354433eb6fae860f8434f404110c8d5594d7b549667ad7c433",
+  "savefig": {
+    "dpi": 150
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

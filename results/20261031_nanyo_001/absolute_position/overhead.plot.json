@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T13:56:26.828943+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/estimate_nanyo_absolute.py",
+    "--experiment",
+    "20261031_nanyo_001",
+    "--experiment",
+    "20261031_nanyo_002"
+  ],
+  "master": "overhead.figure.pickle",
+  "image": "overhead.png",
+  "master_sha256": "a81290ce2545f59e5f566cdf18d0b0e413374c8136ed715aa5c02f2e5ae3d200",
+  "savefig": {
+    "dpi": 150
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

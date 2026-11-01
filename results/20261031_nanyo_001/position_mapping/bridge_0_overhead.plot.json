@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T14:15:52.739483+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/anchor_nanyo_maps.py",
+    "--experiment",
+    "20261031_nanyo_001",
+    "--experiment",
+    "20261031_nanyo_002",
+    "--use-bridge"
+  ],
+  "master": "bridge_0_overhead.figure.pickle",
+  "image": "bridge_0_overhead.png",
+  "master_sha256": "c609171b7ba8be13da6e4ddbcb3d8a52459981826911387e1a71659bb1e22f65",
+  "savefig": {
+    "dpi": 170
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T09:21:07.772675+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/locate_nanyo.py",
+    "--experiment",
+    "20261031_nanyo_002"
+  ],
+  "master": "relative_candidates.figure.pickle",
+  "image": "relative_candidates.png",
+  "master_sha256": "edfc2666fefdfc1634d5093f144b05f9acde3e0881a0f6e53d41b9c3269f092c",
+  "savefig": {
+    "dpi": 150
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}

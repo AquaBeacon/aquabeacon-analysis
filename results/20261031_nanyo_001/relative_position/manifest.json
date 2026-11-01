@@ -1,0 +1,62 @@
+{
+  "experiment_id": "20261031_nanyo_001",
+  "sample_hz": 2,
+  "samples": 2087,
+  "candidate_positions": 552,
+  "intrinsics": {
+    "device_id": "P_MAIN_CAM",
+    "source": "C:\\Users\\ryupc\\WorkSpace\\Aquabeacon-OSS\\aquabeacon-analysis\\calibration\\parent_camera_underwater_20260924_provisional.json",
+    "sha256": "cd8a1e643ed26aaa48048beacf855d692c77823d3febd2d9f748b8cd644c7942",
+    "defaults_sha256": "7558d2d4181015685d280ea019594d2e06bd669833278cf9c418113029df7eed",
+    "source_kind": "proxy",
+    "calibrated_size": [
+      1280,
+      720
+    ],
+    "output_size": [
+      1280,
+      720
+    ],
+    "camera_matrix_px": [
+      [
+        671.4928071645874,
+        0.0,
+        646.1748800271314
+      ],
+      [
+        0.0,
+        672.2714627042396,
+        360.67668886119225
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "distortion": [
+      0.36299078889677444,
+      0.35047393383599057,
+      -0.005888261119551278,
+      0.0018919520831984344,
+      0.0
+    ],
+    "status": "provisional_limited_viewpoint_diversity",
+    "required_conditions": {
+      "camera": "DJI Osmo Action 6",
+      "fov": "Standard (Dewarp)",
+      "eis": "Off",
+      "housing": "DJI official waterproof case",
+      "medium": "underwater"
+    },
+    "capture_conditions_independently_verified": false
+  },
+  "orientation": "native raster, autorotation disabled",
+  "source_code_sha256": "4751fcab0d3428ee16f7a1de7b0760ea45898fab362bb0779973a9cce593e99d",
+  "assumptions": [
+    "Distance and optical centers treated as coincident only for candidate output.",
+    "Bright component identity and medium require manual review.",
+    "No optical-to-body extrinsic, so no global/ENU child coordinates.",
+    "Candidate coordinates are in the moving parent camera frame, not a trajectory in a fixed frame."
+  ]
+}

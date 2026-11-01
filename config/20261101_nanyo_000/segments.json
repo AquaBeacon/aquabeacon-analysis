@@ -1,0 +1,22 @@
+{
+  "experiment_id": "20261101_nanyo_000",
+  "log_suffixes": {
+    "child": [
+      "68440"
+    ],
+    "parent": [
+      "62440",
+      "62441"
+    ]
+  },
+  "baseline_first_s": 180,
+  "density_kg_m3_assumed": 1025,
+  "gravity_m_s2": 9.80665,
+  "depth_threshold_m": 0.2,
+  "median_samples": 5,
+  "ranging_gap_s": 5,
+  "immersion_merge_gap_s": 30,
+  "minimum_duration_s": 10,
+  "sample_tail_s": 1,
+  "selection": "child submerged AND parent ranging; no padding; retain failed ranges"
+}

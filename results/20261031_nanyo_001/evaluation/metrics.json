@@ -1,0 +1,18 @@
+{
+  "experiment_id": "20261031_nanyo_001",
+  "ppk_quality_counts": {
+    "1": 137,
+    "2": 877,
+    "4": 29
+  },
+  "spp_ppk_horizontal_difference_median_m": 3.441895367849052,
+  "spp_ppk_horizontal_difference_p95_m": 5.602623502704687,
+  "shot_count": 2842,
+  "candidate_count": 1870,
+  "candidate_fraction": 0.6579873328641802,
+  "range_below_depth_count": 1822,
+  "range_state_counts": {
+    "1": 972,
+    "3": 1870
+  }
+}

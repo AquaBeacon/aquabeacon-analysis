@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T14:16:00.399665+00:00",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "matplotlib": "3.10.8",
+  "git_commit": "0385b8957cd7ed8f6420db282920bb01e9d351b3",
+  "generator": [
+    "scripts/anchor_nanyo_maps.py",
+    "--experiment",
+    "20261031_nanyo_001",
+    "--experiment",
+    "20261031_nanyo_002",
+    "--use-bridge"
+  ],
+  "master": "extended_0_anchor_residuals.figure.pickle",
+  "image": "extended_0_anchor_residuals.png",
+  "master_sha256": "141254ecb4369c2066c14d7609e6fd0de394d700a02c4dddf90945da18c4da9a",
+  "savefig": {
+    "dpi": 170
+  },
+  "reproduction": "Keep the generating script, config, calibration and analysis manifest."
+}
