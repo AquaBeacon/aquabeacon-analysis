@@ -11,11 +11,23 @@
   "c_main_suffix": "68440",
   "p_main_suffix": null,
   "config_paths": [
-    "config/20261101_nanyo_000/segments.json"
+    "config/20261101_nanyo_000/segments.json",
+    "config/20261101_nanyo_000/absolute_position.json",
+    "config/20261101_nanyo_000/stationary_spectra.json",
+    "config/20261101_nanyo_000/static_light_review.json",
+    "config/20261101_nanyo_000/mapping_light_review.json",
+    "config/20261101_nanyo_000/mapping_navigation.json"
   ],
-  "calibration_paths": [],
+  "calibration_paths": [
+    "calibration/20261029_parent_axis_011_axes.json",
+    "calibration/20261029_child_axis_003_imu_frd.json",
+    "calibration/20261028_parent_lis3mdl_cad_axes.json",
+    "calibration/rigs/cad_20261028.json",
+    "calibration/child_mount_20261028_actual.json"
+  ],
   "notes": [
-    "Raw is read-only. Camera restart before last immersion requires independent clocks. Segments require child submerged AND parent ranging. Earlier-day logs in acquisition must be excluded by UTC."
+    "Raw is read-only. Camera restart before last immersion requires independent clocks. Segments require child submerged AND parent ranging. Earlier-day logs in acquisition must be excluded by UTC.",
+    "2026-11-02 user confirms same mount as day1 and child 30 fps. Day2 clocks and per-session camera rotations are applied explicitly; shared underwater intrinsics and CAD centers remain provisional. Static time corrected 10:14 to 10:15, each window 60 s."
   ],
   "parent_acquisition": "20261101_nanyo_000",
   "utc_interval_s": [

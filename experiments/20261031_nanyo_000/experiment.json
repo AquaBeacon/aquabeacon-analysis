@@ -14,7 +14,9 @@
     "config/20261031_nanyo_000/synchronization.json",
     "config/20261031_nanyo_000/evaluation.json",
     "config/20261031_nanyo_000/absolute_position.json",
-    "config/20261031_nanyo_000/navigation_fusion.json"
+    "config/20261031_nanyo_000/navigation_fusion.json",
+    "config/20261031_nanyo_000/mapping_light_review.json",
+    "config/20261031_nanyo_000/mapping_navigation.json"
   ],
   "calibration_paths": [
     "calibration/camera_defaults.json",

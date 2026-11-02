@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261102_nanyo_combined_000",
+  "description": "Day1 and Day2 map union in a common WGS84 ENU frame, with GNSS selected by matched static RMSE",
+  "raw_root": "data/raw",
+  "raw_sources": [
+    "data/raw/Nanyo_ocean_test",
+    "data/raw/Nanyo_ocean_test_day2"
+  ],
+  "c_main_suffix": null,
+  "p_main_suffix": null,
+  "config_paths": [
+    "config/20261031_nanyo_000/mapping_light_review.json",
+    "config/20261031_nanyo_000/mapping_navigation.json",
+    "config/20261101_nanyo_000/mapping_light_review.json",
+    "config/20261101_nanyo_000/mapping_navigation.json"
+  ],
+  "calibration_paths": [
+    "calibration/camera_defaults.json",
+    "calibration/parent_camera_underwater_20260924_provisional.json",
+    "calibration/20261029_child_axis_003_imu_frd.json",
+    "calibration/20261029_child_axis_003_camera_imu.json",
+    "calibration/20261029_parent_axis_011_axes.json",
+    "calibration/20261028_parent_lis3mdl_cad_axes.json",
+    "calibration/child_mount_20261028_actual.json",
+    "calibration/rigs/cad_20261028.json"
+  ],
+  "parent_acquisitions": [
+    "20261031_nanyo_000",
+    "20261101_nanyo_000"
+  ],
+  "notes": [
+    "Derived mapping only. Raw is read-only. GNSS selection scores are repeatability about each window mean, not surveyed accuracy. No per-day alignment fitted to make the maps overlap."
+  ]
+}

@@ -857,4 +857,53 @@ python scripts/verify_nanyo_day2_segments.py --experiment 20261101_nanyo_000
 結果：[day2分割レポート](results/20261101_nanyo_000/segmentation/report.md)。
 
 
-別PCへのNanyo作業引き継ぎ：[手順と現在地](docs/handoff/nanyo_20261102.md)。processed移行後は `python scripts/verify_nanyo_handoff.py --experiment 20261101_nanyo_000 --verify-csv`。
+別PCへのNanyo作業引き継ぎ：[手順と現在地](docs/handoff/nanyo_20261102.md)。Day2解析・2日分の地図・PPK Float比較は生成済みで、Canva原本への反映は編集権限待ち。最新結果はGit配布に含めず別途転送する。processed移行後は `python scripts/verify_nanyo_handoff.py --experiment 20261101_nanyo_000 --verify-csv`。
+
+Nanyo day2の解析・光源追跡・day1との静止周波数比較：
+
+```powershell
+python scripts/analyze_nanyo_day2.py --experiment 20261101_nanyo_000 --phase all
+python scripts/map_nanyo.py --experiment 20261101_nanyo_001
+# map_nanyo.py は区間002〜005にも実行する
+python scripts/track_nanyo_stationary.py --experiment 20261101_nanyo_000
+python scripts/review_nanyo_tracked_shots.py --experiment 20261101_nanyo_000
+python scripts/analyze_nanyo_stationary.py --experiment 20261101_nanyo_000
+python scripts/report_nanyo_day2.py --experiment 20261101_nanyo_000
+python scripts/verify_nanyo_day2_analysis.py --experiment 20261101_nanyo_000
+```
+
+[全体レポート](results/20261101_nanyo_000/analysis/report.md)と同じ場所にローカルHTMLを生成する。
+静止窓は09:56、10:15、10:20（手動揺動）、10:32の各60秒、day1は既存の2窓。
+取付けはday1と同じとのユーザー確認を記録し、day2のカメラ時計・取付回転を使用する。
+光源追跡はこの6窓に適用し、画像の初期同定・喪失時の再初期化・欠測を記録する。
+RMSEは平均周りの散らばり。波と雑音の因果的分離や絶対精度の検証とは扱わない。
+
+
+## Nanyo Day1・Day2・結合マッピング（2026-11-02）
+
+[Day1](results/20261031_nanyo_000/mapping_replay/viewer.html) / [Day2](results/20261101_nanyo_000/mapping_replay/viewer.html) / [Day1 + Day2](results/20261102_nanyo_combined_000/mapping_replay/viewer.html) / [統合レポート](results/20261102_nanyo_combined_000/mapping_replay/report.html)。
+
+静止60秒窓の同時刻GNSS比較から各日の方式を一つ選び、全区間に適用。
+SPP・通常PPK・Float設定PPK・別基準局PPKの比較では両日ともFloat設定PPKを採用した。
+写真面・点群・航跡・同期親子映像・GLB/PLYは従来Day1と同じ形式。
+結合はWGS84の共通ENUへの変換。日をまたぐ写真の接続は未確認であり、任意の位置合わせを加えない。
+静止表には深度・GNSS RMSEと各窓の俯瞰図を含む。再実行コマンドはAGENTS.md、受入条件はdocs/spec.mdを参照。
+
+ブラウザで映像をシークできない場合は、`python scripts/serve_nanyo_mapping.py` を起動し、
+表示される127.0.0.1のURLを開く。公開サーバーではなくローカル専用。
+
+## Float設定PPKによる静止位置比較
+
+[Day1・Day2の比較レポート](results/20261101_nanyo_000/stationary_gnss_comparison/report.html)。
+同じ6つの60秒窓・同じ光源追跡と測距点を使い、通常PPKとFloat設定PPKで子機の絶対位置を比較する。
+従来の親子相対位置ではGNSSの共通並進が差し引かれるため、そのRMSEは変わらない。
+姿勢補正あり／親機姿勢固定／親子姿勢固定のRMSE、深度、俯瞰図、時系列、最近傍GNSSの感度を保存。
+
+```powershell
+python scripts/compare_nanyo_static_gnss.py --experiment 20261101_nanyo_000
+python scripts/verify_nanyo_static_gnss.py --experiment 20261101_nanyo_000
+python scripts/report_nanyo_day2.py --experiment 20261101_nanyo_000 --skip-map-render
+```
+
+GNSSの隣接観測内の時刻合わせを除き、位置の平滑化・欠測補完・トレンド除去は行わない。
+結果は平均周りのばらつきであり、独立した絶対精度評価ではない。

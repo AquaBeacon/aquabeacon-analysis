@@ -424,3 +424,66 @@ python scripts/verify_nanyo_day2_segments.py --experiment 20261101_nanyo_000
 
 
 Nanyoの別PC引き継ぎは `docs/handoff/nanyo_20261102.md` を参照。raw/interimなしの移行確認は `python scripts/verify_nanyo_handoff.py --experiment 20261101_nanyo_000 --verify-csv`。既存manifestの絶対パスは来歴として保持し、移行時に一括置換しない。
+
+Nanyo day2の解析・追跡と2日分の静止比較：
+
+```powershell
+python scripts/analyze_nanyo_day2.py --experiment 20261101_nanyo_000 --phase all
+python scripts/map_nanyo.py --experiment 20261101_nanyo_001
+# 同じCLIを002〜005にも明示実行
+python scripts/track_nanyo_stationary.py --experiment 20261101_nanyo_000
+python scripts/review_nanyo_tracked_shots.py --experiment 20261101_nanyo_000
+python scripts/analyze_nanyo_stationary.py --experiment 20261101_nanyo_000
+python scripts/report_nanyo_day2.py --experiment 20261101_nanyo_000
+python scripts/verify_nanyo_day2_analysis.py --experiment 20261101_nanyo_000
+python -m pytest tests/test_beacon_halo.py tests/test_beacon_tracker.py tests/test_stationary_spectra.py
+```
+
+`--window`は追跡・静止解析の部分再実行に使用できる。最終比較表は全窓で再生成する。
+追跡の対象は設定の6窓。原動画の観測時刻を使い、予測位置を観測へ混ぜない。
+再初期化の目視点は対象同定用であり独立画素真値ではない。新規図は編集マスターも保存する。
+位置スペクトルでも無効shotをNaNで残し、採用点間隔から欠測を補間しない。
+受け入れ条件・方法はdocs/spec.mdのday2静止周波数評価節を参照。
+
+
+Nanyo 2日分のGNSS選択とマッピング：
+
+```powershell
+python scripts/select_nanyo_mapping_gnss.py --experiment 20261031_nanyo_000 --experiment 20261101_nanyo_000
+# 各trialのframe_timesが必要。day2は実際の29.97 fpsのPTSを復元する。
+python scripts/recover_nanyo_frame_times.py --experiment 20261101_nanyo_001
+# 同じコマンドをday2の002〜005にも実行。
+python scripts/track_nanyo_mapping_lights.py --experiment 20261031_nanyo_001 --experiment 20261031_nanyo_002 --experiment 20261101_nanyo_001 --experiment 20261101_nanyo_002 --experiment 20261101_nanyo_003 --experiment 20261101_nanyo_004 --experiment 20261101_nanyo_005
+python scripts/fuse_nanyo_navigation.py --experiment 20261031_nanyo_000 --mapping-selection
+python scripts/fuse_nanyo_navigation.py --experiment 20261101_nanyo_000 --mapping-selection
+python scripts/prepare_nanyo_replay_media.py --experiment 20261031_nanyo_000
+python scripts/prepare_nanyo_replay_media.py --experiment 20261101_nanyo_000 --output-name mapping_replay
+python scripts/check_nanyo_crossday_overlap.py --experiment 20261102_nanyo_combined_000
+python scripts/export_nanyo_combined_mapping.py --experiment 20261102_nanyo_combined_000
+python scripts/report_nanyo_mapping.py --experiment 20261102_nanyo_combined_000
+python scripts/verify_nanyo_combined_mapping.py --experiment 20261102_nanyo_combined_000
+```
+
+光源初期化ROIはconfig/<acquisition>/mapping_light_review.json。追加・変更前に原画像で対象を同定する。
+元の静止窓の追跡は実UTCのまま再利用し、trial範囲外を取り込まない。`--reuse-static-only`は既存全区間追跡への静止結果・目視除外の再適用。
+GNSS選択は同時刻の各窓平均周りの3D RMSEで、手動揺動は除外。絶対精度に読み替えない。
+`--reuse-geometry`は入力が変わっていない表示再生成だけに用いる。
+生データ・resultsは公開しない。既存のnavigation_replayは旧解析、新しいmapping_replayが本比較の成果物。
+必要なら`python scripts/serve_nanyo_mapping.py`でローカル再生し、終了後サーバーを停止する。
+
+Nanyo静止絶対位置へのFloat設定PPK追加比較：
+
+```powershell
+python scripts/compare_nanyo_static_gnss.py --experiment 20261101_nanyo_000
+python scripts/verify_nanyo_static_gnss.py --experiment 20261101_nanyo_000
+python scripts/report_nanyo_day2.py --experiment 20261101_nanyo_000 --skip-map-render
+python scripts/report_nanyo_mapping.py --experiment 20261102_nanyo_combined_000
+python -m pytest tests/test_stationary_gnss.py tests/test_static_evaluation.py
+```
+
+設定は`config/20261101_nanyo_000/stationary_gnss_comparison.json`。
+旧静止相対位置にはGNSS共通並進が残らないため、GNSS方式差を相対RMSE改善と呼ばない。
+採用済みの同じshotを使い、子機絶対位置で通常PPKとFloat設定PPKを比較する。
+GNSSの時刻合わせは最大1.5秒の有効な隣接区間のみ。光源・測距欠測を補完しない。
+両GNSS共通時刻、最近傍感度、共分散、全6窓の俯瞰、圧力深度を保存する。
+旧位置・マッピングを更新せず、`stationary_gnss_comparison`へ追加出力する。

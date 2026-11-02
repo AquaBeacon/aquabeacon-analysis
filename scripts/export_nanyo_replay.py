@@ -45,19 +45,32 @@ def dump(path, value):
     )
 
 
-def segment(eid, parent):
-    out = Path(f"results/{eid}/navigation_mapping")
+def segment(
+    eid,
+    parent,
+    *,
+    source_path=None,
+    output_name="navigation_mapping",
+    nav_name="navigation_fusion",
+    image_root_override=None,
+    align=True,
+):
+    out = Path(f"results/{eid}/{output_name}")
     out.mkdir(parents=True, exist_ok=True)
     (out / "textures").mkdir(exist_ok=True)
     label = "extended_0" if eid.endswith("001") else "original_1"
-    source = Path(f"data/processed/{eid}/position_mapping/{label}")
+    source = (
+        Path(source_path)
+        if source_path is not None
+        else Path(f"data/processed/{eid}/position_mapping/{label}")
+    )
     model = pc.Reconstruction(source)
     intervals = json.loads(Path(f"experiments/{eid}/experiment.json").read_text())["utc_interval_s"]
     times = {
         r["image"]: float(r["sync_utc_s"])
         for r in read(Path(f"results/{eid}/visual_mapping/frame_times.csv"))
     }
-    if eid.endswith("001"):
+    if eid == "20261031_nanyo_001":
         times.update(
             {
                 r["image"]: float(r["sync_utc_s"])
@@ -66,7 +79,7 @@ def segment(eid, parent):
         )
     images = sorted(model.images.values(), key=lambda im: times[im.name])
     t = np.array([times[im.name] for im in images])
-    nav_path = Path(f"results/{eid}/navigation_fusion/child_navigation.csv")
+    nav_path = Path(f"results/{eid}/{nav_name}/child_navigation.csv")
     nav = read(nav_path)
     nt = n(nav, ["utc_s"])[:, 0]
     camera = n(nav, ["camera_east", "camera_north", "camera_up"])
@@ -75,19 +88,23 @@ def segment(eid, parent):
     target = sample_with_gaps(nt, camera, t, 0.15)
     centers = np.array([im.projection_center() for im in images])
     ok = np.isfinite(target).all(1)
-    if ok.sum() < 3:
+    if align and ok.sum() < 3:
         raise ValueError(f"{eid}: no sensor anchors for registration")
-    fit = least_squares(
-        lambda shift: ((centers[ok] + shift - target[ok]) / [1, 1, 2]).ravel(),
-        np.median(target[ok] - centers[ok], axis=0),
-        loss="soft_l1",
+    fit = (
+        least_squares(
+            lambda shift: ((centers[ok] + shift - target[ok]) / [1, 1, 2]).ravel(),
+            np.median(target[ok] - centers[ok], axis=0),
+            loss="soft_l1",
+        )
+        if align
+        else None
     )
-    shift = fit.x
+    shift = fit.x if fit is not None else np.zeros(3)
     residual = np.linalg.norm(centers[ok] + shift - target[ok], axis=1)
     reprojection = model.compute_mean_reprojection_error()
     model.transform(pc.Sim3d(1, pc.Rotation3d(), shift))
     assert abs(model.compute_mean_reprojection_error() - reprojection) < 1e-7
-    dest = Path(f"data/processed/{eid}/navigation_mapping/model")
+    dest = Path(f"data/processed/{eid}/{output_name}/model")
     dest.mkdir(parents=True, exist_ok=True)
     model.write(dest)
     model.export_PLY(out / "points.ply")
@@ -101,6 +118,8 @@ def segment(eid, parent):
         + ("position_mapping" if eid.endswith("001") else "visual_mapping")
         + "/images"
     )
+    if image_root_override is not None:
+        image_root = Path(image_root_override)
     selected = np.unique(np.linspace(0, len(images) - 1, min(72, len(images))).astype(int))
     surfaces = []
     seen = set()
@@ -172,9 +191,11 @@ def segment(eid, parent):
             }
         )
         inputs.append(path)
-    if not surfaces:
-        raise ValueError("No photo patches")
-    (out / "textured_map.glb").write_bytes(scene.export(file_type="glb"))
+    if surfaces:
+        (out / "textured_map.glb").write_bytes(scene.export(file_type="glb"))
+    else:
+        fallback = trimesh.Scene(trimesh.points.PointCloud(xyz, colors=rgb))
+        (out / "textured_map.glb").write_bytes(fallback.export(file_type="glb"))
     rows = nav[::5]
     parent_times = n(parent, ["utc_s"])[:, 0]
     parent_values = n(
@@ -252,13 +273,14 @@ def segment(eid, parent):
                 r["time"]
                 for r in navigation
                 if r["child"] is not None
+                and surfaces
                 and surfaces[0]["time"] <= r["time"] <= surfaces[-1]["time"]
             ),
             key=lambda t: abs(t - surfaces[len(surfaces) // 2]["time"]),
-            default=surfaces[len(surfaces) // 2]["time"],
+            default=surfaces[len(surfaces) // 2]["time"] if surfaces else 0,
         ),
         "manifest": manifest,
-        "downloads": f"../../{eid}/navigation_mapping/",
+        "downloads": f"../../{eid}/{output_name}/",
     }
     dump(out / "scene.json", data)
     print(

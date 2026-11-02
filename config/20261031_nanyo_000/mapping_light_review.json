@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "review_method": "Visual light identity in original frames; coordinates are initialization ROIs, not position ground truth. Null means no confidently identified light. Reinitialize at each reviewed anchor; no interpolation between anchors.",
+  "trials": {
+    "20261031_nanyo_001": [
+      {
+        "utc_s": 1793425025.7774749,
+        "offset_s": 5.0,
+        "seed_px": null,
+        "review_source": "review_000.jpg",
+        "review_image_sha256": "c75cf5b01d5e1e1252beae14ec895e93e8f3ef3bc7fc93c4b25f3e3bd68bf3e7"
+      },
+      {
+        "utc_s": 1793425085.768721,
+        "offset_s": 65.0,
+        "seed_px": null,
+        "review_source": "review_001.jpg",
+        "review_image_sha256": "b6f7ad6cb74f61780acb926048f29a534a87741ce72628bd1e1b1ca9aa3e954c"
+      },
+      {
+        "utc_s": 1793425145.793333,
+        "offset_s": 125.0,
+        "seed_px": [
+          615,
+          505
+        ],
+        "review_source": "review_002.jpg",
+        "review_image_sha256": "7eb0757104369423e908dcbef5a189c55af0e2fb041ba873a11b64cbfa647d5e"
+      },
+      {
+        "utc_s": 1793425205.7845795,
+        "offset_s": 185.0,
+        "seed_px": [
+          532,
+          380
+        ],
+        "review_source": "review_003.jpg",
+        "review_image_sha256": "949f1d9d54585911cf8f32e30ffc1f38176847eedb01ae1319e9afd9c48c2d81"
+      },
+      {
+        "utc_s": 1793425265.775826,
+        "offset_s": 245.0,
+        "seed_px": [
+          713,
+          289
+        ],
+        "review_source": "review_004.jpg",
+        "review_image_sha256": "98656b38a6d1e89ab09d0b5f7589bc2de9ca271d0609bff20548ac4ff5691e23"
+      },
+      {
+        "utc_s": 1793425325.7670724,
+        "offset_s": 305.0,
+        "seed_px": [
+          735,
+          220
+        ],
+        "review_source": "review_005.jpg",
+        "review_image_sha256": "f791f51982d50f3c153c5fa5b3c1173cc884004bebc622008c3d552f73da1d8b"
+      },
+      {
+        "utc_s": 1793425385.7916842,
+        "offset_s": 365.0,
+        "seed_px": [
+          723,
+          333
+        ],
+        "review_source": "review_006.jpg",
+        "review_image_sha256": "4934cb5a4b264c953cfed54f3b0a9847348041ab12fd780bffc44991458475fa"
+      },
+      {
+        "utc_s": 1793425445.7829306,
+        "offset_s": 425.0,
+        "seed_px": [
+          673,
+          503
+        ],
+        "review_source": "review_007.jpg",
+        "review_image_sha256": "1556afb885073d08eaa3239d2e511c67f1fe35e474da7219364ad04f20c62034"
+      },
+      {
+        "utc_s": 1793425505.774177,
+        "offset_s": 485.0,
+        "seed_px": [
+          458,
+          370
+        ],
+        "review_source": "review_008.jpg",
+        "review_image_sha256": "ebd932bf6c6463245a6d1f5edb76473bd314519d1110008f41275f75edb5507c"
+      },
+      {
+        "utc_s": 1793425565.7654235,
+        "offset_s": 545.0,
+        "seed_px": [
+          653,
+          412
+        ],
+        "review_source": "review_009.jpg",
+        "review_image_sha256": "29a5f62e01273877b223176dc15861e19088ea75852f1e7cf4c9e6f885f4be40"
+      },
+      {
+        "utc_s": 1793425625.7900355,
+        "offset_s": 605.0,
+        "seed_px": [
+          438,
+          510
+        ],
+        "review_source": "review_010.jpg",
+        "review_image_sha256": "861a5069ef127a27dff8606eba031375e6d265c385d6dca0426885f1dc759a40"
+      },
+      {
+        "utc_s": 1793425685.7812817,
+        "offset_s": 665.0,
+        "seed_px": [
+          192,
+          247
+        ],
+        "review_source": "review_011.jpg",
+        "review_image_sha256": "5ec16b109e4da630d3852e706c581013a63da2a3919406bded7ee0c12a0ece59"
+      },
+      {
+        "utc_s": 1793425745.7725282,
+        "offset_s": 725.0,
+        "seed_px": [
+          738,
+          355
+        ],
+        "review_source": "review_012.jpg",
+        "review_image_sha256": "6ec74b49f0de096fb9daad22ccef6fedf9f77280ecbc187b6992b33083cbc16c"
+      },
+      {
+        "utc_s": 1793425805.7637746,
+        "offset_s": 785.0,
+        "seed_px": [
+          565,
+          403
+        ],
+        "review_source": "review_013.jpg",
+        "review_image_sha256": "c2d19fa6762cc6bfacb63412cd75c9207c81206d457ca0818876338737aabdc0"
+      },
+      {
+        "utc_s": 1793425865.7883866,
+        "offset_s": 845.0,
+        "seed_px": [
+          302,
+          411
+        ],
+        "review_source": "review_014.jpg",
+        "review_image_sha256": "348007bd0d8f3ed1aa32d5e3fc796b8e2452d942c8d61522a9974da00226561b"
+      },
+      {
+        "utc_s": 1793425925.7796328,
+        "offset_s": 905.0,
+        "seed_px": null,
+        "review_source": "review_015.jpg",
+        "review_image_sha256": "a8c9389377e07e0a0dd559d48ea8a3390112b8d31c9213fcf5e8b231d8cab63f"
+      },
+      {
+        "utc_s": 1793425985.7708793,
+        "offset_s": 965.0,
+        "seed_px": null,
+        "review_source": "review_016.jpg",
+        "review_image_sha256": "4cc0fc6f75c6787146eb168cb54401b6bd5dd8e8dd961a41e5c601916ac95a40"
+      },
+      {
+        "utc_s": 1793426045.7954912,
+        "offset_s": 1025.0,
+        "seed_px": null,
+        "review_source": "review_017.jpg",
+        "review_image_sha256": "2f6b072c56c3c7b1d9e0e519bfe68d67ed97327c2f61f53cb34a1e43dda3e624"
+      },
+      {
+        "utc_s": 1793426058.9748807,
+        "offset_s": 1038.19655585289,
+        "seed_px": null,
+        "review_source": "review_018.jpg",
+        "review_image_sha256": "beb3bc20795af2fcde362788b8da97628ff8448507193e23ca48d896d96208ec"
+      }
+    ],
+    "20261031_nanyo_002": [
+      {
+        "utc_s": 1793426443.1457434,
+        "offset_s": 5.0,
+        "seed_px": null,
+        "review_source": "review_000.jpg",
+        "review_image_sha256": "805ecd7097e4773ac7a029998f6f18310dca6025a4348f5f96fa28aea59dba6f"
+      },
+      {
+        "utc_s": 1793426503.1703553,
+        "offset_s": 65.0,
+        "seed_px": [
+          512,
+          491
+        ],
+        "review_source": "review_001.jpg",
+        "review_image_sha256": "2daec27003ac845df09e7d94db19a784cb5302f8512ce28b666b223c6f4f1907"
+      },
+      {
+        "utc_s": 1793426563.1616018,
+        "offset_s": 125.0,
+        "seed_px": [
+          635,
+          405
+        ],
+        "review_source": "review_002.jpg",
+        "review_image_sha256": "95d53a274def1ec3defe5346e1a7dd25510a61d47503a3eeedc0e73102b2bee7"
+      },
+      {
+        "utc_s": 1793426623.152848,
+        "offset_s": 185.0,
+        "seed_px": [
+          583,
+          324
+        ],
+        "review_source": "review_003.jpg",
+        "review_image_sha256": "12131bd38eb53a764f3427e85ef0158d488e09511b4d3b73849bae360a88f306"
+      },
+      {
+        "utc_s": 1793426683.1440945,
+        "offset_s": 245.0,
+        "seed_px": [
+          439,
+          415
+        ],
+        "review_source": "review_004.jpg",
+        "review_image_sha256": "dc7904417e0eb704c5c58e13f0941bd4620ef0d8ad44bd2e5f72dc1993d97977"
+      },
+      {
+        "utc_s": 1793426743.1706722,
+        "offset_s": 305.0,
+        "seed_px": null,
+        "review_source": "review_005.jpg",
+        "review_image_sha256": "f86ce9328d92bdaec6252c9be07735a227f784cc89c42c51941f143c770a2797"
+      },
+      {
+        "utc_s": 1793426752.7465634,
+        "offset_s": 314.5948841571808,
+        "seed_px": null,
+        "review_source": "review_006.jpg",
+        "review_image_sha256": "bd4ab25a0496313b5bf54a841cf2368e94492d810785df9e27ab619bcf224785"
+      }
+    ]
+  }
+}

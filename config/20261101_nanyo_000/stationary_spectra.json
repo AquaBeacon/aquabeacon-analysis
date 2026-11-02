@@ -1,0 +1,29 @@
+{
+  "experiment_id": "20261101_nanyo_000",
+  "duration_s": 60,
+  "timezone": "Asia/Tokyo",
+  "interval": "[start,end)",
+  "day2_mount_confirmed": "2026-11-02 user: same as day1, child camera 30 fps",
+  "day2_time_correction": "User corrected 10:14 to 10:15; ranging had not yet been started",
+  "maximum_comparison_hz": 0.45,
+  "common_coherence_hz": 1,
+  "welch_window_s": 16,
+  "minimum_welch_windows": 3,
+  "interpolation_max_cadences": 1.5,
+  "spectral_detrend": "linear (RMSE is not detrended)",
+  "fft_window": "periodic Hann, longest contiguous valid run",
+  "frequency_peak_search": "at least two cycles; <= 0.45 * median native sample rate and <= 0.45 Hz",
+  "windows": [
+    {"id":"day1_144110", "experiment_id":"20261031_nanyo_001", "start":"2026-10-31T14:41:10+09:00", "condition":"exploratory_static_selection", "selection":"Previous selection by attitude and parent position, not relative RMSE"},
+    {"id":"day1_150300", "experiment_id":"20261031_nanyo_002", "start":"2026-10-31T15:03:00+09:00", "condition":"user_static", "selection":"Previous user-declared grounded/non-operated interval"},
+    {"id":"day2_095600", "experiment_id":"20261101_nanyo_002", "start":"2026-11-01T09:56:00+09:00", "condition":"user_static", "selection":"User: 60 s from stated time"},
+    {"id":"day2_101500", "experiment_id":"20261101_nanyo_003", "start":"2026-11-01T10:15:00+09:00", "condition":"user_static_delayed_ranging", "selection":"User corrected 10:14 to 10:15; retain missing pre-ranging first 14 s"},
+    {"id":"day2_102000", "experiment_id":"20261101_nanyo_003", "start":"2026-11-01T10:20:00+09:00", "condition":"intentional_hand_shaking", "selection":"User deliberately shook system; not natural-wave-only control"},
+    {"id":"day2_103200", "experiment_id":"20261101_nanyo_004", "start":"2026-11-01T10:32:00+09:00", "condition":"user_static", "selection":"User: 60 s from stated time"}
+  ],
+  "method_references": [
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.welch.html",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.coherence.html",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.lombscargle.html"
+  ]
+}

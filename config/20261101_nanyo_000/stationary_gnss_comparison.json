@@ -1,0 +1,16 @@
+{
+  "experiment_id": "20261101_nanyo_000",
+  "windows_config": "config/20261101_nanyo_000/stationary_spectra.json",
+  "solutions": {
+    "ppk_ar": {"filename": "ppk_positions.csv", "label": "通常PPK"},
+    "ppk_float": {"filename": "ppk_float_positions.csv", "label": "Float設定PPK"}
+  },
+  "valid_quality": [1, 2, 4],
+  "linear_maximum_bracket_s": 1.5,
+  "nearest_sensitivity_maximum_delta_s": 0.51,
+  "main_sample_set": "Same accepted unique acoustic shots from stationary_spectra; intersection of valid GNSS solutions",
+  "metric": "Own arithmetic mean, population denominator N; no detrending or position smoothing",
+  "frame": "Child CAD body origin in each acquisition's original true ENU frame",
+  "aggregate": "Equal weight per 60-second window; intentional hand shaking excluded",
+  "interpretation": "Conditional repeatability, not ground-truth accuracy; GNSS and relative position covariance retained"
+}

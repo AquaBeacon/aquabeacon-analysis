@@ -12,21 +12,23 @@ from aquabeacon_analysis.time_sync import resolve_ffmpeg
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--experiment", required=True, choices=["20261031_nanyo_000"])
-    acq = parser.parse_args().experiment
-    output = Path(f"results/{acq}/navigation_replay/media")
+    parser.add_argument(
+        "--experiment", required=True, choices=["20261031_nanyo_000", "20261101_nanyo_000"]
+    )
+    parser.add_argument("--output-name", default="navigation_replay")
+    args = parser.parse_args()
+    acq = args.experiment
+    output = Path(f"results/{acq}/{args.output_name}/media")
     output.mkdir(parents=True, exist_ok=True)
     sync_path = Path(f"results/{acq}/synchronization/manifest.json")
-    cameras = json.loads(sync_path.read_text())["cameras"]
-    joined = json.loads(Path(f"results/{acq}/segmentation/manifest.json").read_text())[
-        "parent_join_mapping"
-    ]
+    cameras = json.loads(sync_path.read_text(encoding="utf-8"))["cameras"]
     jobs = []
-    for suffix in ["001", "002"]:
-        eid = f"20261031_nanyo_{suffix}"
-        interval = json.loads(Path(f"experiments/{eid}/experiment.json").read_text())[
-            "utc_interval_s"
-        ]
+    for number in range(1, 3 if acq.startswith("20261031") else 6):
+        suffix = f"{number:03d}"
+        eid = f"{acq[:8]}_nanyo_{suffix}"
+        interval = json.loads(
+            Path(f"experiments/{eid}/experiment.json").read_text(encoding="utf-8")
+        )["utc_interval_s"]
         for role in ["parent", "child"]:
             for key, clock in cameras.items():
                 if not key.startswith(role):
@@ -34,10 +36,14 @@ def main():
                 source = Path(clock["source_video"]["path"]).with_suffix(".LRF")
                 utc0 = clock["utc_at_video_zero_s"]
                 scale = clock["time_scale"]
-                end = interval[1]
-                if role == "parent":
-                    part = next(p for p in joined if p["camera_key"] == key)
-                    end = min(end, utc0 + (part["joined_end_s"] - part["joined_start_s"]) * scale)
+                end = min(interval[1], utc0 + clock["source_video"]["duration_s"] * scale)
+                later = [
+                    c["utc_at_video_zero_s"]
+                    for k, c in cameras.items()
+                    if k.startswith(role) and c["utc_at_video_zero_s"] > utc0
+                ]
+                if later:
+                    end = min(end, min(later))
                 start = max(interval[0], utc0)
                 if end <= start:
                     continue

@@ -52,4 +52,10 @@
 
 Nanyo day2：[同期](../results/20261101_nanyo_000/synchronization/report.md) / [5実験の分割](../results/20261101_nanyo_000/segmentation/report.md)。仕様はspec.mdのday2節。
 
-[Nanyo：別PCへの引き継ぎ](handoff/nanyo_20261102.md)：day2の現状、processedの転送先、移行検証、公開対象と再処理用の追加データ。
+[Nanyo：別PCへの引き継ぎ](handoff/nanyo_20261102.md)：Day2解析・2日分のマッピング・PPK Float比較の現在地、転送対象、検証結果、Canvaの編集権限待ちと再開手順。
+
+- [Nanyo day2解析・day1との静止周波数比較](../results/20261101_nanyo_000/analysis/report.md)：5区間のPPK・音響・SfM、6静止窓の光源追跡、姿勢補正前後のRMSE・FFT・Lomb–Scargle・コヒーレンス。
+
+- [Nanyo Day1・Day2結合マッピング](../results/20261102_nanyo_combined_000/mapping_replay/report.html)：静止RMSEによるGNSS選択、追跡光源による航法、共通ENUでの写真面・航跡・同期映像。
+
+- [PPK Floatを使った静止絶対位置RMSE](../results/20261101_nanyo_000/stationary_gnss_comparison/report.html)：通常PPKと同じ6窓・385測距点、姿勢補正比較、深度・俯瞰・最近傍感度・GNSSとの共分散。仕様はspec.mdの「静止絶対位置へのFloat設定PPK比較」。

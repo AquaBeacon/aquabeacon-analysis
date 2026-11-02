@@ -1,0 +1,165 @@
+{
+  "experiment_id": "20261101_nanyo_000",
+  "review_date": "2026-11-02",
+  "reviewer": "assistant visual inspection of native parent LRF contact sheets",
+  "coordinate_system": "native unrotated 1280x720 pixels",
+  "roi_radius_px": 20,
+  "policy": "Reviewed anchors initialize at window start or after at least 10 missing frames only. No interpolated anchor coordinates are emitted; image template match and local centroid determine observations. Not ground-truth annotations.",
+  "reason": "Largest saturated component repeatedly selects near yellow/white tether; distant beacon is often not saturated.",
+  "windows": {
+    "day2_095600": [
+      [
+        0,
+        584,
+        418
+      ],
+      [
+        10,
+        574,
+        394
+      ],
+      [
+        20,
+        604,
+        382
+      ],
+      [
+        30,
+        596,
+        370
+      ],
+      [
+        40,
+        580,
+        312
+      ],
+      [
+        50,
+        594,
+        320
+      ],
+      [
+        60,
+        560,
+        282
+      ]
+    ],
+    "day2_101500": [
+      [
+        0,
+        616,
+        286
+      ],
+      [
+        10,
+        536,
+        376
+      ],
+      [
+        20,
+        522,
+        382
+      ],
+      [
+        30,
+        670,
+        302
+      ],
+      [
+        40,
+        622,
+        286
+      ],
+      [
+        50,
+        620,
+        292
+      ],
+      [
+        60,
+        594,
+        346
+      ]
+    ],
+    "day2_102000": [
+      [
+        0,
+        580,
+        338
+      ],
+      [
+        10,
+        544,
+        378
+      ],
+      [
+        20,
+        674,
+        318
+      ],
+      [
+        30,
+        584,
+        312
+      ],
+      [
+        40,
+        644,
+        346
+      ],
+      [
+        50,
+        508,
+        362
+      ],
+      [
+        60,
+        432,
+        346
+      ]
+    ],
+    "day2_103200": [
+      [
+        0,
+        528,
+        400
+      ],
+      [
+        10,
+        590,
+        388
+      ],
+      [
+        20,
+        566,
+        382
+      ],
+      [
+        30,
+        572,
+        388
+      ],
+      [
+        40,
+        556,
+        380
+      ],
+      [
+        50,
+        494,
+        362
+      ],
+      [
+        60,
+        420,
+        324
+      ]
+    ]
+  },
+  "source_sheets": [
+    "results/20261101_nanyo_000/analysis/light_anchors_095600.jpg",
+    "results/20261101_nanyo_000/analysis/light_anchors_101500.jpg",
+    "results/20261101_nanyo_000/analysis/light_anchors_102000.jpg",
+    "results/20261101_nanyo_000/analysis/light_anchors_103200.jpg"
+  ]
+}

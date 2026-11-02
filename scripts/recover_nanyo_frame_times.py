@@ -20,14 +20,16 @@ def main():
     eid = args.experiment
     work = Path(f"data/interim/{eid}/visual_mapping")
     out = Path(f"results/{eid}/visual_mapping")
-    m = json.loads((out / "manifest.json").read_text())
+    m = json.loads((out / "manifest.json").read_text(encoding="utf-8"))
     start, end = m["source_interval_s"]
+    experiment = json.loads(Path(f"experiments/{eid}/experiment.json").read_text(encoding="utf-8"))
+    acquisition = experiment.get("parent_acquisition", "20261031_nanyo_000")
     clock = next(
         v
         for k, v in json.loads(
-            Path("results/20261031_nanyo_000/synchronization/manifest.json").read_text()
+            Path(f"results/{acquisition}/synchronization/manifest.json").read_text(encoding="utf-8")
         )["cameras"].items()
-        if k.startswith("child")
+        if k.startswith("child") and Path(v["source_video"]["path"]).stem == Path(m["source"]).stem
     )
     # Same fps filter and trim as map_nanyo.py. A FIFO follows ffmpeg's own
     # read/drop/write trace; no assumption of uniform native frame rate.

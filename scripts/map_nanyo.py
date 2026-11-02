@@ -22,10 +22,16 @@ def main():
     eid = args.experiment
     root = Path.cwd()
     segment = json.loads((root / f"experiments/{eid}/experiment.json").read_text())
-    clocks = json.loads(
-        (root / "results/20261031_nanyo_000/synchronization/manifest.json").read_text()
+    acquisition = segment.get("parent_acquisition", "20261031_nanyo_000")
+    clocks = json.loads((root / f"results/{acquisition}/synchronization/manifest.json").read_text())
+    lo, hi = segment["utc_interval_s"]
+    child_clocks = [c for k, c in clocks["cameras"].items() if k.startswith("child")]
+    clock = max(
+        (c for c in child_clocks if c["utc_at_video_zero_s"] <= lo),
+        key=lambda c: c["utc_at_video_zero_s"],
     )
-    clock = next(c for k, c in clocks["cameras"].items() if k.startswith("child"))
+    if any(lo < c["utc_at_video_zero_s"] < hi for c in child_clocks):
+        raise ValueError("This mapping run must not cross camera sessions")
     start, end = [
         (t - clock["utc_at_video_zero_s"]) / clock["time_scale"] for t in segment["utc_interval_s"]
     ]
@@ -38,6 +44,7 @@ def main():
     k, d, provenance = load_camera_intrinsics(root, "C_MAIN_CAM", (960, 540), "proxy")
     manifest = {
         "experiment_id": eid,
+        "acquisition": acquisition,
         "method": "COLMAP sequential SfM, child only",
         "sample_hz": 1,
         "source": str(source),
