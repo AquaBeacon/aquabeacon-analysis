@@ -16,6 +16,15 @@
 Pythonでは `aquabeacon_analysis.camera_calibration.load_camera_intrinsics` を使い、
 `C_MAIN_CAM` / `P_MAIN_CAM`、出力寸法、main/proxyを明示する。cropや縦横比変更は拒否する。
 
+内部校正の画像座標は元の符号化画像に対応し、動画の表示回転は自動では反映しない。
+長田高校の修正は `20261031_ngt_camera_frames.json` に記録する。親機LRFは90°、
+子機動画は180°、校正原動画は0°である。`camera_geometry.py` の `rotate_intrinsics`
+で主点・焦点距離の軸と接線歪みを同じ表示基底に移す。主点の90°変換には `H-1-cy`
+を使い、全画面縮小は `resize_intrinsics_pixel_centers` の `(x+0.5)s-0.5` に従う。
+COLMAPへ渡す主点にはOpenCVとの差0.5 pxを加える。向きは各動画のメタデータと実画素で
+確認し、この実験の90°/180°を別撮影へ固定適用しない。光学→カメラIMUの軸・符号の確認は
+連続角度の精密な取付校正や測定中心の校正を意味しない。
+
 想定ファイル:
 - `parent_camera.yaml`: 親機カメラ内部パラメータ・歪み
 - `child_camera.yaml`: 子機カメラ内部パラメータ・歪み

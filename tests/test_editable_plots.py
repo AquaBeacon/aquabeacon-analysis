@@ -59,6 +59,27 @@ def test_loader_detaches_destroyed_gui_manager_before_resizing(master, monkeypat
     assert document.render("png").startswith(b"\x89PNG")
 
 
+@pytest.mark.parametrize("rgb", [False, True])
+def test_image_background_round_trip_renders_without_changing_pixels(tmp_path, rgb):
+    shape = (4, 5, 3) if rgb else (4, 5)
+    pixels = np.ma.array(np.linspace(0, 1, np.prod(shape)).reshape(shape))
+    pixels[0, 0] = np.ma.masked
+    figure, axis = plt.subplots(figsize=(3, 2))
+    axis.imshow(pixels, interpolation="nearest")
+    save_editable_figure(figure, tmp_path / "background.png", dpi=100)
+    plt.close(figure)
+    master = tmp_path / "background.figure.pickle"
+    original_bytes = master.read_bytes()
+    document = PlotDocument(master)
+    document.update({"figure": {"width": 4}})
+    restored = document.figure.axes[0].images[0].get_array()
+    np.testing.assert_array_equal(restored.data, pixels.data)
+    np.testing.assert_array_equal(np.ma.getmaskarray(restored), np.ma.getmaskarray(pixels))
+    for fmt, signature in [("png", b"\x89PNG"), ("svg", b"<?xml"), ("pdf", b"%PDF")]:
+        assert document.render(fmt).startswith(signature)
+    assert master.read_bytes() == original_bytes
+
+
 def test_round_trip_edits_preserve_data_and_missing_values(master):
     original_bytes = master.read_bytes()
     doc = PlotDocument(master)

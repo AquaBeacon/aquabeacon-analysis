@@ -1,0 +1,14 @@
+{
+  "experiment_id": "20261103_field_review_000",
+  "acquisitions": ["20261028_ngt_000", "20261031_nanyo_000", "20261101_nanyo_000"],
+  "nanyo_trials": ["20261031_nanyo_001", "20261031_nanyo_002", "20261101_nanyo_001", "20261101_nanyo_002", "20261101_nanyo_003", "20261101_nanyo_004", "20261101_nanyo_005"],
+  "ngt_trials": ["20261028_ngt_001", "20261028_ngt_002", "20261028_ngt_003", "20261028_ngt_004"],
+  "stationary_windows": "config/20261101_nanyo_000/stationary_spectra.json",
+  "ngt_coordinate_run": "rotation_corrected_20261031",
+  "simulation_seed": 20261103,
+  "monte_carlo_samples": 100000,
+  "simulation_scope": "Conditional range/bearing noise at observed mean geometry; no ground-truth calibration, attitude/GNSS fusion, dropout replacement or depth constraint",
+  "simulation_angular_sensitivity_deg": [0.08, 0.3, 0.6, 1.0, 2.0],
+  "map_navigation_max_age_s": 1.0,
+  "map_navigation_max_bracket_s": 0.15
+}

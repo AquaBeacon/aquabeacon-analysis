@@ -237,7 +237,7 @@ def fit_fragment(ctx, eid, label, source, time_rows, out, fixed_alignment=None):
     ax.legend()
     ax.set_box_aspect(np.maximum(np.ptp(xyz, axis=0), 0.1))
     fig.subplots_adjust(left=0.05, right=0.94, bottom=0.08, top=0.90)
-    fig.savefig(out / f"{label}.png", dpi=170, bbox_inches="tight", pad_inches=0.25)
+    save_editable_figure(fig, out / f"{label}.png", dpi=170, bbox_inches="tight", pad_inches=0.25)
     plt.close(fig)
     fig, ax = plt.subplots(figsize=(8, 7))
     ax.scatter(xyz[:, 0], xyz[:, 1], c=rgb, s=1, alpha=0.35)

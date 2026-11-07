@@ -249,7 +249,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--experiment", required=True, action="append",
                         choices=[f"20261028_ngt_{i:03}" for i in [2, 3, 4]])
+    parser.add_argument("--coordinate-run", choices=["corrected", "legacy"], default="corrected",
+                        help="Use the rotation-corrected run by default; legacy reproduces the known mismatch")
     args = parser.parse_args()
+    if args.coordinate_run == "corrected":
+        from recalculate_ngt_positions import run
+        run(args.experiment)
+        return
     started = datetime.now(UTC).isoformat()
     print(json.dumps({"pid": os.getpid(), "started_utc": started,
                       "owner": "position_evaluation", "purpose": "NGT range-light position evaluation"}), flush=True)

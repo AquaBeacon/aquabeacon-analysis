@@ -127,7 +127,7 @@ def main():
             )
             ax.set_box_aspect(np.maximum(np.ptp(xyz, axis=0), 0.01))
             fig.tight_layout()
-            fig.savefig(folder / f"visual_mapping/model_{mid}.png", dpi=160)
+            save_editable_figure(fig, folder / f"visual_mapping/model_{mid}.png", dpi=160)
             plt.close(fig)
             names = sorted(image.name for image in model.images.values())
             selected = [names[0], names[len(names) // 2], names[-1]]
@@ -137,7 +137,7 @@ def main():
                 ax.set_title(name)
                 ax.axis("off")
             fig.tight_layout()
-            fig.savefig(folder / f"visual_mapping/model_{mid}_views.png", dpi=120)
+            save_editable_figure(fig, folder / f"visual_mapping/model_{mid}_views.png", dpi=120)
             plt.close(fig)
         fig, ax = plt.subplots(figsize=(10, 3))
         ax.scatter(

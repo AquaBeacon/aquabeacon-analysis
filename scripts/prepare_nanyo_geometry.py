@@ -7,7 +7,7 @@ import json
 import subprocess
 import zipfile
 from collections import Counter
-from datetime import datetime
+from datetime import UTC, datetime
 from pathlib import Path
 
 import numpy as np
@@ -68,8 +68,8 @@ def main():
     with zipfile.ZipFile(io.BytesIO(archive.read_bytes())) as z:
         name = next(n for n in z.namelist() if n.endswith("/WMM.COF"))
         (work / "WMM.COF").write_bytes(z.read(name))
-    date = datetime(2026, 10, 31)
-    decimal_year = 2026 + (date - datetime(2026, 1, 1)).days / 365
+    date = datetime(2026, 10, 31, tzinfo=UTC)
+    decimal_year = 2026 + (date - datetime(2026, 1, 1, tzinfo=UTC)).days / 365
     lines = (work / "WMM.COF").read_text().splitlines()
     h = lines[0].split()
     coefficients = [

@@ -1,15 +1,132 @@
 # AquaBeacon Analysis
 
+海・プールの全10区間について、[子機BNO085＋深度と現在位置の比較](results/20261103_field_review_000/child_dead_reckoning/comparison_20261106_v2/report.html)を別runへ保存する。
+水平は重力除去後の加速度を二重積分し、上下は圧力深度の変化を使う。現在の子機位置と開始点だけを合わせ、
+初速0で連続区間・5/10/30/60秒窓を比較する。差は方式間の不一致であり、真値誤差ではない。
+設定・受け入れ条件は[仕様書](docs/spec.md)の「海・プールの子機BNO085＋深度比較」を参照。
+
+```powershell
+$drArgs = @(
+  '--experiment','20261028_ngt_002','--experiment','20261028_ngt_003','--experiment','20261028_ngt_004',
+  '--experiment','20261031_nanyo_001','--experiment','20261031_nanyo_002',
+  '--experiment','20261101_nanyo_001','--experiment','20261101_nanyo_002','--experiment','20261101_nanyo_003',
+  '--experiment','20261101_nanyo_004','--experiment','20261101_nanyo_005'
+)
+python scripts/compare_field_dead_reckoning.py @drArgs
+python scripts/verify_field_dead_reckoning.py @drArgs
+python -m pytest tests/test_dead_reckoning_comparison.py -q -p no:cacheprovider
+python -m ruff check scripts/compare_field_dead_reckoning.py scripts/verify_field_dead_reckoning.py scripts/dr_sources_pool.py scripts/dr_sources_nanyo.py src/aquabeacon_analysis/dead_reckoning_comparison.py tests/test_dead_reckoning_comparison.py
+```
+
+完成runは上書きしない。既存数値から集約報告と集約図を再出力する場合は`--phase report`を使う。
+保存図は`python -m aquabeacon_analysis.editable_plots results/20261028_ngt_004/child_dead_reckoning/comparison_20261106_v2/comparison.figure.pickle`で編集できる。
+
+長田高校プール（10月28日）と南予水産技術センターの協力を得た海上実験（10月31日・11月1日）は、
+**[統合研究レポート](results/20261103_field_review_000/research_review/report.html)** を最新の入口とする。
+実験条件、採用する修正版、測距・位置・GNSS、シミュレーション比較、地図の成立範囲と残課題を9章に整理した。
+[章別索引と再現手順](docs/reports/field_experiments_20261103.md)から元CSV・図・従来報告へたどれる。
+本文と実験データはローカル成果物であり、公開Gitには生成コード・設定・索引だけを置く。
+
+同じ整理実験の[位置フォールバック評価](results/20261103_field_review_000/position_fallback/report.html)では、共同推定位置の有効値を優先し、条件を満たす行に限り光学・音響候補を補う。方法・制約・再生成コマンドは[統合レポート索引](docs/reports/field_experiments_20261103.md)を参照。
+
+既存図を維持して統合報告の数値表と入力来歴だけを更新する場合は、`analyze_field_review.py --experiment 20261103_field_review_000 --skip-plots`を使う。
+
+南予の光源検出改善は[比較レポート](results/20261103_field_review_000/optical_detection/multiscale_v2/report.html)と
+[再現手順](docs/optical_detection.md)を参照。色に依存しない局所輝度検出と小さな固定画像テンプレートで
+欠測候補を回復し、旧有効点と同定除外を保持する。光源候補の成立率と位置成立率を分けて比較する。
+
+```powershell
+# 1区間の例。他の区間は --experiment を繰り返して明示する。
+python scripts/prepare_nanyo_detection_proxy.py --experiment 20261031_nanyo_001
+python scripts/improve_nanyo_light.py --experiment 20261031_nanyo_001 --run multiscale_v2
+python scripts/audit_nanyo_detection_inputs.py --experiment 20261031_nanyo_001
+python scripts/review_nanyo_light_recovery.py --experiment 20261031_nanyo_001 --phase prepare
+python scripts/review_nanyo_light_recovery.py --experiment 20261031_nanyo_001 --phase apply
+python scripts/evaluate_nanyo_light_recovery.py --experiment 20261031_nanyo_001 --run multiscale_v2
+python scripts/verify_nanyo_light_recovery.py --experiment 20261031_nanyo_001
+```
+
+南予7区間では、旧有効点の保持と画像確認による除外を含め、光源候補23.1%→35.3%、
+光学＋姿勢＋深度の位置成立率21.4%→33.3%。新規動画への完全自動適用や絶対精度の検証ではない。
+レビュー設定は今回のCSVハッシュに限定する。再現手順と留保は[光源検出](docs/optical_detection.md)を参照。
+
+11月1日001〜005を含む[親機フレーム付きの原因分析・位置評価・マッピング](results/20261103_field_review_000/optical_followup/optical_fallback_20261104/report.html)を追加した。
+明るい光源でも再初期化待ち・初期化設定の空白で欠測する例を示す。静止時のばらつき、
+意図的に揺らした区間での悪化、暫定実寸断片と尺度未確定の点群を区別している。
+
+```powershell
+python scripts/analyze_nanyo_optical_followup.py --experiment 20261101_nanyo_004
+python scripts/map_nanyo_optical_followup.py --experiment 20261101_nanyo_004
+python scripts/write_nanyo_optical_followup.py --experiment 20261101_nanyo_004 --render
+python scripts/verify_nanyo_optical_followup.py --experiment 20261101_nanyo_004
+```
+
+長田高校の受信包絡線・マルチパス候補は[観測解析レポート](results/20261028_ngt_000/multipath/report.md)を参照。
+`python scripts/analyze_ngt_multipath.py --experiment 20261028_ngt_000` で6図と指標CSVを生成する。
+初期の可変3連送信と約1秒周期の後続ピーク群を区別し、反射経路は未確定として扱う。
+
+プール002〜004も[親機フレーム付きの光源検出・位置評価・マッピング](results/20261028_ngt_000/optical_followup/pool_multiscale_20261104/report.html)で比較した。
+同一LRFの2450画像を再処理し、画像で同定した55点を追加。既存除外後の光源候補成立率は62.4→64.7%、
+位置フォールバックの成立率は67.7→70.9%。静止002の平均周りRMSは変わらず、追加マッピングは実寸地図の採用条件を満たさなかった。
+全追加候補のレビューを含む結果であり、未知動画での全自動検出率・絶対精度ではない。
+
+```powershell
+$poolArgs = @('--experiment','20261028_ngt_002','--experiment','20261028_ngt_003','--experiment','20261028_ngt_004')
+python scripts/improve_ngt_light.py @poolArgs --phase detect
+python scripts/review_pool_optical_frames.py @poolArgs
+# CSVハッシュと画像に基づく明示レビュー設定を作成してから適用する
+python scripts/improve_ngt_light.py @poolArgs --phase apply
+python scripts/analyze_pool_optical_followup.py @poolArgs
+python scripts/map_pool_optical_followup.py @poolArgs
+python scripts/prepare_pool_dense_followup.py --experiment 20261028_ngt_004
+python scripts/map_pool_optical_followup.py --experiment 20261028_ngt_004 --config config/20261103_field_review_000/pool_mapping_dense.json
+python scripts/write_pool_optical_followup.py @poolArgs --render
+python scripts/verify_pool_optical_followup.py @poolArgs
+```
+
+完成・途中runを上書きしない。設定と詳細は[光源検出の再現手順](docs/optical_detection.md)を参照。
+
+004の壁区間は[位置拘束の有無を比較した原因診断](results/20261028_ngt_004/mapping_diagnosis/wall_ablation_v2_20261104/report.html)も参照。
+同じ300画像で無拘束・旧位置・新位置・旧位置の再試行を比較した。旧新252点の位置入力は完全一致し、
+無拘束でも12画像・7点の断片に留まった。特徴点の検出数より、画像間対応の分断と短い点追跡が制限となる。
+全ペアの対応・推定視差・分断時刻・実画像と編集可能な図を保存した。
+
+```powershell
+python scripts/diagnose_pool_mapping.py --experiment 20261028_ngt_004 --phase run
+python scripts/diagnose_pool_mapping.py --experiment 20261028_ngt_004 --phase report
+python scripts/diagnose_pool_mapping.py --experiment 20261028_ngt_004 --phase verify
+```
+
+完了済みのrunは再実行せず、数値の再試行には`pool_mapping_diagnosis.json`のrun名を変える。
+
 別のPCへの導入は **[セットアップと新しい実験の解析](docs/another_pc.md)** を参照。
 解析コード・設定・共通カメラ校正・親子の軸校正と、
 約12 MBの[校正根拠データ](calibration/reference_data/README.md)をGitHubに収録している。
 元動画や全実験のログを移さずに校正値を確認・数値再計算できる。
 新しい実験の原本はローカルの`data/raw/<experiment_id>/`へ配置する。
 
-長田高校の[研究発表用レポート](results/20261028_ngt_000/research_report/report.md)と
+長田高校の最新評価は[画像回転を整合した位置・地図尺度の再評価](results/20261028_ngt_000/coordinate_reassessment/report.md)。
+親機90°・子機180°の表示回転、内部行列・接線歪み・画素中心規約を明示して再計算する。
+修正後の位置と地図は各実験の `rotation_corrected_20261031/` に保存し、旧出力は比較用に保持する。
+`evaluate_ngt_position.py` は修正版を既定とし、旧処理の再現には `--coordinate-run legacy` を明示する。
+既存の `report_ngt_position_evaluation.py`、`visualize_ngt_positions.py`、
+`run_ngt_restart_mapping.py` は旧出力の再現用である。修正版の後続処理には下記の専用コマンドと
+`rotation_corrected_20261031/positions_5hz.csv` を使用する。
+磁気方位・暫定内部校正等の条件が残るため、独立した真値に対する絶対精度とは呼ばない。
+
+```powershell
+python scripts/audit_ngt_camera_frames.py --experiment 20261028_ngt_000
+python scripts/evaluate_ngt_position.py --experiment 20261028_ngt_002 --experiment 20261028_ngt_003 --experiment 20261028_ngt_004
+python scripts/remap_ngt_corrected.py --experiment 20261028_ngt_004 --phase all
+python scripts/report_ngt_coordinate_reassessment.py --experiment 20261028_ngt_000 --phase positions
+python scripts/report_ngt_coordinate_reassessment.py --experiment 20261028_ngt_000 --phase final
+python scripts/verify_ngt_coordinate_reassessment.py --experiment 20261028_ngt_000
+```
+
+以下の[研究発表用レポート（修正前の監査記録）](results/20261028_ngt_000/research_report/report.md)と
 [実映像の照合・12事例](results/20261028_ngt_000/research_report/media_review.md)を追加した。
-親機の90°表示回転と内部校正の不整合を確認したため、既存の子機位置・軌跡・位置priorを使う地図尺度は再評価が必要。
-成立フラグの集計と座標精度の保証を区別する。図の再生成はこのレポート内だけを対象とする。
+親機の90°表示回転と内部校正の不整合を確認した記録であり、旧座標の留保を保持する。
+位置の成立・欠測フラグは今回変更していない。地図成立区間は上記の再評価版を参照する。
 
 ```powershell
 python scripts/prepare_ngt_research_report.py --experiment 20261028_ngt_000 --phase prepare
@@ -22,6 +139,9 @@ python scripts/verify_ngt_research_report.py --experiment 20261028_ngt_000
 [発表素材の入口](results/20261028_ngt_000/presentation/index.html) と
 [検証・制約](results/20261028_ngt_000/presentation/report.md) を参照。
 新しい可視化は元の位置推定CSV・疎点群・rawを上書きしない。
+
+これらの既存発表素材の子機位置・地図尺度は画像回転修正前の計算に基づく。
+今回の座標・尺度を示す場合は、冒頭の再評価版とそのBlender・図を使う。
 
 2026-10-30改訂：研究用の細かなブラウザ編集は2次元グラフを対象にする。
 発表用の3D映像は構図・光・画質を優先し、MP4と編集用Blenderを渡す。
@@ -907,3 +1027,10 @@ python scripts/report_nanyo_day2.py --experiment 20261101_nanyo_000 --skip-map-r
 
 GNSSの隣接観測内の時刻合わせを除き、位置の平滑化・欠測補完・トレンド除去は行わない。
 結果は平均周りのばらつきであり、独立した絶対精度評価ではない。
+
+
+## 入水1分後の60秒静止位置評価
+
+`python scripts/evaluate_ngt_immersion_static.py --experiment 20261028_ngt_002`
+
+設定は`config/20261028_ngt/static_after_immersion.json`。子機映像の入水境界（親機動画995〜996秒）を根拠に、1056〜1116秒を評価する。既存002/003の画像回転修正版位置を読み取り、元台帳・元位置・マッピングを変更しない。出力は`results/20261028_ngt_002/static_after_immersion_20261105/report.md`。同名runの完了済みmanifestがある場合は再実行を拒否する。テストは`python -m pytest tests/test_ngt_immersion_static.py tests/test_ngt_position.py -q -p no:cacheprovider`。

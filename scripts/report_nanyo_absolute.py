@@ -15,6 +15,7 @@ import pycolmap as pc
 from analyze_nanyo import read
 from estimate_nanyo_absolute import n
 
+from aquabeacon_analysis.editable_plots import save_editable_figure
 from aquabeacon_analysis.ngt_binary import sha256
 
 
@@ -157,7 +158,7 @@ def main():
                 ax.set_title(name)
                 ax.axis("off")
             fig.tight_layout()
-            fig.savefig(folder / f"position_mapping/{label}_views.png", dpi=130)
+            save_editable_figure(fig, folder / f"position_mapping/{label}_views.png", dpi=130)
             plt.close(fig)
         primary_names = (
             {

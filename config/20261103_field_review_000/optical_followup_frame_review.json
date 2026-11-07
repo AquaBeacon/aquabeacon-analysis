@@ -1,0 +1,270 @@
+{
+  "reviewed_utc": "2026-11-04T04:01:28.539527+00:00",
+  "reviewer": "assistant visual inspection of full parent-frame contact sheets",
+  "scope": "Selected case evidence, not a cause annotation of every frame",
+  "experiments": {
+    "20261031_nanyo_001": [
+      {
+        "row_index": 9545,
+        "image": "parent_both_missing_09545.jpg",
+        "image_sha256": "a9670c6d82852413860eb07413b7dfde1ef6c097b5537741ba453d034ef437a7",
+        "category": "above_water",
+        "observed": "船内が写り、水中の発光部が画角内にない。",
+        "interpretation": "全区間を分母にした率には、引き上げ後の非観測時間も含まれる。"
+      },
+      {
+        "row_index": 624,
+        "image": "parent_both_missing_00624.jpg",
+        "image_sha256": "fe6949ed612bc8f493135e8ffbdad30db2413ce3708ec78a241b58460e773ad6",
+        "category": "above_water",
+        "observed": "船内の壁と黄色いケーブルが画面を占め、発光部が見えない。",
+        "interpretation": "投入前の非観測時間が含まれる。"
+      },
+      {
+        "row_index": 6145,
+        "image": "parent_recovered_06145.jpg",
+        "image_sha256": "b915423de8e7dd1e52b223f133240deb8f2009cdd34fb8c49e85c6c03748670f",
+        "category": "small_dim",
+        "observed": "暗い海中でロープ先端付近の小さな光点を採用できている。",
+        "interpretation": "新方式で補えた例。画像の光点は小さく、浮遊物との同定が必要。"
+      },
+      {
+        "row_index": 2867,
+        "image": "parent_old_algorithm_only_02867.jpg",
+        "image_sha256": "5cc2d10a42c7984c516df5e33f03b8e76495602ae199e1743f91d60120731972",
+        "category": "visible_but_waiting",
+        "observed": "赤紫色の大きな発光部が写っている。",
+        "interpretation": "新方式単体はawaiting_reviewed_reinitialization。約1秒の連続失敗後に次の確認点を待つ規則が、見えている時間も欠測にする。最終系列では旧有効点を保持。"
+      },
+      {
+        "row_index": 7891,
+        "image": "parent_identity_rejected_07891.jpg",
+        "image_sha256": "957d31db9a099429ab321c418604ebdd37baddd22d49eb3f35b7882a0cf59ca3",
+        "category": "identity_ambiguous",
+        "observed": "発光部とロープ終端の反射を独立に区別しづらい。",
+        "interpretation": "誤同定を避け、この追加区間を目視確認で除外した。"
+      }
+    ],
+    "20261031_nanyo_002": [
+      {
+        "row_index": 2828,
+        "image": "parent_both_missing_02828.jpg",
+        "image_sha256": "f7ae0559ae9926a73f5804e97521a09cc414985602722a1e8ef03e097a7bdc20",
+        "category": "above_water",
+        "observed": "親機フレームは船内の壁面で、光源が写っていない。",
+        "interpretation": "引き上げ後の非観測時間を含む。"
+      },
+      {
+        "row_index": 324,
+        "image": "parent_both_missing_00324.jpg",
+        "image_sha256": "df280fe1d6fe679ccb71d41e12426f4bb18be1f7f2f977b194727a338b921414",
+        "category": "above_water",
+        "observed": "船内・ロープ・作業者が写り、水中の光源は画角外。",
+        "interpretation": "投入前の非観測時間を含む。"
+      },
+      {
+        "row_index": 2101,
+        "image": "parent_recovered_02101.jpg",
+        "image_sha256": "14714cf28e58384f46e36212c7ad10d3911da004e745f94fd83110fabc08fc36",
+        "category": "broad_halo_recovered",
+        "observed": "近距離の白いハローと子機が見える。",
+        "interpretation": "旧欠測へ画像で測定した光点を追加。ハロー重心と最も明るい画素の一致を保証するものではない。"
+      },
+      {
+        "row_index": 1723,
+        "image": "parent_old_algorithm_only_01723.jpg",
+        "image_sha256": "a2b37a7834ad61e3698e5a7b4465c27e19ddcdbbc6bb2f4ecee3b00ed2850939",
+        "category": "visible_but_waiting",
+        "observed": "白く広がる発光部が明瞭に写る。",
+        "interpretation": "新方式単体は再初期化待ち。小さな固定核や欠測期限を厳しくした影響で、旧方式の方が継続する場面がある。"
+      }
+    ],
+    "20261101_nanyo_001": [
+      {
+        "row_index": 890,
+        "image": "parent_both_missing_00890.jpg",
+        "image_sha256": "36dc119c3f95ea26a930c6cdd329213d72439646d9d2ab9ef09562709191db47",
+        "category": "visible_but_waiting",
+        "observed": "網の左側に明るい光源が明瞭に写る。",
+        "interpretation": "新方式は再初期化待ち、保存済み旧方式も追跡欠測。暗さだけが原因ではなく追跡状態の制約による取りこぼし。"
+      },
+      {
+        "row_index": 4760,
+        "image": "parent_both_missing_04760.jpg",
+        "image_sha256": "6dc7b2476b0defa68fe1a49dc82445b20725d262da288c38b83d7110dc25ac15",
+        "category": "not_identifiable",
+        "observed": "網と水中背景が中心で、発光中心をこのフレームでは特定できない。",
+        "interpretation": "画角・遮蔽・向きのどれが支配的かはこの1枚だけでは断定しない。"
+      },
+      {
+        "row_index": 3551,
+        "image": "parent_recovered_03551.jpg",
+        "image_sha256": "0119d460f2a34c1000f3e924c70d99ad7f549e3ab74664186682ca12f0b62bc3",
+        "category": "recovered",
+        "observed": "網の左に白い発光中心があり、追加点が中心に重なる。",
+        "interpretation": "輝度核による追跡継続で旧欠測を補った例。"
+      },
+      {
+        "row_index": 1899,
+        "image": "parent_old_algorithm_only_01899.jpg",
+        "image_sha256": "dc01e68d2b2c63eafbba60330cd73feb14796ce2ddbeb2a8f94994f8cc3b2157",
+        "category": "visible_but_waiting",
+        "observed": "網の縁の向こう側にハローが見える。",
+        "interpretation": "新方式単体は再初期化待ち。網への接近と発光像の変化に対し固定テンプレートを維持できなかった可能性がある。"
+      },
+      {
+        "row_index": 1587,
+        "image": "parent_identity_rejected_01587.jpg",
+        "image_sha256": "9a9d76c9d3d734cba0e181df2b32883042ed0884575fea355153afef13a240ad",
+        "category": "occlusion_identity",
+        "observed": "発光部が網の背後に隠れ、網の反射が画面内に多数ある。",
+        "interpretation": "小さな核だけの照合で網に移った追加区間を除外した。"
+      }
+    ],
+    "20261101_nanyo_002": [
+      {
+        "row_index": 3166,
+        "image": "parent_both_missing_03166.jpg",
+        "image_sha256": "b57b4b0715668c877d889f11bf8bb521cfaa6aea3909ced83b4f0a6d5f8e750e",
+        "category": "not_identifiable",
+        "observed": "水中背景とロープが見えるが、明瞭な発光中心は特定できない。",
+        "interpretation": "この時刻はno_reviewed_visible_lightとして追跡を開始していない。全欠測時間を消灯や濁度のせいとは断定しない。"
+      },
+      {
+        "row_index": 6399,
+        "image": "parent_both_missing_06399.jpg",
+        "image_sha256": "ece0ea0bb907c4da527a2928d43630e161db900bdc7b0f6b764038113fcb15c5",
+        "category": "not_identifiable",
+        "observed": "明るい手前のロープに対して、発光中心を明瞭に特定できない。",
+        "interpretation": "既存の同定設定がない時間。反射と小光点の識別が課題。"
+      },
+      {
+        "row_index": 5489,
+        "image": "parent_recovered_05489.jpg",
+        "image_sha256": "007a6ea51f73cb241779034ccf2df0df88b5843584c8f3ff6261b8c2130d39fe",
+        "category": "small_dim",
+        "observed": "追加点は水中背景に近い小さな淡い光点。",
+        "interpretation": "検出に使える画素が少なく、浮遊物の明点が競合する。距離や濁度はこの画像だけでは定量化しない。"
+      },
+      {
+        "row_index": 8343,
+        "image": "parent_old_algorithm_only_08343.jpg",
+        "image_sha256": "e00aed0616635d937eb050c98bc392efb410a14046af15f8d78f086bc02a2e03",
+        "category": "visible_but_waiting",
+        "observed": "近距離の子機と白い光源が明瞭に写っている。",
+        "interpretation": "新方式単体は再初期化待ち。この区間では同じ動画の旧方式16.1%に対し新方式単体12.9%で、厳しい再捕捉規則が取りこぼしを増やす。最終系列では旧有効点を保持して19.0%。"
+      }
+    ],
+    "20261101_nanyo_003": [
+      {
+        "row_index": 1663,
+        "image": "parent_both_missing_01663.jpg",
+        "image_sha256": "a300115860eec7c57d2b30b9227d712cac51171709beda1c0caf53a4ad991a46",
+        "category": "small_dim",
+        "observed": "多数の浮遊物の明点と黄色いロープがあり、発光中心は非常に弱い。",
+        "interpretation": "初期検出が成立せず、再初期化待ちになっている。"
+      },
+      {
+        "row_index": 3854,
+        "image": "parent_both_missing_03854.jpg",
+        "image_sha256": "c96a370b5b982dce524f1bd96259c6469258e6a474f255c17fbe79609e7603dd",
+        "category": "identity_ambiguous",
+        "observed": "明るい黄色いロープと周辺の光が目立ち、発光中心を明確に同定できない。",
+        "interpretation": "保存済みレビューでも同定除外されており、今回も解除していない。"
+      },
+      {
+        "row_index": 4658,
+        "image": "parent_recovered_04658.jpg",
+        "image_sha256": "3bfdd7342f88620d51fa69d277a26285f7dffd4a7ac694720d8dc241e13a81e1",
+        "category": "recovered",
+        "observed": "黄色いロープ先端に白い発光部が明瞭に見える。",
+        "interpretation": "既存欠測へ光点を追加できた例。"
+      },
+      {
+        "row_index": 5025,
+        "image": "parent_old_algorithm_only_05025.jpg",
+        "image_sha256": "1d819ba4b7ffe2927c3d3b07847d4ff65ddf7576c097c124e4f479b0f82c7596",
+        "category": "visible_but_waiting",
+        "observed": "子機と大きく広がる白い発光部が明瞭に写る。",
+        "interpretation": "新方式単体は再初期化待ち。近距離での像の大きさ・形の変化も固定核の照合を難しくする。"
+      },
+      {
+        "row_index": 481,
+        "image": "parent_identity_rejected_00481.jpg",
+        "image_sha256": "c8608b7e83c306266f8159a1615fc140cd8af051adbcf56c62987cbfefef2b3a",
+        "category": "identity_ambiguous",
+        "observed": "水中の浮遊物と小さな発光部が混在する。",
+        "interpretation": "区間末尾で追跡点が別位置へ移ることを確認したため、この追加区間を保守的に除外。"
+      }
+    ],
+    "20261101_nanyo_004": [
+      {
+        "row_index": 281,
+        "image": "parent_both_missing_00281.jpg",
+        "image_sha256": "c9a2b0062d7959fc97da7ebed2cdeb2defb450849883b63948292d8976854d30",
+        "category": "initialization_exclusion_visible",
+        "observed": "子機と明るい赤紫色・白色の光源が写る。",
+        "interpretation": "no_reviewed_visible_lightの初期化区間として扱われている。光源が物理的に見えないことを意味せず、既存の初期化設定による未処理時間が残っている。"
+      },
+      {
+        "row_index": 5185,
+        "image": "parent_both_missing_05185.jpg",
+        "image_sha256": "9f2e0d7dadc7ecefd0c7442b3a78f74c4b645d80db686be44559d5e7dc86a8f9",
+        "category": "visible_but_waiting",
+        "observed": "ロープの先に小さな白い光源が見える。",
+        "interpretation": "初期検出失敗後の再初期化待ち。小さい光点の検出と長い待機を減らすことが次の改善点。"
+      },
+      {
+        "row_index": 4322,
+        "image": "parent_recovered_04322.jpg",
+        "image_sha256": "08f01a77266c16ed6f2afd912858a1e3ea5cae616986f74f8f9027d9d8688da2",
+        "category": "recovered",
+        "observed": "ロープの近くに白い発光部が見え、中心を採用できている。",
+        "interpretation": "旧方式の欠測を補った例。"
+      },
+      {
+        "row_index": 1797,
+        "image": "parent_old_algorithm_only_01797.jpg",
+        "image_sha256": "0d547c141785bbac81d41b4594ba306d5feeb677c96f02a05054a01fac05c04e",
+        "category": "visible_but_waiting",
+        "observed": "白い光源が画角内で明瞭に見える。",
+        "interpretation": "新方式単体は再初期化待ち。最終系列では旧有効点を使っている。"
+      }
+    ],
+    "20261101_nanyo_005": [
+      {
+        "row_index": 324,
+        "image": "parent_both_missing_00324.jpg",
+        "image_sha256": "dccc20aef35a922a6456f10ca09d2e00e30640d5b149b0d8ce5f6c849b9e54ef",
+        "category": "frame_edge",
+        "observed": "子機が画像上端で切れ、発光部を中心として追える状態にない。",
+        "interpretation": "初期化未設定区間。画角外・画像端への移動が短い試行の成立率を下げる要因。"
+      },
+      {
+        "row_index": 928,
+        "image": "parent_both_missing_00928.jpg",
+        "image_sha256": "b9b3fa7becdf4cf356158e717371b315296c9c92c3510e9ef377aa3ae15b129a",
+        "category": "frame_edge",
+        "observed": "子機が右下端に寄って一部が画面外に出ている。",
+        "interpretation": "再初期化待ちに加え、画像端での追跡が難しい。"
+      },
+      {
+        "row_index": 695,
+        "image": "parent_recovered_00695.jpg",
+        "image_sha256": "31b901540a7ddfde00ace1c2edb543da8bc5a098b69ceb89ee29e5071917c91e",
+        "category": "recovered",
+        "observed": "中央付近に発光部と子機が入り、光点を採用できている。",
+        "interpretation": "同区間でも光源が画角内に入る時間は追加検出が成立する。"
+      }
+    ]
+  },
+  "mapping_views": {
+    "20261031_nanyo_001": "海底らしき背景はあるが、像がぼやけている。mapperは初期画像ペアを維持できなかった。ぼけと特徴対応不足の因果はこの画像だけで定量確定していない。",
+    "20261031_nanyo_002": "網状の壁面を再構成している。網自体が静止しているかは独立に検証していない。",
+    "20261101_nanyo_001": "網と魚が混在する。魚の動きの影響を除き切った静的環境地図とは断定できない。",
+    "20261101_nanyo_002": "近距離の付着物と大きな像変化・ぼけが見える。局所SfMは成立するが、位置priorと尺度の向きが整合しないモデルがある。",
+    "20261101_nanyo_003": "近距離の大きな面が中心で、登録は5画像の短い断片に限られた。",
+    "20261101_nanyo_004": "岩・海底の局所形状が見える。今回の実寸配置はセンサ位置に条件付けられており、独立測量で形状や尺度を検証していない。",
+    "20261101_nanyo_005": "海底の構造物を含むが、ぼけと視点移動が大きい。画像上の局所再構成は成立しても、正のセンサ位置尺度は得られていない。"
+  }
+}

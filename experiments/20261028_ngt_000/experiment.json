@@ -19,7 +19,8 @@
     "calibration/20261029_parent_axis_011_axes.json",
     "calibration/20261028_parent_lis3mdl_cad_axes.json",
     "calibration/camera_defaults.json",
-    "calibration/parent_camera_underwater_20260924_provisional.json"
+    "calibration/parent_camera_underwater_20260924_provisional.json",
+    "calibration/20261031_ngt_camera_frames.json"
   ],
   "notes": [
     "Raw files are read-only shared sources. Segment bounds are parent source-video seconds; camera clocks must be aligned using IMU.",

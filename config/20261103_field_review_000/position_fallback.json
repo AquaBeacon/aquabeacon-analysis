@@ -1,0 +1,19 @@
+{
+  "experiment_id": "20261103_field_review_000",
+  "experiments": ["20261028_ngt_002", "20261028_ngt_003", "20261028_ngt_004", "20261031_nanyo_001", "20261031_nanyo_002", "20261101_nanyo_001", "20261101_nanyo_002", "20261101_nanyo_003", "20261101_nanyo_004", "20261101_nanyo_005"],
+  "geometry": {
+    "min_depth_m": 0.3,
+    "min_vertical_ray": 0.15,
+    "max_optical_distance_m": 50.0,
+    "max_bearing_age_s": 3.0,
+    "max_surface_age_s": 60.0,
+    "surface_window_s": 30.0,
+    "min_surface_samples": 3
+  },
+  "bearing_age_sensitivity_s": [1.0, 3.0, 5.0],
+  "parameter_selection": "Predeclared engineering limits; not fitted to stationary RMS",
+  "acoustic_direction_model": "Last independent optical acoustic-point world bearing held for at most 3 seconds; no IMU yaw-as-bearing assumption",
+  "depth_reference": "Causal rolling median of prior joint positions plus pressure depth; independent acoustic events only",
+  "priority": ["joint", "optical_imu_depth", "acoustic_imu_depth"],
+  "accuracy_validated": false
+}

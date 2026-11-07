@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261103_field_review_000",
+  "description": "Retrospective structured report and additional analyses for Nagata pool and Nanyo field experiments",
+  "raw_root": "data/raw",
+  "raw_sources": [],
+  "c_main_suffix": null,
+  "p_main_suffix": null,
+  "config_paths": [
+    "config/20261103_field_review_000/review.json",
+    "config/20261103_field_review_000/position_fallback.json",
+    "config/20261103_field_review_000/optical_detection.json",
+    "config/20261103_field_review_000/optical_detection_identity_review.json",
+    "config/20261103_field_review_000/optical_followup.json",
+    "config/20261103_field_review_000/optical_followup_frame_review.json",
+    "config/20261103_field_review_000/child_dead_reckoning.json"
+  ],
+  "calibration_paths": [],
+  "parent_acquisitions": [
+    "20261028_ngt_000",
+    "20261031_nanyo_000",
+    "20261101_nanyo_000"
+  ],
+  "notes": [
+    "Derived review; the date is the review date, not a new field acquisition.",
+    "Original calibration and data provenance are retained in source manifests. No cross-day calibration is silently applied.",
+    "Generated reports and numerical outputs remain local under results. The simulator is read-only."
+  ]
+}

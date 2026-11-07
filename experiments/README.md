@@ -1,5 +1,9 @@
 # 実験台帳
 
+派生登録：[`20261103_field_review_000`](20261103_field_review_000/experiment.json)は、
+長田高校プール（10月28日）と南予（10月31日・11月1日）の横断整理・モデル比較。
+IDの日付は整理日であり、新しい取得日ではない。入力実験・区間・静止窓を専用設定で明示し、原本参照は各取得台帳へ戻る。
+
 新しい解析は `experiments/<experiment_id>/experiment.json` を入口にする。
 生データの配置は [../data/README.md](../data/README.md)、処理コマンドは
 [../README.md](../README.md#別の実験を追加するとき) を参照。

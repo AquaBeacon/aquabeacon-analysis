@@ -23,21 +23,24 @@ from create_ngt_visualizations import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'results/20261028_ngt_004/wall_mapping/native120_restart'
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--experiment', required=True, choices=['20261028_ngt_004'])
-    parser.parse_args(sys.argv[sys.argv.index('--')+1:])
-    data = json.loads((OUT / 'map_data.json').read_text(encoding='utf-8'))
+    parser.add_argument('--run', default='native120_restart',
+                        choices=['native120_restart', 'rotation_corrected_20261031'])
+    args = parser.parse_args(sys.argv[sys.argv.index('--')+1:])
+    out = ROOT / 'results' / args.experiment / 'wall_mapping' / args.run
+    data = json.loads((out / 'map_data.json').read_text(encoding='utf-8'))
     maps = [m for m in data['maps'] if not m.get('aggregate') and m['metric']
             and m['valid_structure'] and m['wall_period']]
     record = {'pid': os.getpid(), 'started_utc': datetime.now(UTC).isoformat(),
-        'owner': 'native120_restart_mapping', 'purpose': __doc__, 'threads': 2,
-        'input_sha256': digest(OUT / 'map_data.json'), 'generator_sha256': digest(Path(__file__)),
+        'owner': 'coordinate_reassessment' if args.run == 'rotation_corrected_20261031' else 'native120_restart_mapping',
+        'run': args.run, 'purpose': __doc__, 'threads': 2,
+        'input_sha256': digest(out / 'map_data.json'), 'generator_sha256': digest(Path(__file__)),
         'helper_sha256': digest(Path(__file__).with_name('create_ngt_visualizations.py')), 'scenes': []}
-    path = OUT / 'blender.process.json'
+    path = out / 'blender.process.json'
     path.write_text(json.dumps(record, indent=2))
     try:
         if not maps:
@@ -75,14 +78,14 @@ def main():
                 points.extend(routes['parent'] + routes['child'])
                 scene['route_coordinate_policy'] = routes['coordinate_policy']
             cam = camera(scene, 'View', points, direction=(.6, -1, .8), minimum=.5)
-            render(scene, cam, OUT / ('blender_overview.png' if n == 0 else f'blender_{name}.png'))
+            render(scene, cam, out / ('blender_overview.png' if n == 0 else f'blender_{name}.png'))
             record['scenes'].append({'name': name, 'models': [m['model'] for m in selected],
                 'display_points': sum(len(m['points']) for m in selected)})
         bpy.context.window.scene = bpy.data.scenes['All_positioned_fragments']
         open_camera_view()
-        bpy.ops.wm.save_as_mainfile(filepath=str(OUT / 'wall_map.blend'))
+        bpy.ops.wm.save_as_mainfile(filepath=str(out / 'wall_map.blend'))
         # Reopen saved output and check all declared objects rather than trusting save success.
-        bpy.ops.wm.open_mainfile(filepath=str(OUT / 'wall_map.blend'))
+        bpy.ops.wm.open_mainfile(filepath=str(out / 'wall_map.blend'))
         assert len(bpy.data.scenes) == len(selections)
         for scene_record in record['scenes']:
             scene = bpy.data.scenes[scene_record['name']]

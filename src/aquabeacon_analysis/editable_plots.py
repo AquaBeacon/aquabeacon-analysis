@@ -489,6 +489,15 @@ class PlotDocument:
         # A closed Tk/Qt canvas may retain a destroyed window manager. Detach it
         # before set_dpi/set_size_inches, including when used from a Python REPL.
         FigureCanvasAgg(figure)
+        # NumPy 2 masked-array pickles can restore noncanonical dtype objects
+        # that Agg rejects. Rebuild image buffers without changing values/masks.
+        for image in [*figure.images, *(im for ax in figure.axes for im in ax.images)]:
+            pixels = image.get_array()
+            if pixels is not None:
+                image.set_data(np.ma.array(
+                    np.array(pixels, dtype=pixels.dtype.type, copy=True),
+                    mask=np.array(np.ma.getmaskarray(pixels), copy=True),
+                ))
         original_dpi = self.metadata.get("savefig", {}).get("dpi")
         if isinstance(original_dpi, (int, float)):
             figure.set_dpi(original_dpi)

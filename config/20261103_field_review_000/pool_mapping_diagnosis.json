@@ -1,0 +1,17 @@
+{
+  "experiment_id": "20261028_ngt_004",
+  "run": "wall_ablation_v2_20261104",
+  "source_run": "pool_dense_20261104",
+  "runtime": "data/interim/20261028_ngt_004/wall_mapping/runtime",
+  "maximum_images": 300,
+  "threads": 2,
+  "mapper_seconds": 100,
+  "worker_timeout_s": 600,
+  "random_seed": 20261104,
+  "modes": ["visual_only", "old", "new", "old_repeat"],
+  "position_prior_sigma_m": [1, 1, 3],
+  "minimum_pair_inliers": 15,
+  "initial_pair_inliers": 30,
+  "initial_triangle_angle_deg": 1.5,
+  "scope": "Exploratory diagnosis of the already selected 1505-1535 s wall interval. Reuse exactly the same 300 images, mask, keypoints, matches, intrinsics and priors. Only position-prior use changes. Seed mapper and triangulator explicitly as well as pipeline; old_repeat checks remaining nondeterminism. No raw data or previous run is overwritten."
+}

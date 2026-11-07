@@ -1,0 +1,13 @@
+{
+  "experiment_id": "20261028_ngt_002",
+  "run": "static_after_immersion_20261105",
+  "source_experiments": ["20261028_ngt_002", "20261028_ngt_003"],
+  "immersion_parent_video_s": 996.0,
+  "immersion_bracket_parent_video_s": [995.0, 996.0],
+  "delay_s": 60.0,
+  "duration_s": 60.0,
+  "sensitivity_start_parent_video_s": [1055.0, 1056.0, 1057.0],
+  "selection_basis": "User reports stationary from one minute after immersion for one minute. Child video visually above water at parent 995 s and underwater at 996 s. Use first inspected underwater frame; pressure sensor submerges later. No RMS-based window selection.",
+  "registry_policy": "Keep historical 002/003 boundaries; select this window across both source files without relabeling the acquisition.",
+  "ground_truth": null
+}

@@ -1,11 +1,22 @@
 # ドキュメント
 
+長田高校プール・南予海上実験の現行入口は **[統合研究レポートの索引](reports/field_experiments_20261103.md)**。
+修正依頼順ではなく研究上の論点順で読み、旧結果と採用結果を区別する。
+
+長田高校の[マルチパス観測解析](../results/20261028_ngt_000/multipath/report.md)：
+可変3連送信の受信包絡線、後続ピーク候補、約1秒周期の反復、編集可能な6図と指標CSV。
+
 全体概要は [../README.md](../README.md)、作業規約は [../AGENTS.md](../AGENTS.md) を参照。
+
+位置フォールバック仕様と受け入れ条件は[spec.md](spec.md)、「2026-11-03 プール・南予の統合研究報告」節を参照。設定は`config/20261103_field_review_000/position_fallback.json`。
 
 | ドキュメント | 内容 |
 |---|---|
+| [海・プールの子機BNO085＋深度比較](../results/20261103_field_review_000/child_dead_reckoning/comparison_20261106_v2/report.html) | 全10区間の現在子機位置との変位比較、初速0、欠測リセット、5/10/30/60秒窓、共通センサと未校正方位の留保。仕様・受け入れ条件はspec.md |
+| [optical_detection.md](optical_detection.md) | プール・南予の光源検出改善、親機全画面による欠測原因、共通時刻の位置評価、旧新フォールバックの地図、プール004の対応分断と位置拘束の比較 |
 | [another_pc.md](another_pc.md) | 別PCへの導入、校正根拠の検証、新しい実験の配置と解析の適用範囲 |
-| [長田高校・研究発表用レポート](../results/20261028_ngt_000/research_report/report.md) / [実映像と12事例](../results/20261028_ngt_000/research_report/media_review.md) | 成立・欠測の全区間台帳、親子同期動画、映像とログの考察。親機表示回転と内部校正の不整合を検出し、旧座標の精度・尺度を保留 |
+| [長田高校・位置と地図尺度の再評価](../results/20261028_ngt_000/coordinate_reassessment/report.md) | 最新版。親機90°・子機180°の画像座標を整合した位置、同一形状の尺度比較、33,564画像で再構成した壁地図 |
+| [長田高校・研究発表用レポート（修正前の監査）](../results/20261028_ngt_000/research_report/report.md) / [実映像と12事例](../results/20261028_ngt_000/research_report/media_review.md) | 成立・欠測の全区間台帳、親子同期動画、映像とログの考察。修正前の座標不整合と旧尺度の留保を記録 |
 | [長田高校・発表素材の入口](../results/20261028_ngt_000/presentation/index.html) / [検証記録](../results/20261028_ngt_000/presentation/report.md) | 親子の位置・姿勢、観測順の地図再生（機体あり／なし）、写真地図、GNSS俯瞰と2D研究グラフ |
 | [長田高校・子機単独解析の詳細レポート](../results/20261028_ngt_000/child_only_comprehensive_report/report.md) / [PDF](../results/20261028_ngt_000/child_only_comprehensive_report/report.pdf) | 校正・磁北姿勢・全4実験の単眼VSLAM・地図・DR深度融合・VI-SLAM・失敗履歴・評価の限界を集約 |
 | [子機地図・DR深度融合・VI-SLAM](../results/20261028_ngt_000/child_sensor_fusion/report.md) | 親機観測なしの地図3D表示、子機IMU・磁気・圧力融合、慣性初期化の成否・尺度の制約 |

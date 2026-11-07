@@ -1,0 +1,256 @@
+{
+  "run": "pool_multiscale_20261104",
+  "experiments": {
+    "20261028_ngt_002": [
+      {
+        "row_index": 0,
+        "parent_video_s": 1050.0156333333334,
+        "segment_time_s": 0.01563333333342598,
+        "category": "baseline",
+        "image": "parent_00000.jpg",
+        "image_sha256": "963bfd7c8474c7566874b38d307c5a9b09310ef3e2c4a60c85ba2a612064f3ba",
+        "candidate_xy": [
+          327.51908543334935,
+          579.4045728332532
+        ],
+        "baseline_status": "candidate",
+        "baseline_reason": "unverified_bright_component",
+        "proposed_addition": false,
+        "explanation": "静止区間では明るい発光面が画像内にあり、旧方式も候補を取得している。この区間の300画像はすべて旧候補があり、追加による改善余地はなかった。"
+      }
+    ],
+    "20261028_ngt_003": [
+      {
+        "row_index": 0,
+        "parent_video_s": 1110.0089,
+        "segment_time_s": 0.008900000000039654,
+        "category": "baseline",
+        "image": "parent_00000.jpg",
+        "image_sha256": "b09345ec8176f25590f423ebbc85cb01f6ca6c5a6bd0f9c8fb3fb670ee8718fd",
+        "candidate_xy": [
+          397.2902313268046,
+          796.5
+        ],
+        "baseline_status": "candidate",
+        "baseline_reason": "unverified_bright_component",
+        "proposed_addition": false,
+        "explanation": "区間開始時は白く飽和した光源が見え、旧方式で検出できている。"
+      },
+      {
+        "row_index": 187,
+        "parent_video_s": 1147.4129333333333,
+        "segment_time_s": 37.412933333333285,
+        "category": "proposed",
+        "image": "parent_00187.jpg",
+        "image_sha256": "05e7fb67d22456fdd68cffcdb01b7cd5aa434d642e784d7ae514fe0149669250",
+        "candidate_xy": [
+          521.6521024768293,
+          716.7976096508806
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": true,
+        "explanation": "発光部が右端で切れる一方、新方式の候補は機体の文字・反射に移っている。機体表面を光源として採用せず除外した。"
+      },
+      {
+        "row_index": 279,
+        "parent_video_s": 1165.8313333333333,
+        "segment_time_s": 55.831333333333305,
+        "category": "proposed",
+        "image": "parent_00279.jpg",
+        "image_sha256": "4ca0c6b960c2505f9b9dfc04bcca7a02a2af9a9fbbe748b0d3bc2a55a6613ec8",
+        "candidate_xy": [
+          645.216389185778,
+          223.05167209001226
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": true,
+        "explanation": "発光面が緑色に見え、局所的な明るさは残るが旧方式の全RGB飽和条件を満たさない。画像中の発光面として確認し追加した。"
+      },
+      {
+        "row_index": 375,
+        "parent_video_s": 1185.0171666666668,
+        "segment_time_s": 75.01716666666675,
+        "category": "missing",
+        "image": "parent_00375.jpg",
+        "image_sha256": "24019b3cd5f9b6de0c23002a0985b614453d6310961334ea48a4ee8ec5c65aeb",
+        "candidate_xy": [
+          null,
+          null
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": false,
+        "explanation": "子機の一部が右端に残るが発光部は画角外。しきい値を下げても正しい光源中心は復元できない。"
+      },
+      {
+        "row_index": 500,
+        "parent_video_s": 1210.0088,
+        "segment_time_s": 100.00880000000006,
+        "category": "proposed",
+        "image": "parent_00500.jpg",
+        "image_sha256": "da55a0d0e7c1b61c0822a7e45c95f3a3773f47796b053cbc69116f297edf204f",
+        "candidate_xy": [
+          188.03215461248226,
+          437.15205164397446
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": true,
+        "explanation": "プール底とその模様が写り、光源は見当たらない。新方式が底の模様を候補にしたため除外した。"
+      },
+      {
+        "row_index": 731,
+        "parent_video_s": 1256.2216333333333,
+        "segment_time_s": 146.22163333333333,
+        "category": "proposed",
+        "image": "parent_00731.jpg",
+        "image_sha256": "df422d4b59f87f779fb538c386c49df0d5c1b27a48d0697625dd2bcd94aa6341",
+        "candidate_xy": [
+          666.0280066491114,
+          405.0628095733627
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": true,
+        "explanation": "右側に戻った紫色の発光面を新方式で拾った。白色飽和を要求しない効果が見えるが、発光面の見かけの中心と校正済み測定中心は同一と保証されない。"
+      }
+    ],
+    "20261028_ngt_004": [
+      {
+        "row_index": 22,
+        "parent_video_s": 1264.4298333333334,
+        "segment_time_s": 4.429833333333363,
+        "category": "proposed",
+        "image": "parent_00022.jpg",
+        "image_sha256": "6ac6f48665dd4a85cbb498dd31bd49ff25d16928c3a844f19065b725a1cb38fb",
+        "candidate_xy": [
+          384.35026925531787,
+          171.8437941029057
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": true,
+        "explanation": "光源が右端で切れ、新方式の候補は別の背景模様へ移っている。自動候補をそのまま位置計算へ渡さず除外した。"
+      },
+      {
+        "row_index": 120,
+        "parent_video_s": 1284.0160666666668,
+        "segment_time_s": 24.016066666666802,
+        "category": "proposed",
+        "image": "parent_00120.jpg",
+        "image_sha256": "73fae5d425a28331b7c94268269ff13f41271f3aa29a160ba2c2c116f00ad290",
+        "candidate_xy": [
+          656.6516734605583,
+          260.9174242844807
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": true,
+        "explanation": "右上に紫色の発光面があり、旧方式では欠測。新方式の実測候補を画像で確認して追加した。"
+      },
+      {
+        "row_index": 328,
+        "parent_video_s": 1325.6243000000002,
+        "segment_time_s": 65.62430000000018,
+        "category": "missing",
+        "image": "parent_00328.jpg",
+        "image_sha256": "d391500f9889f746bdff4c7b5f62f27388edbfd2306d3b708a23d7c9156b017d",
+        "candidate_xy": [
+          null,
+          null
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": false,
+        "explanation": "プール底を向いており、発光面は画像内にない。欠測を保つ。"
+      },
+      {
+        "row_index": 593,
+        "parent_video_s": 1378.6105666666667,
+        "segment_time_s": 118.61056666666673,
+        "category": "proposed",
+        "image": "parent_00593.jpg",
+        "image_sha256": "ecf49f8e2dbaf90df5445c733c2443ba7386e737913761f828fc7248adde0632",
+        "candidate_xy": [
+          489.9375427298094,
+          497.0183253975723
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": true,
+        "explanation": "機体の右側の発光面が見えるが、全RGBが白く飽和していない。ロープに中心が重ならないことを確認して追加した。"
+      },
+      {
+        "row_index": 611,
+        "parent_video_s": 1382.2141666666666,
+        "segment_time_s": 122.21416666666664,
+        "category": "proposed",
+        "image": "parent_00611.jpg",
+        "image_sha256": "f60f8674e7cace6ca82f56969c69270dadd30baa56129324f5b3821fe91d1f35",
+        "candidate_xy": [
+          425.0189198062043,
+          352.90585716049225
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": true,
+        "explanation": "紫色の発光面が明瞭に写る。従来の白色飽和条件で落ちていた中心を、新方式で追加した。"
+      },
+      {
+        "row_index": 695,
+        "parent_video_s": 1399.0309666666667,
+        "segment_time_s": 139.0309666666667,
+        "category": "veto",
+        "image": "parent_00695.jpg",
+        "image_sha256": "3bea10f89cac69312fcfe50c9fffb59c61fcea9244a56b2f690b6773f51524e2",
+        "candidate_xy": [
+          352.69768662881177,
+          776.8137480295071
+        ],
+        "baseline_status": "candidate",
+        "baseline_reason": "unverified_bright_component",
+        "proposed_addition": false,
+        "explanation": "明るい光源の近くにロープが写る。既存の1397.5〜1402.5秒の保守的なレビュー除外区間に含まれるため、今回も位置計算では除外を維持した。この一枚だけで区間全体の同定を解除しない。"
+      },
+      {
+        "row_index": 1008,
+        "parent_video_s": 1461.6268333333335,
+        "segment_time_s": 201.62683333333348,
+        "category": "proposed",
+        "image": "parent_01008.jpg",
+        "image_sha256": "67b9d4541cf0b6550800c126acf6e6d26aff4f326e42a25903fcb0b83256c089",
+        "candidate_xy": [
+          318.6562457470711,
+          383.45683667850255
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": true,
+        "explanation": "前景の皮膚・物体が光で明るくなっているが、実際の発光面はさらに上にある。新方式の候補は前景の反射なので除外した。"
+      },
+      {
+        "row_index": 1200,
+        "parent_video_s": 1500.0318666666667,
+        "segment_time_s": 240.0318666666667,
+        "category": "veto",
+        "image": "parent_01200.jpg",
+        "image_sha256": "edbaae4ffc6168d639668f3201147ad9b46f193143038409791986a2739eb86c",
+        "candidate_xy": [
+          461.35831836695866,
+          423.9083490317727
+        ],
+        "baseline_status": "missing",
+        "baseline_reason": "no_saturated_component",
+        "proposed_addition": false,
+        "explanation": "手前の太い物体が発光面を遮っている。白いにじみだけから中心を推測せず、既存の同定除外と欠測を保持した。"
+      }
+    ]
+  },
+  "mapping_views": {
+    "20261028_ngt_002": "子機画像は緑色の水中で強いぼけ・低コントラストがあり、安定した環境特徴と視差を確認できない。静止位置のばらつきを尺度の基線には使わない。",
+    "20261028_ngt_003": "再構成された最大モデルの画像は水面・水上建物を含む。親機の光源欠測時間と重なり、登録画像に有限な位置priorがない。共通水中内部校正を水上へ適用する制約があり、水中の実寸地図とは扱えない。",
+    "20261028_ngt_004": "前半・中盤の子機画像はぼけた水中像で、後半に壁の模様が見える。疎い全区間サンプルでは初期化しなかったため、後半30秒を10 Hz・右側の壁領域マスクで追加試行した。"
+  }
+}

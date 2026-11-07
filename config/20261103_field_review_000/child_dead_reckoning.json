@@ -1,0 +1,21 @@
+{
+  "aggregate_experiment": "20261103_field_review_000",
+  "run": "comparison_20261106_v2",
+  "experiments": [
+    "20261028_ngt_002", "20261028_ngt_003", "20261028_ngt_004",
+    "20261031_nanyo_001", "20261031_nanyo_002",
+    "20261101_nanyo_001", "20261101_nanyo_002", "20261101_nanyo_003",
+    "20261101_nanyo_004", "20261101_nanyo_005"
+  ],
+  "pool_current_run": "pool_multiscale_20261104",
+  "sea_current_run": "optical_fallback_20261104",
+  "substeps_per_position_grid": {"pool": 4, "sea": 2},
+  "integration_max_gap_s": 0.100001,
+  "window_horizons_s": [5, 10, 30, 60],
+  "window_stride_s": 5,
+  "pool_use_existing_static_bias": true,
+  "method": "Horizontal gravity-subtracted BNO085 acceleration double integration; vertical displacement directly from bounded pressure depth. Zero initial velocity at each independently anchored segment/window. No position, velocity, yaw, scale or bias fit to current positions.",
+  "excluded_experiments": {
+    "20261028_ngt_001": "No overlapping child body IMU and pressure; parent GNSS stationary experiment."
+  }
+}

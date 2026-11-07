@@ -1,0 +1,19 @@
+{
+  "experiment_id": "20261103_field_review_000",
+  "experiments": ["20261031_nanyo_001", "20261031_nanyo_002", "20261101_nanyo_001", "20261101_nanyo_002", "20261101_nanyo_003", "20261101_nanyo_004", "20261101_nanyo_005"],
+  "detector": "multiscale_luminous_core_with_cyan_confirmed_dim_core",
+  "tracking": "fixed_41px_template; strong measured core can continue with >=8 FB-valid flow points, <=0.15px FB error, <=8px innovation, core NCC>=0.65; legacy control uses 81px",
+  "sample_clock": "saved_mapping_light_tracking_times; nearest proxy source frame within 20 ms; additions use decoded timestamps",
+  "video_source": "processed_mp4_30hz_lossless_proxy",
+  "preserve_baseline_valid": true,
+  "max_missing_frames": 10,
+  "short_gap_recovery": "Within 120px of last measured center and <10 missing frames; contrast>=25, response>=10, fixed multiscale core NCC>=0.85; reject competing peaks within a 1.5 score ratio",
+  "max_workers": 2,
+  "initialization": "hashed original review image at its review UTC; no early application of pixel seeds",
+  "review_exclusions": "preserve_rejected_identity_review_and_null_initializations",
+  "position_config": "config/20261103_field_review_000/position_fallback.json",
+  "pixel_basis": "encoded_unrotated_MP4_resampled_to_1280x720_with_pixel_center_mapping",
+  "max_runtime_s": 3600,
+  "review_stride_s": 10,
+  "scope": "Image candidate availability; not independently annotated recall or absolute position accuracy"
+}

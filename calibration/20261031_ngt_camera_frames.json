@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-31",
+  "experiment_id": "20261028_ngt_000",
+  "metadata_rotation_deg": {
+    "calibration": 0,
+    "parent": 90,
+    "child": 180
+  },
+  "parent_sensor_size": [
+    1280,
+    720
+  ],
+  "parent_display_size": [
+    720,
+    1280
+  ],
+  "parent_proxy_matrix_display": [
+    [
+      672.2714627042396,
+      0.0,
+      358.32331113880775
+    ],
+    [
+      0.0,
+      671.4928071645874,
+      646.1748800271314
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "parent_proxy_distortion_display": [
+    0.36299078889677444,
+    0.35047393383599057,
+    0.0018919520831984344,
+    0.005888261119551278,
+    0.0
+  ],
+  "R_display_from_sensor": [
+    [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "R_camera_imu_from_sensor_optical": [
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ]
+  ],
+  "R_camera_imu_from_display_optical": [
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      -1.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "axis_evidence": "results\\20261028_ngt_000\\coordinate_reassessment\\sensor_axis_audit.json",
+  "axis_evidence_sha256": "ac32fd56ea736a5c3059d36a45cab1e231e8e2dea817b0e078e741bc2eae5d05",
+  "intrinsics_source": {
+    "device_id": "P_MAIN_CAM",
+    "source": "C:\\Users\\ryupc\\WorkSpace\\Mitou26\\AquaBeacon-OSS\\aquabeacon-analysis\\calibration\\parent_camera_underwater_20260924_provisional.json",
+    "sha256": "cd8a1e643ed26aaa48048beacf855d692c77823d3febd2d9f748b8cd644c7942",
+    "defaults_sha256": "7558d2d4181015685d280ea019594d2e06bd669833278cf9c418113029df7eed",
+    "source_kind": "proxy",
+    "calibrated_size": [
+      1280,
+      720
+    ],
+    "output_size": [
+      1280,
+      720
+    ],
+    "camera_matrix_px": [
+      [
+        671.4928071645874,
+        0.0,
+        646.1748800271314
+      ],
+      [
+        0.0,
+        672.2714627042396,
+        360.67668886119225
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "distortion": [
+      0.36299078889677444,
+      0.35047393383599057,
+      -0.005888261119551278,
+      0.0018919520831984344,
+      0.0
+    ],
+    "status": "provisional_limited_viewpoint_diversity",
+    "required_conditions": {
+      "camera": "DJI Osmo Action 6",
+      "fov": "Standard (Dewarp)",
+      "eis": "Off",
+      "housing": "DJI official waterproof case",
+      "medium": "underwater"
+    },
+    "capture_conditions_independently_verified": false
+  },
+  "status": "pixel_frame_consistent_discrete_axes_checked_continuous_extrinsic_provisional",
+  "child_mapping_policy": "Rotate main-video intrinsics 180 degrees; account for full-frame pixel-center resize and COLMAP +0.5 pixel convention",
+  "limits": [
+    "No new continuous optical-to-IMU or lever-arm calibration",
+    "Magnetic heading accuracy unvalidated, zero declination retained",
+    "Shared underwater calibration remains provisional"
+  ]
+}
